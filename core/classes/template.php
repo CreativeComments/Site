@@ -316,7 +316,7 @@ class SiteTemplateModifiers
 	public static function formatDate($var, $format)
 	{
 		// format the date
-		return SpoonDate::getDate((string) $format, (int) $var, 'nl');
+		return SpoonDate::getDate((string) $format, (int) $var, 'en');
 	}
 
 	/**
