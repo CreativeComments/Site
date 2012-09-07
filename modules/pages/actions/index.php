@@ -3,13 +3,13 @@
 /**
  * ExampleIndex
  *
- * @package		example
+ * @package		pages
  * @subpackage	index
  *
  * @author 		Tijs Verkoyen <tijs@sumocoders.be>
  * @since		1.0
  */
-class ExampleIndex extends SiteBaseAction
+class PagesIndex extends SiteBaseAction
 {
 	/**
 	 * Execute the action

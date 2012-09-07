@@ -299,7 +299,7 @@ class SiteURL
 		$this->setLanguage((isset($chunks[0]) && $chunks[0] != '') ? $chunks[0] : SiteLocale::getPreferedLanguage());
 
 		// get the module, null will be the default
-		$this->setModule((isset($chunks[1]) && $chunks[1] != '') ? $chunks[1] : 'example'); // @todo
+		$this->setModule((isset($chunks[1]) && $chunks[1] != '') ? $chunks[1] : 'pages');
 
 		// get the requested action, index will be our default action
 		$this->setAction((isset($chunks[2]) && $chunks[2] != '') ? $chunks[2] : 'index');

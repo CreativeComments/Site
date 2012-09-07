@@ -3,7 +3,7 @@
 /**
  * AjaxExampleGet
  *
- * @package		example
+ * @package		pages
  * @subpackage	get
  *
  * @author 		Tijs Verkoyen <tijs@sumocoders.be>

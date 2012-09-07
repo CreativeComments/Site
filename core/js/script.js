@@ -18,8 +18,8 @@ var jsSite =
 		// get url and split into chunks
 		var chunks = document.location.pathname.split('/');
 		if(typeof chunks[1] == 'undefined') chunks[1] = 'nl';		// @todo	fix me
-		if(typeof chunks[2] == 'undefined') chunks[2] = 'example';	// @todo	fix me
-		if(typeof chunks[3] == 'undefined') chunks[3] = 'index';	// @todo	fix me
+		if(typeof chunks[2] == 'undefined') chunks[2] = 'pages';
+		if(typeof chunks[3] == 'undefined') chunks[3] = 'index';
 
 		// set some properties
 		jsSite.current.module = chunks[2];
