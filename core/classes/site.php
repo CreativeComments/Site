@@ -129,6 +129,32 @@ class Site
 	}
 
 	/**
+	 * Get the Facebook instance
+	 *
+	 * @return Facebook
+	 */
+	public static function getFacebook()
+	{
+		// does it exists
+		if(!Spoon::exists('facebook'))
+		{
+			// create facebook instance
+			$facebook = new Facebook(
+				array(
+					 'appId' => FB_APP_ID,
+					 'secret' => FB_APP_SECRET,
+				)
+			);
+
+			// store
+			Spoon::set('facebook', $facebook);
+		}
+
+		// return the instance
+		return Spoon::get('facebook');
+	}
+
+	/**
 	 * Get the available languages
 	 *
 	 * @return array
