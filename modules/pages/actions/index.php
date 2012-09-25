@@ -18,6 +18,9 @@ class PagesIndex extends SiteBaseAction
 	 */
 	public function execute()
 	{
+		// go to dashboard after login
+		if($this->currentUser !== null) $this->redirect($this->url->buildUrl('dashboard', 'users'));
+
 		// parse
 		$this->parse();
 

@@ -30,7 +30,7 @@ class UsersLogin extends SiteBaseAction
 		if($this->currentUser != null)
 		{
 			// grab the url if provided
-			$url = SpoonFilter::getGetValue('redirect', null, '/' . $this->url->getLanguage());
+			$url = SpoonFilter::getGetValue('redirect', null, $this->url->buildUrl('dashboard', 'users'));
 
 			// add a report
 			if(substr_count($url, '?') > 0) $url .= '&report=logged-in';
@@ -107,7 +107,7 @@ class UsersLogin extends SiteBaseAction
 				Authentication::login($user);
 
 				// grab the url if provided
-				$url = SpoonFilter::getGetValue('redirect', null, '/' . $this->url->getLanguage());
+				$url = SpoonFilter::getGetValue('redirect', null, $this->url->buildUrl('dashboard', 'users'));
 
 				// add a report
 				if(substr_count($url, '?') > 0) $url .= '&report=logged-in';
