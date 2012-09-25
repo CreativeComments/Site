@@ -114,3 +114,5 @@ $msg['UsersLogin'] = 'Aanmelden';
 $msg['UsersLoggedInAs'] = 'Je bent aangemeld als <strong>%1$s</strong>';
 $msg['UsersLoggedOut'] = 'Je bent afgemeld.';
 $msg['UsersNoItems'] = 'Er zijn nog geen gebruikers aangemaakt.';
+$msg['UsersNoCreativeComments'] = 'No Creative Comments so far, go and create on <a href="https://www.facebook.com">Facebook</a>.';
+$msg['UsersYourCreativeComments'] = 'Your Creative Comments so far';

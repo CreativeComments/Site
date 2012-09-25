@@ -18,6 +18,15 @@ class UsersDashboard extends SiteBaseAction
 	 */
 	public function execute()
 	{
+		// check if logged in
+		if(!$this->currentUser)
+		{
+			$this->redirect(
+				$this->url->buildUrl('index', 'error', null, array('code' => 403, 'message' => 'forbidden')),
+				403
+			);
+		}
+
 		// show reports
 		$this->parseReports();
 
@@ -35,13 +44,5 @@ class UsersDashboard extends SiteBaseAction
 	 */
 	private function parse()
 	{
-		// check if admin
-		if(!$this->currentUser)
-		{
-			$this->redirect(
-				$this->url->buildUrl('index', 'error', null, array('code' => 403, 'message' => 'forbidden')),
-				403
-			);
-		}
 	}
 }
