@@ -71,6 +71,9 @@ class Init
 		// ignore case
 		$class = strtolower($class);
 
+		// execption for Facebook, which has its own directory
+		if($class == 'facebook') require_once PATH_LIBRARY .'/external/facebook/facebook.php';
+
 		// an exception?
 		if(in_array($class, array_keys($exceptions))) $class = $exceptions[$class];
 
