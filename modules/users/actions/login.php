@@ -84,13 +84,9 @@ class UsersLogin extends SiteBaseAction
 			$this->frm->getField('login')->isFilled('Dit veld is verplicht');
 			$this->frm->getField('password')->isFilled('Dit veld is verplicht');
 
-			// get db
-			$db = Site::getDB(true);
+			$user = User::getByEmail($this->frm->getField('login')->getValue());
 
-			// get secret
-			$user = $db->getRecord('SELECT i.* FROM users AS i WHERE i.email = ?', array($this->frm->getField('login')->getValue()));
-
-			if($user == null)
+			if(!$user)
 			{
 				$this->tpl->assign('error', true);
 				$this->frm->getField('login')->addError('&nbsp;');
@@ -98,7 +94,7 @@ class UsersLogin extends SiteBaseAction
 
 			else
 			{
-				if($user['password'] != sha1(md5($this->frm->getField('password')->getValue()) . $user['secret']))
+				if($user->password != sha1(md5($this->frm->getField('password')->getValue()) . $user->secret))
 				{
 					$this->tpl->assign('error', true);
 					$this->frm->getField('login')->addError('&nbsp;');
