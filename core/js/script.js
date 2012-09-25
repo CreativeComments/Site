@@ -307,18 +307,6 @@ jsSite.facebook = {
 				}
 			);
 		});
-
-		FB.Event.subscribe('auth.statusChange', function(response)
-		{
-			if(response.authResponse)
-			{
-				// user has auth'd your app and is logged into Facebook
-				FB.api('/me', function(me)
-				{
-					console.log(me);
-				});
-			}
-		});
 	}
 }
 
