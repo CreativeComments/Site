@@ -26,6 +26,20 @@ class UsersLogin extends SiteBaseAction
 	 */
 	public function execute()
 	{
+		// redirect if a user is already logged in
+		if($this->currentUser != null)
+		{
+			// grab the url if provided
+			$url = SpoonFilter::getGetValue('redirect', null, '/' . $this->url->getLanguage());
+
+			// add a report
+			if(substr_count($url, '?') > 0) $url .= '&report=logged-in';
+			else $url .= '?report=logged-in';
+
+			// redirect
+			$this->redirect($url);
+		}
+
 		// load the form
 		$this->loadForm();
 
@@ -96,8 +110,15 @@ class UsersLogin extends SiteBaseAction
 			{
 				Authentication::login($user);
 
+				// grab the url if provided
+				$url = SpoonFilter::getGetValue('redirect', null, '/' . $this->url->getLanguage());
+
+				// add a report
+				if(substr_count($url, '?') > 0) $url .= '&report=logged-in';
+				else $url .= '?report=logged-in';
+
 				// redirect
-				$this->redirect(SpoonFilter::getGetValue('redirect', null, '/'));
+				$this->redirect($url);
 			}
 		}
 	}
