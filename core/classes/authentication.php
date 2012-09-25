@@ -69,6 +69,13 @@ class Authentication
 								WHERE i.session_id = ? AND i.edited_on > ?',
 								array(SpoonSession::getSessionId(), Site::getUTCDate(null, (time() - (2 * 60 * 60)))));
 
+		// no data?
+		if($data === null)
+		{
+			// check if the user is logged in through Facebook
+			self::getFacebookUser();
+		}
+
 		// any data?
 		if($data !== null)
 		{
