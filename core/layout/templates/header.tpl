@@ -15,11 +15,17 @@
 			{option:currentUser}
 				<div id="user">
 					<p>
+						{* @todo avatar if needed in design *}
 						{$msgUsersLoggedInAs|sprintf:{$currentUser.name}} |
 						<a href="{$var|buildurl:'logout':'users'}">{$lblSignOff}</a>
 					</p>
 				</div>
 			{/option:currentUser}
+			{option:!currentUser}
+                <a href="#" class="btn btn-inverse facebookRegister">
+                    Sign up with Facebook{* @todo locale *}
+                </a>
+			{/option:!currentUser}
 		</div>
 	</div>
 </div>
