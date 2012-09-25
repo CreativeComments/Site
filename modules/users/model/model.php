@@ -24,7 +24,7 @@ class User
 	 *
 	 * @var	string
 	 */
-	public $name, $email, $secret, $rawPassword, $type;
+	public $name, $email, $secret, $rawPassword, $type, $facebookId;
 
 
 	/**
@@ -53,7 +53,7 @@ class User
 		$id = (int) $id;
 
 		// get data
-		$data = Site::getDB()->getRecord('SELECT i.id, i.name, i.email, i.secret, i.type, i.data
+		$data = Site::getDB()->getRecord('SELECT i.*
 											FROM users AS i
 											WHERE i.id = ?',
 											array($id));
@@ -70,6 +70,37 @@ class User
 		// return
 		return $item;
 	}
+
+	/**
+	 * Get a user by his Facebook id
+	 *
+	 * @param string $facebookId
+	 * @return User
+	 */
+	public static function getByFacebookId($facebookId)
+	{
+		// redefine
+		$facebookId = (string) $facebookId;
+
+		// get data
+		$data = Site::getDB()->getRecord('SELECT i.*
+										  FROM users AS i
+										  WHERE i.facebook_id = ?',
+										 array($facebookId));
+
+		// validate
+		if($data === null) return false;
+
+		// create instance
+		$item = new User();
+
+		// initialize
+		$item->initialize($data);
+
+		// return
+		return $item;
+	}
+
 
 	/**
 	 * Get all users for usage in a dropdown
@@ -104,6 +135,7 @@ class User
 	public function initialize($data)
 	{
 		if(isset($data['id'])) $this->id = (int) $data['id'];
+		if(isset($data['facebook_id'])) $this->facebookId = (string) $data['facebook_id'];
 		if(isset($data['name'])) $this->name = (string) $data['name'];
 		if(isset($data['email'])) $this->email = (string) $data['email'];
 		if(isset($data['secret'])) $this->secret = (string) $data['secret'];
@@ -124,6 +156,7 @@ class User
 	public function save()
 	{
 		// build record
+		$item['facebook_id'] = $this->facebookId;
 		$item['name'] = $this->name;
 		$item['email'] = $this->email;
 		$item['secret'] = $this->secret;
@@ -162,6 +195,7 @@ class User
 	{
 		// build array
 		$item['id'] = $this->id;
+		$item['facebook_id'] = $this->facebookId;
 		$item['name'] = $this->name;
 		$item['email'] = $this->email;
 		$item['type'] = $this->type;
