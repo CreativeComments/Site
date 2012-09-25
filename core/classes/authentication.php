@@ -12,6 +12,44 @@
 class Authentication
 {
 	/**
+	 * Get a user from Facebook, create a new one if needed
+	 */
+	private static function getFacebookUser()
+	{
+		$facebookId = Site::getFacebook()->getUser();
+
+		// check if we know this user
+		if($facebookId != 0)
+		{
+			$user = User::getByFacebookId($facebookId);
+
+			if($user === false)
+			{
+				// grab data from Facebook
+				$data = Site::getFacebook()->api('/me');
+
+				// create a new user
+				$user = new User();
+				$user->name = $data['name'];
+				$user->email = $data['email'];
+				$user->type = 'user';
+				$user->secret = md5(uniqid());
+				$user->rawPassword = md5(uniqid());
+				$user->facebookId = $data['id'];
+
+				// store the user
+				$user->save();
+			}
+
+			// login the user
+			self::login($user);
+
+			// recall
+			self::getLoggedInUser();
+		}
+	}
+
+	/**
 	 * Get the logged in user.
 	 *
 	 * @return User
