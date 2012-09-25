@@ -23,10 +23,11 @@ class Authentication
 		{
 			$user = User::getByFacebookId($facebookId);
 
+			// grab data from Facebook
+			$data = Site::getFacebook()->api('/me');
+
 			if($user === false)
 			{
-				// grab data from Facebook
-				$data = Site::getFacebook()->api('/me');
 
 				// create a new user
 				$user = new User();
@@ -39,6 +40,26 @@ class Authentication
 
 				// store the user
 				$user->save();
+			}
+
+			else
+			{
+				// save changes if there are changes
+				$changed = false;
+
+				if($user->name != $data['name'])
+				{
+					$changed = true;
+					$user->name = $data['name'];
+				}
+				if($user->email != $data['email'])
+				{
+					$changed = true;
+					$user->email = $data['email'];
+				}
+
+				// store the user if needed
+				if($changed) $user->save();
 			}
 
 			// login the user
