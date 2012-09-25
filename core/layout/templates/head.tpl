@@ -47,6 +47,22 @@
 	</script>
 </head>
 <body>
+	<div id="fb-root"></div>
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({ appId: '{$FB_APP_ID}', channelUrl: '//{$SITE_DOMAIN}/channel.html', status: true, cookie: true, xfbml: true });
+			jsSite.facebook.init();
+		};
+
+		// Load the SDK Asynchronously
+		(function(d){
+			var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement('script'); js.id = id; js.async = true;
+			js.src = "//connect.facebook.net/en_US/all.js";
+			ref.parentNode.insertBefore(js, ref);
+		}(document));
+	</script>
 	<!--[if lt IE 8 ]>
 		<div id="ie6" class="alert alert-block">
 			<a href="#" class="close" data-dismiss="alert">x</a>

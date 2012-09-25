@@ -292,4 +292,34 @@ jsSite.links =
 	}
 }
 
+jsSite.facebook = {
+	init: function()
+	{
+		$('a.facebookRegister').on('click', function(e)
+		{
+			FB.login(
+				function(response)
+				{
+					window.location.reload();
+				},
+				{
+					scope: 'email'
+				}
+			);
+		});
+
+		FB.Event.subscribe('auth.statusChange', function(response)
+		{
+			if(response.authResponse)
+			{
+				// user has auth'd your app and is logged into Facebook
+				FB.api('/me', function(me)
+				{
+					console.log(me);
+				});
+			}
+		});
+	}
+}
+
 $(jsSite.init);

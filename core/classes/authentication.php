@@ -43,25 +43,6 @@ class Authentication
 			// return
 			return $user;
 		}
-
-		// no data, so redirect to login
-		else
-		{
-			// reset session
-			SpoonSession::destroy();
-			session_regenerate_id(true);
-
-			$url = Spoon::get('url');
-
-			// not login page
-			if($url->getModule() != 'users') SpoonHTTP::redirect($url->buildUrl('login', 'users', null, array('redirect' => '/' . $url->getQueryString())), 403);
-
-			// not logout
-			elseif($url->getAction() != 'logout' && $url->getAction() != 'login')
-			{
-				SpoonHTTP::redirect($url->buildUrl('login', 'users', null, array('redirect' => '/' . $url->getQueryString())), 403);
-			}
-		}
 	}
 
 	/**
