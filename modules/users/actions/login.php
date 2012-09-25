@@ -94,16 +94,7 @@ class UsersLogin extends SiteBaseAction
 			// no errors
 			if($this->frm->isCorrect())
 			{
-				// build item
-				$item['session_id'] = SpoonSession::getSessionId();
-				$item['user_id'] = $user['id'];
-				$item['edited_on'] = Site::getUTCDate();
-
-				// insert new session
-				$db->execute('INSERT INTO users_sessions(session_id, user_id, edited_on)
-								VALUES(:session_id, :user_id, :edited_on)
-								ON DUPLICATE KEY UPDATE edited_on = :edited_on',
-								$item);
+				Authentication::login($user);
 
 				// redirect
 				$this->redirect(SpoonFilter::getGetValue('redirect', null, '/'));
