@@ -133,10 +133,6 @@ class Authentication
 			 ON DUPLICATE KEY UPDATE edited_on = :edited_on',
 			$item
 		);
-
-		// save user
-		$user->lastLoginOn = new DateTime();
-		$user->save();
 	}
 
 	/**
