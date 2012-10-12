@@ -15,6 +15,18 @@ var jsSite =
 
 	init: function()
 	{
+		// while there is no real detection for chrome, we implement our own,
+		// see http://stackoverflow.com/questions/3303858/distinguish-chrome-from-safari-using-jquery-browser
+		$.browser.chrome = /chrome/.test(navigator.userAgent.toLowerCase());
+		if($.browser.chrome)
+		{
+			var userAgent = navigator.userAgent.toLowerCase();
+			userAgent = userAgent.substring(userAgent.indexOf('chrome/') +7);
+			userAgent = userAgent.substring(0,userAgent.indexOf('.'));
+			$.browser.version = userAgent;
+			$.browser.safari = false;
+		}
+
 		// get url and split into chunks
 		var chunks = document.location.pathname.split('/');
 		if(typeof chunks[1] == 'undefined') chunks[1] = 'en';
@@ -33,6 +45,7 @@ var jsSite =
 		jsSite.forms.init();
 		jsSite.layout.init();
 		jsSite.links.init();
+		jsSite.creativeComments.init();
 
 		try
 		{
@@ -318,42 +331,24 @@ jsSite.users = {
 
 		if($pluginNotInstalled.length > 0)
 		{
-			if(jsSite.creativeComments.isPluginInstalled()) $pluginNotInstalled.hide();
-			else
-			{
-				$pluginNotInstalled.show();
+			$pluginNotInstalled.show();
 
-				// while there is no real detection for chrome, we implement our own,
-				// see http://stackoverflow.com/questions/3303858/distinguish-chrome-from-safari-using-jquery-browser
-				$.browser.chrome = /chrome/.test(navigator.userAgent.toLowerCase());
-				if($.browser.chrome)
-				{
-					var userAgent = navigator.userAgent.toLowerCase();
-					userAgent = userAgent.substring(userAgent.indexOf('chrome/') +7);
-					userAgent = userAgent.substring(0,userAgent.indexOf('.'));
-					$.browser.version = userAgent;
-					$.browser.safari = false;
-				}
-
-				// detect browser
-				if($.browser.chrome) $('#browserPluginChrome').show();
-				if($.browser.mozilla) $('#browserPluginFirefox').show();
-				if($.browser.safari) $('#browserPluginSafari').show();
-
-				if($.browser.chrome || $.browser.mozilla || $.browser.safari) $('#noPluginAvailable').hide();
-
-			}
+			// detect browser
+			if($.browser.chrome) $('#browserPluginChrome').show();
+			if($.browser.mozilla) $('#browserPluginFirefox').show();
+			if($.browser.safari) $('#browserPluginSafari').show();
+			if($.browser.chrome || $.browser.mozilla || $.browser.safari) $('#noPluginAvailable').hide();
 		}
-
 	}
 }
 
 jsSite.creativeComments =
 {
-	// check if the plugin is available
-	isPluginInstalled: function()
+	init: function()
 	{
-		return (typeof cc_plugin_available != 'undefined' && cc_plugin_available);
+		$(window).on('cco:loaded', function() {
+			$('#pluginNotInstalled').hide();
+		});
 	}
 }
 
