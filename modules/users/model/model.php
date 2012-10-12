@@ -23,7 +23,7 @@ class User
 	 *
 	 * @var	string
 	 */
-	public $name, $email, $secret, $rawPassword, $password, $type, $facebookId;
+	public $accessToken, $name, $email, $secret, $rawPassword, $password, $type, $facebookId;
 
 	/**
 	 * Boolean properties
@@ -74,6 +74,37 @@ class User
 		// return
 		return $item;
 	}
+
+	/**
+	 * Get a user by his access_token
+	 *
+	 * @param $accessToken
+	 * @return bool|User
+	 */
+	public static function getByAccessToken($accessToken)
+	{
+		// redefine
+		$accessToken = (string) $accessToken;
+
+		// get data
+		$data = Site::getDB()->getRecord('SELECT i.*, UNIX_TIMESTAMP(i.created_on) AS created_on, UNIX_TIMESTAMP(i.edited_on) AS edited_on
+										  FROM users AS i
+										  WHERE i.access_token = ?',
+										 array($accessToken));
+
+		// validate
+		if($data === null) return false;
+
+		// create instance
+		$item = new User();
+
+		// initialize
+		$item->initialize($data);
+
+		// return
+		return $item;
+	}
+
 
 	/**
 	 * Get a user by his email
@@ -168,6 +199,7 @@ class User
 	public function initialize($data)
 	{
 		if(isset($data['id'])) $this->id = (int) $data['id'];
+		if(isset($data['access_token'])) $this->accessToken = (string) $data['access_token'];
 		if(isset($data['facebook_id'])) $this->facebookId = (string) $data['facebook_id'];
 		if(isset($data['name'])) $this->name = (string) $data['name'];
 		if(isset($data['email'])) $this->email = (string) $data['email'];
