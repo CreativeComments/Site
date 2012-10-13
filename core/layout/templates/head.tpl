@@ -45,6 +45,7 @@
 		currentUser.name = '{$currentUser.name|addslashes}';
 		currentUser.email = '{$currentUser.email|addslashes}';
 		{/option:currentUser}
+		var data = {};
 	</script>
 </head>
 <body>
@@ -65,8 +66,12 @@
 		}(document));
 	</script>
 	<!--[if lt IE 8 ]>
-		<div id="ie6" class="alert alert-block">
+		<div id="ie6" class="alert alert-block" style="margin: 0;">
 			<a href="#" class="close" data-dismiss="alert">x</a>
 			{$msgOldBrowserWarning}
 		</div>
 	<![endif]-->
+    <div id="upgradeBar" class="alert alert-block" style="margin: 0; display: none;">
+        <a href="#" class="close" data-dismiss="alert">x</a>
+		{$msgUpgradePlugin}
+    </div>

@@ -63,10 +63,8 @@ class ApiServer extends SiteBaseAction
 		if($message !== null) $response['message'] = (string) $message;
 		if($data != null) $response['data'] = $data;
 
-		// set headers
-		SpoonHTTP::setHeaders('Content-type: application/json');
-
 		// output
+		SpoonHTTP::setHeaders('Content-type: application/json');
 		echo json_encode($response);
 		exit;
 	}

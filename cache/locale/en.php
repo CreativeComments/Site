@@ -107,6 +107,7 @@ $msg['PluginNotInstalled'] = '<p>Lorem ipsum dolor sit amet, consectetur adipisi
 $msg['OldBrowserWarning'] = '<strong>Warning:</strong> You are using an older browser. If you want to see the site as it is intended, you may want to download a new version or a decent browser like <a href="http://www.getfirefox.com">Firefox</a>.';
 $msg['Required'] = 'Required';
 $msg['ReportBug'] = 'Report a bug';
+$msg['UpgradePlugin'] = 'It seems you have an outdated version of the plugin, <a href="/en/pages/plugins">download the latest version</a>.';
 $msg['UsersAdd'] = 'Add a user';
 $msg['UsersAdded'] = 'The user %1$s has been added.';
 $msg['UsersEdit'] = 'Edit %1$s';
