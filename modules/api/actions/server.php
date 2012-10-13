@@ -89,8 +89,38 @@ class ApiServer extends SiteBaseAction
 	}
 }
 
+class commentsApi
+{
+	/**
+	 * Add a comment
+	 *
+	 * @param array $args
+	 * @return bool|Comment
+	 */
+	public static function add($args)
+	{
+		if(!isset($args['access_token']) || $args['access_token'] == '') throw new Exception('no access_token');
+		if(!isset($args['text']) || $args['text'] == '') throw new Exception('no text');
+
+		$user = User::getByAccessToken($args['access_token']);
+		if(!$user) throw new Exception('invalid access_token');
+
+		$comment = new Comment();
+		$comment->text = $args['text'];
+		$comment->save();
+
+		return $comment;
+	}
+}
+
 class UsersApi
 {
+	/**
+	 * Check if a user is logged in
+	 *
+	 * @param array $args
+	 * @return array
+	 */
 	public static function isLoggedIn($args)
 	{
 		if(!isset($args['access_token']) || $args['access_token'] == '') throw new Exception('no access_token');
