@@ -36,6 +36,11 @@ class ApiServer extends SiteBaseAction
 
 		try
 		{
+			if($chunks[0] == 'users')
+			{
+				$parameters['userObject'] = $this->currentUser;
+			}
+
 			$data = call_user_func(array($chunks[0] . 'Api', mb_strtolower($chunks[1])), $parameters);
 			$this->outputSuccess('ok', $data);
 		}
@@ -124,13 +129,16 @@ class UsersApi
 	 */
 	public static function isLoggedIn($args)
 	{
-		if(!isset($args['access_token']) || $args['access_token'] == '') throw new Exception('no access_token');
+		if(!isset($args['access_token'])) throw new Exception('no access_token');
+		if($args['access_token'] == 'undefined') $args['access_token'] = '';
+		if($args['access_token'] == '' && $args['userObject'] === false) throw new Exception('invalid access_token');
+		elseif($args['access_token'] == '' && $args['userObject'] !== false) $user = $args['userObject'];
+		else $user = User::getByAccessToken($args['access_token']);
 
-		$user = User::getByAccessToken($args['access_token']);
 		if(!$user) throw new Exception('invalid access_token');
 
 		// @todo	user returnen zodat we kunnen tonen als welke Creative Comments gebruiker ze zijn ingelogd.
 
-		return array('access_token' => $user->accessToken);
+		return $user->toArray();
 	}
 }
