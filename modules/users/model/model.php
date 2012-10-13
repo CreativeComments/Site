@@ -224,9 +224,11 @@ class User
 	public function save()
 	{
 		$this->editedOn = new DateTime();
+		if($this->accessToken == '') $this->accessToken = md5($this->secret . uniqid());
 
 		// build record
 		$item['facebook_id'] = $this->facebookId;
+		$item['access_token'] = $this->accessToken;
 		$item['name'] = $this->name;
 		$item['email'] = $this->email;
 		$item['secret'] = $this->secret;

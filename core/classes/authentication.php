@@ -67,6 +67,8 @@ class Authentication
 
 			// recall
 			self::getLoggedInUser();
+
+			return $user;
 		}
 	}
 
@@ -94,7 +96,7 @@ class Authentication
 		if($data === null)
 		{
 			// check if the user is logged in through Facebook
-			self::getFacebookUser();
+			return self::getFacebookUser();
 		}
 
 		// any data?
