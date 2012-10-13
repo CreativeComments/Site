@@ -346,20 +346,17 @@ jsSite.creativeComments =
 {
 	init: function()
 	{
-		$(window).on('cco:loaded', function(e, f) {
+		$(window).on('cco:loaded', function() {
 			$('#pluginNotInstalled').hide();
 
 			$.ajax({
 				url: '/ajax.php?module=plugins&action=versions&language=' + jsSite.current.language,
 				success: function(data, textStatus, jqXHR)
 				{
-					console.log(data.data.chrome.latest.version);
-					console.log(window.CC.data.version);
-
 					if($.browser.chrome && data.data.chrome.latest.version != window.CC.data.version) $('#upgradeBar').show();
 					if($.browser.mozilla && data.data.mozilla.latest.version != window.CC.data.version) $('#upgradeBar').show();
 					if($.browser.safari && data.data.safari.latest.version != window.CC.data.version) $('#upgradeBar').show();
-				},
+				}
 			});
 		});
 	}
