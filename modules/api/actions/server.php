@@ -105,6 +105,7 @@ class commentsApi
 		$user = User::getByAccessToken($args['access_token']);
 		if(!$user) throw new Exception('invalid access_token');
 
+		// @todo	prevent XSS
 		$comment = new Comment();
 		$comment->text = $args['text'];
 		$comment->save();

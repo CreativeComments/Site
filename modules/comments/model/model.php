@@ -73,6 +73,7 @@ class Comment
 		if(isset($data['id']))
 		{
 			$this->id = (int) $data['id'];
+			$this->fullUrl = Spoon::get('url')->buildUrl('detail', 'comments') . '/' . $this->id;
 		}
 		if(isset($data['text'])) $this->text = (string) $data['text'];
 		if(isset($data['created_on'])) $this->createdOn = new DateTime('@' . $data['created_on']);

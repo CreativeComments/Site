@@ -4,12 +4,12 @@
  * CommentsDetail
  *
  * @package		comments
- * @subpackage	detail
+ * @subpackage	report
  *
  * @author 		Tijs Verkoyen <tijs@sumocoders.be>
  * @since		1.0
  */
-class CommentsDetail extends SiteBaseAction
+class CommentsReport extends SiteBaseAction
 {
 	/**
 	 * @var Comment
@@ -27,22 +27,7 @@ class CommentsDetail extends SiteBaseAction
 		$this->item = Comment::get($id);
 		if(!$this->item) $this->redirect($this->url->buildUrl('index', null, null, array('error' => 'invalid-record')));
 
-		// parse
-		$this->parseReports();
-		$this->parse();
-
-		// display the page
-		$this->display();
-	}
-
-	/**
-	 * Parse
-	 *
-	 * @return void
-	 */
-	private function parse()
-	{
-		// @todo	parse meta/open graph data
-		$this->tpl->assign('item', $this->item->toArray());
+		// @todo	send a mail
+		$this->redirect($this->item->fullUrl . '?report=reported');
 	}
 }
