@@ -271,6 +271,7 @@ class User
 	{
 		// build array
 		$item['id'] = $this->id;
+		$item['accessToken'] = $this->accessToken;
 		$item['facebookId'] = $this->facebookId;
 		$item['name'] = $this->name;
 		$item['email'] = $this->email;
