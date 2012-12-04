@@ -109,9 +109,23 @@ class commentsApi
 		if(!$user) throw new Exception('invalid access_token');
 
 		// @todo	prevent XSS
+		// @todo	link to a user
 		$comment = new Comment();
 		$comment->text = $args['text'];
 		$comment->save();
+
+		return $comment;
+	}
+
+	public static function get($args)
+	{
+		if(!isset($args['access_token']) || $args['access_token'] == '') throw new Exception('no access_token');
+		if(!isset($args['id']) || $args['id'] == '') throw new Exception('no id');
+
+		$user = User::getByAccessToken($args['access_token']);
+		if(!$user) throw new Exception('invalid access_token');
+
+		$comment = Comment::get($args['id']);
 
 		return $comment;
 	}
