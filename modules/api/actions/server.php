@@ -129,6 +129,21 @@ class commentsApi
 
 		return $comment;
 	}
+
+	public static function uploadvideo($args)
+	{
+		if(!isset($args['raw'])) throw new Exception('no data');
+
+		$splitString = 'data:image/png;base64,';
+		$images = explode($splitString, substr($args['raw'], strlen($splitString)));
+
+		foreach($images as $i => $image)
+		{
+
+		}
+
+		return $images;
+	}
 }
 
 class UsersApi
