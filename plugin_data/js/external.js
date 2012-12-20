@@ -12,4 +12,3 @@ function Nimbb_stateChanged(idPlayer, state)
 {
 	CC.instance.video.stateChange(state);
 }
-
