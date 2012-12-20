@@ -103,7 +103,6 @@ class commentsApi
 	public static function add($args)
 	{
 		if(!isset($args['access_token']) || $args['access_token'] == '') throw new Exception('no access_token');
-		if(!isset($args['text']) || $args['text'] == '') throw new Exception('no text');
 
 		$user = User::getByAccessToken($args['access_token']);
 		if(!$user) throw new Exception('invalid access_token');
@@ -111,12 +110,19 @@ class commentsApi
 		// @todo	prevent XSS
 		// @todo	link to a user
 		$comment = new Comment();
-		$comment->text = $args['text'];
+		if(isset($args['text']) || $args['text'] == '') $comment->text = $args['text'];
+		if(isset($args['video_id']) || $args['video_id'] == '') $comment->videoId = $args['video_id'];
 		$comment->save();
 
 		return $comment;
 	}
 
+	/**
+	 * Get a comment
+	 *
+	 * @param $args
+	 * @return bool|Comment
+	 */
 	public static function get($args)
 	{
 		if(!isset($args['access_token']) || $args['access_token'] == '') throw new Exception('no access_token');
@@ -128,21 +134,6 @@ class commentsApi
 		$comment = Comment::get($args['id']);
 
 		return $comment;
-	}
-
-	public static function uploadvideo($args)
-	{
-		if(!isset($args['raw'])) throw new Exception('no data');
-
-		$splitString = 'data:image/png;base64,';
-		$images = explode($splitString, substr($args['raw'], strlen($splitString)));
-
-		foreach($images as $i => $image)
-		{
-
-		}
-
-		return $images;
 	}
 }
 
