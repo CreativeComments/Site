@@ -108,8 +108,8 @@ class commentsApi
 		if(!$user) throw new Exception('invalid access_token');
 
 		// @todo	prevent XSS
-		// @todo	link to a user
 		$comment = new Comment();
+		$comment->userId = $user->id;
 		if(isset($args['text']) || $args['text'] == '') $comment->text = $args['text'];
 		if(isset($args['video_id']) || $args['video_id'] == '') $comment->videoId = $args['video_id'];
 		$comment->save();
