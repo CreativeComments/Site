@@ -23,7 +23,7 @@ class Comment
 	 *
 	 * @var	string
 	 */
-	public $fullUrl, $text;
+	public $fullUrl, $text, $videoId;
 
 	/**
 	 * DateTime properties
@@ -76,6 +76,7 @@ class Comment
 			$this->fullUrl = Spoon::get('url')->buildUrl('detail', 'comments') . '/' . $this->id;
 		}
 		if(isset($data['text'])) $this->text = (string) $data['text'];
+		if(isset($data['video_id'])) $this->videoId = (string) $data['video_id'];
 		if(isset($data['created_on'])) $this->createdOn = new DateTime('@' . $data['created_on']);
 		if(isset($data['edited_on'])) $this->editedOn = new DateTime('@' . $data['edited_on']);
 	}
@@ -91,6 +92,7 @@ class Comment
 
 		// build record
 		$item['text'] = $this->text;
+		$item['video_id'] = $this->videoId;
 		$item['edited_on'] = Site::getUTCDate('Y-m-d H:i:s', $this->editedOn->getTimestamp());
 
 		// non existing
@@ -118,6 +120,7 @@ class Comment
 		// build array
 		$item['id'] = $this->id;
 		$item['text'] = $this->text;
+		$item['videoId'] = $this->videoId;
 		$item['createdOn'] = ($this->createdOn !== null) ? $this->createdOn->getTimestamp() : null;
 		$item['editedOn'] = ($this->editedOn !== null) ? $this->editedOn->getTimestamp() : null;
 
