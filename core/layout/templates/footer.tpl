@@ -1,8 +1,7 @@
 <footer id="footer" class="container-fluid">
 	<div class="row-fluid">
 		<div id="credits" class="span3">
-			{* @todo replace the ... with the name of the application as a nice and url-compatible string *}
-			<a href="http://www.sumocoders.be/?utm_source=...&amp;utm_medium=credits&amp;utm_campaign=client_sites" rel="external">
+			<a href="http://www.sumocoders.be/?utm_source=creative_comments&amp;utm_medium=credits&amp;utm_campaign=client_sites" rel="external">
 				SumoCoders
 			</a>
 		</div>

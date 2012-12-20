@@ -21,9 +21,9 @@
 				</div>
 			{/option:currentUser}
 			{option:!currentUser}
-                <a href="#" class="btn btn-inverse facebookRegister">
-                    Sign up with Facebook{* @todo locale *}
-                </a>
+				<a href="#" class="btn btn-inverse facebookRegister">
+					{$msgUsersSignUpWithFacebook}
+				</a>
 			{/option:!currentUser}
 		</div>
 	</div>

@@ -117,4 +117,5 @@ $msg['UsersLoggedInAs'] = 'You are logged in as <strong>%1$s</strong>';
 $msg['UsersLoggedOut'] = 'You have been signed out';
 $msg['UsersNoItems'] = 'No users yet.';
 $msg['UsersNoCreativeComments'] = 'No Creative Comments so far, go and create on <a href="https://www.facebook.com">Facebook</a>.';
+$msg['UsersSignUpWithFacebook'] = 'Sign up with Facebook';
 $msg['UsersYourCreativeComments'] = 'Your Creative Comments so far';
