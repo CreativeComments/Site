@@ -11,11 +11,23 @@
 		{/option:report}
 
 		<section id="{$MODULE}" class="{$ACTION} row-fluid">
-			<div class="span12 well">
+			<div class="span12">
+				{option:item.videoId}
+					<div class="well">
+						<object id="videoplayer" width="600" height="450">
+							<param name="movie" value="http://player.nimbb.com/nimbb.swf?guid={$item.videoId}&lang=en&autoplay=1" />
+							<param name="allowScriptAccess" value="always" />
+							<embed name="nimbb" src="http://player.nimbb.com/nimbb.swf?guid={$item.videoId}&lang=en&autoplay=1" width="320" height="240" allowScriptAccess="always" type="application/x-shockwave-flash">
+							</embed>
+						</object>
+					</div>
+				{/option:item.videoId}
 				{option:item.text}
-					<blockquote>
-						{$item.text}
-					</blockquote>
+					<div class="well">
+						<blockquote>
+							{$item.text}
+						</blockquote>
+					</div>
 				{/option:item.text}
 			</div>
 		</section>
