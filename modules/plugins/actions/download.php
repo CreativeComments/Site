@@ -22,9 +22,9 @@ class PluginsDownload extends SiteBaseAction
 		$allowedBrowsers = array_keys($allowedVersions);
 
 		$browser = mb_strtolower(SpoonFilter::getGetValue('browser', $allowedBrowsers, ''));
-		if($browser == '') $this->redirect($this->url->buildUrl('index', 'error', null, array('code' => 404, 'message' => 'file-not-found')));
+		if($browser == '') $this->redirect($this->url->buildUrl('index', 'error', null, array('code' => 404, 'message' => 'file-not-found', 'type' => 'browser')));
 		$version = SpoonFilter::getGetValue('version', array_keys($allowedVersions[$browser]), '');
-		if($version == '') $this->redirect($this->url->buildUrl('index', 'error', null, array('code' => 404, 'message' => 'file-not-found')));
+		if($version == '') $this->redirect($this->url->buildUrl('index', 'error', null, array('code' => 404, 'message' => 'file-not-found', 'type' => 'version')));
 
 		// output the file
 		$this->redirect($allowedVersions[$browser][$version]['url']);
