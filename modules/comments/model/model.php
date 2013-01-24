@@ -275,6 +275,8 @@ class Comment
 		$item['user_id'] = $this->getUserId();
 		$item['text'] = $this->getText();
 		$item['videoId'] = $this->getVideoId();
+		$item['youtube'] = $this->getYoutube();
+		$item['slideshare'] = $this->getSlideshare();
 		$item['createdOn'] = ($this->createdOn !== null) ? $this->createdOn->getTimestamp() : null;
 		$item['editedOn'] = ($this->editedOn !== null) ? $this->editedOn->getTimestamp() : null;
 
