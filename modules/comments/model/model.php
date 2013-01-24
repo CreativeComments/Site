@@ -117,6 +117,9 @@ class Comment
 	 */
 	public function setText($text)
 	{
+		$text = trim($text, '<br>');
+		if($text == '') $text = null;
+
 		$this->text = $text;
 	}
 
