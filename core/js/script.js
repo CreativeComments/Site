@@ -199,7 +199,6 @@ jsSite.bugs = {
 }
 
 jsSite.forms = {
-{
 	init: function() {
 		$('form').on('submit', function(e) { $('#ajaxSpinner').show(); });
 		jsSite.forms.datefields();
