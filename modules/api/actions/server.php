@@ -110,8 +110,8 @@ class commentsApi
 		// @todo	prevent XSS
 		$comment = new Comment();
 		$comment->userId = $user->id;
-		if(isset($args['text']) || $args['text'] == '') $comment->text = $args['text'];
-		if(isset($args['video_id']) || $args['video_id'] == '') $comment->videoId = $args['video_id'];
+		if(isset($args['text']) && $args['text'] != '') $comment->text = $args['text'];
+		if(isset($args['video_id']) && $args['video_id'] != '') $comment->videoId = $args['video_id'];
 		$comment->save();
 
 		return $comment;
