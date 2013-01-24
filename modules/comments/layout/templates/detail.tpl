@@ -29,6 +29,16 @@
 						</blockquote>
 					</div>
 				{/option:item.text}
+				{option:item.youtube}
+					<div class="well">
+						{$item.youtube}
+					</div>
+				{/option:item.youtube}
+				{option:item.slideshare}
+					<div class="well">
+						{$item.slideshare}
+					</div>
+				{/option:item.slideshare}
 			</div>
 		</section>
 
