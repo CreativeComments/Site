@@ -44,7 +44,6 @@ define('SITE_DEFAULT_TITLE', '<name>'); // @todo	correct title
 // the url
 define('SITE_URL', 'http://' . SITE_DOMAIN);
 
-
 /**
  * Path configuration
  *
@@ -54,3 +53,9 @@ define('SITE_URL', 'http://' . SITE_DOMAIN);
 define('PATH_WWW', realpath(dirname(__FILE__) . '/../'));
 // path to the library
 define('PATH_LIBRARY', realpath(dirname(__FILE__)));
+
+/**
+ * Errbit configuration
+ */
+define('ERRBIT_API_KEY', '');
+require_once PATH_LIBRARY . '/external/sumo.php';
