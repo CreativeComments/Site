@@ -33,6 +33,117 @@ class Comment
 	public $createdOn, $editedOn;
 
 	/**
+	 * @param \DateTime $createdOn
+	 */
+	public function setCreatedOn($createdOn)
+	{
+		$this->createdOn = $createdOn;
+	}
+
+	/**
+	 * @return \DateTime
+	 */
+	public function getCreatedOn()
+	{
+		return $this->createdOn;
+	}
+
+	/**
+	 * @param \DateTime $editedOn
+	 */
+	public function setEditedOn($editedOn)
+	{
+		$this->editedOn = $editedOn;
+	}
+
+	/**
+	 * @return \DateTime
+	 */
+	public function getEditedOn()
+	{
+		return $this->editedOn;
+	}
+
+	/**
+	 * @param string $fullUrl
+	 */
+	public function setFullUrl($fullUrl)
+	{
+		$this->fullUrl = $fullUrl;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getFullUrl()
+	{
+		return $this->fullUrl;
+	}
+
+	/**
+	 * @param int $id
+	 */
+	public function setId($id)
+	{
+		$this->id = $id;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getId()
+	{
+		return $this->id;
+	}
+
+	/**
+	 * @param string $text
+	 */
+	public function setText($text)
+	{
+		$this->text = $text;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getText()
+	{
+		return $this->text;
+	}
+
+	/**
+	 * @param int $userId
+	 */
+	public function setUserId($userId)
+	{
+		$this->userId = $userId;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function getUserId()
+	{
+		return $this->userId;
+	}
+
+	/**
+	 * @param string $videoId
+	 */
+	public function setVideoId($videoId)
+	{
+		$this->videoId = $videoId;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getVideoId()
+	{
+		return $this->videoId;
+	}
+
 	 * Get a comment
 	 *
 	 * @param int $id		The id of the comment.
