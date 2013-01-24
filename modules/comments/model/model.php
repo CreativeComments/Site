@@ -269,9 +269,9 @@ class Comment
 	{
 		// build array
 		$item['id'] = $this->id;
-		$item['user_id'] = $this->userId;
-		$item['text'] = $this->text;
-		$item['videoId'] = $this->videoId;
+		$item['user_id'] = $this->getUserId();
+		$item['text'] = $this->getText();
+		$item['videoId'] = $this->getVideoId();
 		$item['createdOn'] = ($this->createdOn !== null) ? $this->createdOn->getTimestamp() : null;
 		$item['editedOn'] = ($this->editedOn !== null) ? $this->editedOn->getTimestamp() : null;
 
