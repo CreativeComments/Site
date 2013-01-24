@@ -23,7 +23,7 @@ class Comment
 	 *
 	 * @var	string
 	 */
-	public $fullUrl, $text, $videoId;
+	public $fullUrl, $text, $videoId, $youtube, $slideshare;
 
 	/**
 	 * DateTime properties
@@ -97,6 +97,22 @@ class Comment
 	}
 
 	/**
+	 * @param string $slideshare
+	 */
+	public function setSlideshare($slideshare)
+	{
+		$this->slideshare = $slideshare;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getSlideshare()
+	{
+		return $this->slideshare;
+	}
+
+	/**
 	 * @param string $text
 	 */
 	public function setText($text)
@@ -144,6 +160,23 @@ class Comment
 		return $this->videoId;
 	}
 
+	/**
+	 * @param string $youtube
+	 */
+	public function setYoutube($youtube)
+	{
+		$this->youtube = $youtube;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getYoutube()
+	{
+		return $this->youtube;
+	}
+
+	/**
 	 * Get a comment
 	 *
 	 * @param int $id		The id of the comment.
@@ -189,6 +222,8 @@ class Comment
 		if(isset($data['user_id'])) $this->userId = (int) $data['user_id'];
 		if(isset($data['text'])) $this->text = (string) $data['text'];
 		if(isset($data['video_id'])) $this->videoId = (string) $data['video_id'];
+		if(isset($data['youtube'])) $this->youtube = (string) $data['youtube'];
+		if(isset($data['slideshare'])) $this->slideshare = (string) $data['slideshare'];
 		if(isset($data['created_on'])) $this->createdOn = new DateTime('@' . $data['created_on']);
 		if(isset($data['edited_on'])) $this->editedOn = new DateTime('@' . $data['edited_on']);
 	}
@@ -206,6 +241,8 @@ class Comment
 		$item['user_id'] = $this->userId;
 		$item['text'] = $this->text;
 		$item['video_id'] = $this->videoId;
+		$item['youtube'] = $this->youtube;
+		$item['slideshare'] = $this->slideshare;
 		$item['edited_on'] = Site::getUTCDate('Y-m-d H:i:s', $this->editedOn->getTimestamp());
 
 		// non existing
