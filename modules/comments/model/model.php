@@ -23,7 +23,7 @@ class Comment
 	 *
 	 * @var	string
 	 */
-	public $fullUrl, $text, $videoId, $youtube, $slideshare;
+	public $fullUrl, $text, $videoId, $youtube, $slideshare, $url, $dropbox;
 
 	/**
 	 * DateTime properties
@@ -46,6 +46,22 @@ class Comment
 	public function getCreatedOn()
 	{
 		return $this->createdOn;
+	}
+
+	/**
+	 * @param string $dropbox
+	 */
+	public function setDropbox($dropbox)
+	{
+		$this->dropbox = $dropbox;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getDropbox()
+	{
+		return $this->dropbox;
 	}
 
 	/**
@@ -148,6 +164,22 @@ class Comment
 	}
 
 	/**
+	 * @param string $url
+	 */
+	public function setUrl($url)
+	{
+		$this->url = $url;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getUrl()
+	{
+		return $this->url;
+	}
+
+	/**
 	 * @param string $videoId
 	 */
 	public function setVideoId($videoId)
@@ -227,6 +259,8 @@ class Comment
 		if(isset($data['video_id'])) $this->videoId = (string) $data['video_id'];
 		if(isset($data['youtube'])) $this->youtube = (string) $data['youtube'];
 		if(isset($data['slideshare'])) $this->slideshare = (string) $data['slideshare'];
+		if(isset($data['url'])) $this->url = (string) $data['url'];
+		if(isset($data['dropbox'])) $this->dropbox = (string) $data['dropbox'];
 		if(isset($data['created_on'])) $this->createdOn = new DateTime('@' . $data['created_on']);
 		if(isset($data['edited_on'])) $this->editedOn = new DateTime('@' . $data['edited_on']);
 	}
@@ -246,6 +280,8 @@ class Comment
 		$item['video_id'] = $this->videoId;
 		$item['youtube'] = $this->youtube;
 		$item['slideshare'] = $this->slideshare;
+		$item['url'] = $this->url;
+		$item['dropbox'] = $this->dropbox;
 		$item['edited_on'] = Site::getUTCDate('Y-m-d H:i:s', $this->editedOn->getTimestamp());
 
 		// non existing
@@ -277,6 +313,8 @@ class Comment
 		$item['videoId'] = $this->getVideoId();
 		$item['youtube'] = $this->getYoutube();
 		$item['slideshare'] = $this->getSlideshare();
+		$item['url'] = $this->getUrl();
+		$item['dropbox'] = $this->getDropbox();
 		$item['createdOn'] = ($this->createdOn !== null) ? $this->createdOn->getTimestamp() : null;
 		$item['editedOn'] = ($this->editedOn !== null) ? $this->editedOn->getTimestamp() : null;
 
