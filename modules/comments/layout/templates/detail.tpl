@@ -39,6 +39,16 @@
 						{$item.slideshare}
 					</div>
 				{/option:item.slideshare}
+				{option:item.url}
+					<div class="well">
+						<a href="{$item.url}">{$item.url}</a>
+					</div>
+				{/option:item.url}
+				{option:item.dropbox}
+					<div class="well">
+						<a href="{$item.dropbox}">{$item.dropbox}</a>
+					</div>
+				{/option:item.dropbox}
 			</div>
 		</section>
 
