@@ -1,14 +1,12 @@
-function Nimbb_videoSaved(idPlayer)
-{
+function Nimbb_videoSaved(idPlayer) {
 	CC.instance.video.saved(document.getElementById(idPlayer).getGuid());
 }
-
-function Nimbb_recordingStopped(idPlayer)
-{
+function Nimbb_recordingStopped(idPlayer) {
 	document.getElementById(idPlayer).saveVideo();
 }
-
-function Nimbb_stateChanged(idPlayer, state)
-{
+function Nimbb_stateChanged(idPlayer, state) {
 	CC.instance.video.stateChange(state);
+}
+function Nimbb_initCompleted(idPlayer) {
+	CC.instance.video.privacy();
 }
