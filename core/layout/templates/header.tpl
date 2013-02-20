@@ -9,8 +9,29 @@
 					</a>
 				</h1>
 			</div>
+			
+			<div class="span6 offset1">
+				<div class="row-fluid">
+					<div class="span3">
+						<a href="#">
+							English
+						</a>
+					</div>
+					<div class="span3">
+						<a href="#">
+							About
+						</a>
+					</div>
+					<div class="span6">
+						<a href="#">
+							Sign in
+						</a>
+					</div>
+				</div>
+			</div>
 	
-			<div class="span4">
+			<!--
+<div class="span4">
 				{option:currentUser}
 					<div id="user">
 						<p>
@@ -25,6 +46,7 @@
 					</a>
 				{/option:!currentUser}
 			</div>
+-->
 		</div>
 	</div>
 </div>
