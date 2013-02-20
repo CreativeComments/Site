@@ -1,0 +1,15 @@
+@mixin load-font($fontName, $fontFile, $weight: "normal", $style: "normal") {
+	@include font-face($fontName, 
+			font-files("#{$fontFile}.woff", 
+				"#{$fontFile}.ttf", 
+				"#{$fontFile}.svg##{$fontName}"),
+			"#{$fontFile}.eot",
+			$weight,
+			$style
+		 );
+}
+
+@include load-font("opensans-bold-webfont", "opensans-bold-webfont");
+@include load-font("opensans-semibold-webfont", "opensans-semibold-webfont");
+@include load-font("opensans-semibolditalic-webfont", "opensans-semibolditalic-webfont");
+@include load-font("opensans-regular-webfont", "opensans-regular-webfont");
