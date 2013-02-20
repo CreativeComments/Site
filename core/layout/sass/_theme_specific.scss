@@ -1,0 +1,17 @@
+body {
+	@include background(image-url("_bg_body.jpg"));
+	padding: 0;
+}
+
+#header {
+	background: #fff;
+	border-bottom: 1px solid #d9d9d9;
+	@include box-shadow(0 1px 0 0 rgba(255,255,255,0.6));
+	
+	.container{
+		//outline: 1px solid red;
+		
+		
+	}
+}
+

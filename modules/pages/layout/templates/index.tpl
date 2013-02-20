@@ -1,7 +1,7 @@
 {include:'{$CORE_PATH}/layout/templates/head.tpl'}
 {include:'{$CORE_PATH}/layout/templates/header.tpl'}
 
-	<div id="content" class="container-fluid">
+	<div id="content" class="container">
 		<section id="{$MODULE}" class="{$ACTION}">
 			{option:!currentUser}
 				<div class="row-fluid">
