@@ -1,7 +1,7 @@
 <div id="header">
 	<div class="container">
 		<div class="row-fluid">
-			<div class="span8">
+			<div class="span5">
 				<h1>
 					<a href="/" rel="home">
 						<!-- {$SITE_DEFAULT_TITLE} -->
