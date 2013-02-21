@@ -73,12 +73,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 					</div>
 				</div>
 			</div>
-			<div class="row-fluid">
+			<div class="row-fluid itemGrid">
 				<div class="span4 item">
-					<div class="video">
-						<p>
-							Hier komt video
-						</p>
+					<div class="videoHolder">
+						<div class="video">
+							<p>
+								@todo Tys video
+							</p>
+						</div>
 					</div>
 					<header>
 						<h4>
@@ -87,11 +89,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 					</header>
 					<div class="user">
 						<div class="avatar">
+							<div class="top"></div>
+							<!-- @todo avatar hier plaatsen -->
+							<img src="https://si0.twimg.com/profile_images/1354981961/icon_08_01.png" alt="avatar">
 						</div>
 						<div class="content">
-							<p>
+							<a href="#">
 								Niels De Paepe
-							</p>
+							</a>
 							<time>
 								12 minutes ago
 							</time>
@@ -99,10 +104,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 					</div>
 				</div>
 				<div class="span4 item">
-					<div class="video">
-						<p>
-							Hier komt video
-						</p>
+					<div class="videoHolder">
+						<div class="video">
+							<p>
+								@todo Tys video
+							</p>
+						</div>
 					</div>
 					<header>
 						<h4>
@@ -111,11 +118,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 					</header>
 					<div class="user">
 						<div class="avatar">
+							<div class="top"></div>
+							<!-- @todo avatar hier plaatsen -->
+							<img src="https://si0.twimg.com/profile_images/1354981961/icon_08_01.png" alt="avatar">
 						</div>
 						<div class="content">
-							<p>
+							<a href="#">
 								Niels De Paepe
-							</p>
+							</a>
 							<time>
 								12 minutes ago
 							</time>
@@ -123,10 +133,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 					</div>
 				</div>
 				<div class="span4 item">
-					<div class="video">
-						<p>
-							Hier komt video
-						</p>
+					<div class="videoHolder">
+						<div class="video">
+							<p>
+								@todo Tys video
+							</p>
+						</div>
 					</div>
 					<header>
 						<h4>
@@ -135,11 +147,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 					</header>
 					<div class="user">
 						<div class="avatar">
+							<div class="top"></div>
+							<!-- @todo avatar hier plaatsen -->
 						</div>
 						<div class="content">
-							<p>
+							<a href="#">
 								Niels De Paepe
-							</p>
+							</a>
 							<time>
 								12 minutes ago
 							</time>
