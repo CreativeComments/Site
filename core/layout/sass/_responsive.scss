@@ -54,6 +54,18 @@
 			@include background(inline-image("svg/logo_footer.svg") no-repeat);
 			margin-top: 30px;
 		}
+		
+		.social {
+			
+			ul {
+				float: right;
+			}
+			
+			p {
+				margin-right: 5px;
+				float: right;
+			}
+		}
 	}
 }
 

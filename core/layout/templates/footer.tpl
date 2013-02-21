@@ -47,7 +47,7 @@
 				</ul>
 			</div>
 	
-			<div class="span3 social offset1">
+			<div class="span4 social">
 				<ul>
 					<li>	
 						<!-- @todo juiste url invullen -->
