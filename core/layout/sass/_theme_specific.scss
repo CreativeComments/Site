@@ -58,7 +58,57 @@ body {
 	}
 }
 
+#pages {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #d3d2d2;
+	@include box-shadow(0 1px 0 0 rgba(255,255,255,0.6));
+	
+	.container {
+		
+		.row-fluid {
+			
+			.intro {
+				
+				header {
+					margin-top: 20px;
+					
+					h2 {
+						color: #e5382f;
+						text-transform: uppercase;
+						line-height: 1.2em;
+						font-size: 28px;
+					}
+				}
+				
+				.facebookRegister {
+					width: 85%;
+					display: block;
+					margin: 20px auto 0;
+					background-color: #334f8a;
+					color: #fff;
+					@include text-shadow(none);
+					border: none;
+					@include box-shadow(0 2px 0 0 rgba(9,33,82,1));
+					font-size: 16px;
+					@include background(inline-image("svg/facebook.svg") no-repeat #334f8a);
+					background-position: 3px 0;
+					text-align: right;
+
+					strong {
+						font-family: $openSansBold;
+					}
+				}
+			}
+		}
+	}
+}
+
 #grid {
+
+	.subMenu {
+		
+	}
 	
 	.itemGrid {
 		

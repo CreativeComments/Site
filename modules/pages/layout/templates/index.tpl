@@ -12,7 +12,7 @@
 							</p>
 						</div>
 					</div>
-					<div class="span5">
+					<div class="span5 intro">
 						{option:!currentUser}
 						<header>
 						<h2>
@@ -25,7 +25,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 						</p>
 						<p>
 							<a href="#" class="btn btn-large facebookRegister">
-								Sign in with Facebook
+								Sign in with <strong>Facebook</strong>
 							</a>
 						</p>
 						{/option:!currentUser}

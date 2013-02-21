@@ -49,17 +49,20 @@
 	
 			<div class="span3 social offset1">
 				<ul>
-					<li>
+					<li>	
+						<!-- @todo juiste url invullen -->
 						<a href="#" class="google">
 							Google+
 						</a>
 					</li>
 					<li>
+						<!-- @todo juiste url invullen -->
 						<a href="#" class="facebook">
 							Facebook
 						</a>
 					</li>
 					<li>
+						<!-- @todo juiste url invullen -->
 						<a href="#" class="twitter">
 							Twitter
 						</a>

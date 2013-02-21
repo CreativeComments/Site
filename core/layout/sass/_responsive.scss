@@ -1,6 +1,22 @@
 /* tablets */
 @media (min-width: 767px) {
 
+
+#pages {
+	margin-bottom: 50px;
+
+	.container {
+		.row-fluid {
+			.intro {
+				.facebookRegister {
+					font-size: 18px;
+					margin: 20px 0 0 0;
+				}
+			}
+		}
+	}
+}
+
 #footer {
 
 	.row-fluid {
@@ -11,6 +27,24 @@
 			height: 80px;
 			@include background(inline-image("svg/logo_footer.svg") no-repeat);
 			margin-top: 30px;
+		}
+	}
+}
+
+}
+
+
+/* desktop */
+@media (min-width: 979px) {
+
+#pages {
+	.container {
+		.row-fluid {
+			.intro {
+				.facebookRegister {
+					text-align: center;
+				}
+			}
 		}
 	}
 }
