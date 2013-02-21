@@ -46,9 +46,23 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 						<p>
 							Sort by category
 						</p>
-						<a href="#" class="btn">
-							All
-						</a>
+						<div class="dropdown">
+							<a class="dropdown-toggle btn" data-toggle="dropdown" href="#">All<span class="icon"></span></a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+								<li>
+									<a href="#">Lorem</a>
+								</li>
+								<li>
+									<a href="#">Vulputate</a>
+								</li>
+								<li>
+									<a href="#">Dolor</a>
+								</li>
+								<li>
+									<a href="#">Consectetur</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 					<div class="span3 emotion">
 						<p>

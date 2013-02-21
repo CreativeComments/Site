@@ -13,14 +13,42 @@
 			<div class="span6 offset1">
 				<div class="row-fluid">
 					<div class="span3">
-						<a href="#">
-							English
-						</a>
+						<div class="dropdown">
+							<a class="dropdown-toggle language" data-toggle="dropdown" href="#">English<span class="icon"></span></a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+								<li>
+									<a href="#">Lorem</a>
+								</li>
+								<li>
+									<a href="#">Vulputate</a>
+								</li>
+								<li>
+									<a href="#">Dolor</a>
+								</li>
+								<li>
+									<a href="#">Consectetur</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 					<div class="span3">
-						<a href="#">
-							About
-						</a>
+						<div class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">About</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+								<li>
+									<a href="#">Lorem</a>
+								</li>
+								<li>
+									<a href="#">Vulputate</a>
+								</li>
+								<li>
+									<a href="#">Dolor</a>
+								</li>
+								<li>
+									<a href="#">Consectetur</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 					<div class="span6">
 						<a href="#">

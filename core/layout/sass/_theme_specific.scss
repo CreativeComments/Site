@@ -18,6 +18,7 @@ body {
 			
 			.span5 {
 				margin-top: 20px;
+				border-bottom: 1px solid #ededed;
 				
 				h1 {
 					
@@ -42,19 +43,31 @@ body {
 			}
 			
 			.span6 {
-				//text-align: center;
+
 				
-				/*
-.row-fluid {
+
+			.row-fluid {
 					
 					.span3 {
-						float: left;
-						width: 50%;
+						text-align: center;
+						margin-top: 10px;
+						border-bottom: 1px solid #ededed;
+						
+							.language {
+								//outline: 1px solid red;
+								padding-left: 20px;
+								@include clearfix;
+								
+								.icon {
+									
+								}
+								}
+							
+					
+						}
 					}
 				}
-*/
 			}
-		}
 	}
 }
 
