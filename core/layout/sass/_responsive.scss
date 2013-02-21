@@ -11,6 +11,7 @@
 			.span7 {
 				position: relative;
 				margin-top: 35px;
+				height: 305px;
 				
 				.graphic {
 					position: absolute;
@@ -71,6 +72,13 @@
 				}
 			}
 			.intro {
+			
+				header {
+				h2 {
+					font-size: 25px;
+					}
+				}
+
 				.facebookRegister {
 					text-align: center;
 				}
