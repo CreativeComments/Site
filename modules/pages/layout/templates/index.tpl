@@ -219,7 +219,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 						</div>
 					</div>
 				</div>
-				<div class="span4 add">
+				<div class="span4 ads">
 					<div class="addBlock">
 						<a href="#">
 							<img src="http://storage.googleapis.com/support-kms-prod/SNP_2665173_en_v0" alt="add">

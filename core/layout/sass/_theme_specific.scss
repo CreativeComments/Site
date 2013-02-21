@@ -135,11 +135,12 @@ body {
 			}
 		}
 		
-		.add {
+		.ads {
 			background: #fff;
 			border: 1px solid #d2d2d2;
 			@include box-shadow(0 1px 0 0 rgba(255,255,255,0.6));
 			overflow: hidden;
+			margin-bottom: 20px;
 			
 			.addBlock {
 				width: 300px;
@@ -151,3 +152,7 @@ body {
 	}
 }
 
+#footer {
+	background: #1f1f1f;
+	border-top: 1px solid #fafafa;
+}

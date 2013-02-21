@@ -1,22 +1,69 @@
-<footer id="footer" class="container-fluid">
-	<div class="row-fluid">
-		<div id="credits" class="span3">
-			<a href="http://www.sumocoders.be/?utm_source=creative_comments&amp;utm_medium=credits&amp;utm_campaign=client_sites" rel="external">
-				SumoCoders
-			</a>
-		</div>
-
-		<div id="legal" class="span4 content">
-			{$msgFooterDisclaimer}
-		</div>
-
-		<div id="feedback" class="span2">
-			<p>
-				<a id="reportBug" href="#" class="bug">
-					<i class="icon-bug"></i>
-					{$msgReportBug}
-				</a>
-			</p>
+<footer id="footer">
+	<div class="container">
+		<div class="row-fluid">
+			<div class="span2">
+				
+			</div>
+	
+			<div class="span3 offset1">
+				<h5>
+					Get started
+				</h5>
+				<ul>
+					<li>
+						<a href="#">Ullamcorper ipsum </a>
+					</li>
+					<li>
+						<a href="#">Cursus Cras Risus </a>
+					</li>
+					<li>
+						<a href="#">Bibendum Dapibus Adipiscing </a>
+					</li>
+					<li>
+						<a href="#">Mollis Pharetra Bibendum </a>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="span3">
+				<h5>
+					About us
+				</h5>
+				<ul>
+					<li>
+						<a href="#">Egestas Fusce </a>
+					</li>
+					<li>
+						<a href="#">Adipiscing Pharetra </a>
+					</li>
+					<li>
+						<a href="#">Sit Lorem Risus </a>
+					</li>
+					<li>
+						<a href="#">Cursus Sollicitudin Ultricies </a>
+					</li>
+				</ul>
+			</div>
+	
+			<div class="span3">
+				<ul>
+					<li>
+						<a href="#">
+							Google+
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Facebook
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Twitter
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </footer>
