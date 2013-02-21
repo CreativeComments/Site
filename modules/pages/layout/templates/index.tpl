@@ -36,37 +36,37 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 		</section>
 		<section id="grid" class="container">
 			<div class="subMenu">
-				<div class="row-fluid">
-					<div class="span3">
+				<div class="row-fluid menu">
+					<div class="span4 title">
 						<h3>
 							All comments
 						</h3>
 					</div>
-					<div class="span3 offset2">
+					<div class="span3 offset2 category">
 						<p>
 							Sort by category
-							<a href="#" class="btn">
-								All
-							</a>
 						</p>
+						<a href="#" class="btn">
+							All
+						</a>
 					</div>
-					<div class="span4">
+					<div class="span3 emotion">
 						<p>
 							Sort by emotion
 						</p>
 						<ul>
 							<li>
-								<a href="#">
+								<a href="#" class="sad">
 									sad
 								</a>
 							</li>
-							<li>
-								<a href="#">
-									glad
+							<li class="active">
+								<a href="#" class="normal">
+									normal
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="#" class="happy">
 									happy
 								</a>
 							</li>

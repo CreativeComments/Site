@@ -3,10 +3,12 @@
 
 
 #pages {
+	padding-bottom: 30px;
 	margin-bottom: 50px;
 
 	.container {
 		.row-fluid {
+			margin-top: 20px;
 		
 			.span7 {
 				position: relative;
@@ -78,6 +80,7 @@
 #pages {
 	.container {
 		.row-fluid {
+			
 			.span7	{
 				.graphic {
 					left: 0;
