@@ -74,7 +74,78 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 				</div>
 			</div>
 			<div class="row-fluid">
-				
+				<div class="span4 item">
+					<div class="video">
+						<p>
+							Hier komt video
+						</p>
+					</div>
+					<header>
+						<h4>
+							Ullamcorper Ornare Fringilla
+						</h4>
+					</header>
+					<div class="user">
+						<div class="avatar">
+						</div>
+						<div class="content">
+							<p>
+								Niels De Paepe
+							</p>
+							<time>
+								12 minutes ago
+							</time>
+						</div>
+					</div>
+				</div>
+				<div class="span4 item">
+					<div class="video">
+						<p>
+							Hier komt video
+						</p>
+					</div>
+					<header>
+						<h4>
+							Ullamcorper Ornare Fringilla
+						</h4>
+					</header>
+					<div class="user">
+						<div class="avatar">
+						</div>
+						<div class="content">
+							<p>
+								Niels De Paepe
+							</p>
+							<time>
+								12 minutes ago
+							</time>
+						</div>
+					</div>
+				</div>
+				<div class="span4 item">
+					<div class="video">
+						<p>
+							Hier komt video
+						</p>
+					</div>
+					<header>
+						<h4>
+							Ullamcorper Ornare Fringilla
+						</h4>
+					</header>
+					<div class="user">
+						<div class="avatar">
+						</div>
+						<div class="content">
+							<p>
+								Niels De Paepe
+							</p>
+							<time>
+								12 minutes ago
+							</time>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 
