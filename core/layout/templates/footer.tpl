@@ -1,11 +1,13 @@
 <footer id="footer">
 	<div class="container">
 		<div class="row-fluid">
-			<div class="span2">
-				
+			<div class="span2 hidden-phone">
+				<div class="logo">
+					Creative Comments
+				</div>
 			</div>
 	
-			<div class="span3 offset1">
+			<div class="span3 list">
 				<h5>
 					Get started
 				</h5>
@@ -25,7 +27,7 @@
 				</ul>
 			</div>
 			
-			<div class="span3">
+			<div class="span3 list">
 				<h5>
 					About us
 				</h5>
@@ -45,24 +47,27 @@
 				</ul>
 			</div>
 	
-			<div class="span3">
+			<div class="span3 social offset1">
 				<ul>
 					<li>
-						<a href="#">
+						<a href="#" class="google">
 							Google+
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="#" class="facebook">
 							Facebook
 						</a>
 					</li>
 					<li>
-						<a href="#">
+						<a href="#" class="twitter">
 							Twitter
 						</a>
 					</li>
 				</ul>
+				<p>
+					Follow us elsewhere
+				</p>
 			</div>
 		</div>
 	</div>

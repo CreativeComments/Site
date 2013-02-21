@@ -153,6 +153,96 @@ body {
 }
 
 #footer {
+	margin-top: 30px;
 	background: #1f1f1f;
 	border-top: 1px solid #fafafa;
+	padding-bottom: 50px;
+	
+	.row-fluid {
+
+		.list {
+			
+			h5 {
+				color: #fa5d54;
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+			
+			ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				
+				li {
+					
+					a {
+						color: #fff;
+						font-size: 12px;
+						
+						&:hover {
+							color: #e64239;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+		
+		.social {
+			margin-top: 40px;
+			
+			ul {
+				list-style: none;
+				margin: 0 0 20px 0;
+				padding: 0;
+				@include clearfix;
+				
+				li {
+					float: left;
+					margin-right: 10px;
+					
+					a {
+						width: 57px;
+						height: 55px;
+						
+						display: block;
+						@include squish-text;
+						background-position: -1px 0;
+						
+						&.google {
+							@include background(inline-image("svg/footer_google.svg") no-repeat);
+						}
+						
+						&.facebook {
+							@include background(inline-image("svg/footer_facebook.svg") no-repeat);
+						}
+						
+						&.twitter {
+							@include background(inline-image("svg/footer_twitter.svg") no-repeat);
+						}
+						
+						&:hover {
+							
+							&.google {
+								@include background(inline-image("svg/footer_google_hover.svg") no-repeat);
+							}
+							
+							&.facebook {
+							@include background(inline-image("svg/footer_facebook_hover.svg") no-repeat);
+							}
+							
+							&.twitter {
+							@include background(inline-image("svg/footer_twitter_hover.svg") no-repeat);
+						}
+						}
+					}
+				}
+			}
+			
+			p {
+				color: #fff;
+				font-size: 15px;
+			}
+		}
+	}
 }
