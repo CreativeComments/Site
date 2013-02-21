@@ -161,6 +161,159 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 					</div>
 				</div>
 			</div>
+			<div class="row-fluid itemGrid">
+				<div class="span4 item">
+					<div class="videoHolder">
+						<div class="video">
+							<p>
+								@todo Tys video
+							</p>
+						</div>
+					</div>
+					<header>
+						<h4>
+							Ullamcorper Ornare Fringilla
+						</h4>
+					</header>
+					<div class="user">
+						<div class="avatar">
+							<div class="top"></div>
+							<!-- @todo avatar hier plaatsen -->
+							<img src="https://si0.twimg.com/profile_images/1354981961/icon_08_01.png" alt="avatar">
+						</div>
+						<div class="content">
+							<a href="#">
+								Niels De Paepe
+							</a>
+							<time>
+								12 minutes ago
+							</time>
+						</div>
+					</div>
+				</div>
+				<div class="span4 item">
+					<div class="videoHolder">
+						<div class="video">
+							<p>
+								@todo Tys video
+							</p>
+						</div>
+					</div>
+					<header>
+						<h4>
+							Ullamcorper Ornare Fringilla
+						</h4>
+					</header>
+					<div class="user">
+						<div class="avatar">
+							<div class="top"></div>
+							<!-- @todo avatar hier plaatsen -->
+						</div>
+						<div class="content">
+							<a href="#">
+								Niels De Paepe
+							</a>
+							<time>
+								12 minutes ago
+							</time>
+						</div>
+					</div>
+				</div>
+				<div class="span4 add">
+					<div class="addBlock">
+						<a href="#">
+							<img src="http://storage.googleapis.com/support-kms-prod/SNP_2665173_en_v0" alt="add">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="row-fluid itemGrid">
+				<div class="span4 item">
+					<div class="videoHolder">
+						<div class="video">
+							<p>
+								@todo Tys video
+							</p>
+						</div>
+					</div>
+					<header>
+						<h4>
+							Ullamcorper Ornare Fringilla
+						</h4>
+					</header>
+					<div class="user">
+						<div class="avatar">
+							<div class="top"></div>
+							<!-- @todo avatar hier plaatsen -->
+						</div>
+						<div class="content">
+							<a href="#">
+								Niels De Paepe
+							</a>
+							<time>
+								12 minutes ago
+							</time>
+						</div>
+					</div>
+				</div>
+				<div class="span4 item">
+					<div class="videoHolder">
+						<div class="video">
+							<p>
+								@todo Tys video
+							</p>
+						</div>
+					</div>
+					<header>
+						<h4>
+							Ullamcorper Ornare Fringilla
+						</h4>
+					</header>
+					<div class="user">
+						<div class="avatar">
+							<div class="top"></div>
+							<!-- @todo avatar hier plaatsen -->
+							<img src="https://si0.twimg.com/profile_images/1354981961/icon_08_01.png" alt="avatar">
+						</div>
+						<div class="content">
+							<a href="#">
+								Niels De Paepe
+							</a>
+							<time>
+								12 minutes ago
+							</time>
+						</div>
+					</div>
+				</div>
+				<div class="span4 item">
+					<div class="videoHolder">
+						<div class="video">
+							<p>
+								@todo Tys video
+							</p>
+						</div>
+					</div>
+					<header>
+						<h4>
+							Ullamcorper Ornare Fringilla
+						</h4>
+					</header>
+					<div class="user">
+						<div class="avatar">
+							<div class="top"></div>
+							<!-- @todo avatar hier plaatsen -->
+						</div>
+						<div class="content">
+							<a href="#">
+								Niels De Paepe
+							</a>
+							<time>
+								12 minutes ago
+							</time>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
 
 		{include:'{$CORE_PATH}/layout/templates/footer.tpl'}
