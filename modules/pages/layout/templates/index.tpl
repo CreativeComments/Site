@@ -33,6 +33,50 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 				</div>
 			</div>
 		</section>
+		<section id="grid" class="container">
+			<div class="subMenu">
+				<div class="row-fluid">
+					<div class="span3">
+						<h3>
+							All comments
+						</h3>
+					</div>
+					<div class="span3 offset2">
+						<p>
+							Sort by category
+							<a href="#" class="btn">
+								All
+							</a>
+						</p>
+					</div>
+					<div class="span4">
+						<p>
+							Sort by emotion
+						</p>
+						<ul>
+							<li>
+								<a href="#">
+									sad
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									glad
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									happy
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row-fluid">
+				
+			</div>
+		</section>
 
 		{include:'{$CORE_PATH}/layout/templates/footer.tpl'}
 	</div>
