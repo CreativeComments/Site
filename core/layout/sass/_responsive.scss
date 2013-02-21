@@ -7,6 +7,31 @@
 
 	.container {
 		.row-fluid {
+		
+			.span7 {
+				position: relative;
+				margin-top: 35px;
+				
+				.graphic {
+					position: absolute;
+					width: 460px;
+					height: 295px;
+					left: -70px;
+	
+					@include background(inline-image("svg/graphic_intro.svg") no-repeat);
+					
+					a {
+						@include squish-text;
+						position: absolute;
+						display: block;
+						width: 164px;
+						height: 85px;
+						top: 82px;
+						left: 173px;
+					}
+				}
+			}
+		
 			.intro {
 				.facebookRegister {
 					font-size: 18px;
@@ -40,6 +65,11 @@
 #pages {
 	.container {
 		.row-fluid {
+			.span7	{
+				.graphic {
+					left: 0;
+				}
+			}
 			.intro {
 				.facebookRegister {
 					text-align: center;

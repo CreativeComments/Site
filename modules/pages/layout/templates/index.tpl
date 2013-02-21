@@ -7,9 +7,10 @@
 				<div class="row-fluid">
 					<div class="span7 hidden-phone">
 						<div class="graphic">
-							<p>
-								Hier komt illustratie
-							</p>
+							<a href="#">
+								<!-- @todo link naar creative comment -->
+								Creative comment
+							</a>
 						</div>
 					</div>
 					<div class="span5 intro">
