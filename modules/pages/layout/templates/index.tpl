@@ -14,6 +14,7 @@
 						</div>
 					</div>
 					<div class="span5 intro">
+						<!-- @todo tys nazien of option correct staat -->
 						{option:!currentUser}
 						<header>
 						<h2>
@@ -88,6 +89,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 					</div>
 				</div>
 			</div>
+			<!-- @todo tys drie items per row-fluid -->
 			<div class="row-fluid itemGrid">
 				<div class="span4 item">
 					<div class="videoHolder">
@@ -172,6 +174,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 							<a href="#">
 								Niels De Paepe
 							</a>
+							<!-- @todo tys correcte tijd toevoegen in time tag --> 
 							<time>
 								12 minutes ago
 							</time>
@@ -342,6 +345,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 		{include:'{$CORE_PATH}/layout/templates/footer.tpl'}
 	</div>
 	
+	<!-- uservoice -->
 	<script type="text/javascript">
   var uvOptions = {};
   (function() {
