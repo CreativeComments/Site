@@ -42,12 +42,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 							All comments
 						</h3>
 					</div>
-					<div class="span3 offset2 category">
+					<div class="span4 category">
 						<p>
 							Sort by category
 						</p>
 						<div class="dropdown">
-							<a class="dropdown-toggle btn" data-toggle="dropdown" href="#">All<span class="icon"></span></a>
+							<a class="dropdown-toggle btn" data-toggle="dropdown" href="#">Commodo Ridic<span class="icon"></span></a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 								<li>
 									<a href="#">Lorem</a>
@@ -64,7 +64,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 							</ul>
 						</div>
 					</div>
-					<div class="span3 emotion">
+					<div class="span4 emotion">
 						<p>
 							Sort by emotion
 						</p>

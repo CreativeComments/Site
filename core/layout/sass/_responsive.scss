@@ -45,6 +45,31 @@
 	}
 }
 
+#grid {
+	.subMenu {
+		.row-fluid {
+			.title {
+				margin-bottom: 0;
+				padding-bottom: 0;
+				border-bottom: none;
+				@include box-shadow(none);
+			}
+			
+			.category {
+				margin-bottom: 0;
+				padding-bottom: 0;
+				border-bottom: none;
+				@include box-shadow(none);
+				margin-top: 10px;
+			}
+			
+			.emotion {
+				margin-top: 10px;
+			}
+		}
+	}
+}
+
 #footer {
 
 	.row-fluid {
