@@ -1,0 +1,203 @@
+.ie8 {
+
+#header {
+	.container {
+		.row-fluid{
+			.span5 {
+				h1 {
+					a {
+						@include background(image-url("ie/logo.png") no-repeat);
+						background-position: left center;
+					}
+				}
+			}
+			
+			.span7 {
+				.row-fluid {
+					.span3 {
+						.language {
+							.world {
+								@include background(image-url("ie/menu_world.png") no-repeat);
+								margin-top: 2px;
+							}
+							.icon {
+								@include background(image-url("ie/select_icon.png") no-repeat);
+							}
+						}
+						
+						.about {
+							.about {
+								@include background(image-url("ie/menu_about.png") no-repeat);
+							}
+							.icon {
+								@include background(image-url("ie/select_icon.png") no-repeat);
+							}
+						}
+					}
+					.span6 {
+						.avatar {
+							@include background(image-url("ie/avatar.png") no-repeat);
+							background-position: center 40%;
+							
+							.top {
+								@include background(image-url("ie/avatar_top.png") no-repeat);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#pages {
+	.container {
+		.row-fluid {
+			.span7 {
+				.graphic {
+					@include background(image-url("ie/graphic_intro.png") no-repeat);
+				}
+			}
+			.intro {
+				.facebookRegister {
+					@include background(image-url("ie/facebook.png") no-repeat #334f8a);
+				background-position: 6px 0;
+				}
+			}
+		}
+	}
+}
+
+#grid {
+	.subMenu {
+		.row-fluid {
+			.title {
+				h3 {
+					@include background(image-url("ie/title_icon.png") no-repeat);
+					background-position: left center;
+				}
+			}
+			.category {
+				.dropdown {
+					.btn {
+						.icon {
+							@include background(image-url("ie/select_icon.png") no-repeat);
+						}
+					}
+				}
+			}
+			.emotion {
+				ul {
+					li {
+					
+						&.active {
+							a {
+								&.sad {
+								@include background(image-url("ie/sad_active.png") no-repeat);
+							}
+							&.normal {
+								@include background(image-url("ie/normal_active.png") no-repeat);
+							}
+							&.happy {
+								@include background(image-url("ie/happy_active.png") no-repeat);
+							}
+							}
+						}
+					
+					
+						a {
+							&.sad {
+								@include background(image-url("ie/sad.png") no-repeat);
+							}
+							&.normal {
+								@include background(image-url("ie/normal.png") no-repeat);
+							}
+							&.happy {
+								@include background(image-url("ie/happy.png") no-repeat);
+							}
+							
+							&:hover {
+								&.sad {
+								@include background(image-url("ie/sad_active.png") no-repeat);
+							}
+							&.normal {
+								@include background(image-url("ie/normal_active.png") no-repeat);
+							}
+							&.happy {
+								@include background(image-url("ie/happy_active.png") no-repeat);
+							}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.itemGrid {
+		.item {
+			.user {
+				
+				&.sad {
+					@include background(image-url("ie/sad.png") no-repeat);
+					background-position: 95% center;
+				}
+				
+				&.normal {
+					@include background(image-url("ie/normal.png") no-repeat);
+					background-position: 95% center;
+				}
+				
+				&.happy {
+					@include background(image-url("ie/happy.png") no-repeat);
+					background-position: 95% center;
+				}
+			
+				.avatar {
+					.top {
+						@include background(image-url("ie/avatar_top.png") no-repeat);
+					}
+				}
+			}
+		}
+	}
+}
+
+#footer {
+	.row-fluid {
+		.logo {
+			@include background(image-url("ie/logo_footer.png") no-repeat);
+		}
+		.social {
+			ul {
+				li {
+				margin-right: 5px;
+					a {
+						&.google {
+							@include background(image-url("ie/footer_google.png") no-repeat);
+						}
+						&.facebook {
+							@include background(image-url("ie/footer_facebook.png") no-repeat);
+						}
+						&.twitter {
+							@include background(image-url("ie/footer_twitter.png") no-repeat);
+						}
+						
+						&:hover {
+							&.google {
+							@include background(image-url("ie/footer_google_hover.png") no-repeat);
+						}
+						&.facebook {
+							@include background(image-url("ie/footer_facebook_hover.png") no-repeat);
+						}
+						&.twitter {
+							@include background(image-url("ie/footer_twitter_hover.png") no-repeat);
+						}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+}
