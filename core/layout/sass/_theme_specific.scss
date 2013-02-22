@@ -531,3 +531,23 @@ body {
 		}
 	}
 }
+
+.textPage {
+	margin-top: 30px;
+	h2 {
+		color: #000;
+	}
+	
+	h3 {
+		color: #4a4949;
+		line-height: 1.4em;
+	}
+	
+	a {
+		color: #cc2f28;
+		
+		&:hover {
+			color: #781b17;
+		}
+	}
+}
