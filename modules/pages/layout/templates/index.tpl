@@ -102,7 +102,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 							Ullamcorper Ornare Fringilla
 						</h4>
 					</header>
-					<div class="user">
+						<!-- @todo tys add class for emotion icon -->
+					<div class="user sad">
 						<div class="avatar">
 							<div class="top"></div>
 							<!-- @todo avatar hier plaatsen -->
@@ -131,7 +132,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 							Ullamcorper Ornare Fringilla
 						</h4>
 					</header>
-					<div class="user">
+					<!-- @todo tys add class for emotion icon -->
+					<div class="user happy">
 						<div class="avatar">
 							<div class="top"></div>
 							<!-- @todo avatar hier plaatsen -->
@@ -160,7 +162,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 							Ullamcorper Ornare Fringilla
 						</h4>
 					</header>
-					<div class="user">
+					<!-- @todo tys add class for emotion icon -->
+					<div class="user normal">
 						<div class="avatar">
 							<div class="top"></div>
 							<!-- @todo avatar hier plaatsen -->
@@ -190,7 +193,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 							Ullamcorper Ornare Fringilla
 						</h4>
 					</header>
-					<div class="user">
+					<!-- @todo tys add class for emotion icon -->
+					<div class="user sad">
 						<div class="avatar">
 							<div class="top"></div>
 							<!-- @todo avatar hier plaatsen -->
@@ -219,7 +223,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 							Ullamcorper Ornare Fringilla
 						</h4>
 					</header>
-					<div class="user">
+					<!-- @todo tys add class for emotion icon -->
+					<div class="user normal">
 						<div class="avatar">
 							<div class="top"></div>
 							<!-- @todo avatar hier plaatsen -->
@@ -256,7 +261,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 							Ullamcorper Ornare Fringilla
 						</h4>
 					</header>
-					<div class="user">
+					<!-- @todo tys add class for emotion icon -->
+					<div class="user happy">
 						<div class="avatar">
 							<div class="top"></div>
 							<!-- @todo avatar hier plaatsen -->
@@ -284,7 +290,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 							Ullamcorper Ornare Fringilla
 						</h4>
 					</header>
-					<div class="user">
+					<!-- @todo tys add class for emotion icon -->
+					<div class="user sad">
 						<div class="avatar">
 							<div class="top"></div>
 							<!-- @todo avatar hier plaatsen -->
@@ -313,7 +320,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non co
 							Ullamcorper Ornare Fringilla
 						</h4>
 					</header>
-					<div class="user">
+					<!-- @todo tys add class for emotion icon -->
+					<div class="user normal">
 						<div class="avatar">
 							<div class="top"></div>
 							<!-- @todo avatar hier plaatsen -->

@@ -283,6 +283,21 @@ body {
 				border-top: 1px solid #d2d2d2;
 				@include clearfix;
 				
+				&.sad {
+						@include background(inline-image("svg/sad.svg") no-repeat);
+					background-position: 95% center;
+					}
+					
+				&.normal {
+						@include background(inline-image("svg/normal.svg") no-repeat);
+					background-position: 95% center;
+					}
+					
+				&.happy {
+						@include background(inline-image("svg/happy.svg") no-repeat);
+					background-position: 95% center;
+					}
+				
 				.avatar {
 					width: 40px;
 					height: 40px;
@@ -303,6 +318,8 @@ body {
 				
 				.content {
 					float: left;
+					width: 70%;
+
 					
 					a {
 						margin: 0;
