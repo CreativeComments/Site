@@ -7,6 +7,12 @@
 			.span5 {
 				border-bottom: none;
 				margin-top: 0;
+				
+				h1 {
+					a {
+						margin: 0;
+					}
+				}
 			}
 			
 		.span7 {
@@ -49,7 +55,6 @@
 
 #pages {
 	padding-bottom: 30px;
-	margin-bottom: 50px;
 
 	.container {
 		.row-fluid {
@@ -91,6 +96,8 @@
 }
 
 #grid {
+	margin-top: 50px;
+	
 	.subMenu {
 		.row-fluid {
 			.title {
