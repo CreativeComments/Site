@@ -56,14 +56,12 @@
 						</a>
 					</li>
 					<li>
-						<!-- @todo juiste url invullen -->
-						<a href="#" class="facebook">
+						<a href="http://www.facebook.com/CreativeComments" class="facebook">
 							Facebook
 						</a>
 					</li>
 					<li>
-						<!-- @todo juiste url invullen -->
-						<a href="#" class="twitter">
+						<a href="https://twitter.com/c_comments" class="twitter">
 							Twitter
 						</a>
 					</li>
