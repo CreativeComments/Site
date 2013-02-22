@@ -10,11 +10,15 @@
 				</h1>
 			</div>
 			
-			<div class="span6 offset1">
+			<div class="span7">
 				<div class="row-fluid">
 					<div class="span3">
 						<div class="dropdown">
-							<a class="dropdown-toggle language" data-toggle="dropdown" href="#">English<span class="icon"></span></a>
+							<a class="dropdown-toggle language" data-toggle="dropdown" href="#">
+							<span class="world"></span>
+							English
+							<span class="icon"></span>
+							</a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 								<li>
 									<a href="#">Lorem</a>
@@ -33,7 +37,11 @@
 					</div>
 					<div class="span3">
 						<div class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#">About</a>
+							<a class="dropdown-toggle about" data-toggle="dropdown" href="#">
+							<span class="about"></span>
+							About
+							<span class="icon"></span>
+							</a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 								<li>
 									<a href="#">Lorem</a>
@@ -54,6 +62,10 @@
 						<a href="#">
 							Sign in
 						</a>
+						<div class="avatar">
+							<div class="top"></div>
+							<!-- @todo tys hier komt avatar image -->
+						</div>
 					</div>
 				</div>
 			</div>

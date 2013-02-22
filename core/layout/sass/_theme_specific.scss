@@ -42,28 +42,99 @@ body {
 				}
 			}
 			
-			.span6 {
-
-				
-
+			.span7 {
 			.row-fluid {
 					
 					.span3 {
-						text-align: center;
 						margin-top: 10px;
 						border-bottom: 1px solid #ededed;
 						
 							.language {
-								//outline: 1px solid red;
-								padding-left: 20px;
 								@include clearfix;
+								color: #9d9d9d;
+								display: block;
+							
+								.world {
+									float: left;
+									width: 20px;
+									height: 20px;
+									margin-right: 8px;
+									@include background(inline-image("svg/menu_world.svg") no-repeat);
+								}
 								
 								.icon {
-									
+								float: right;
+								width: 8px;
+								height: 5px;
+								@include background(inline-image("svg/select_icon.svg") no-repeat);
+								margin: 8px 10px 0 10px;
 								}
+								
+								&:hover {
+									text-decoration: none;
 								}
+								
+							}
 							
+							.about {
+								@include clearfix;
+								color: #9d9d9d;
+								display: block;
+								
+								.about {
+									float: left;
+									width: 20px;
+									height: 20px;
+									margin-right: 8px;
+									margin-top: 3px;
+									@include background(inline-image("svg/menu_about.svg") no-repeat);
+								}
+								
+								.icon {
+								float: right;
+								width: 8px;
+								height: 5px;
+								@include background(inline-image("svg/select_icon.svg") no-repeat);
+								margin: 8px 10px 0 10px;
+								}
+								
+								&:hover {
+									text-decoration: none;
+								}
+								
+							}
+						}
+					}
 					
+					.span6 {
+						@include clearfix;
+							margin: 10px 0;
+						
+						a {
+							margin-top: 8px;
+							float: left;
+							color: #9d9d9d;
+							
+							&:hover {
+								text-decoration: none;
+							}
+						}
+						
+						.avatar {
+							width: 40px;
+							height: 40px;
+							float: right;
+							@include background(inline-image("svg/avatar_bg.svg") no-repeat);
+							background-position: center 40%;
+							background-color: #ededed;
+							
+							.top {
+						position: absolute;
+						width: 40px;
+						height: 40px;
+						@include background(inline-image("svg/avatar_top.svg") no-repeat);
+						z-index: 1;
+							}
 						}
 					}
 				}
