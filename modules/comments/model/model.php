@@ -334,6 +334,7 @@ class Comment
 		$item['url'] = $this->getUrl();
 		$item['dropbox'] = $this->getDropbox();
 		$item['file'] = $this->getFile();
+		$item['fileUrl'] = ($this->getFile() != null) ? Site::getFilesUrl($this->getFile()) : null;
 		$item['createdOn'] = ($this->createdOn !== null) ? $this->createdOn->getTimestamp() : null;
 		$item['editedOn'] = ($this->editedOn !== null) ? $this->editedOn->getTimestamp() : null;
 

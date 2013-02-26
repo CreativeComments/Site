@@ -49,6 +49,11 @@
 						<a href="{$item.dropbox}">{$item.dropbox}</a>
 					</div>
 				{/option:item.dropbox}
+				{option:item.file}
+					<div class="well">
+						<a href="{$item.fileUrl}">{$lblDownload|ucfirst}</a>
+					</div>
+				{/option:item.file}
 			</div>
 		</section>
 

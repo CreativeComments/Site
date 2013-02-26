@@ -28,6 +28,7 @@ $lbl['Cancel'] = 'cancel';
 $lbl['Close'] = 'close';
 $lbl['Delete'] = 'delete';
 $lbl['Description'] = 'description';
+$lbl['Download'] = 'download';
 $lbl['Edit'] = 'edit';
 $lbl['Email'] = 'email address';
 $lbl['Feedback'] = 'feedback';
