@@ -165,9 +165,39 @@ class commentsApi
 			)
 		);
 
+		self::cleanupTemporaryFiles();
+
 		return array(
 			'id' => $id,
 		);
+	}
+
+	/**
+	 * Cleanup the old temporary files
+	 */
+	private static function cleanupTemporaryFiles()
+	{
+		// delete al files that are older the 4u
+		$items = (array) Site::getDB()->getPairs(
+			'SELECT id, file
+			FROM temporary_files
+			WHERE created_on <= ?',
+			Site::getUTCDate(null, (time() - (4 * 60 * 60)))
+		);
+
+		if(!empty($items))
+		{
+			foreach($items as $id => $row)
+			{
+				$path = Site::getFilesPath($row['file']);
+				SpoonFile::delete($path);
+			}
+
+			Site::getDB(true)->delete(
+				'temporary_files',
+				'id IN (' . implode(', ', array_keys($items)) . ')'
+			);
+		}
 	}
 }
 
