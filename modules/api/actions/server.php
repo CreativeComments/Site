@@ -153,16 +153,20 @@ class commentsApi
 		if(!isset($args['name']) || $args['name'] == '') throw new Exception('no name');
 		if(!isset($args['data']) || $args['data'] == '') throw new Exception('no data');
 
-		$id = time();
 		$filename = Site::getFilename() . '.' . SpoonFile::getExtension($args['name']);
 		$path = Site::getFilesPath($filename);
 		SpoonFile::setContent($path, $args['data']);
 
-		// @todo find a way to delete files that aren't linked to a comment
+		$id = Site::getDB(true)->insert(
+			'temporary_files',
+			array(
+			     'file' => $filename,
+			     'created_on' => Site::getUTCDate()
+			)
+		);
 
 		return array(
 			'id' => $id,
-			'filename' => $filename,
 		);
 	}
 }
