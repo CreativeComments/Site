@@ -139,6 +139,32 @@ class commentsApi
 
 		return $comment;
 	}
+
+	/**
+	 * Upload a temporary file
+	 *
+	 * @param $args
+	 * @return array
+	 * @throws Exception
+	 */
+	public static function uploadTemporaryFile($args)
+	{
+		if(!isset($args['access_token']) || $args['access_token'] == '') throw new Exception('no access_token');
+		if(!isset($args['name']) || $args['name'] == '') throw new Exception('no name');
+		if(!isset($args['data']) || $args['data'] == '') throw new Exception('no data');
+
+		$id = time();
+		$filename = Site::getFilename() . '.' . SpoonFile::getExtension($args['name']);
+		$path = Site::getFilesPath($filename);
+		SpoonFile::setContent($path, $args['data']);
+
+		// @todo find a way to delete files that aren't linked to a comment
+
+		return array(
+			'id' => $id,
+			'filename' => $filename,
+		);
+	}
 }
 
 class UsersApi
