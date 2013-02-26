@@ -116,6 +116,7 @@ class commentsApi
 		if(isset($args['slideshare']) && $args['slideshare'] != '') $comment->setSlideshare($args['slideshare']);
 		if(isset($args['url']) && $args['url'] != '') $comment->setUrl($args['url']);
 		if(isset($args['dropbox']) && $args['dropbox'] != '') $comment->setDropbox($args['dropbox']);
+		if(isset($args['file_id']) && $args['file_id'] != '') $comment->setFile(self::getTemporaryFile($args['file_id']));
 		$comment->save();
 
 		return $comment;
@@ -138,6 +139,24 @@ class commentsApi
 		$comment = Comment::get($args['id']);
 
 		return $comment;
+	}
+
+	/**
+	 * Get a temporary files
+	 * @param int $id
+	 * @return string
+	 */
+	private static function getTemporaryFile($id)
+	{
+		$return = Site::getDB()->getVar(
+			'SELECT file
+			 FROM temporary_files
+			 WHERE id = ?',
+			$id
+		);
+
+		Site::getDB(true)->delete('temporary_files', 'id = ?', $id);
+		return $return;
 	}
 
 	/**
