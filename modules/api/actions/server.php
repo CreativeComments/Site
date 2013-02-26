@@ -138,6 +138,11 @@ class commentsApi
 
 		$comment = Comment::get($args['id']);
 
+		if($comment->file != '')
+		{
+			$comment->fileUrl = SITE_URL . Site::getFilesUrl($comment->file);
+		}
+
 		return $comment;
 	}
 
