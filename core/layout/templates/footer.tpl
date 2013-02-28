@@ -39,10 +39,10 @@
 						<a href="#">Adipiscing Pharetra </a>
 					</li>
 					<li>
-						<a href="#">Sit Lorem Risus </a>
+						<a href="{$var|buildurl:'terms-of-service':'pages'}">Terms of service</a>
 					</li>
 					<li>
-						<a href="#">Cursus Sollicitudin Ultricies </a>
+						<a href="{$var|buildurl:'privacy-policy':'pages'}">Privacy policy</a>
 					</li>
 				</ul>
 			</div>

@@ -3,7 +3,7 @@
 		<div class="row-fluid">
 			<div class="span5">
 				<h1>
-					<a href="/" rel="home">{$SITE_DEFAULT_TITLE}</a>
+					<a href="{$var|buildurl:'index':'pages'}" rel="home">{$SITE_DEFAULT_TITLE}</a>
 				</h1>
 			</div>
 
@@ -60,8 +60,7 @@
 					</div>
 					<div class="span6">
 						{option:currentUser}
-							{* @todo link to own page *}
-							<a href="#">
+							<a href="{$var|buildurl:'dashboard':'users'}">
 								{$currentUser.name}
 							</a>
 							<div class="avatar">

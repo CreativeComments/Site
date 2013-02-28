@@ -1,15 +1,15 @@
 <?php
 
 /**
- * ExampleIndex
+ * PagesTermsOfService
  *
  * @package		pages
- * @subpackage	index
+ * @subpackage	terms_of_service
  *
  * @author 		Tijs Verkoyen <tijs@sumocoders.be>
  * @since		1.0
  */
-class PagesDisclaimer extends SiteBaseAction
+class PagesTermsOfService extends SiteBaseAction
 {
 	/**
 	 * Execute the action
@@ -18,20 +18,7 @@ class PagesDisclaimer extends SiteBaseAction
 	 */
 	public function execute()
 	{
-
-		// parse
-		$this->parse();
-
 		// display the page
 		$this->display();
-	}
-
-	/**
-	 * Parse the page
-	 *
-	 * @return void
-	 */
-	private function parse()
-	{
 	}
 }
