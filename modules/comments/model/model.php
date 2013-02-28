@@ -358,9 +358,9 @@ class CommentsHelper {
 	public static function buildFlashOutput($id, $width, $height)
 	{
 		$output =   '<object id="video-%1$s" width="%2$s" height="%3$s">
-						<param name="movie" value="http://player.nimbb.com/nimbb.swf?guid=%1$s" />
+						<param name="movie" value="https://player.nimbb.com/nimbb.swf?guid=%1$s" />
 						<param name="allowScriptAccess" value="always" />
-						<embed name="nimbb" src="http://player.nimbb.com/nimbb.swf?guid=%1$s" width="%2$s" height="%3$s" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+						<embed name="nimbb" src="https://player.nimbb.com/nimbb.swf?guid=%1$s" width="%2$s" height="%3$s" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
 					</object>';
 		$output = sprintf($output, $id, $width, $height);
 		return $output;
