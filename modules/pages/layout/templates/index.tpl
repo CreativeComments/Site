@@ -46,10 +46,10 @@
 					</div>
 					<div class="span4 emotion">
 						<p>{$lblShowByEmotion|ucfirst}</p>
-						<ul>
-							<li class="active"><a href="#" class="sad">{$lblSad|ucfirst}</a></li>
-							<li class="active"><a href="#" class="normal">{$lblNormal|ucfirst}</a></li>
-							<li class="active"><a href="#" class="happy">{$lblHappy|ucfirst}</a></li>
+						<ul id="emotionFilter">
+							<li class="active"><a href="#" class="sad" data-value="sad">{$lblSad|ucfirst}</a></li>
+							<li class="active"><a href="#" class="normal" data-value="normal">{$lblNormal|ucfirst}</a></li>
+							<li class="active"><a href="#" class="happy" data-value="happy">{$lblHappy|ucfirst}</a></li>
 						</ul>
 					</div>
 				</div>
@@ -66,8 +66,7 @@
 								{/option:items.videoId}
 							</div>
 						</div>
-						<!-- @todo tys add class for emotion icon -->
-						<div class="user sad">
+						<div class="user {$items.emotion}">
 							<div class="avatar">
 								<div class="top"></div>
 								<img src="https://graph.facebook.com/{$items.user.facebookId}/picture?type=square" width="40" height="40" alt="" />
