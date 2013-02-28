@@ -10,6 +10,8 @@
 			<div class="span7">
 				<div class="row-fluid">
 					<div class="span3">
+{*
+	Disabled this as there are no multiple languages yet
 						<div class="dropdown">
 							<a class="dropdown-toggle language" data-toggle="dropdown" href="#">
 							<span class="world"></span>
@@ -31,6 +33,7 @@
 								</li>
 							</ul>
 						</div>
+*}
 					</div>
 					<div class="span3">
 						<div class="dropdown">
