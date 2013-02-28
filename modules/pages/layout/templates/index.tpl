@@ -1,40 +1,30 @@
 {include:'{$CORE_PATH}/layout/templates/head.tpl'}
 {include:'{$CORE_PATH}/layout/templates/header.tpl'}
-
 	<div id="content">
-		<section id="{$MODULE}" class="{$ACTION}">
-			<div class="container">
-				<div class="row-fluid">
-					<div class="span7 hidden-phone">
-						<div class="graphic">
-							<a href="#">
-								<!-- @todo link naar creative comment -->
-								Creative comment
-							</a>
+		{option:!currentUser}
+			<section id="{$MODULE}" class="{$ACTION}">
+				<div class="container">
+					<div class="row-fluid">
+						<div class="span7 hidden-phone">
+							<div class="graphic">
+								<a href="#">
+									<!-- @todo link naar creative comment -->
+									Creative comment
+								</a>
+							</div>
+						</div>
+						<div class="span5 intro">
+							<header>
+								<h2>Spice-up the conversation!</h2>
+							</header>
+							<p>Welcome to Creative Comments™, an out-of-the-ordinary commenting platform for Facebook&#174;.  We drive a more creative conversation among 1 billion socialnauts.</p>
+							<p>With Creative Comments, you can be most imaginative and post lush comments that include your instant 20” video message, Dropbox&#174; files, Youtube&#174; movies, Slideshare&#174; decks,… whatever helps to bring your point across better.</p>
+							<p><a href="#" class="btn btn-large facebookRegister">Sign in with <strong>Facebook</strong></a></p>
 						</div>
 					</div>
-					<div class="span5 intro">
-						<!-- @todo tys nazien of option correct staat -->
-						{option:!currentUser}
-						<header>
-						<h2>
-							Spice-up the conversation!
-						</h2>
-						</header>
-						<p>
-						Welcome to Creative Comments™, an out-of-the-ordinary commenting platform for Facebook&#174;.  We drive a more creative conversation among 1 billion socialnauts.<br><br>
-						With Creative Comments, you can be most imaginative and post lush comments that include your instant 20” video message, Dropbox&#174; files, Youtube&#174; movies, Slideshare&#174; decks,… whatever helps to bring your point across better.
-						</p>
-						<p>
-							<a href="#" class="btn btn-large facebookRegister">
-								Sign in with <strong>Facebook</strong>
-							</a>
-						</p>
-						{/option:!currentUser}
-					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		{/option:!currentUser}
 		<section id="grid" class="container">
 			<div class="subMenu">
 				<div class="row-fluid menu">
@@ -174,7 +164,7 @@
 							<a href="#">
 								Niels De Paepe
 							</a>
-							<!-- @todo tys correcte tijd toevoegen in time tag --> 
+							<!-- @todo tys correcte tijd toevoegen in time tag -->
 							<time>
 								12 minutes ago
 							</time>
@@ -344,15 +334,5 @@
 
 		{include:'{$CORE_PATH}/layout/templates/footer.tpl'}
 	</div>
-	
-	<!-- uservoice -->
-	<script type="text/javascript">
-  var uvOptions = {};
-  (function() {
-    var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
-    uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/L5m3jOM3XfG9t40AQo8dg.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
-  })();
-</script>
 </body>
 </html>

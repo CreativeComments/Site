@@ -36,3 +36,14 @@
 	</div>
 </footer>
 {include:'{$CORE_PATH}/layout/templates/dialogs.tpl'}
+
+<!-- uservoice -->
+<script type="text/javascript">
+	var uvOptions = {};
+	(function() {
+		var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+		uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/L5m3jOM3XfG9t40AQo8dg.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+	})();
+</script>
+
