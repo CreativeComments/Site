@@ -117,6 +117,7 @@ class commentsApi
 		if(isset($args['url']) && $args['url'] != '') $comment->setUrl($args['url']);
 		if(isset($args['dropbox']) && $args['dropbox'] != '') $comment->setDropbox($args['dropbox']);
 		if(isset($args['file_id']) && $args['file_id'] != '') $comment->setFile(self::getTemporaryFile($args['file_id']));
+		if(isset($args['emotion']) && $args['emotion'] != '') $comment->setEmotion($args['emotion']);
 		$comment->save();
 
 		return $comment;
