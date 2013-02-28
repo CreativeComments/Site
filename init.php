@@ -99,6 +99,11 @@ class Init
 
 			else
 			{
+				if(substr_count($class, 'shelper') > 0)
+				{
+					$class = str_replace('shelper', '', $class);
+				}
+
 				// build path
 				$path = PATH_WWW . '/modules/' . $class . 's/model/model.php';
 
