@@ -29,306 +29,72 @@
 			<div class="subMenu">
 				<div class="row-fluid menu">
 					<div class="span4 title">
-						<h3>
-							All comments
-						</h3>
+						<h3>{$lblMostRecent|ucfirst}</h3>
 					</div>
 					<div class="span4 category">
-						<p>
-							Sort by category
-						</p>
+{*
+							Disabled for now because there is no such thing as categories
+						<p>Sort by category</p>
 						<div class="dropdown">
 							<a class="dropdown-toggle btn" data-toggle="dropdown" href="#">Commodo Ridic<span class="icon"></span></a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-								<li>
-									<a href="#">Lorem</a>
-								</li>
-								<li>
-									<a href="#">Vulputate</a>
-								</li>
-								<li>
-									<a href="#">Dolor</a>
-								</li>
-								<li>
-									<a href="#">Consectetur</a>
-								</li>
+								<li><a href="#">Lorem</a></li>
+								<li><a href="#">Consectetur</a>	</li>
 							</ul>
 						</div>
+*}
 					</div>
 					<div class="span4 emotion">
-						<p>
-							Sort by emotion
-						</p>
+						<p>{$lblShowByEmotion|ucfirst}</p>
 						<ul>
-							<li>
-								<a href="#" class="sad">
-									sad
-								</a>
-							</li>
-							<li class="active">
-								<a href="#" class="normal">
-									normal
-								</a>
-							</li>
-							<li>
-								<a href="#" class="happy">
-									happy
-								</a>
-							</li>
+							<li class="active"><a href="#" class="sad">{$lblSad|ucfirst}</a></li>
+							<li class="active"><a href="#" class="normal">{$lblNormal|ucfirst}</a></li>
+							<li class="active"><a href="#" class="happy">{$lblHappy|ucfirst}</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
-			<!-- @todo tys drie items per row-fluid -->
+
 			<div class="row-fluid itemGrid">
-				<div class="span4 item">
-					<div class="videoHolder">
-						<div class="video">
-							<p>
-								@todo Tys video
-							</p>
+				{iteration:items}
+					<div class="span4 item">
+						<div class="videoHolder">
+							<div class="video">
+								{* this should be a still instead of this tiny flash thingy *}
+								{option:items.videoId}
+									{$items.video_flash_278x135}
+								{/option:items.videoId}
+							</div>
 						</div>
-					</div>
-					<header>
-						<h4>
-							Ullamcorper Ornare Fringilla
-						</h4>
-					</header>
 						<!-- @todo tys add class for emotion icon -->
-					<div class="user sad">
-						<div class="avatar">
-							<div class="top"></div>
-							<!-- @todo avatar hier plaatsen -->
-							<img src="https://si0.twimg.com/profile_images/1354981961/icon_08_01.png" alt="avatar">
-						</div>
-						<div class="content">
-							<a href="#">
-								Niels De Paepe
-							</a>
-							<time>
-								12 minutes ago
-							</time>
+						<div class="user sad">
+							<div class="avatar">
+								<div class="top"></div>
+								<img src="https://graph.facebook.com/{$items.user.facebookId}/picture?type=square" width="40" height="40" alt="" />
+							</div>
+							<div class="content">
+								<a href="#">
+									{$items.user.name}
+								</a>
+								<time datetime="{$items.createdOn|date:"Y-m-d\TH:i:s"}">{$items.createdOn|timeago}</time>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="span4 item">
-					<div class="videoHolder">
-						<div class="video">
-							<p>
-								@todo Tys video
-							</p>
+
+					{option:items.showAdd}
+						<div class="span4 ads">
+							<div class="addBlock">
+								<a href="#">
+									<img src="http://storage.googleapis.com/support-kms-prod/SNP_2665173_en_v0" alt="add">
+								</a>
+							</div>
 						</div>
-					</div>
-					<header>
-						<h4>
-							Ullamcorper Ornare Fringilla
-						</h4>
-					</header>
-					<!-- @todo tys add class for emotion icon -->
-					<div class="user happy">
-						<div class="avatar">
-							<div class="top"></div>
-							<!-- @todo avatar hier plaatsen -->
-							<img src="https://si0.twimg.com/profile_images/1354981961/icon_08_01.png" alt="avatar">
-						</div>
-						<div class="content">
-							<a href="#">
-								Niels De Paepe
-							</a>
-							<time>
-								12 minutes ago
-							</time>
-						</div>
-					</div>
-				</div>
-				<div class="span4 item">
-					<div class="videoHolder">
-						<div class="video">
-							<p>
-								@todo Tys video
-							</p>
-						</div>
-					</div>
-					<header>
-						<h4>
-							Ullamcorper Ornare Fringilla
-						</h4>
-					</header>
-					<!-- @todo tys add class for emotion icon -->
-					<div class="user normal">
-						<div class="avatar">
-							<div class="top"></div>
-							<!-- @todo avatar hier plaatsen -->
-						</div>
-						<div class="content">
-							<a href="#">
-								Niels De Paepe
-							</a>
-							<!-- @todo tys correcte tijd toevoegen in time tag -->
-							<time>
-								12 minutes ago
-							</time>
-						</div>
-					</div>
-				</div>
+					{/option:items.showAdd}
+					{option:items.newRow}
 			</div>
 			<div class="row-fluid itemGrid">
-				<div class="span4 item">
-					<div class="videoHolder">
-						<div class="video">
-							<p>
-								@todo Tys video
-							</p>
-						</div>
-					</div>
-					<header>
-						<h4>
-							Ullamcorper Ornare Fringilla
-						</h4>
-					</header>
-					<!-- @todo tys add class for emotion icon -->
-					<div class="user sad">
-						<div class="avatar">
-							<div class="top"></div>
-							<!-- @todo avatar hier plaatsen -->
-							<img src="https://si0.twimg.com/profile_images/1354981961/icon_08_01.png" alt="avatar">
-						</div>
-						<div class="content">
-							<a href="#">
-								Niels De Paepe
-							</a>
-							<time>
-								12 minutes ago
-							</time>
-						</div>
-					</div>
-				</div>
-				<div class="span4 item">
-					<div class="videoHolder">
-						<div class="video">
-							<p>
-								@todo Tys video
-							</p>
-						</div>
-					</div>
-					<header>
-						<h4>
-							Ullamcorper Ornare Fringilla
-						</h4>
-					</header>
-					<!-- @todo tys add class for emotion icon -->
-					<div class="user normal">
-						<div class="avatar">
-							<div class="top"></div>
-							<!-- @todo avatar hier plaatsen -->
-						</div>
-						<div class="content">
-							<a href="#">
-								Niels De Paepe
-							</a>
-							<time>
-								12 minutes ago
-							</time>
-						</div>
-					</div>
-				</div>
-				<div class="span4 ads">
-					<div class="addBlock">
-						<a href="#">
-							<img src="http://storage.googleapis.com/support-kms-prod/SNP_2665173_en_v0" alt="add">
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="row-fluid itemGrid">
-				<div class="span4 item">
-					<div class="videoHolder">
-						<div class="video">
-							<p>
-								@todo Tys video
-							</p>
-						</div>
-					</div>
-					<header>
-						<h4>
-							Ullamcorper Ornare Fringilla
-						</h4>
-					</header>
-					<!-- @todo tys add class for emotion icon -->
-					<div class="user happy">
-						<div class="avatar">
-							<div class="top"></div>
-							<!-- @todo avatar hier plaatsen -->
-						</div>
-						<div class="content">
-							<a href="#">
-								Niels De Paepe
-							</a>
-							<time>
-								12 minutes ago
-							</time>
-						</div>
-					</div>
-				</div>
-				<div class="span4 item">
-					<div class="videoHolder">
-						<div class="video">
-							<p>
-								@todo Tys video
-							</p>
-						</div>
-					</div>
-					<header>
-						<h4>
-							Ullamcorper Ornare Fringilla
-						</h4>
-					</header>
-					<!-- @todo tys add class for emotion icon -->
-					<div class="user sad">
-						<div class="avatar">
-							<div class="top"></div>
-							<!-- @todo avatar hier plaatsen -->
-							<img src="https://si0.twimg.com/profile_images/1354981961/icon_08_01.png" alt="avatar">
-						</div>
-						<div class="content">
-							<a href="#">
-								Niels De Paepe
-							</a>
-							<time>
-								12 minutes ago
-							</time>
-						</div>
-					</div>
-				</div>
-				<div class="span4 item">
-					<div class="videoHolder">
-						<div class="video">
-							<p>
-								@todo Tys video
-							</p>
-						</div>
-					</div>
-					<header>
-						<h4>
-							Ullamcorper Ornare Fringilla
-						</h4>
-					</header>
-					<!-- @todo tys add class for emotion icon -->
-					<div class="user normal">
-						<div class="avatar">
-							<div class="top"></div>
-							<!-- @todo avatar hier plaatsen -->
-						</div>
-						<div class="content">
-							<a href="#">
-								Niels De Paepe
-							</a>
-							<time>
-								12 minutes ago
-							</time>
-						</div>
-					</div>
-				</div>
+					{/option:items.newRow}
+				{/iteration:items}
 			</div>
 		</section>
 

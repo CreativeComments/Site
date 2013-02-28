@@ -18,13 +18,7 @@ class PagesIndex extends SiteBaseAction
 	 */
 	public function execute()
 	{
-		// go to dashboard after login
-//		if($this->currentUser !== null) $this->redirect($this->url->buildUrl('dashboard', 'users'));
-
-		// parse
 		$this->parse();
-
-		// display the page
 		$this->display();
 	}
 
@@ -35,5 +29,52 @@ class PagesIndex extends SiteBaseAction
 	 */
 	private function parse()
 	{
+		$this->parseMostRecent();
+	}
+
+	private function parseMostRecent()
+	{
+		$mostRecent = CommentsHelper::getMostRecent();
+		$userIds = array();
+
+		foreach($mostRecent as $row)
+		{
+			$userIds[] = $row->userId;
+		}
+
+		$userIds = array_unique($userIds);
+
+		$userData = Site::getDB()->getRecords(
+			'SELECT i.*, UNIX_TIMESTAMP(i.created_on) AS created_on, UNIX_TIMESTAMP(i.edited_on) AS edited_on
+				 FROM users AS i
+				 WHERE i.id IN (' . implode(', ', $userIds) . ')'
+		);
+
+		$users = array();
+		foreach($userData as $row)
+		{
+			$user = new User();
+			$user->initialize($row);
+			$users[$row['id']] = $user;
+		}
+
+		$items = array();
+		$i = 1;
+		foreach($mostRecent as $comment)
+		{
+			$data = $comment->toArray();
+			$data['user'] = $users[$comment->userId]->toArray();
+			$data['newRow'] = false;
+			if($i == 5) {
+				$data['showAdd'] = true;
+				$i++;
+			}
+			if($i % 3 == 0) $data['newRow'] = true;
+
+			$items[] = $data;
+			$i++;
+		}
+
+		$this->tpl->assign('items', $items);
 	}
 }

@@ -65,7 +65,7 @@
 							</a>
 							<div class="avatar">
 								<div class="top"></div>
-								<img src="https://graph.facebook.com/{$currentUser.facebookId}/picture" />
+								<img src="https://graph.facebook.com/{$currentUser.facebookId}/picture?type=square" width="40" height="40" alt="" />
 							</div>
 						{/option:currentUser}
 						{option:!currentUser}

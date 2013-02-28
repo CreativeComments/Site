@@ -338,6 +338,64 @@ class Comment
 		$item['createdOn'] = ($this->createdOn !== null) ? $this->createdOn->getTimestamp() : null;
 		$item['editedOn'] = ($this->editedOn !== null) ? $this->editedOn->getTimestamp() : null;
 
+
+		$item['video_flash_278x135'] = CommentsHelper::buildFlashOutput($this->getVideoId(), 278, 135);
+
 		return $item;
+	}
+}
+
+class CommentsHelper {
+
+	/**
+	 * Build Flash output for the video
+	 *
+	 * @param $id
+	 * @param $width
+	 * @param $height
+	 * @return string
+	 */
+	public static function buildFlashOutput($id, $width, $height)
+	{
+		$output =   '<object id="video-%1$s" width="%2$s" height="%3$s">
+						<param name="movie" value="http://player.nimbb.com/nimbb.swf?guid=%1$s" />
+						<param name="allowScriptAccess" value="always" />
+						<embed name="nimbb" src="http://player.nimbb.com/nimbb.swf?guid=%1$s" width="%2$s" height="%3$s" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+					</object>';
+		$output = sprintf($output, $id, $width, $height);
+		return $output;
+
+
+	}
+
+	/**
+	 * Get the most recent comments
+	 *
+	 * @param int[optional] $limit
+	 * @return array
+	 */
+	public static function getMostRecent($limit = 8)
+	{
+		$data = Site::getDB()->getRecords(
+			'SELECT i.*, UNIX_TIMESTAMP(i.created_on) AS created_on, UNIX_TIMESTAMP(i.edited_on) AS edited_on
+			FROM comments AS i
+			ORDER BY i.created_on DESC
+			LIMIT ?',
+			array($limit)
+		);
+
+		$return = array();
+
+		if(!empty($data))
+		{
+			foreach($data as $row)
+			{
+				$comment = new Comment();
+				$comment->initialize($row);
+				$return[$row['id']] = $comment;
+			}
+		}
+
+		return $return;
 	}
 }
