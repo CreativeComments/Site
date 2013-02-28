@@ -27,13 +27,8 @@ class UsersDashboard extends SiteBaseAction
 			);
 		}
 
-		// show reports
 		$this->parseReports();
-
-		// parse
 		$this->parse();
-
-		// display the page
 		$this->display();
 	}
 
@@ -44,5 +39,20 @@ class UsersDashboard extends SiteBaseAction
 	 */
 	private function parse()
 	{
+		$comments = CommentsHelper::getForUser($this->currentUser->id);
+		$items = array();
+		$i = 1;
+		foreach($comments as $comment)
+		{
+			$data = $comment->toArray();
+			$data['user'] = $this->currentUser->toArray();
+			$data['newRow'] = false;
+			if($i % 3 == 0) $data['newRow'] = true;
+
+			$items[] = $data;
+			$i++;
+		}
+
+		$this->tpl->assign('items', $items);
 	}
 }

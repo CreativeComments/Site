@@ -398,4 +398,35 @@ class CommentsHelper {
 
 		return $return;
 	}
+
+	/**
+	 * @todo    add pagina, so we can implement infinite scroll
+	 *
+	 * @param $id
+	 * @return array
+	 */
+	public static function getForUser($id)
+	{
+		$data = Site::getDB()->getRecords(
+			'SELECT i.*, UNIX_TIMESTAMP(i.created_on) AS created_on, UNIX_TIMESTAMP(i.edited_on) AS edited_on
+			FROM comments AS i
+			WHERE i.user_id = ?
+			ORDER BY i.created_on DESC',
+			array($id)
+		);
+
+		$return = array();
+
+		if(!empty($data))
+		{
+			foreach($data as $row)
+			{
+				$comment = new Comment();
+				$comment->initialize($row);
+				$return[$row['id']] = $comment;
+			}
+		}
+
+		return $return;
+	}
 }

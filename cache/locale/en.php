@@ -59,6 +59,7 @@ $lbl['ShowByEmotion'] = 'show by emotion';
 $lbl['Thanks'] = 'thanks';
 $lbl['Type'] = 'type';
 $lbl['Users'] = 'users';
+$lbl['YourComments'] = 'your comments';
 
 // init var
 $msg = array();
