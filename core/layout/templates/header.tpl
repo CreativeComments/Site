@@ -3,13 +3,10 @@
 		<div class="row-fluid">
 			<div class="span5">
 				<h1>
-					<a href="/" rel="home">
-						<!-- {$SITE_DEFAULT_TITLE} -->
-						Creative Comments
-					</a>
+					<a href="/" rel="home">{$SITE_DEFAULT_TITLE}</a>
 				</h1>
 			</div>
-			
+
 			<div class="span7">
 				<div class="row-fluid">
 					<div class="span3">
@@ -39,7 +36,7 @@
 						<div class="dropdown">
 							<a class="dropdown-toggle about" data-toggle="dropdown" href="#">
 							<span class="about"></span>
-							<span class="link">About</span>
+							<span class="link">{$lblAbout|ucfirst}</span>
 							<span class="icon"></span>
 							</a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
@@ -69,24 +66,6 @@
 					</div>
 				</div>
 			</div>
-	
-			<!--
-<div class="span4">
-				{option:currentUser}
-					<div id="user">
-						<p>
-							{* @todo avatar if needed in design *}
-							{$msgUsersLoggedInAs|sprintf:{$currentUser.name}}
-						</p>
-					</div>
-				{/option:currentUser}
-				{option:!currentUser}
-					<a href="#" class="btn btn-inverse facebookRegister">
-						{$msgUsersSignUpWithFacebook}
-					</a>
-				{/option:!currentUser}
-			</div>
--->
 		</div>
 	</div>
 </div>

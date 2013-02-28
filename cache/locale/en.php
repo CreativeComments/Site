@@ -23,6 +23,7 @@ $err['InvalidModule'] = 'Sorry, this module can not be found.';
 
 // init var
 $lbl = array();
+$lbl['About'] = 'about';
 $lbl['Add'] = 'add';
 $lbl['Cancel'] = 'cancel';
 $lbl['Close'] = 'close';
