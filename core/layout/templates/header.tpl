@@ -59,13 +59,21 @@
 						</div>
 					</div>
 					<div class="span6">
-						<a href="#">
-							Sign in
-						</a>
-						<div class="avatar">
-							<div class="top"></div>
-							<!-- @todo tys hier komt avatar image -->
-						</div>
+						{option:currentUser}
+							{* @todo link to own page *}
+							<a href="#">
+								{$currentUser.name}
+							</a>
+							<div class="avatar">
+								<div class="top"></div>
+								<img src="https://graph.facebook.com/{$currentUser.facebookId}/picture" />
+							</div>
+						{/option:currentUser}
+						{option:!currentUser}
+							<a href="#" class="btn btn-inverse facebookRegister">
+								{$lblSignIn|ucfirst}
+							</a>
+						{/option:!currentUser}
 					</div>
 				</div>
 			</div>
