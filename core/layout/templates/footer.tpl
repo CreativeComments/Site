@@ -6,7 +6,7 @@
 					Creative Comments
 				</div>
 			</div>
-	
+
 			<div class="span3 list">
 				<h5>
 					Get started
@@ -26,7 +26,7 @@
 					</li>
 				</ul>
 			</div>
-			
+
 			<div class="span3 list">
 				<h5>
 					About us
@@ -46,24 +46,17 @@
 					</li>
 				</ul>
 			</div>
-	
+
 			<div class="span4 social">
 				<ul>
-					<li>	
-						<!-- @todo juiste url invullen -->
-						<a href="#" class="google">
-							Google+
-						</a>
+					<li>
+						<a href="https://plus.google.com/106412636178651998866" class="google">Google+</a>
 					</li>
 					<li>
-						<a href="http://www.facebook.com/CreativeComments" class="facebook">
-							Facebook
-						</a>
+						<a href="http://www.facebook.com/CreativeComments" class="facebook">Facebook</a>
 					</li>
 					<li>
-						<a href="https://twitter.com/c_comments" class="twitter">
-							Twitter
-						</a>
+						<a href="https://twitter.com/c_comments" class="twitter">Twitter</a>
 					</li>
 				</ul>
 				<p>
