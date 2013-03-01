@@ -336,8 +336,8 @@ body {
 				.video {
 					width: 260px;
 					height: 135px;
-					
-					background: #ededed;
+					display: block;
+					@include background(inline-image("svg/no_image.svg") no-repeat center center #ededed);
 				}
 			}
 			

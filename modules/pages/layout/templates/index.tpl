@@ -59,12 +59,13 @@
 				{iteration:items}
 					<div class="span4 item">
 						<div class="videoHolder">
-							<div class="video">
+							<!-- @todo tijs add correct url -->
+							<a class="video" href="#">
 								{* this should be a still instead of this tiny flash thingy *}
 								{option:items.videoId}
 									{$items.video_flash_278x135}
 								{/option:items.videoId}
-							</div>
+							</a>
 						</div>
 						<div class="user {$items.emotion}">
 							<div class="avatar">
