@@ -60,6 +60,7 @@
 					<div class="span4 item">
 						<div class="videoHolder">
 							<!-- @todo tijs add correct url -->
+							<!-- @todo tys add class loading for loader -->
 							<a class="video" href="#">
 								{* this should be a still instead of this tiny flash thingy *}
 								{option:items.videoId}

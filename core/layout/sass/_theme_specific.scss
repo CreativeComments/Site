@@ -338,6 +338,10 @@ body {
 					height: 135px;
 					display: block;
 					@include background(inline-image("svg/no_image.svg") no-repeat center center #ededed);
+					
+					&.loading {
+						@include background(image-url("loader.gif") no-repeat center center #ededed);
+					}
 				}
 			}
 			
@@ -434,6 +438,31 @@ body {
 			}
 		}
 	}
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+
+#grid {
+	.itemGrid {
+		.item {
+			.videoHolder {
+				.video {
+					&.loading {
+						@include background(image-url("loaderx2.gif") no-repeat center center #ededed);
+						background-size: 50px 50px;
+					}
+				}
+			}
+		}
+	}
+}
+
 }
 
 #footer {

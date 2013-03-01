@@ -139,6 +139,10 @@
 			.videoHolder {
 				.video {
 					@include background(image-url("ie/no_image.png") no-repeat center center #ededed);
+					
+					&.loading {
+						@include background(image-url("loader.gif") no-repeat center center #ededed);
+					}
 				}
 			}
 			.user {
