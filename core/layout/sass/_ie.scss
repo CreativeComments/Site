@@ -184,13 +184,13 @@
 						
 						&:hover {
 							&.google {
-							@include background(image-url("ie/footer_google_hover.png") no-repeat);
+							background-position: 0 -55px;
 						}
 						&.facebook {
-							@include background(image-url("ie/footer_facebook_hover.png") no-repeat);
+							background-position: 0 -55px;
 						}
 						&.twitter {
-							@include background(image-url("ie/footer_twitter_hover.png") no-repeat);
+							background-position: 0 -55px;
 						}
 						}
 					}

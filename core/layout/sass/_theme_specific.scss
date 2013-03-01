@@ -509,15 +509,15 @@ body {
 						&:hover {
 							
 							&.google {
-								@include background(inline-image("svg/footer_google_hover.svg") no-repeat);
+								background-position: 0 -55px;
 							}
 							
 							&.facebook {
-							@include background(inline-image("svg/footer_facebook_hover.svg") no-repeat);
+								background-position: 0 -55px;
 							}
 							
 							&.twitter {
-							@include background(inline-image("svg/footer_twitter_hover.svg") no-repeat);
+								background-position: 0 -55px;
 						}
 						}
 					}
