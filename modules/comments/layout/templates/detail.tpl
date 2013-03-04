@@ -1,7 +1,7 @@
 {include:'{$CORE_PATH}/layout/templates/head.tpl'}
 {include:'{$CORE_PATH}/layout/templates/header.tpl'}
 
-	<div id="content" class="container-fluid">
+	<div id="content" class="container">
 		{option:report}
 			<div class="row-fluid">
                 <div class="span12 alert alert-success">
@@ -72,8 +72,7 @@
 				</p>
 			</div>
 		</section>
-
-		{include:'{$CORE_PATH}/layout/templates/footer.tpl'}
 	</div>
+	{include:'{$CORE_PATH}/layout/templates/footer.tpl'}
 </body>
 </html>
