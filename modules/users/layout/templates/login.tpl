@@ -1,8 +1,9 @@
 {include:'{$CORE_PATH}/layout/templates/head.tpl'}
 {include:'{$CORE_PATH}/layout/templates/header.tpl'}
 
-	<div id="content" class="container-fluid">
-		<section id="{$MODULE}" class="{$ACTION} row-fluid">
+	<div id="content">
+		<div class="container">
+			<section id="{$MODULE}" class="{$ACTION} row-fluid">
 			<div class="span12">
 				<header class="header hide">
 					<h2>{$msgUsersLogin}</h2>
@@ -34,8 +35,8 @@
 				{/form:login}
 			</div>
 		</section>
-
-		{include:'{$CORE_PATH}/layout/templates/footer.tpl'}
+		</div>
 	</div>
+	{include:'{$CORE_PATH}/layout/templates/footer.tpl'}
 </body>
 </html>
