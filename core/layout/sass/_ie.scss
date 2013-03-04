@@ -210,4 +210,8 @@
 	}
 }
 
+#erroricon {
+	@include background(image-url("ie/error.png") no-repeat);
+}
+
 }

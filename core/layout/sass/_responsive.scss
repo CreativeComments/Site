@@ -130,6 +130,20 @@
 	}
 }
 
+.error {
+	.title {
+		margin: 30px 0;
+		
+		h3 {
+			font-size: 28px;
+		}
+	}
+}
+
+#erroricon {
+	margin: 50px auto;
+}
+
 #footer {
 
 	.row-fluid {
@@ -183,6 +197,16 @@
 					text-align: center;
 				}
 			}
+		}
+	}
+}
+
+.error {
+	.title {
+		margin: 30px 0;
+		
+		h3 {
+			font-size: 32px;
 		}
 	}
 }
