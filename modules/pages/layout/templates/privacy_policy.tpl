@@ -10,7 +10,7 @@
 						<h2>Privacy and Cookie Policy</h2>
 					</header>
 					<section class="item">
-						<p>This Privacy and Cookie Policy was first published and made effective on Sunday 10 February 2013 and was last modified on Sunday 10 February 2013.</p>BVBA (“Creative Comments”, “we”, or “us”). Our Privacy Policy explains how we collect, use, disclose, and protect information that applies to our Service, and your choices about the collection and use of your information.</p>
+						<p>This Privacy and Cookie Policy was first published and made effective on Sunday 10 February 2013 and was last modified on Sunday 10 February 2013.</p><p>Welcome to <a href="/">www.creativecomments.cc</a>, the website and online service (“Service”) of Creative Comments Media, BVBA (“Creative Comments”, “we”, or “us”). Our Privacy Policy explains how we collect, use, disclose, and protect information that applies to our Service, and your choices about the collection and use of your information.</p>
 						<p>Creative Comments may modify or update this Privacy Policy from time to time to reflect the changes in our business and practices, and so you should review this page periodically. When we change the policy in a material manner we will let you know and update the “last modified” date at the bottom of this policy.</p>
 						</p>
 					</section>
