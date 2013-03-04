@@ -1,7 +1,7 @@
 {include:'{$CORE_PATH}/layout/templates/head.tpl'}
 {include:'{$CORE_PATH}/layout/templates/header.tpl'}
 
-	<div id="content" class="container-fluid">
+	<div id="content" class="container">
 		<section id="{$MODULE}" class="{$ACTION}">
 			<div class="row-fluid">
 				<div class="span4 content well">
@@ -32,8 +32,7 @@
 				</div>
 			</div>
 		</section>
-
-		{include:'{$CORE_PATH}/layout/templates/footer.tpl'}
 	</div>
+	{include:'{$CORE_PATH}/layout/templates/footer.tpl'}
 </body>
 </html>
