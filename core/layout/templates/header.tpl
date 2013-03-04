@@ -69,9 +69,12 @@
 							</div>
 						{/option:currentUser}
 						{option:!currentUser}
-							<a href="#" class="btn btn-inverse facebookRegister">
+							<a href="#">
 								{$lblSignIn|ucfirst}
 							</a>
+							<div class="avatar">
+								<div class="top"></div>
+							</div>
 						{/option:!currentUser}
 					</div>
 				</div>
