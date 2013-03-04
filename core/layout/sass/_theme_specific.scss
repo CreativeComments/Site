@@ -614,7 +614,7 @@ only screen and (                min-resolution: 2dppx) {
 				margin: 0 auto;
 				
 				&.chrome {
-					@include background(inline-image("svg/chrome.svg") no-repeat);
+					@include sprite(chrome);
 				}
 				
 				&.firefox {
@@ -626,9 +626,27 @@ only screen and (                min-resolution: 2dppx) {
 				}
 			}
 			
+			h2 {
+				color: #4c4c4c;
+				margin: 0;
+				margin-bottom: 10px;
+				border-bottom: 1px solid #e6e6e6;
+			}
+			
 			.btn {
+				margin-top: 10px;
 				@include box-sizing(border-box);
 				width: 100%;
+			}
+			
+			&.notReady {
+				h2 {
+					color: #a9a9a9;
+				}
+				
+				p {
+					color: #bababa;
+				}
 			}
 		}
 	}

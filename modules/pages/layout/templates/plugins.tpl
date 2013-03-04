@@ -7,31 +7,27 @@
 				<div class="span4 plugin">
 					<div class="icon chrome"></div>
 					<h2>Chrome</h2>
-					<p>...</p>
+					<p>Download the plugin.</p>
 					<p>
 						<a href="{$var|buildurl:'download':'plugins'}?browser=chrome&version=latest" class="btn">Download</a>
 					</p>
 				</div>
-				<!-- @todo remove the strike-elements when other plugins are ready -->
-				<div class="span4 plugin">
-					<strike>
+				<!-- @todo remove the notReady class when other plugins are ready -->
+				<div class="span4 plugin notReady">
 						<div class="icon firefox"></div>
 						<h2>Firefox</h2>
 						<p>not available yet</p>
 						<p>
 							<a href="{$var|buildurl:'download':'plugins'}?browser=firefox&version=latest" class="btn disabled">Download</a>
 						</p>
-					</strike>
 				</div>
-				<div class="span4 plugin">
-					<strike>
+				<div class="span4 plugin notReady">
 						<div class="icon safari"></div>
 						<h2>Safari</h2>
 						<p>not available yet</p>
 						<p>
 							<a href="{$var|buildurl:'download':'plugins'}?browser=safari&version=latest" class="btn disabled">Download</a>
 						</p>
-					</strike>
 				</div>
 			</div>
 		</section>
