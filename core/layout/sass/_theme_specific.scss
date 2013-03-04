@@ -2,8 +2,13 @@
 
 
 body {
-	@include background(image-url("_bg_body.jpg"));
+	background: #1f1f1f;
 	padding: 0;
+}
+
+#content {
+	padding: 15px 0;
+	@include background(image-url("_bg_body.jpg"));
 }
 
 .container {
@@ -474,7 +479,6 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 #footer {
-	margin-top: 30px;
 	background: #1f1f1f;
 	border-top: 1px solid #fafafa;
 	padding-bottom: 50px;

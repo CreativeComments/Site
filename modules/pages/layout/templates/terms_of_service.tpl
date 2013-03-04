@@ -1,8 +1,9 @@
 {include:'{$CORE_PATH}/layout/templates/head.tpl'}
 {include:'{$CORE_PATH}/layout/templates/header.tpl'}
 
-<div id="content" class="container" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
-	<section class="textPage">
+<div id="content" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+	<div class="container">
+		<section class="textPage">
 			<div class="row-fluid">
 				<div class="span8">
 					<header>
@@ -141,6 +142,7 @@
 				</div>
 			</div>
 	</section>
+	</div>
 </div>
 
 {include:'{$CORE_PATH}/layout/templates/footer.tpl'}

@@ -98,8 +98,7 @@
 				{/iteration:items}
 			</div>
 		</section>
-
-		{include:'{$CORE_PATH}/layout/templates/footer.tpl'}
 	</div>
+{include:'{$CORE_PATH}/layout/templates/footer.tpl'}
 </body>
 </html>
