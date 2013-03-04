@@ -2,7 +2,7 @@
 {include:'{$CORE_PATH}/layout/templates/header.tpl'}
 	<div id="content">
 		{option:!currentUser}
-			<section id="{$MODULE}" class="{$ACTION}">
+			<section id="{$MODULE}" class="{$ACTION} lineBottom">
 				<div class="container">
 					<div class="row-fluid">
 						<div class="span7 hidden-phone">
