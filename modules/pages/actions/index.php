@@ -35,6 +35,10 @@ class PagesIndex extends SiteBaseAction
 	private function parseMostRecent()
 	{
 		$mostRecent = CommentsHelper::getMostRecent();
+
+		// if there are no recent items we shouldn't do anything
+		if(empty($mostRecent)) return false;
+
 		$userIds = array();
 
 		foreach($mostRecent as $row)
