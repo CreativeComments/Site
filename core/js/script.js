@@ -448,20 +448,18 @@ jsSite.creativeComments =
 			});
 		});
 
-		if($('#emotionFilter a').length > 0) {
-			$('#emotionFilter a').on('click', function(e) {
-				var emotion = $(this).data('value');
-				var $items = $('.item .' + emotion).parents('.item');
+		$('#emotionFilter a').on('click', function(e) {
+			var emotion = $(this).data('value');
+			var $items = $('.item .' + emotion).parents('.item');
 
-				if($($items[0]).is(':visible')) {
-					$items.fadeOut();
-				} else {
-					$items.fadeIn();
-				}
+			if($($items[0]).is(':visible')) {
+				$items.fadeOut();
+			} else {
+				$items.fadeIn();
+			}
 
-				$(this).parent('li').toggleClass('active');
-			});
-		}
+			$(this).parent('li').toggleClass('active');
+		});
 	}
 }
 
