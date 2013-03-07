@@ -452,7 +452,7 @@ jsSite.creativeComments =
 			e.preventDefault();
 
 			var emotion = $(this).data('value');
-			var $items = $('.item .' + emotion).parents('.item');
+			var $items = $('.item:has(.' + emotion + ')');
 
 			if($($items[0]).is(':visible')) {
 				$items.fadeOut();
