@@ -448,7 +448,7 @@ jsSite.creativeComments =
 			});
 		});
 
-		$('#emotionFilter a').on('click', function(e) {
+		$('#emotionFilter').on('click', 'a', function(e) {
 			var emotion = $(this).data('value');
 			var $items = $('.item .' + emotion).parents('.item');
 
