@@ -69,7 +69,7 @@
 							</div>
 						{/option:currentUser}
 						{option:!currentUser}
-							<a href="#">
+							<a href="#" class="facebookRegister">
 								{$lblSignIn|ucfirst}
 							</a>
 							<div class="avatar">
