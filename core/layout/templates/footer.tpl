@@ -35,8 +35,7 @@
 		</div>
 		<div class="row-fluid madeBy">
 			<div class="span4">
-				<!-- @todo tys link correct maken -->
-				<p>Webdesign by <a href="http://www.sumocoders.be/?utm_source=#&amp;utm_medium=credits&amp;utm_campaign=client_sites" rel="external">SumoCoders</a>
+				<p>Webdesign by <a href="http://www.sumocoders.be/?utm_source=creative_comments&amp;utm_medium=credits&amp;utm_campaign=client_sites" rel="external">SumoCoders</a>
 			</div>
 		</div>
 	</div>
