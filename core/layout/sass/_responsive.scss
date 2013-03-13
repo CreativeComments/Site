@@ -57,14 +57,14 @@
 	padding: 20px 0 50px;
 }
 
-#pages {
+#pages, #business {
 	padding-bottom: 30px;
 
 	.container {
 		.row-fluid {
 			margin-top: 20px;
 		
-			.span7 {
+			.graphicHolder {
 				position: relative;
 				margin-top: 35px;
 				height: 305px;
@@ -89,12 +89,20 @@
 				}
 			}
 		
-			.intro {
-				.facebookRegister {
-					font-size: 18px;
-					margin: 20px 0 0 0;
-				}
+			.facebookRegister {
+				font-size: 18px;
+				margin: 20px 0 0 0;
 			}
+
+		}
+	}
+}
+
+#business {
+	.container {
+		.lineBottom {
+			padding-bottom: 40px;
+			margin-bottom: 40px;
 		}
 	}
 }

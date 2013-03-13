@@ -5,7 +5,7 @@
 			<section id="{$MODULE}" class="{$ACTION} lineBottom">
 				<div class="container">
 					<div class="row-fluid">
-						<div class="span7 hidden-phone">
+						<div class="span7 graphicHolder hidden-phone">
 							<div class="graphic">
 								<a href="#">
 									<!-- @todo link naar creative comment -->
