@@ -11,6 +11,7 @@
 				<h5>{$lblGetStarted|ucfirst}</h5>
 				<ul>
 					<li><a href="{$var|buildurl:'plugins':'pages'}">{$msgPagesDownloadPlugin}</a></li>
+					<li><a href="{$var|buildurl:'business':'pages'}">For business</a></li>
 				</ul>
 			</div>
 
