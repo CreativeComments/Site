@@ -30,8 +30,8 @@
 						This Creative Comments can not be viewed on a mobile device. Please visit the link on a desktop computer.
 					</p>
 				</div>
-				<div class="row-fluid hidden-phone">
-					<div id="buttonsLeft" class="span1">
+				<div id="creativeCommentsContent" class="hidden-phone">
+					<div id="buttonsLeft">
 					<ul>
 						<li>
 							<!-- @todo tys -->
@@ -80,7 +80,7 @@
 						</li>
 					</ul>
 				</div>
-					<div id="creativeCommentsHolder" class="span10">
+					<div id="creativeCommentsHolder">
 
 					{option:item.videoId}
 						<div class="video">
@@ -93,7 +93,7 @@
 						</div>
 					{/option:item.videoId}
 				</div>
-					<div id="buttonsRight" class="span1">
+					<div id="buttonsRight">
 					<ul>
 						<li>
 							<!-- @todo tys -->
