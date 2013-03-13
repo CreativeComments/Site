@@ -14,18 +14,20 @@
 			<section id="{$MODULE}" class="{$ACTION}">
 				<div class="row-fluid header">
 					<div class="span10 offset1 username">
+						<!-- @todo tijs include username -->
 						<h3>
 							Username
 						</h3>
+						<!-- @todo tijs include date -->
 						<time>
-							12 06 2013
+							12.06.2013
 						</time>
 					</div>
 				</div>
 				<!-- @todo tijs message for mobile -->
-				<div class="row-fluid visible-phone">
+				<div class="visible-phone mobile">
 					<p>
-						This Creative Comments is best viewed on a desktop
+						This Creative Comments can not be viewed on a mobile device. Please visit the link on a desktop computer.
 					</p>
 				</div>
 				<div class="row-fluid hidden-phone">
