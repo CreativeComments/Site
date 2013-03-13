@@ -50,12 +50,15 @@
 	}
 }
 
-#pages {
+#pages, #business {
 	.container {
 		.row-fluid {
-			.span7 {
+			.graphicHolder {
 				.graphic {
 					@include background(image-url("ie/graphic_intro.png") no-repeat);
+				&.business {
+					@include background(image-url("ie/graphic_business.png") no-repeat);
+				}
 				}
 			}
 			.intro {

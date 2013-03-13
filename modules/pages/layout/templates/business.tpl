@@ -6,7 +6,7 @@
 				<div class="container">
 					<div class="row-fluid lineBottom">
 						<div class="span7 graphicHolder hidden-phone">
-							<div class="graphic">
+							<div class="graphic business">
 							</div>
 						</div>
 						<div class="span5 intro">
