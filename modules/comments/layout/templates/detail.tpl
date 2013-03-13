@@ -34,12 +34,12 @@
 						</li>
 						<li>
 							<!-- @todo tys -->
-							{*option:item.pintrest*}
-								<a href="{$item.pintrest}" class="uiButton toggleElement">
+							{*option:item.pinterest*}
+								<a href="{$item.pinterest}" class="uiButton toggleElement">
 									<span class="pinterest"></span>
 									<span class="title">Pintrest</span>
 								</a>
-							{*/option:item.pintrest*}
+							{*/option:item.pinterest*}
 						</li>
 						<li>
 							<!-- @todo tys -->
@@ -74,21 +74,52 @@
 						</div>
 					{/option:item.videoId}
 				</div>
-				<div class="span1">
+				<div id="buttonsRight" class="span1">
 					<ul>
 						<li>
-							{option:item.dropbox}
-								<a href="#" class="uiButton toggleElement">
-									<a href="{$item.dropbox}">{$item.dropbox}</a>
+							<!-- @todo tys -->
+							{*option:item.evernote*}
+								<a href="{$item.evernote}" class="uiButton toggleElement">
+									<span class="evernote"></span>
+									<span class="title">Evernote</span>
 								</a>
-							{/option:item.dropbox}
+							{*/option:item.evernote*}
 						</li>
 						<li>
-							{option:item.file}
-								<div class="well">
-									<a href="{$item.fileUrl}">{$lblDownload|ucfirst}</a>
-								</div>
-							{/option:item.file}
+							<!-- @todo tys -->
+							{*option:item.dropbox*}
+								<a href="{$item.dropbox}" class="uiButton toggleElement">
+									<span class="dropbox"></span>
+									<span class="title">Dropbox</span>
+								</a>
+							{*/option:item.dropbox*}
+						</li>
+						<li>
+							<!-- @todo tys -->
+							{*option:item.pinterest*}
+								<a href="{$item.pinterest}" class="uiButton toggleElement">
+									<span class="pinterest"></span>
+									<span class="title">Pintrest</span> 
+								</a>
+							{*/option:item.pinterest*}
+						</li>
+						<li>
+							<!-- @todo tys -->
+							{*option:item.picture*}
+								<a href="{$item.picture}" class="uiButton toggleElement">
+									<span class="picture"></span>
+									<span class="title">Picture</span>
+								</a>
+							{*/option:item.picture*}
+						</li>
+						<li>
+							<!-- @todo tys -->
+							{*option:item.file*}
+								<a href="{$item.fileUrl}" class="uiButton toggleElement">
+									<span class="file"></span>
+									<span class="title">{$lblDownload|ucfirst}</span>
+								</a>
+							{*/option:item.file*}
 						</li>
 					</ul>
 				</div>

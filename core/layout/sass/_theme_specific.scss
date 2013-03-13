@@ -741,7 +741,7 @@ only screen and (                min-resolution: 2dppx) {
 						.title {
 						position: absolute;
 						top: 18px;
-						left: 58px;
+						left: 60px;
 						width: 200px;
 						}
 						
@@ -778,6 +778,113 @@ only screen and (                min-resolution: 2dppx) {
 				}
 			}
 		}
+		
+		#buttonsRight {
+			margin-left: 0;
+			
+		ul {
+			margin: 0;
+			padding: 0;
+
+			li {
+				list-style: none;
+				width: 56px;
+				border-bottom: 1px solid #bfbfbf;
+				
+				&:last-child {
+					border-bottom: none;
+				}
+
+				a {
+					display: block;
+					height: 55px;
+					width: 56px;
+					overflow-x: hidden;
+					position: relative;
+					@include transition(all 200ms);
+					background: #fff;
+					color: #cc3129;
+					font-family: $openSansSemiBold;
+					font-size: 15px;
+
+					&:hover {
+						width: 175px;
+						margin-right: -120px;
+						color: #cc3129;
+						@include border-radius( 0 4px 4px 0);
+
+						.evernote {
+							@include sprite(icon_evernote_hover);
+						}
+
+						.dropbox {
+							@include sprite(icon_dropbox_hover);
+						}
+
+						.pinterest {
+							@include sprite(icon_pinterest_hover);
+						}
+
+						.picture {
+							@include sprite(icon_picture_hover);
+						}
+
+						.file {
+							@include sprite(icon_file_hover);
+						}
+					}
+
+					.title {
+						position: absolute;
+						top: 18px;
+						right: 56px;
+						width: 200px;
+						text-align: right;
+					}
+
+					.evernote {
+						display: block;
+						@include sprite(icon_evernote);
+						margin: 8px 8px 0 0;
+						position: absolute;
+						right: 0;
+					}
+
+					.dropbox {
+						display: block;
+						@include sprite(icon_dropbox);
+						margin: 8px 8px 0 0;
+						position: absolute;
+						right: 0;
+					}
+
+					.pinterest {
+						display: block;
+						@include sprite(icon_pinterest);
+						margin: 8px 8px 0 0;
+						position: absolute;
+						right: 0;
+					}
+
+					.picture {
+						display: block;
+						@include sprite(icon_picture);
+						margin: 8px 8px 0 0;
+						position: absolute;
+						right: 0;
+					}
+
+					.file {
+						display: block;
+						@include sprite(icon_file);
+						margin: 8px 8px 0 0;
+						position: absolute;
+						right: 0;
+					}
+				}
+			}
+		}
+	}
 		
 		#creativeCommentsHolder {
 			margin-left: 0;
