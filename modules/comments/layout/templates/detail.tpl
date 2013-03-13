@@ -81,18 +81,17 @@
 					</ul>
 				</div>
 					<div id="creativeCommentsHolder">
-
-					{option:item.videoId}
-						<div class="video">
-							<object id="videoplayer" width="600" height="450">
-								<param name="movie" value="http://player.nimbb.com/nimbb.swf?guid={$item.videoId}&lang=en&autoplay=1" />
-								<param name="allowScriptAccess" value="always" />
-								<embed name="nimbb" src="http://player.nimbb.com/nimbb.swf?guid={$item.videoId}&lang=en&autoplay=1" width="320" height="240" allowScriptAccess="always" type="application/x-shockwave-flash">
-								</embed>
-							</object>
-						</div>
-					{/option:item.videoId}
-				</div>
+						{option:item.videoId}
+							<div class="video">
+								<object id="videoplayer" width="600" height="450">
+									<param name="movie" value="http://player.nimbb.com/nimbb.swf?guid={$item.videoId}&lang=en&autoplay=1" />
+									<param name="allowScriptAccess" value="always" />
+									<embed name="nimbb" src="http://player.nimbb.com/nimbb.swf?guid={$item.videoId}&lang=en&autoplay=1" width="320" height="240" allowScriptAccess="always" type="application/x-shockwave-flash">
+									</embed>
+								</object>
+							</div>
+						{/option:item.videoId}
+					</div>
 					<div id="buttonsRight">
 					<ul>
 						<li>
@@ -143,12 +142,20 @@
 					</ul>
 				</div>
 				</div>
-				<div class="row-fluid content row-fluid hidden-phone">
+				<div id="creativeCommentsSub" class="row-fluid row-fluid hidden-phone">
 					<div class="span10 offset1">
 						<p>
-							Hier komt tekst
+							Hier komt tekst of een <a href="#">link</a>
 						</p>
 					</div>
+				</div>
+			</section>
+			
+			<section class="row-fluid report">
+				<div class="span12">
+					<p>
+						<a href="{$var|buildurl:'report':'comments'}/{$item.id}">{$lblReportThis}</a>
+					</p>
 				</div>
 			</section>
 	
@@ -157,14 +164,6 @@
 					<a href="#">
 						<img src="http://placehold.it/728x90&t=advertisments" alt="Ad-zone" width="780" height="90" />
 					</a>
-				</div>
-			</section>
-	
-			<section class="row-fluid">
-				<div class="span12">
-					<p>
-						<a href="{$var|buildurl:'report':'comments'}/{$item.id}">{$lblReportThis}</a>
-					</p>
 				</div>
 			</section>
 		</div>
