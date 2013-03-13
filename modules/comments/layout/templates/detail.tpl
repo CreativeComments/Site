@@ -11,8 +11,25 @@
 				</div>
 			{/option:report}
 	
-			<section id="{$MODULE}" class="{$ACTION} row-fluid">
-				<div id="buttonsLeft" class="span1">
+			<section id="{$MODULE}" class="{$ACTION}">
+				<div class="row-fluid header">
+					<div class="span10 offset1 username">
+						<h3>
+							Username
+						</h3>
+						<time>
+							12 06 2013
+						</time>
+					</div>
+				</div>
+				<!-- @todo tijs message for mobile -->
+				<div class="row-fluid visible-phone">
+					<p>
+						This Creative Comments is best viewed on a desktop
+					</p>
+				</div>
+				<div class="row-fluid hidden-phone">
+					<div id="buttonsLeft" class="span1">
 					<ul>
 						<li>
 							<!-- @todo tys -->
@@ -61,7 +78,7 @@
 						</li>
 					</ul>
 				</div>
-				<div id="creativeCommentsHolder" class="span10">
+					<div id="creativeCommentsHolder" class="span10">
 
 					{option:item.videoId}
 						<div class="video">
@@ -74,7 +91,7 @@
 						</div>
 					{/option:item.videoId}
 				</div>
-				<div id="buttonsRight" class="span1">
+					<div id="buttonsRight" class="span1">
 					<ul>
 						<li>
 							<!-- @todo tys -->
@@ -122,6 +139,14 @@
 							{*/option:item.file*}
 						</li>
 					</ul>
+				</div>
+				</div>
+				<div class="row-fluid content row-fluid hidden-phone">
+					<div class="span10 offset1">
+						<p>
+							Hier komt tekst
+						</p>
+					</div>
 				</div>
 			</section>
 	

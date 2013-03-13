@@ -682,6 +682,26 @@ only screen and (                min-resolution: 2dppx) {
 		border: 1px solid #C4CDE0;
 		@include border-radius(3px);
 		@include box-shadow(0 0 0 4px rgba(100,100,100,0.2));
+		margin-bottom: 30px;
+		
+		.header {
+			border-bottom: 1px solid #bfbfbf;
+			
+			.username {
+				@include clearfix;
+				
+				h3 {
+					float: left;
+					width: 70%;
+				}
+				
+				time {
+					float: right;
+					width: 30%;
+					text-align: right;
+				}
+			}
+		}
 		
 		#buttonsLeft {
 			ul {
