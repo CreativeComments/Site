@@ -214,8 +214,6 @@
 						font-size: 15px;
 						
 						&:hover {
-						width: 175px;
-						margin-left: -120px;
 						color: #cc3129;
 						@include border-radius(4px 0 0 4px);
 						
@@ -287,9 +285,9 @@
 			right: 1px;
 			top: 0;
 			
-		ul {
-			margin: 0;
-			padding: 0;
+			ul {
+				margin: 0;
+				padding: 0;
 
 			li {
 				list-style: none;
@@ -302,15 +300,13 @@
 					width: 56px;
 					overflow-x: hidden;
 					position: relative;
-					@include transition(all 200ms);
 					background: #fff;
 					color: #cc3129;
+					@include transition(all 200ms);
 					font-family: $openSansSemiBold;
 					font-size: 15px;
 
 					&:hover {
-						width: 175px;
-						margin-right: -120px;
 						color: #cc3129;
 						@include border-radius( 0 4px 4px 0);
 
@@ -388,13 +384,12 @@
 	}
 		
 			#creativeCommentsHolder {
-			margin-left: 0;
-			border: 1px solid #bfbfbf;
-			border-top: none;
-			width: 580px;
-			height: 310px;
-			margin: 0 auto;
-		}
+				border: 1px solid #bfbfbf;
+				border-top: none;
+				width: 580px;
+				height: 310px;
+				margin: 0 auto;
+			}
 		
 		}
 }
@@ -436,6 +431,42 @@
 		
 		h3 {
 			font-size: 32px;
+		}
+	}
+}
+
+#comments {
+	width: 736px;
+
+	#creativeCommentsContent {
+		#buttonsLeft {
+			ul {
+				li {
+					a {
+						&:hover {
+													width: 175px;
+							margin-left: -120px;
+						}
+					}
+				}
+			}
+		}
+		#buttonsRight {
+			ul {
+				li {
+					a {
+						&:hover {
+							width: 175px;
+							margin-right: -120px;
+						}
+					}
+				}
+			}
+		}
+		
+		#creativeCommentsHolder {
+			width: 618px;
+			height: 330px;
 		}
 	}
 }
