@@ -18,6 +18,7 @@
 			<div class="span3 list">
 				<h5>{$lblAboutUs|ucfirst}</h5>
 				<ul>
+					<li><a href="{$var|buildurl:'team':'pages'}">Our team</a></li>
 					<li><a href="{$var|buildurl:'terms-of-service':'pages'}">Terms of service</a></li>
 					<li><a href="{$var|buildurl:'privacy-policy':'pages'}">Privacy policy</a></li>
 				</ul>
