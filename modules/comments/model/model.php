@@ -23,7 +23,7 @@ class Comment
 	 *
 	 * @var	string
 	 */
-	public $fullUrl, $text, $videoId, $youtube, $slideshare, $url, $dropbox, $file, $emotion = 'neutral';
+	public $fullUrl, $text, $videoId, $youtube, $slideshare, $url, $dropbox, $file, $emotion = 'neutral', $picture;
 
 	/**
 	 * DateTime properties
@@ -147,6 +147,22 @@ class Comment
 	public function getId()
 	{
 		return $this->id;
+	}
+
+	/**
+	 * @param string $picture
+	 */
+	public function setPicture($picture)
+	{
+		$this->picture = $picture;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getPicture()
+	{
+		return $this->picture;
 	}
 
 	/**
@@ -299,6 +315,7 @@ class Comment
 		if(isset($data['url'])) $this->url = (string) $data['url'];
 		if(isset($data['dropbox'])) $this->dropbox = (string) $data['dropbox'];
 		if(isset($data['file'])) $this->file = (string) $data['file'];
+		if(isset($data['picture'])) $this->picture = (string) $data['picture'];
 		if(isset($data['emotion'])) $this->emotion = (string) $data['emotion'];
 		if(isset($data['created_on'])) $this->createdOn = new DateTime('@' . $data['created_on']);
 		if(isset($data['edited_on'])) $this->editedOn = new DateTime('@' . $data['edited_on']);
@@ -322,6 +339,7 @@ class Comment
 		$item['url'] = $this->url;
 		$item['dropbox'] = $this->dropbox;
 		$item['file'] = $this->file;
+		$item['picture'] = $this->picture;
 		$item['emotion'] = $this->emotion;
 		$item['edited_on'] = Site::getUTCDate('Y-m-d H:i:s', $this->editedOn->getTimestamp());
 
@@ -358,6 +376,8 @@ class Comment
 		$item['dropbox'] = $this->getDropbox();
 		$item['file'] = $this->getFile();
 		$item['fileUrl'] = ($this->getFile() != null) ? Site::getFilesUrl($this->getFile()) : null;
+		$item['picture'] = $this->getPicture();
+		$item['pictureUrl'] = ($this->getPicture() != null) ? Site::getFilesUrl($this->getPicture()) : null;
 		$item['emotion'] = $this->getEmotion();
 		$item['createdOn'] = ($this->createdOn !== null) ? $this->createdOn->getTimestamp() : null;
 		$item['editedOn'] = ($this->editedOn !== null) ? $this->editedOn->getTimestamp() : null;
