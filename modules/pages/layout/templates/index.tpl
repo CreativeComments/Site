@@ -62,9 +62,8 @@
 							<!-- @todo tijs add correct url -->
 							<!-- @todo tys add class loading for loader -->
 							<a class="video" href="#">
-								{* this should be a still instead of this tiny flash thingy *}
 								{option:items.videoId}
-									{$items.video_flash_278x135}
+									<img src="http://api.nimbb.com/Live/Thumbnail.aspx?key={$NIMB_PUBLIC_KEY}&guid={$items.videoId}" width="278" height="170" />
 								{/option:items.videoId}
 							</a>
 						</div>

@@ -60,10 +60,9 @@
 					<div class="span4 item">
 						<div class="videoHolder">
 							<div class="video">
-							{* this should be a still instead of this tiny flash thingy *}
-							{option:items.videoId}
-								{$items.video_flash_278x135}
-							{/option:items.videoId}
+								{option:items.videoId}
+									<img src="http://api.nimbb.com/Live/Thumbnail.aspx?key={$NIMB_PUBLIC_KEY}&guid={$items.videoId}" width="278" height="170" />
+								{/option:items.videoId}
 							</div>
 						</div>
 						<div class="user {$items.emotion}">
