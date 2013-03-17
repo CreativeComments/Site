@@ -467,6 +467,10 @@ jsSite.creativeComments =
 			e.preventDefault();
 			document.location = $(this).find('a:first').attr('href');
 		});
+
+		$(document).on('click', 'a.disabled', function(e) {
+			e.preventDefault();
+		});
 	}
 }
 
