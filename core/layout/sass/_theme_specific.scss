@@ -237,9 +237,6 @@ body {
 			margin: 0 auto;
 			@include background(inline-image("svg/avatar_bg_big.svg") no-repeat);
 			background-position: center center;
-			background-color: #fff;
-			border: 1px solid #ccc;
-
 		}
 
 		h4 {

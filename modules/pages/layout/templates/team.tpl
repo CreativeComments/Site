@@ -13,51 +13,31 @@
 					<div class="row-fluid">
 						<div class="span3 item">
 							<div class="avatarHolder">
-								<!-- @todo correcte image toevoegen -->
-								<img src="http://placehold.it/150x150" alt="placeholder"/>
+								<img src="/core/layout/images/team_filip_tack.jpg" alt="Filip Tack" class="img-circle" />
 							</div>
-							<h4>
-								Filip Tack
-							</h4>
-							<p>
-								CEO
-							</p>
+							<h4>Filip Tack</h4>
+							<p>CEO</p>
 						</div>
 						<div class="span3 item">
 							<div class="avatarHolder">
-								<!-- @todo correcte image toevoegen -->
-								<img src="http://placehold.it/150x150" alt="placeholder"/>
+								<img src="/core/layout/images/team_peter_geldhof.jpg" alt="Peter Geldhof" class="img-circle" />
 							</div>
-							<h4>
-								Dapibus Cras
-							</h4>
-							<p>
-								Teamleader
-							</p>
+							<h4>Peter Geldhof</h4>
+							<p>Teamleader</p>
 						</div>
 						<div class="span3 item">
 							<div class="avatarHolder">
-								<!-- @todo correcte image toevoegen -->
-								<img src="http://placehold.it/150x150" alt="placeholder"/>
+								<img src="http://placehold.it/150x150" alt="placeholder" class="img-circle" />
 							</div>
-							<h4>
-								Tristique Inceptos
-							</h4>
-							<p>
-								Marketing
-							</p>
+							<h4>Tristique Inceptos</h4>
+							<p>Marketing</p>
 						</div>
 						<div class="span3 item">
 							<div class="avatarHolder">
-								<!-- @todo correcte image toevoegen -->
-								<img src="http://placehold.it/150x150" alt="placeholder"/>
+								<img src="http://placehold.it/150x150" alt="placeholder" class="img-circle" />
 							</div>
-							<h4>
-								Inceptos Parient
-							</h4>
-							<p>
-								Copywriter
-							</p>
+							<h4>Tristique Inceptos</h4>
+							<p>Copywriter</p>
 						</div>
 					</div>
 				</div>
@@ -75,10 +55,9 @@
 					</div>
 					<div class="row-fluid">
 						<div class="span6 map">
-							<!-- @todo tijs google maps toevoegen -->
+							<iframe width="460" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.be/maps?f=q&amp;source=s_q&amp;hl=nl&amp;geocode=&amp;q=Nomadesk,+Xavier+de+Cocklaan,+Sint-Martens-Latem&amp;aq=0&amp;oq=Nomadesk&amp;sll=51.090154,3.714752&amp;sspn=0.337691,0.85762&amp;ie=UTF8&amp;hq=Nomadesk,&amp;hnear=Xavier+de+Cocklaan,+Sint-Martens-Latem,+Oost-Vlaanderen,+Vlaams+Gewest&amp;t=m&amp;ll=51.003587,3.621008&amp;spn=0.012497,0.029506&amp;output=embed"></iframe>
 						</div>
 						<div class="span5 offset1 info">
-							<!-- @todo correcte inhoud toevoegen -->
 							<ul>
 								<li>
 									<strong>Creative Comments Media BVBA</strong>
