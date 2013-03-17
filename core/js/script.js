@@ -462,6 +462,11 @@ jsSite.creativeComments =
 
 			$(this).parent('li').toggleClass('active');
 		});
+
+		$(document).on('click', '.itemGrid .item', function(e) {
+			e.preventDefault();
+			document.location = $(this).find('a:first').attr('href');
+		});
 	}
 }
 
