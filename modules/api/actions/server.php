@@ -117,6 +117,7 @@ class commentsApi
 		if(isset($args['url']) && $args['url'] != '') $comment->setUrl($args['url']);
 		if(isset($args['dropbox']) && $args['dropbox'] != '') $comment->setDropbox($args['dropbox']);
 		if(isset($args['file_id']) && $args['file_id'] != '') $comment->setFile(self::getTemporaryFile($args['file_id']));
+		if(isset($args['picture_id']) && $args['picture_id'] != '') $comment->setPicture(self::getTemporaryFile($args['picture_id']));
 		if(isset($args['emotion']) && $args['emotion'] != '') $comment->setEmotion($args['emotion']);
 		$comment->save();
 
@@ -157,24 +158,6 @@ class commentsApi
 	 * @return string
 	 */
 	private static function getTemporaryFile($id)
-	{
-		$return = Site::getDB()->getVar(
-			'SELECT file
-			 FROM temporary_files
-			 WHERE id = ?',
-			$id
-		);
-
-		Site::getDB(true)->delete('temporary_files', 'id = ?', $id);
-		return $return;
-	}
-
-	/**
-	 * Get a temporary image
-	 * @param int $id
-	 * @return string
-	 */
-	private static function getTemporaryImage($id)
 	{
 		$return = Site::getDB()->getVar(
 			'SELECT file
