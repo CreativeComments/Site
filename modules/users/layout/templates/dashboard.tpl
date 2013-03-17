@@ -58,11 +58,11 @@
 				{iteration:items}
 					<div class="span4 item">
 						<div class="videoHolder">
-							<div class="video">
+							<a class="video" href="{$var|buildurl:'detail':'comments'}/{$items.id}">
 								{option:items.videoId}
 									<img src="http://api.nimbb.com/Live/Thumbnail.aspx?key={$NIMB_PUBLIC_KEY}&guid={$items.videoId}" width="278" height="170" />
 								{/option:items.videoId}
-							</div>
+							</a>
 						</div>
 						<div class="user {$items.emotion}">
 							<div class="avatar">
@@ -70,7 +70,7 @@
 								<img src="https://graph.facebook.com/{$items.user.facebookId}/picture?type=square" width="40" height="40" alt="" />
 							</div>
 							<div class="content">
-								<a href="#">
+								<a href="{$var|buildurl:'detail':'comments'}/{$items.id}">
 									{$items.user.name}
 								</a>
 								<time datetime="{$items.createdOn|date:"Y-m-d\TH:i:s"}">{$items.createdOn|timeago}</time>
