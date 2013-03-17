@@ -166,6 +166,24 @@ class commentsApi
 	}
 
 	/**
+	 * Get a temporary image
+	 * @param int $id
+	 * @return string
+	 */
+	private static function getTemporaryImage($id)
+	{
+		$return = Site::getDB()->getVar(
+			'SELECT file
+			 FROM temporary_files
+			 WHERE id = ?',
+			$id
+		);
+
+		Site::getDB(true)->delete('temporary_files', 'id = ?', $id);
+		return $return;
+	}
+
+	/**
 	 * Upload a temporary file
 	 *
 	 * @param $args
@@ -174,6 +192,40 @@ class commentsApi
 	 */
 	public static function uploadTemporaryFile($args)
 	{
+		if(!isset($args['access_token']) || $args['access_token'] == '') throw new Exception('no access_token');
+		if(!isset($args['name']) || $args['name'] == '') throw new Exception('no name');
+		if(!isset($args['data']) || $args['data'] == '') throw new Exception('no data');
+
+		$filename = Site::getFilename() . '.' . SpoonFile::getExtension($args['name']);
+		$path = Site::getFilesPath($filename);
+		SpoonFile::setContent($path, $args['data']);
+
+		$id = Site::getDB(true)->insert(
+			'temporary_files',
+			array(
+			     'file' => $filename,
+			     'created_on' => Site::getUTCDate()
+			)
+		);
+
+		self::cleanupTemporaryFiles();
+
+		return array(
+			'id' => $id,
+		);
+	}
+
+	/**
+	 * Upload a temporary image
+	 *
+	 * @param $args
+	 * @return array
+	 * @throws Exception
+	 */
+	public static function uploadTemporaryImage($args)
+	{
+		// @todo    validate if image
+
 		if(!isset($args['access_token']) || $args['access_token'] == '') throw new Exception('no access_token');
 		if(!isset($args['name']) || $args['name'] == '') throw new Exception('no name');
 		if(!isset($args['data']) || $args['data'] == '') throw new Exception('no data');
