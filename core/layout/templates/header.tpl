@@ -39,22 +39,13 @@
 						<div class="dropdown">
 							<a class="dropdown-toggle about" data-toggle="dropdown" href="#">
 							<span class="about"></span>
-							<span class="link">{$lblAbout|ucfirst}</span>
+							<span class="link">{$lblAboutUs|ucfirst}</span>
 							<span class="icon"></span>
 							</a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-								<li>
-									<a href="#">Lorem</a>
-								</li>
-								<li>
-									<a href="#">Vulputate</a>
-								</li>
-								<li>
-									<a href="#">Dolor</a>
-								</li>
-								<li>
-									<a href="#">Consectetur</a>
-								</li>
+								<li><a href="{$var|buildurl:'team':'pages'}">Our team</a></li>
+								<li><a href="{$var|buildurl:'terms-of-service':'pages'}">Terms of service</a></li>
+								<li><a href="{$var|buildurl:'privacy-policy':'pages'}">Privacy policy</a></li>
 							</ul>
 						</div>
 					</div>
