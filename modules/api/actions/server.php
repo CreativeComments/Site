@@ -139,9 +139,13 @@ class commentsApi
 
 		$comment = Comment::get($args['id']);
 
-		if($comment->file != '')
+		if($comment->getFile() != '')
 		{
-			$comment->fileUrl = SITE_URL . Site::getFilesUrl($comment->file);
+			$comment->fileUrl = SITE_URL . Site::getFilesUrl($comment->getFile());
+		}
+		if($comment->getPicture() != '')
+		{
+			$comment->pictureUrl = SITE_URL . Site::getFilesUrl($comment->getPicture());
 		}
 
 		return $comment;
