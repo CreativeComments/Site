@@ -25,3 +25,6 @@ require "forkcms_deploy"
 require "forkcms_deploy/defaults"
 require "sumodev_deploy"
 load "./deployment/overwrites"
+
+# compile sass on deploy
+after 'deploy:update_code', 'assets:precompile'
