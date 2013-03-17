@@ -14,7 +14,6 @@
 					</div>
 					<p>
 						<a style="display: none;" id="browserPluginChrome" class="btn" href="{$var|buildurl:'download':'plugins'}?browser=chrome&version=latest">Download for Chrome</a>
-						<!-- @todo remove the strike-elements when other plugins are ready -->
 						<a style="display: none;" id="browserPluginFirefox" class="btn" href="{$var|buildurl:'download':'plugins'}?browser=firefox&version=latest"><strike>Download for Firefox</strike> <small>(not available yet)</small></a>
 						<a style="display: none;" id="browserPluginSafari" class="btn" href="{$var|buildurl:'download':'plugins'}?browser=safari&version=latest"><strike>Download for Safari</strike> <small>(not available yet)</small></a>
 						<small><br ><a href="{$var|buildurl:'plugins':'pages'}"><strike>{$lblOtherBrowsers|ucfirst}</strike> <small>(not available yet)</small></a></small>

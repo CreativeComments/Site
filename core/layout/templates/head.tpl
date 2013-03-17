@@ -44,8 +44,8 @@
 	<script>
 		var currentUser = {};
 		{option:currentUser}
-		currentUser.name = '{$currentUser.name|addslashes}';
-		currentUser.email = '{$currentUser.email|addslashes}';
+			currentUser.name = '{$currentUser.name|addslashes}';
+			currentUser.email = '{$currentUser.email|addslashes}';
 		{/option:currentUser}
 		var data = {};
 	</script>

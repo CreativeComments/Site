@@ -13,7 +13,6 @@
 							<a href="{$var|buildurl:'download':'plugins'}?browser=chrome&version=latest" class="btn">Download</a>
 						</p>
 					</div>
-					<!-- @todo remove the notReady class when other plugins are ready -->
 					<div class="span4 plugin notReady">
 							<div class="icon firefox"></div>
 							<h2>Firefox</h2>
