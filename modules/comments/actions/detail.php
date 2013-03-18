@@ -42,7 +42,10 @@ class CommentsDetail extends SiteBaseAction
 	 */
 	private function parse()
 	{
+		$user = User::get($this->item->getUserId());
+
 		// @todo	parse meta/open graph data
-		$this->tpl->assign('item', $this->item->toArray());
+		$this->tpl->assign('item', $this->item->toArray(true));
+		$this->tpl->assign('user', $user->toArray());
 	}
 }

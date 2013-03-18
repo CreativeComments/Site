@@ -363,7 +363,7 @@ class Comment
 	 *
 	 * @return array
 	 */
-	public function toArray()
+	public function toArray($onSite = false)
 	{
 		// build array
 		$item['id'] = $this->id;
@@ -383,6 +383,22 @@ class Comment
 		$item['editedOn'] = ($this->editedOn !== null) ? $this->editedOn->getTimestamp() : null;
 
 		$item['video_flash_278x135'] = CommentsHelper::buildFlashOutput($this->getVideoId(), 278, 135);
+		$item['video_flash_600x450'] = CommentsHelper::buildFlashOutput($this->getVideoId(), 600, 450);
+
+		if($onSite)
+		{
+			if($item['youtube'] != '')
+			{
+				$item['youtube'] = preg_replace('|width="[0-9]*"|iU', 'width="610"', $item['youtube']);
+				$item['youtube'] = preg_replace('|height="[0-9]*"|iU', 'height="450"', $item['youtube']);
+			}
+
+			if($item['slideshare'] != '')
+			{
+				$item['slideshare'] = preg_replace('|width="[0-9]*"|iU', 'width="610"', $item['slideshare']);
+				$item['slideshare'] = preg_replace('|height="[0-9]*"|iU', 'height="450"', $item['slideshare']);
+			}
+		}
 
 		return $item;
 	}

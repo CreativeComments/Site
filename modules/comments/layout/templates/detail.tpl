@@ -10,147 +10,147 @@
 	                </div>
 				</div>
 			{/option:report}
-	
+
 			<section id="{$MODULE}" class="{$ACTION}">
 				<div class="row-fluid header">
 					<div class="span10 offset1 username">
-						<!-- @todo tijs include username -->
 						<h3>
-							Username
+							{$user.name}
 						</h3>
-						<!-- @todo tijs include date -->
-						<time>
-							12.06.2013
-						</time>
+						<time datetime="{$item.createdOn|date:"Y-m-d\TH:i:s"}">{$item.createdOn|timeago}</time>
 					</div>
 				</div>
-				<!-- @todo tijs message for mobile -->
-				<div class="visible-phone mobile">
-					<p>
-						This Creative Comments can not be viewed on a mobile device. Please visit the link on a desktop computer.
-					</p>
+				<div class="visible-phone mobile alert">
+					This Creative Comments can not be viewed on a mobile device. Please visit the link on a desktop computer.
 				</div>
 				<div id="creativeCommentsContent" class="hidden-phone">
 					<div id="buttonsLeft">
-					<ul>
-						<li>
-							<!-- @todo tys -->
-							{*option:item.text*}
-								<a href="#" class="uiButton toggleElement">
-										{*$item.text*}
+						<ul>
+							{option:item.text}
+								<li>
+									<a href="#" class="uiButton toggleElement" data-id="textHolder">
 										<span class="text"></span><span class="title">View text</span>
-								</a>
-							{*/option:item.text*}
-						</li>
-						<li>
-							<!-- @todo tys -->
-							{*option:item.youtube*}
-								<a href="{$item.youtube}" class="uiButton toggleElement">
-									<span class="youtube"></span>
-									<span class="title">Watch movie</span>
-								</a>
-							{*/option:item.youtube*}
-						</li>
-						<li>
-							<!-- @todo tys -->
-							{*option:item.pinterest*}
-								<a href="{$item.pinterest}" class="uiButton toggleElement">
+									</a>
+								</li>
+							{/option:item.text}
+							{option:item.youtube}
+								<li>
+									<a href="#" class="uiButton toggleElement" data-id="youtubeHolder">
+										<span class="youtube"></span>
+										<span class="title">Watch movie</span>
+									</a>
+								</li>
+							{/option:item.youtube}
+	{*
+							<li>
+								<a href="#" class="uiButton toggleElement" data-id="pinterestHolder">
 									<span class="pinterest"></span>
 									<span class="title">Pintrest</span>
 								</a>
-							{*/option:item.pinterest*}
-						</li>
-						<li>
-							<!-- @todo tys -->
-							{*option:item.slideshare*}
-								<a href="{$item.slideshare}" class="uiButton toggleElement">
-									<span class="slideshare"></span>
-									<span class="title">View slide</span>
-								</a>
-							{*/option:item.slideshare*}
-						</li>
-						<li>
-							<!-- @todo tys -->
-							{*option:item.url*}
-								<a href="{$item.url}" class="uiButton toggleElement">
-									<span class="link"></span>
-									<span class="title">View link</span>
-								</a>
-							{*/option:item.url*}
-						</li>
-					</ul>
-				</div>
-					<div id="creativeCommentsHolder">
-						{option:item.videoId}
-							<div class="video">
-								<object id="videoplayer" width="600" height="450">
-									<param name="movie" value="http://player.nimbb.com/nimbb.swf?guid={$item.videoId}&lang=en&autoplay=1" />
-									<param name="allowScriptAccess" value="always" />
-									<embed name="nimbb" src="http://player.nimbb.com/nimbb.swf?guid={$item.videoId}&lang=en&autoplay=1" width="320" height="240" allowScriptAccess="always" type="application/x-shockwave-flash">
-									</embed>
-								</object>
-							</div>
-						{/option:item.videoId}
+							</li>
+	*}
+							{option:item.slideshare}
+								<li>
+									<a href="#" class="uiButton toggleElement" data-id="slideshareHolder">
+										<span class="slideshare"></span>
+										<span class="title">View slide</span>
+									</a>
+								</li>
+							{/option:item.slideshare}
+
+							{option:item.url}
+								<li>
+									<a href="{$item.url}" target="_blank" class="uiButton">
+										<span class="link"></span>
+										<span class="title">View link</span>
+									</a>
+								</li>
+							{/option:item.url}
+						</ul>
+					</div>
+					<div id="creativeCommentsHolderSite">
+						<div class="video">
+							{option:item.videoId}
+								{$item.video_flash_600x450}
+							{/option:item.videoId}
+						</div>
 					</div>
 					<div id="buttonsRight">
-					<ul>
-						<li>
-							<!-- @todo tys -->
-							{*option:item.evernote*}
-								<a href="{$item.evernote}" class="uiButton toggleElement">
+						<ul>
+{*
+							<li>
+								<a href="#" class="uiButton toggleElement" data-id="evernoteHolder">
 									<span class="evernote"></span>
 									<span class="title">Evernote</span>
 								</a>
-							{*/option:item.evernote*}
-						</li>
-						<li>
-							<!-- @todo tys -->
-							{*option:item.dropbox*}
-								<a href="{$item.dropbox}" class="uiButton toggleElement">
-									<span class="dropbox"></span>
-									<span class="title">Dropbox</span>
-								</a>
-							{*/option:item.dropbox*}
-						</li>
-						<li>
-							<!-- @todo tys -->
-							{*option:item.pinterest*}
-								<a href="{$item.pinterest}" class="uiButton toggleElement">
+							</li>
+*}
+							{option:item.dropbox}
+								<li>
+									<a href="{$item.dropbox}" target="_blank" class="uiButton">
+										<span class="dropbox"></span>
+										<span class="title">Dropbox</span>
+									</a>
+								</li>
+							{/option:item.dropbox}
+{*
+							<li>
+								<a href="#" class="uiButton toggleElement">
 									<span class="pinterest"></span>
-									<span class="title">Pintrest</span> 
+									<span class="title">Pintrest</span>
 								</a>
-							{*/option:item.pinterest*}
-						</li>
-						<li>
-							<!-- @todo tys -->
-							{*option:item.picture*}
-								<a href="{$item.picture}" class="uiButton toggleElement">
-									<span class="picture"></span>
-									<span class="title">Picture</span>
-								</a>
-							{*/option:item.picture*}
-						</li>
-						<li>
-							<!-- @todo tys -->
-							{*option:item.file*}
-								<a href="{$item.fileUrl}" class="uiButton toggleElement">
-									<span class="file"></span>
-									<span class="title">{$lblDownload|ucfirst}</span>
-								</a>
-							{*/option:item.file*}
-						</li>
-					</ul>
-				</div>
+							</li>
+*}
+							{option:item.pictureUrl}
+								<li>
+									<a href="#" class="uiButton toggleElement" data-id="pictureHolder">
+										<span class="picture"></span>
+										<span class="title">Picture</span>
+									</a>
+								</li>
+							{/option:item.pictureUrl}
+							{option:item.fileUrl}
+								<li>
+									<a href="{$item.fileUrl}" target="_blank" class="uiButton">
+										<span class="file"></span>
+										<span class="title">{$lblDownload|ucfirst}</span>
+									</a>
+								</li>
+							{/option:item.fileUrl}
+						</ul>
+					</div>
 				</div>
 				<div id="creativeCommentsSub" class="row-fluid row-fluid hidden-phone">
 					<div class="span10 offset1">
-						<p>
-							Hier komt tekst of een <a href="#">link</a>
-						</p>
+						{option:item.text}
+							<div id="textHolder" class="element" style="display: none;">
+								{$item.text}
+							</div>
+						{/option:item.text}
+
+						{option:item.youtube}
+							<div id="youtubeHolder" class="element" style="display: none;">
+								{$item.youtube}
+							</div>
+						{/option:item.youtube}
+
+						{option:item.slideshare}
+							<div id="slideshareHolder" class="element" style="display: none;">
+								{$item.slideshare}
+							</div>
+						{/option:item.slideshare}
+
+						{option:item.pictureUrl}
+							<div id="pictureHolder" class="element" style="display: none;">
+								<a href="{$item.pictureUrl}" target="_blank">
+									<img src="{$item.pictureUrl}" alt="" width="610" />
+								</a>
+							</div>
+						{/option:item.pictureUrl}
 					</div>
 				</div>
 			</section>
-			
+
 			<section class="row-fluid report">
 				<div class="span12">
 					<p>
@@ -158,7 +158,7 @@
 					</p>
 				</div>
 			</section>
-	
+
 			<section class="row-fluid">
 	            <div class="span12" style="text-align: center;">
 					<a href="#">

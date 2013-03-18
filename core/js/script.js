@@ -471,6 +471,24 @@ jsSite.creativeComments =
 		$(document).on('click', 'a.disabled', function(e) {
 			e.preventDefault();
 		});
+
+		$(document).on('click', 'a.toggleElement', function(e) {
+			e.preventDefault();
+			var $element = $('#' + $(this).data('id'));
+
+			if($element.is(':visible')) {
+				$element.slideUp();
+				$('html, body').stop().animate({
+                   scrollTop: $('#comments').offset().top
+               }, 1000);
+			} else {
+				$element.slideDown();
+
+				$('html, body').stop().animate({
+					scrollTop: $element.offset().top
+				}, 1000);
+			}
+		});
 	}
 }
 
