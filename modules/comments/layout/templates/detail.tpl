@@ -161,9 +161,17 @@
 
 			<section class="row-fluid">
 	            <div class="span12" style="text-align: center;">
-					<a href="#">
-						<img src="http://placehold.it/728x90&t=advertisments" alt="Ad-zone" width="780" height="90" />
-					</a>
+					<script type="text/javascript"><!--
+						google_ad_client = "ca-pub-2874679990125867";
+						/* Creative Comments - below comment */
+						google_ad_slot = "3583138376";
+						google_ad_width = 728;
+						google_ad_height = 90;
+						//-->
+					</script>
+					<script type="text/javascript"
+						src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+					</script>
 				</div>
 			</section>
 		</div>

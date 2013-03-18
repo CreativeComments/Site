@@ -82,9 +82,17 @@
 					{option:items.showAdd}
 						<div class="span4 ads">
 							<div class="addBlock">
-								<a href="#">
-									<img src="http://storage.googleapis.com/support-kms-prod/SNP_2665173_en_v0" alt="add">
-								</a>
+								<script type="text/javascript"><!--
+									google_ad_client = "ca-pub-2874679990125867";
+									/* Creative comments inside */
+									google_ad_slot = "9629671972";
+									google_ad_width = 300;
+									google_ad_height = 250;
+									//-->
+								</script>
+								<script type="text/javascript"
+									src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+								</script>
 							</div>
 						</div>
 					{/option:items.showAdd}
