@@ -171,6 +171,11 @@
 					}
 				}
 			}
+			&.ads {
+				adBlock {
+					@include background(image-url("adblock.png") no-repeat);
+				}
+			}
 		}
 	}
 }

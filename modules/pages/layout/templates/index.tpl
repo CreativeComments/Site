@@ -81,7 +81,7 @@
 
 					{option:items.showAdd}
 						<div class="span4 ads">
-							<div class="addBlock">
+							<div class="adBlock">
 								<script type="text/javascript"><!--
 									google_ad_client = "ca-pub-2874679990125867";
 									/* Creative comments inside */

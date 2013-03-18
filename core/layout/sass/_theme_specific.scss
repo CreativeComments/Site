@@ -533,11 +533,12 @@ body {
 			overflow: hidden;
 			margin-bottom: 20px;
 
-			.addBlock {
+			.adBlock {
 				width: 300px;
 				height: 250px;
 				background: #ccc;
 				margin: 0 auto;
+				@include background(inline-image("svg/adblock.svg") no-repeat);
 			}
 		}
 	}
