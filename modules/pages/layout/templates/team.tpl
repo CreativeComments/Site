@@ -15,29 +15,27 @@
 							<div class="avatarHolder">
 								<img src="/core/layout/images/team_filip_tack.jpg" alt="Filip Tack" class="img-circle" />
 							</div>
-							<h4>Filip Tack</h4>
-							<p>CEO</p>
+							<h4><a href="http://about.me/filiptack">Filip Tack</a></h4>
+							<p>Chief Instigator</p>
 						</div>
 						<div class="span3 item">
 							<div class="avatarHolder">
 								<img src="/core/layout/images/team_peter_geldhof.jpg" alt="Peter Geldhof" class="img-circle" />
 							</div>
-							<h4>Peter Geldhof</h4>
-							<p>Teamleader</p>
+							<h4><a href="http://about.me/pgeldhof">Peter Geldhof</a></h4>
+							<p>Chief Engager</p>
 						</div>
 						<div class="span3 item">
 							<div class="avatarHolder">
-								<img src="http://placehold.it/150x150" alt="placeholder" class="img-circle" />
 							</div>
-							<h4>Tristique Inceptos</h4>
-							<p>Marketing</p>
+							<h4><a href="mailto:careers@creativecomments.cc">Nomen Nescio</a></h4>
+							<p>Chief Marketeer</p>
 						</div>
 						<div class="span3 item">
 							<div class="avatarHolder">
-								<img src="http://placehold.it/150x150" alt="placeholder" class="img-circle" />
 							</div>
-							<h4>Tristique Inceptos</h4>
-							<p>Copywriter</p>
+							<h4><a href="mailto:careers@creativecomments.cc">Nomen Nescio</a></h4>
+							<p>Chief Developer</p>
 						</div>
 					</div>
 				</div>
@@ -63,10 +61,10 @@
 									<strong>Creative Comments Media BVBA</strong>
 								</li>
 								<li>
-									Nullam id dolor id nibh ultricies
+									<address>Hubert Frére-Orbanlaan 33</address>
 								</li>
 								<li>
-									Nullam quis risus eget urna
+									<address>9000 Gent, Belgium</address>
 								</li>
 								<li>
 									<a href="mailto:info@creativecomments.cc">info@creativecomments.cc</a>
