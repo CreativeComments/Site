@@ -30,7 +30,7 @@
 						{/option:!currentUser}
 						{option:currentUser}
 							<div class="alert alert-success">
-								You are already part of the team!
+								Kudos! You are already part of the team!
 							</div>
 						{/option:currentUser}
 					</div>
