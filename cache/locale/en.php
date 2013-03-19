@@ -46,6 +46,7 @@ $lbl['Next'] = 'next';
 $lbl['Normal'] = 'normal';
 $lbl['PluginNotInstalled'] = 'plugin not installed';
 $lbl['Ok'] = 'Ok';
+$lbl['OtherBrowsers'] = 'other browsers';
 $lbl['Password'] = 'password';
 $lbl['Previous'] = 'previous';
 $lbl['ReportThis'] = 'report this';
@@ -116,6 +117,7 @@ $msg['FooterDisclaimer'] = '<p>This application is developed by SumoCoders BVBA,
 $msg['PagesDownloadPlugin'] = 'Download the plugin';
 $msg['PluginNotInstalled'] = '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>';
 $msg['OldBrowserWarning'] = '<strong>Warning:</strong> You are using an older browser. If you want to see the site as it is intended, you may want to download a new version or a decent browser like <a href="http://www.getfirefox.com">Firefox</a>.';
+$msg['NoPluginAvailable'] = 'No plugin available';
 $msg['Required'] = 'Required';
 $msg['ReportBug'] = 'Report a bug';
 $msg['UpgradePlugin'] = 'It seems you have an outdated version of the plugin, <a href="/en/pages/plugins">download the latest version</a>.';
