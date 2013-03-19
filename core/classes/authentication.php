@@ -35,6 +35,7 @@ class Authentication
 				{
 					SpoonHTTP::redirect('/');
 				}
+				else throw $e;
 			}
 
 			if($user === false)
