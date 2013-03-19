@@ -23,8 +23,19 @@ class Authentication
 		{
 			$user = User::getByFacebookId($facebookId);
 
-			// grab data from Facebook
-			$data = Site::getFacebook()->api('/me');
+			try
+			{
+				// grab data from Facebook
+				$data = Site::getFacebook()->api('/me');
+			}
+			catch(FacebookApiException $e)
+			{
+				// if no active token is found we should redirect to the homepage, and hope it is active in that time
+				if($e->getMessage() == 'An active access token must be used to query information about the current user.')
+				{
+					SpoonHTTP::redirect('/');
+				}
+			}
 
 			if($user === false)
 			{
