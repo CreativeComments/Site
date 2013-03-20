@@ -61,10 +61,10 @@
 									<strong>Creative Comments Media BVBA</strong>
 								</li>
 								<li>
-									<address>Hubert Frére-Orbanlaan 33</address>
+									<address>Hubert Frère-Orbanlaan 33</address>
 								</li>
 								<li>
-									<address>9000 Gent, Belgium</address>
+									<address>9000 Ghent, Belgium</address>
 								</li>
 								<li>
 									<a href="mailto:info@creativecomments.cc">info@creativecomments.cc</a>

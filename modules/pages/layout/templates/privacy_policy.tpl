@@ -114,7 +114,8 @@
 						<header>
 							<h3>How do you contact Creative Comments?</h3>
 						</header>
-						<p>If you have any questions or complaints about this Privacy Policy, the Terms of Service or the Service, please contact us at Creative Comments Media BVBA,…, <a href="mailto:support@creativecomments.cc">support@creativecomments.cc</a>.</p>
+						<p>If you have any questions or complaints about this Privacy Policy, the Terms of Service or the Service, please contact us at Creative Comments Media BVBA,… <address>Hubert Frère-Orbanlaan 33, 9000 Ghent, Belgium</address>
+						 <a href="mailto:support@creativecomments.cc">support@creativecomments.cc</a></p>
 					</section>
 				</div>
 			</div>
