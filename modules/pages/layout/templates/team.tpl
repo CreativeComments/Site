@@ -26,13 +26,13 @@
 							<p>Chief Engager</p>
 						</div>
 						<div class="span3 item">
-							<div class="avatarHolder">
+							<div class="avatarHolder wanted">
 							</div>
 							<h4><a href="mailto:careers@creativecomments.cc">Nomen Nescio</a></h4>
 							<p>Chief Marketeer</p>
 						</div>
 						<div class="span3 item">
-							<div class="avatarHolder">
+							<div class="avatarHolder wanted">
 							</div>
 							<h4><a href="mailto:careers@creativecomments.cc">Nomen Nescio</a></h4>
 							<p>Chief Developer</p>

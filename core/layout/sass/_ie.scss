@@ -367,4 +367,20 @@
 	}
 }
 
+#team {
+	.item {
+		.avatarHolder {
+			@include background(image-url("ie/avatar_bg_big.png") no-repeat);
+			background-position: center center;
+			background-color: #f8f8f8;
+			
+			&.wanted {
+				@include background(image-url("ie/avatar_bg_big_wanted.png") no-repeat);
+				background-position: center center;
+				background-color: #f8f8f8;
+			}
+		}
+	}
+}
+
 }
