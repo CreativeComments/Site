@@ -12,14 +12,13 @@
 					</div>
 					<div class="row-fluid">
 						<div class="span3 item">
-							<div class="avatarHolder">
-								<img src="/core/layout/images/team_filip_tack.jpg" alt="Filip Tack" class="img-circle" />
+							<div class="avatarHolder filip">
 							</div>
 							<h4><a href="http://about.me/filiptack">Filip Tack</a></h4>
 							<p>Chief Instigator</p>
 						</div>
 						<div class="span3 item">
-							<div class="avatarHolder">
+							<div class="avatarHolder Peter">
 								<img src="/core/layout/images/team_peter_geldhof.jpg" alt="Peter Geldhof" class="img-circle" />
 							</div>
 							<h4><a href="http://about.me/pgeldhof">Peter Geldhof</a></h4>

@@ -246,6 +246,14 @@ body {
 				background-position: center center;
 				background-color: #f8f8f8;
 			}
+			
+			&.filip {
+				@include sprite(Filip_bw);
+				
+				&:hover {
+					@include sprite(Filip_color);
+				}
+			}
 	
 		}
 
