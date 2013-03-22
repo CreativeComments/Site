@@ -18,8 +18,7 @@
 							<p>Chief Instigator</p>
 						</div>
 						<div class="span3 item">
-							<div class="avatarHolder Peter">
-								<img src="/core/layout/images/team_peter_geldhof.jpg" alt="Peter Geldhof" class="img-circle" />
+							<div class="avatarHolder peter">
 							</div>
 							<h4><a href="http://about.me/pgeldhof">Peter Geldhof</a></h4>
 							<p>Chief Engager</p>

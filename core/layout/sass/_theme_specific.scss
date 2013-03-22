@@ -254,7 +254,14 @@ body {
 					@include sprite(Filip_color);
 				}
 			}
-	
+
+			&.peter {
+				@include sprite(Peter_bw);
+				
+				&:hover {
+					@include sprite(Peter_color);
+				}
+			}
 		}
 
 		h4 {
