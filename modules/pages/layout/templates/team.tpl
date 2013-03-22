@@ -6,6 +6,12 @@
 					<div class="row-fluid">
 						<div class="span12 intro">
 							<header>
+								<blockquote>
+									"More an experiment than a company, planning to be a movement rather than a community"
+								</blockquote>
+								<a href="http://signup.creativecomments.cc">
+								Care to join?
+								</a>
 								<h3>Here is who we are</h3>
 							</header>
 						</div>
