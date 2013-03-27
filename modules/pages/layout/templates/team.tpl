@@ -57,7 +57,7 @@
 					</div>
 					<div class="row-fluid">
 						<div class="span6 map">
-							<iframe width="460" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.be/maps?f=q&amp;source=s_q&amp;hl=nl&amp;geocode=&amp;q=Nomadesk,+Xavier+de+Cocklaan,+Sint-Martens-Latem&amp;aq=0&amp;oq=Nomadesk&amp;sll=51.090154,3.714752&amp;sspn=0.337691,0.85762&amp;ie=UTF8&amp;hq=Nomadesk,&amp;hnear=Xavier+de+Cocklaan,+Sint-Martens-Latem,+Oost-Vlaanderen,+Vlaams+Gewest&amp;t=m&amp;ll=51.003587,3.621008&amp;spn=0.012497,0.029506&amp;output=embed"></iframe>
+							<iframe width="460" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.be/maps?f=q&amp;source=s_q&amp;hl=nl&amp;geocode=&amp;q=Hubert+Frere-Orbanlaan+33,+Gent&amp;aq=0&amp;oq=Hubert+Fr%C3%A8re-Orbanlaan+33&amp;sll=51.09623,4.227975&amp;sspn=1.019391,2.738342&amp;ie=UTF8&amp;hq=&amp;hnear=Hubert+Frere-Orbanlaan+33,+Gent+9000+Gent,+Oost-Vlaanderen,+Vlaams+Gewest&amp;ll=51.045949,3.732971&amp;spn=0.001003,0.002674&amp;t=m&amp;z=14&amp;output=embed"></iframe>
 						</div>
 						<div class="span5 offset1 info">
 							<ul>
