@@ -368,6 +368,14 @@ jsSite.facebook = {
 				}
 			);
 		});
+
+		$('a.facebookSignOff').on('click', function(e) {
+			FB.logout(
+				function(response) {
+					window.location.reload();
+				}
+			);
+		});
 	}
 }
 
