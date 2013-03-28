@@ -55,6 +55,23 @@ define('PATH_WWW', realpath(dirname(__FILE__) . '/../'));
 define('PATH_LIBRARY', realpath(dirname(__FILE__)));
 
 /**
+ * Facebook configuration
+ */
+define('FB_APP_ID', '338832809543889');
+define('FB_APP_SECRET', '711eb25558ea44d63146bb9142b81e37');
+
+/**
+ * Nimbb configuration
+ */
+define('NIMB_PUBLIC_KEY', '373f5c99d7');
+define('NIMB_PRIVATE_KEY', '283b815418');
+
+/**
+ * Beta configuration
+ */
+define('CC_BETA_PASSWORD', 'thisisoursecretbetacode');
+
+/**
  * Errbit configuration
  */
 define('ERRBIT_API_KEY', '');
