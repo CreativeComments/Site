@@ -58,17 +58,20 @@
 								<div class="top"></div>
 								<img src="https://graph.facebook.com/{$currentUser.facebookId}/picture?type=square" width="40" height="40" alt="" />
 							</div>
-							<a href="{$var|buildurl:'logout':'users'}" class="facebookSignOff">
+							<a href="#" class="facebookSignOff">
 								{$lblSignOff}
 							</a>
 						{/option:currentUser}
 						{option:!currentUser}
-							<a href="#" class="facebookRegister">
-								{$lblSignIn|ucfirst}
-							</a>
-							<div class="avatar">
-								<div class="top"></div>
-							</div>
+							{*
+								@remark disabled while the beta is going on
+								<a href="#" class="facebookRegister">
+									{$lblSignIn|ucfirst}
+								</a>
+								<div class="avatar">
+									<div class="top"></div>
+								</div>
+							*}
 						{/option:!currentUser}
 					</div>
 				</div>
