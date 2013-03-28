@@ -175,7 +175,7 @@ body {
 					font-family: $openSansRegular;
 				}
 			}
-				.facebookRegister {
+				.facebookRegister, .facebookRegisterLayout {
 					width: 85%;
 					display: block;
 					margin: 20px auto 0;
@@ -216,7 +216,7 @@ body {
 		margin-bottom: 30px;
 		margin-top: 40px;
 		text-align: center;
-		
+
 		blockquote {
 			font-family: $openSansRegular;
 			font-size: 18px;
@@ -224,13 +224,13 @@ body {
 			padding: 0;
 			margin: 0 0 10px;
 		}
-		
+
 		a {
 			margin-bottom: 20px;
 			font-size: 24px;
 			font-family: $openSansBold;
 			color: #d93735;
-			
+
 			&:hover {
 				text-decoration: none;
 				color: darken(#d93735, 10%);
@@ -262,16 +262,16 @@ body {
 			@include border-radius(500px);
 			background-color: #f8f8f8;
 			border: 1px solid #d2d2d2;
-			
+
 			&.wanted {
 				@include background(inline-image("svg/avatar_bg_big_wanted.svg") no-repeat);
 				background-position: center center;
 				background-color: #f8f8f8;
 			}
-			
+
 			&.filip {
 				@include sprite(Filip_bw);
-				
+
 				&:hover {
 					@include sprite(Filip_color);
 				}
@@ -279,7 +279,7 @@ body {
 
 			&.peter {
 				@include sprite(Peter_bw);
-				
+
 				&:hover {
 					@include sprite(Peter_color);
 				}
@@ -291,10 +291,10 @@ body {
 			font-family: $openSansSemiBold;
 			margin-bottom: 0;
 			line-height: 1.5em;
-			
+
 			a {
 				color: #989797;
-				
+
 				&:hover {
 					color: darken(#989797, 20%);
 					text-decoration: none;
@@ -319,7 +319,7 @@ body {
 
 			li {
 				margin-bottom: 5px;
-				
+
 				address {
 					display: inherit;
 					line-height: inherit;

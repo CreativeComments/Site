@@ -19,7 +19,7 @@
 							</header>
 							<p>Welcome to Creative Comments™, an out-of-the-ordinary commenting platform for Facebook&#174;.  We drive a more creative conversation among 1 billion socialnauts.</p>
 							<p class="light">With Creative Comments, you can be most imaginative and post lush comments that include your instant 20” video message, Dropbox&#174; files, Youtube&#174; movies, Slideshare&#174; decks,… whatever helps to bring your point across better.</p>
-							<p><a href="http://signup.creativecomments.cc" class="btn btn-large facebookRegister">Request your <strong>account</strong></a></p>
+							<p><a href="http://signup.creativecomments.cc" class="btn btn-large facebookRegisterLayout">Request your <strong>account</strong></a></p>
 						</div>
 					</div>
 				</div>
