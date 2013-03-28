@@ -300,7 +300,7 @@ class Comment
 	public function getOGImageUrl()
 	{
 		// should we generate the image?
-		if(!SpoonFile::exists(PATH_WWW . '/files/comments/og/' . $this->id . '.png'))
+		if($this->videoId != '' && !SpoonFile::exists(PATH_WWW . '/files/comments/og/' . $this->id . '.png'))
 		{
 			$stillPath = PATH_WWW . '/files/comments/temp/' . $this->id . '.jpg';
 			$stillContent = SpoonHTTP::getContent(
