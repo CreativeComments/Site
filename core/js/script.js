@@ -358,6 +358,8 @@ jsSite.facebook = {
 	{
 		$('a.facebookRegister').on('click', function(e)
 		{
+			e.preventDefault();
+
 			FB.login(
 				function(response)
 				{
@@ -370,11 +372,17 @@ jsSite.facebook = {
 		});
 
 		$('a.facebookSignOff').on('click', function(e) {
-			FB.logout(
-				function(response) {
-					window.location.reload();
+			e.preventDefault();
+
+			FB.getLoginStatus(function(response) {
+				if(response.authResponse) {
+					FB.logout(function(response) {
+						window.location = '/en/users/logout';
+					});
+				} else {
+					window.location = '/en/users/logout';
 				}
-			);
+			});
 		});
 	}
 }
