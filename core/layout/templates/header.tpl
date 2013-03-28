@@ -54,13 +54,13 @@
 							<a href="{$var|buildurl:'dashboard':'users'}">
 								{$currentUser.name}
 							</a>
-							<a href="{$var|buildurl:'logout':'users'}" class="facebookSignOff">
-								{$lblSignOff}
-							</a>
 							<div class="avatar">
 								<div class="top"></div>
 								<img src="https://graph.facebook.com/{$currentUser.facebookId}/picture?type=square" width="40" height="40" alt="" />
 							</div>
+							<a href="{$var|buildurl:'logout':'users'}" class="facebookSignOff">
+								{$lblSignOff}
+							</a>
 						{/option:currentUser}
 						{option:!currentUser}
 							<a href="#" class="facebookRegister">
