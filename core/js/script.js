@@ -435,6 +435,8 @@ jsSite.creativeComments =
 	init: function()
 	{
 		$(window).on('cco:loaded', function() {
+			if(typeof window.CC == 'undefined') return;
+
 			$('#pluginNotInstalled').hide();
 
 			$.ajax({
