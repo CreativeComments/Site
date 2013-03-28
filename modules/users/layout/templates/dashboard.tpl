@@ -46,7 +46,7 @@
 						<p>{$lblShowByEmotion|ucfirst}</p>
 						<ul id="emotionFilter">
 							<li class="active"><a href="#" class="sad" data-value="sad">{$lblSad|ucfirst}</a></li>
-							<li class="active"><a href="#" class="normal" data-value="normal">{$lblNormal|ucfirst}</a></li>
+							<li class="active"><a href="#" class="normal" data-value="neutral">{$lblNormal|ucfirst}</a></li>
 							<li class="active"><a href="#" class="happy" data-value="happy">{$lblHappy|ucfirst}</a></li>
 						</ul>
 					</div>
