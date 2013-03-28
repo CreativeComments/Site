@@ -10,7 +10,7 @@
 						<h2>Chrome</h2>
 						<p>Download the plugin.</p>
 						<p>
-							<a href="{$var|buildurl:'download':'plugins'}?browser=chrome&version=latest" class="btn">Download</a>
+							<a href="https://chrome.google.com/webstore/detail/creative-comments/helhdkbppnbmifdjhhiecciflfneoedj" class="btn">Download</a>
 						</p>
 					</div>
 					<div class="span4 plugin notReady">
