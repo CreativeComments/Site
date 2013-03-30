@@ -63,15 +63,12 @@
 							</a>
 						{/option:currentUser}
 						{option:!currentUser}
-							{*
-								@remark disabled while the beta is going on
-								<a href="#" class="facebookRegister">
-									{$lblSignIn|ucfirst}
-								</a>
-								<div class="avatar">
-									<div class="top"></div>
-								</div>
-							*}
+							<a href="#" class="facebookRegister">
+								{$lblSignIn|ucfirst}
+							</a>
+							<div class="avatar">
+								<div class="top"></div>
+							</div>
 						{/option:!currentUser}
 					</div>
 				</div>
