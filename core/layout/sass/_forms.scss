@@ -1,3 +1,4 @@
 .formError {
+	@extend .alert-error;
 	@extend .help-inline;
 }

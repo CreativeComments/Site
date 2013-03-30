@@ -7,21 +7,19 @@
 					<div class="span6 offset3 intro">
 						{option:!correct}
 							<header>
-								<h2>Welcome to our secret page!</h2>
+								<h2>Beta account registration</h2>
 							</header>
-							<p>Welcome to Creative Comments™, an out-of-the-ordinary commenting platform for Facebook&#174;.  We drive a more creative conversation among 1 billion socialnauts.</p>
+							<p>Surely this must be your lucky day! Fill out the passcode you received and click the Sign in button.</p>
 
 							{form:beta}
-								<div class="control-group{option:txtPasswordError} error{/option:txtPasswordError}">
-									<label class="control-label hideText" for="inputPassword">Password</label>
-									<div class="controls">
-										{$txtPassword} {$txtPasswordError}
-									</div>
-								</div>
-
-								<div class="control-group">
-									<div class="controls">
-										<button type="submit" class="btn">Ok, let me in</button>
+								<div class="form-inline">
+									<div class="control-group{option:txtPasswordError} error{/option:txtPasswordError}">
+										<label class="control-label hidden" for="inputPassword">Password</label>
+										<div class="controls">
+											{$txtPassword}
+											<button type="submit" class="btn">Sign in</button>
+										</div>
+										{$txtPasswordError}
 									</div>
 								</div>
 							{/form:beta}

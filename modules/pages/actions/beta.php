@@ -40,7 +40,7 @@ class PagesBeta extends SiteBaseAction
 
 					$this->redirect('/en?report=beta-success', 307);
 				} else {
-					$this->frm->getField('password')->addError(SiteLocale::err('WrongPassword'));
+					$this->frm->getField('password')->addError('Sorry, no can do!');
 				}
 			}
 		}

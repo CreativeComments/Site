@@ -6,10 +6,10 @@
 				<div class="row-fluid">
 					<div class="span6 offset3 intro">
 						<header>
-							<h2>We are in Beta!</h2>
+							<h2>We are still in closed beta</h2>
 						</header>
-						<p>For now you need an invite. You will be redirected in an instant to the invite-page. Or if you can't wait use the button below.</p>
-						<p><a href="http://signup.creativecomments.cc" class="btn">Request an invite</a></p>
+						<p>You require a passcode to complete the registration. We will redirect you to our request page shortly.</p>
+						<p><a href="http://signup.creativecomments.cc" class="btn">Redirect now</a></p>
 
 						<script>
 							setTimeout(function() {
