@@ -1,18 +1,33 @@
 {include:'{$CORE_PATH}/layout/templates/head.tpl'}
 {include:'{$CORE_PATH}/layout/templates/header.tpl'}
 	<div id="content">
-		{option:!currentUser}
+		{option:redirect}
 			<section id="{$MODULE}" class="{$ACTION} lineBottom">
 				<div class="container">
 					<div class="row-fluid">
 						<div class="span6 offset3 intro">
-							{option:correct}
-								<header>
-									<h2>Register your account</h2>
-								</header>
-								<p>Just link your Facebook-account</p>
-								<p><a href="#" class="btn btn-large facebookRegister">Sign up width <strong>Facebook</strong></a></p>
-							{/option:correct}
+							<header>
+								<h2>We are in Beta!</h2>
+							</header>
+							<p>For now you need an invite. You will be redirected in an instant to the invite-page. Or if you can't wait use the button below.</p>
+							<p><a href="http://signup.creativecomments.cc" class="btn">Request an invite</a></p>
+
+							<script>
+								setTimeout(function() {
+									document.location = 'http://signup.creativecomments.cc';
+								}, 5000);
+							</script>
+
+						</div>
+					</div>
+				</div>
+			</section>
+		{/option:redirect}
+		{option:!redirect}
+			<section id="{$MODULE}" class="{$ACTION} lineBottom">
+				<div class="container">
+					<div class="row-fluid">
+						<div class="span6 offset3 intro">
 							{option:!correct}
 								<header>
 									<h2>Welcome to our secret page!</h2>
@@ -38,7 +53,7 @@
 					</div>
 				</div>
 			</section>
-		{/option:!currentUser}
+		{/option:!redirect}
 	</div>
 {include:'{$CORE_PATH}/layout/templates/footer.tpl'}
 </body>

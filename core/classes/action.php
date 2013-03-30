@@ -218,6 +218,17 @@ class SiteBaseAction
 		// assign if there is a valid user
 		if($this->currentUser != false)
 		{
+			if(!$this->currentUser->hasAccess)
+			{
+				if($this->url->getModule() == 'pages' && $this->url->getAction() == 'beta')
+				{
+				}
+				else
+				{
+					$this->redirect($this->url->buildurl('beta', 'pages'));
+				}
+			}
+
 			// assign
 			$this->tpl->assign('currentUser', $this->currentUser->toArray());
 		}
