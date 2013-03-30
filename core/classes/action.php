@@ -36,6 +36,11 @@ class SiteAction
 	 */
 	public $tpl;
 
+	/**
+	 * @var SiteURL
+	 */
+	public $url;
+
 
 	/**
 	 * Default constructor
