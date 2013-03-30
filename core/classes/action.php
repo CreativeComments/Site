@@ -223,6 +223,9 @@ class SiteBaseAction
 				if($this->url->getModule() == 'pages' && (in_array($this->url->getAction(), array('beta', 'redirect'))))
 				{
 				}
+				elseif($this->url->getModule() == 'users' && (in_array($this->url->getAction(), array('logout'))))
+				{
+				}
 				else
 				{
 					$this->redirect($this->url->buildurl('redirect', 'pages'));
