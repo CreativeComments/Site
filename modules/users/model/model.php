@@ -28,7 +28,7 @@ class User
 	/**
 	 * Boolean properties
 	 */
-	public $isAdmin = false;
+	public $isAdmin = false, $hasAccess = false;
 
 	/**
 	 * DateTime properties
@@ -214,6 +214,7 @@ class User
 		if($this->type == 'admin') $this->isAdmin = true;
 		if(isset($data['created_on'])) $this->createdOn = new DateTime('@' . $data['created_on']);
 		if(isset($data['edited_on'])) $this->editedOn = new DateTime('@' . $data['edited_on']);
+		if(isset($data['has_access'])) $this->hasAccess = ($data['has_access'] == 'Y');
 	}
 
 	/**
@@ -235,6 +236,7 @@ class User
 		$item['type'] = $this->type;
 		$item['data'] = serialize(array('settings' => $this->settings));
 		$item['edited_on'] = Site::getUTCDate('Y-m-d H:i:s', $this->editedOn->getTimestamp());
+		$item['has_access'] = ($this->hasAccess) ? 'Y' : 'N';
 
 		// new password?
 		if($this->rawPassword != null) $item['password'] = sha1(md5($this->rawPassword) . $this->secret);
@@ -281,6 +283,7 @@ class User
 		$item['isAdmin'] = $this->isAdmin;
 		$item['createdOn'] = ($this->createdOn !== null) ? $this->createdOn->getTimestamp() : null;
 		$item['editedOn'] = ($this->editedOn !== null) ? $this->editedOn->getTimestamp() : null;
+		$item['hasAccess'] = $this->hasAccess;
 
 		return $item;
 	}
