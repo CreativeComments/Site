@@ -220,12 +220,12 @@ class SiteBaseAction
 		{
 			if(!$this->currentUser->hasAccess)
 			{
-				if($this->url->getModule() == 'pages' && $this->url->getAction() == 'beta')
+				if($this->url->getModule() == 'pages' && (in_array($this->url->getAction(), array('beta', 'redirect'))))
 				{
 				}
 				else
 				{
-					$this->redirect($this->url->buildurl('beta', 'pages'));
+					$this->redirect($this->url->buildurl('redirect', 'pages'));
 				}
 			}
 
