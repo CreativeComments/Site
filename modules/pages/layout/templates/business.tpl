@@ -26,7 +26,7 @@
 					</div>
 					<div class="span5 offset1">
 						{option:!currentUser}
-							<a href="#" class="btn btn-large facebookRegister">Request your <strong>account</strong></a>
+							<a href="#" class="btn btn-large facebookRegister">Sign-in with <strong>Facebook</strong></a>
 						{/option:!currentUser}
 						{option:currentUser}
 							<div class="alert alert-success">
