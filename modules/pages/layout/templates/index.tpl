@@ -25,84 +25,88 @@
 				</div>
 			</section>
 		{/option:!currentUser}
-		<section id="grid" class="container">
-			<div class="subMenu">
-				<div class="row-fluid menu">
-					<div class="span4 title">
-						<h3>{$lblMostRecent|ucfirst}</h3>
-					</div>
-					<div class="span4 category">
-{*
-							Disabled for now because there is no such thing as categories
-						<p>Sort by category</p>
-						<div class="dropdown">
-							<a class="dropdown-toggle btn" data-toggle="dropdown" href="#">Commodo Ridic<span class="icon"></span></a>
-							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-								<li><a href="#">Lorem</a></li>
-								<li><a href="#">Consectetur</a>	</li>
-							</ul>
-						</div>
-*}
-					</div>
-					<div class="span4 emotion">
-						<p>{$lblShowByEmotion|ucfirst}</p>
-						<ul id="emotionFilter">
-							<li class="active"><a href="#" class="sad" data-value="sad">{$lblSad|ucfirst}</a></li>
-							<li class="active"><a href="#" class="normal" data-value="neutral">{$lblNormal|ucfirst}</a></li>
-							<li class="active"><a href="#" class="happy" data-value="happy">{$lblHappy|ucfirst}</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-			<div class="row-fluid itemGrid">
-				{iteration:items}
-					<div class="span4 item">
-						<div class="videoHolder">
-							<a class="video" href="{$var|buildurl:'detail':'comments'}/{$items.id}">
-								{option:items.videoId}
-									<img src="http://api.nimbb.com/Live/Thumbnail.aspx?key={$NIMB_PUBLIC_KEY}&guid={$items.videoId}" width="278" height="170" />
-								{/option:items.videoId}
-							</a>
-						</div>
-						<div class="user {$items.emotion}">
-							<div class="avatar">
-								<div class="top"></div>
-								<img src="https://graph.facebook.com/{$items.user.facebookId}/picture?type=square" width="40" height="40" alt="" />
+		{option:currentUser}
+			{option:items}
+				<section id="grid" class="container">
+					<div class="subMenu">
+						<div class="row-fluid menu">
+							<div class="span4 title">
+								<h3>{$lblMostRecent|ucfirst}</h3>
 							</div>
-							<div class="content">
-								<a href="{$var|buildurl:'detail':'comments'}/{$items.id}">
-									{$items.user.name}
-								</a>
-								<time datetime="{$items.createdOn|date:"Y-m-d\TH:i:s"}">{$items.createdOn|timeago}</time>
+							<div class="span4 category">
+		{*
+									Disabled for now because there is no such thing as categories
+								<p>Sort by category</p>
+								<div class="dropdown">
+									<a class="dropdown-toggle btn" data-toggle="dropdown" href="#">Commodo Ridic<span class="icon"></span></a>
+									<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+										<li><a href="#">Lorem</a></li>
+										<li><a href="#">Consectetur</a>	</li>
+									</ul>
+								</div>
+		*}
+							</div>
+							<div class="span4 emotion">
+								<p>{$lblShowByEmotion|ucfirst}</p>
+								<ul id="emotionFilter">
+									<li class="active"><a href="#" class="sad" data-value="sad">{$lblSad|ucfirst}</a></li>
+									<li class="active"><a href="#" class="normal" data-value="neutral">{$lblNormal|ucfirst}</a></li>
+									<li class="active"><a href="#" class="happy" data-value="happy">{$lblHappy|ucfirst}</a></li>
+								</ul>
 							</div>
 						</div>
 					</div>
 
-					{option:items.showAdd}
-						<div class="span4 ads">
-							<div class="adBlock">
-								<script type="text/javascript"><!--
-									google_ad_client = "ca-pub-2874679990125867";
-									/* Creative comments inside */
-									google_ad_slot = "9629671972";
-									google_ad_width = 300;
-									google_ad_height = 250;
-									//-->
-								</script>
-								<script type="text/javascript"
-									src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-								</script>
+					<div class="row-fluid itemGrid">
+						{iteration:items}
+							<div class="span4 item">
+								<div class="videoHolder">
+									<a class="video" href="{$var|buildurl:'detail':'comments'}/{$items.id}">
+										{option:items.videoId}
+											<img src="http://api.nimbb.com/Live/Thumbnail.aspx?key={$NIMB_PUBLIC_KEY}&guid={$items.videoId}" width="278" height="170" />
+										{/option:items.videoId}
+									</a>
+								</div>
+								<div class="user {$items.emotion}">
+									<div class="avatar">
+										<div class="top"></div>
+										<img src="https://graph.facebook.com/{$items.user.facebookId}/picture?type=square" width="40" height="40" alt="" />
+									</div>
+									<div class="content">
+										<a href="{$var|buildurl:'detail':'comments'}/{$items.id}">
+											{$items.user.name}
+										</a>
+										<time datetime="{$items.createdOn|date:"Y-m-d\TH:i:s"}">{$items.createdOn|timeago}</time>
+									</div>
+								</div>
 							</div>
-						</div>
-					{/option:items.showAdd}
-					{option:items.newRow}
-			</div>
-			<div class="row-fluid itemGrid">
-					{/option:items.newRow}
-				{/iteration:items}
-			</div>
-		</section>
+
+							{option:items.showAdd}
+								<div class="span4 ads">
+									<div class="adBlock">
+										<script type="text/javascript"><!--
+											google_ad_client = "ca-pub-2874679990125867";
+											/* Creative comments inside */
+											google_ad_slot = "9629671972";
+											google_ad_width = 300;
+											google_ad_height = 250;
+											//-->
+										</script>
+										<script type="text/javascript"
+											src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+										</script>
+									</div>
+								</div>
+							{/option:items.showAdd}
+							{option:items.newRow}
+					</div>
+					<div class="row-fluid itemGrid">
+							{/option:items.newRow}
+						{/iteration:items}
+					</div>
+				</section>
+			{/option:items}
+		{/option:currentUser}
 	</div>
 {include:'{$CORE_PATH}/layout/templates/footer.tpl'}
 </body>
