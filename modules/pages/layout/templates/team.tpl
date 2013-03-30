@@ -9,9 +9,16 @@
 								<blockquote>
 									"More an experiment than a company, planning to be a movement rather than a community"
 								</blockquote>
-								<a href="#" class="facebookRegister">
-									Care to join?
-								</a>
+								{option:!currentUser}
+									<a href="#" class="facebookRegister">
+										Care to join?
+									</a>
+								{/option:!currentUser}
+								{option:currentUser}
+									<a href="mailto:info@creativecomments.cc">
+										Care to join?
+									</a>
+								{/option:currentUser}
 								<h3>Here is who we are</h3>
 							</header>
 						</div>
