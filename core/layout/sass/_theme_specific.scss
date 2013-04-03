@@ -782,6 +782,20 @@ only screen and (                min-resolution: 2dppx) {
 .report {
 	margin: 10px 0;
 	text-align: center;
+	
+	.signup {
+			background: #334f8a;
+			color: #fff;
+			@include text-shadow(none);
+			border: none;
+			@include box-shadow(0 2px 0 0 rgba(9,33,82,1));
+			font-size: 16px;
+			padding: 10px 25px;
+			&:hover {
+				color: #fff;
+				background: darken(#334f8a, 15%);
+			}
+	}
 
 	a {
 		color: #aca8a7;

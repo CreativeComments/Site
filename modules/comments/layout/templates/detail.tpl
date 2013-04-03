@@ -155,7 +155,7 @@
 				<div class="span12">
 					<p>
 						{* @todo Niels bijstijlen *}
-						<a href="http://signup.creativecomments.cc" class="btn">Request your account</a>
+						<a href="http://signup.creativecomments.cc" class="btn signup">Request your account</a>
 					</p>
 					<p>
 						<a href="{$var|buildurl:'report':'comments'}/{$item.id}">{$lblReportThis}</a>
