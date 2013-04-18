@@ -101,7 +101,6 @@ jsSite.api = {
 	},
 
 	receive: function(e) {
-
 		var method = e.data.method;
 		if(typeof method == 'undefined') return;
 
@@ -110,6 +109,8 @@ jsSite.api = {
 				VideoRecorder.record();
 				e.source.postMessage('started', e.origin);
 			break;
+			default:
+				console.log(e);
 		}
 	}
 }
