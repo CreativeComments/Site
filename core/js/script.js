@@ -84,6 +84,8 @@ var jsSite = {
 }
 
 jsSite.api = {
+	e: null,
+
 	init: function() {
 		if($('body').hasClass('videoRecorder')) {
 			function receiveMessage(event)
@@ -114,8 +116,17 @@ jsSite.api = {
 				}
 			break;
 			case 'videorecorder.stopRecording':
-				VideoRecorder.record();
+				VideoRecorder.stop();
 				e.source.postMessage({ method: 'videorecorder.stoppedRecording' }, e.origin);
+			break;
+			case 'videorecorder.saveRecording':
+				VideoRecorder.save();
+				jsSite.api.e = e;
+				e.source.postMessage({ method: 'videorecorder.savedRecording' }, e.origin);
+			break;
+			case 'videorecorder.getTime':
+				var time = VideoRecorder.getStreamTime();
+				e.source.postMessage({ method: 'videorecorder.updateTime', time: time }, e.origin);
 			break;
 			default:
 				console.log(e);
@@ -554,9 +565,25 @@ jsSite.hdfvr = {
 	isAllowed: false,
 	onCamAccess: function(allowed, id) {
 		jsSite.hdfvr.isAllowed = allowed;
+	},
+	onSaveOk: function(streamName, streamDuration, userId, cameraName, micName, recorderId) {
+		jsSite.api.e.source.postMessage(
+			{ method: 'videorecorder.saveOk', streamName: streamName },
+		    jsSite.api.e.origin
+		);
+		console.log('saveOk');
+	},
+	onSaveFailed: function(streamName, streamDuration, userId, recorderId) {
+		console.log(streamName);
+		console.log(streamDuration);
+		console.log(userId);
+		console.log(recorderId);
+		console.log('saveFailed');
 	}
 }
 
 $(jsSite.init);
 
-window.onCamAccess= jsSite.hdfvr.onCamAccess;
+window.onCamAccess = jsSite.hdfvr.onCamAccess;
+window.onSaveOk = jsSite.hdfvr.onSaveOk;
+window.onSaveFailed = jsSite.hdfvr.onSaveFailed;
