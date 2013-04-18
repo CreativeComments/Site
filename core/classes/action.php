@@ -226,6 +226,9 @@ class SiteBaseAction
 				elseif($this->url->getModule() == 'users' && (in_array($this->url->getAction(), array('logout'))))
 				{
 				}
+				elseif($this->url->getModule() == 'api' && (in_array($this->url->getAction(), array('server'))))
+				{
+				}
 				else
 				{
 					$this->redirect($this->url->buildurl('redirect', 'pages'));
