@@ -115,7 +115,7 @@ jsSite.api = {
 			break;
 			case 'videorecorder.stopRecording':
 				VideoRecorder.record();
-				e.source.postMessage('started', e.origin);
+				e.source.postMessage({ method: 'videorecorder.stoppedRecording' }, e.origin);
 			break;
 			default:
 				console.log(e);
