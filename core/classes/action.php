@@ -226,7 +226,7 @@ class SiteBaseAction
 				elseif($this->url->getModule() == 'users' && (in_array($this->url->getAction(), array('logout'))))
 				{
 				}
-				elseif($this->url->getModule() == 'api' && (in_array($this->url->getAction(), array('server'))))
+				elseif($this->url->getModule() == 'api')
 				{
 				}
 				else
