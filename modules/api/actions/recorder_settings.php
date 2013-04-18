@@ -26,42 +26,43 @@ class ApiRecorderSettings extends SiteBaseAction
 		$config['qualityurl'] = '/core/hdfvr/profiles/620x330.xml';
 
 		$config['maxRecordingTime'] = 20;
-		$config['minRecordTime'] = 2;
+		$config['minRecordTime'] = 1;
 
-		$config['userId']='';
+		$config['userId'] = '';
 
-		$config['outgoingBuffer']=60;
-		$config['playbackBuffer']= 1;
-		$config['autoPlay']='false';
+		$config['outgoingBuffer'] = 60;
+		$config['playbackBuffer'] = 1;
+		$config['autoPlay'] = 'false';
 
 		$config['deleteUnsavedFlv'] = 'false';
-		$config['hideSaveButton']=1;
-		$config['onSaveSuccessURL']='';
+		$config['hideSaveButton'] = 0;
+		$config['onSaveSuccessURL'] = '';
 		$config['snapshotSec'] = 5;
-		$config['snapshotEnable'] = 'true';
+		$config['snapshotEnable'] = 'false';
 
-		/**
-		 * Design
-		 */
 		$config['backgroundColor'] = 0xffffff;
 		$config['menuColor'] = 0xffffff;
 		$config['radiusCorner'] = 0;
 		$config['padding'] = 0;
 
-		$config['showFps'] = 'true';
-		$config['recordAgain'] =  'true';
-		$config['useUserId'] =  'false';
-		$config['streamPrefix'] = '';
-		$config['streamName'] = '';
-		$config['disableAudio'] = 'false';
-		$config['chmodStreams'] = '';
-		$config['countdownTimer']='false';
-		$config['overlayPath']='';
-		$config['overlayPosition']='tr';
-		$config['loopbackMic']='false';
-		$config['showMenu'] ='false';
+		$config['showFps'] = 'false';
+		$config['showMenu'] = 'false';
 		$config['showTimer'] = 'false';
 		$config['showSoundBar'] = 'true';
+
+		$config['overlayPath'] = '';
+		$config['overlayPosition'] = 'tr';
+
+		$config['recordAgain'] =  'true';
+		$config['useUserId'] =  'false';
+		$config['disableAudio'] = 'false';
+		$config['chmodStreams'] = '';
+		$config['countdownTimer'] = 'false';
+		$config['loopbackMic'] = 'false';
+
+		$config['streamPrefix'] = '';
+		$config['streamName'] = '';
+
 		echo 'donot=removethis';
 		foreach ($config as $key => $value){
 			echo '&'.$key.'='.$value;
