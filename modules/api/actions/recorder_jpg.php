@@ -1,15 +1,15 @@
 <?php
 
 /**
- * ApiRecorderSettings
+ * ApiRecorderJpg
  *
  * @package		api
- * @subpackage	recorder_settings
+ * @subpackage	recorder_jpg
  *
  * @author 		Tijs Verkoyen <tijs@sumocoders.be>
  * @since		1.0
  */
-class ApiRecorderSettings extends SiteBaseAction
+class ApiRecorderJpg extends SiteBaseAction
 {
 	/**
 	 * Execute the action
