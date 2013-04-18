@@ -105,7 +105,15 @@ jsSite.api = {
 		if(typeof method == 'undefined') return;
 
 		switch(method) {
-			case 'videorecorder.start':
+			case 'videorecorder.startRecording':
+				if(!jsSite.hdfvr.isAllowed) {
+					e.source.postMessage({ method: 'videorecorder.notAllowed' }, e.origin);
+				} else {
+					VideoRecorder.record();
+					e.source.postMessage({ method: 'videorecorder.startedRecording' }, e.origin);
+				}
+			break;
+			case 'videorecorder.stopRecording':
 				VideoRecorder.record();
 				e.source.postMessage('started', e.origin);
 			break;
