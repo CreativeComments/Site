@@ -83,6 +83,37 @@ var jsSite = {
 	}
 }
 
+jsSite.api = {
+	init: function() {
+		if($('body').hasClass('videoRecorder')) {
+			function receiveMessage(event)
+			{
+				console.log(e)
+				console.log(VideoRecorder);
+				event.source.postMessage('kuthoer', event.origin);
+			}
+			window.addEventListener(
+				'message',
+				jsSite.api.receive,
+				false
+			);
+		}
+	},
+
+	receive: function(e) {
+
+		var method = e.data.method;
+		if(typeof method == 'undefined') return;
+
+		switch(method) {
+			case 'videorecorder.start':
+				VideoRecorder.record();
+				e.source.postMessage('started', e.origin);
+			break;
+		}
+	}
+}
+
 jsSite.bugs = {
 	screenshot: null,
 	init: function() {
