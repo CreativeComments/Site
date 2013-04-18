@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bandwidth>
+	<item>
+		<nm>620x330@30fps</nm>
+		<df>0</df>
+		<bytes>0</bytes>
+		<q>100</q>
+		<fps>30</fps>
+		<kfps>5</kfps>
+		<w>620</w>
+		<h>330</h>
+		<snd>22</snd>
+		<sndSilencelevel>0</sndSilencelevel>
+		<vcodec>sorenson</vcodec>
+	</item>
+</bandwidth>
