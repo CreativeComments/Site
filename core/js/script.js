@@ -541,4 +541,13 @@ jsSite.creativeComments =
 	}
 }
 
+jsSite.hdfvr = {
+	isAllowed: false,
+	onCamAccess: function(allowed, id) {
+		jsSite.hdfvr.isAllowed = allowed;
+	}
+}
+
 $(jsSite.init);
+
+window.onCamAccess= jsSite.hdfvr.onCamAccess;
