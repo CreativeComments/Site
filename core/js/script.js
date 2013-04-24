@@ -90,8 +90,6 @@ jsSite.api = {
 		if($('body').hasClass('videoRecorder')) {
 			function receiveMessage(event)
 			{
-				console.log(e)
-				console.log(VideoRecorder);
 				event.source.postMessage('kuthoer', event.origin);
 			}
 			window.addEventListener(
@@ -128,6 +126,10 @@ jsSite.api = {
 				var time = VideoRecorder.getStreamTime();
 				e.source.postMessage({ method: 'videorecorder.updateTime', time: time }, e.origin);
 			break;
+			case 'videorecorder.getStreamName':
+				var name = VideoRecorder.getStreamName();
+				e.source.postMessage({ method: 'videorecorder.updateStreamName', name: name }, e.origin);
+				break;
 			default:
 				console.log(e);
 		}
@@ -567,18 +569,8 @@ jsSite.hdfvr = {
 		jsSite.hdfvr.isAllowed = allowed;
 	},
 	onSaveOk: function(streamName, streamDuration, userId, cameraName, micName, recorderId) {
-		jsSite.api.e.source.postMessage(
-			{ method: 'videorecorder.saveOk', streamName: streamName },
-		    jsSite.api.e.origin
-		);
-		console.log('saveOk');
 	},
 	onSaveFailed: function(streamName, streamDuration, userId, recorderId) {
-		console.log(streamName);
-		console.log(streamDuration);
-		console.log(userId);
-		console.log(recorderId);
-		console.log('saveFailed');
 	}
 }
 
