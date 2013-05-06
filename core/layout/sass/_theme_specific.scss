@@ -661,67 +661,65 @@ only screen and (                min-resolution: 2dppx) {
 	}
 }
 
-#pages {
+.plugins {
+	margin-top: 50px;
 
-	&.plugins {
-		margin-top: 50px;
+	.plugin {
+		padding: 20px;
+		background: #fff;
+		border: 1px solid #d2d2d2;
+		@include box-shadow(0 1px 0 0 rgba(255,255,255,0.6));
+		text-align: center;
+		margin-bottom: 30px;
 
-		.plugin {
-			padding: 20px;
-			background: #fff;
-			border: 1px solid #d2d2d2;
-			@include box-shadow(0 1px 0 0 rgba(255,255,255,0.6));
-			text-align: center;
-			margin-bottom: 30px;
+		.icon {
+			width: 50px;
+			height: 50px;
+			//outline: 1px solid red;
+			margin: 0 auto;
 
-			.icon {
-				width: 50px;
-				height: 50px;
-				//outline: 1px solid red;
-				margin: 0 auto;
-
-				&.chrome {
-					@include sprite(chrome);
-				}
-
-				&.firefox {
-					@include sprite(firefox);
-				}
-
-				&.safari {
-					@include sprite(safari);
-				}
+			&.chrome {
+				@include sprite(chrome);
 			}
 
+			&.firefox {
+				@include sprite(firefox);
+			}
+
+			&.safari {
+				@include sprite(safari);
+			}
+		}
+
+		h2 {
+			color: #4c4c4c;
+			margin: 0;
+			margin-bottom: 10px;
+			border-bottom: 1px solid #e6e6e6;
+		}
+
+		.btn {
+			margin-top: 10px;
+			@include box-sizing(border-box);
+			width: 100%;
+		}
+
+		&.notReady {
 			h2 {
-				color: #4c4c4c;
-				margin: 0;
-				margin-bottom: 10px;
-				border-bottom: 1px solid #e6e6e6;
+				color: #a9a9a9;
 			}
 
-			.btn {
-				margin-top: 10px;
-				@include box-sizing(border-box);
-				width: 100%;
-			}
-
-			&.notReady {
-				h2 {
-					color: #a9a9a9;
-				}
-
-				p {
-					color: #bababa;
-				}
+			p {
+				color: #bababa;
 			}
 		}
 	}
-
-	&.business {
-
-	}
 }
+
+#users.dashboard .plugins {
+	margin-top: 0;
+}
+
 
 .getStarted {
 	margin-top: 30px;

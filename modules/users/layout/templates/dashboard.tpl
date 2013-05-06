@@ -4,20 +4,36 @@
 <div id="content">
 	<section id="{$MODULE}" class="{$ACTION}">
 		<div class="container">
-			<div class="row-fluid" id="pluginNotInstalled">
+			<div id="pluginNotInstalled" class="row-fluid plugins">
 				<div class="span12">
-					<header>
-						<h2>{$lblPluginNotInstalled|ucfirst}</h2>
-					</header>
-					<div class="alert" id="noPluginAvailable">
-						{$msgNoPluginAvailable}
+					<h2>{$lblPluginNotInstalled|ucfirst}</h2>
+					<p>It seems like you don't have the plugin installed.</p>
+				</div>
+				<div class="row-fluid">
+					<div id="browserPluginChrome" class="span4 plugin hide">
+						<div class="icon chrome"></div>
+						<h2>Chrome</h2>
+						<p>Download the plugin.</p>
+						<p>
+							<a href="https://chrome.google.com/webstore/detail/creative-comments/helhdkbppnbmifdjhhiecciflfneoedj" class="btn">Download</a>
+						</p>
 					</div>
-					<p>
-						<a style="display: none;" id="browserPluginChrome" class="btn" href="{$var|buildurl:'download':'plugins'}?browser=chrome&version=latest">Download for Chrome</a>
-						<a style="display: none;" id="browserPluginFirefox" class="btn" href="{$var|buildurl:'download':'plugins'}?browser=firefox&version=latest"><strike>Download for Firefox</strike> <small>(not available yet)</small></a>
-						<a style="display: none;" id="browserPluginSafari" class="btn" href="{$var|buildurl:'download':'plugins'}?browser=safari&version=latest"><strike>Download for Safari</strike> <small>(not available yet)</small></a>
-						<small><br ><a href="{$var|buildurl:'plugins':'pages'}"><strike>{$lblOtherBrowsers|ucfirst}</strike> <small>(not available yet)</small></a></small>
-					</p>
+					<div id="browserPluginFirefox" class="span4 plugin hide notReady">
+						<div class="icon firefox"></div>
+						<h2>Firefox</h2>
+						<p>not available yet</p>
+						<p>
+							<a href="{$var|buildurl:'download':'plugins'}?browser=firefox&version=latest" class="btn disabled">Download</a>
+						</p>
+					</div>
+					<div id="browserPluginSafari" class="span4 plugin hide notReady">
+						<div class="icon safari"></div>
+						<h2>Safari</h2>
+						<p>not available yet</p>
+						<p>
+							<a href="{$var|buildurl:'download':'plugins'}?browser=safari&version=latest" class="btn disabled">Download</a>
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
