@@ -17,7 +17,7 @@
 										<label class="control-label hidden" for="inputPassword">Password</label>
 										<div class="controls">
 											{$txtPassword}
-											<button type="submit" class="btn">Sign in</button>
+											<a id="betaAccess" class="btn facebookRegisterLayout">Sign in with Facebook</a>
 										</div>
 										{$txtPasswordError}
 									</div>

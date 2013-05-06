@@ -14,7 +14,7 @@
 						<script>
 							setTimeout(function() {
 								document.location = 'http://signup.creativecomments.cc';
-							}, 5000);
+							}, 4000);
 						</script>
 
 					</div>

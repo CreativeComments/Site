@@ -409,10 +409,22 @@ jsSite.links = {
 jsSite.facebook = {
 	init: function()
 	{
-		$('a.facebookRegister').on('click', function(e)
-		{
+		$('#betaAccess').on('click', function(e) {
+			$form = $(this).parents('form');
 			e.preventDefault();
+			FB.login(
+				function(response)
+				{
+					$form.submit();
+				},
+				{
+					scope: 'email'
+				}
+			);
+		});
 
+		$('a.facebookRegister').on('click', function(e) {
+			e.preventDefault();
 			FB.login(
 				function(response)
 				{
