@@ -34,6 +34,7 @@
 	<!--  icon for facebook -->
 	<link rel="image_src" href="/image_src.png" />
 
+	<script>document.domain = document.domain;</script>
 	<script src="/core/js/lib.js?m={$LAST_MODIFIED}"></script>
 	<script src="/core/js/script.js?m={$LAST_MODIFIED}"></script>
 	{option:javascript}

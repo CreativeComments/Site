@@ -99,28 +99,28 @@ jsSite.api = {
 		switch(method) {
 			case 'videorecorder.startRecording':
 				if(!jsSite.hdfvr.isAllowed) {
-					//e.source.postMessage({ method: 'videorecorder.notAllowed' }, e.origin);
+					e.source.postMessage({ method: 'videorecorder.notAllowed' }, e.origin);
 				} else {
 					VideoRecorder.record();
-					//e.source.postMessage({ method: 'videorecorder.startedRecording' }, e.origin);
+					e.source.postMessage({ method: 'videorecorder.startedRecording' }, e.origin);
 				}
 			break;
 			case 'videorecorder.stopRecording':
 				VideoRecorder.stop();
-				//e.source.postMessage({ method: 'videorecorder.stoppedRecording' }, e.origin);
+				e.source.postMessage({ method: 'videorecorder.stoppedRecording' }, e.origin);
 			break;
 			case 'videorecorder.saveRecording':
 				VideoRecorder.save();
 				jsSite.api.e = e;
-				//e.source.postMessage({ method: 'videorecorder.savedRecording' }, e.origin);
+				e.source.postMessage({ method: 'videorecorder.savedRecording' }, e.origin);
 			break;
 			case 'videorecorder.getTime':
 				var time = VideoRecorder.getStreamTime();
-				//e.source.postMessage({ method: 'videorecorder.updateTime', time: time }, e.origin);
+				e.source.postMessage({ method: 'videorecorder.updateTime', time: time }, e.origin);
 			break;
 			case 'videorecorder.getStreamName':
 				var name = VideoRecorder.getStreamName();
-				//e.source.postMessage({ method: 'videorecorder.updateStreamName', name: name }, e.origin);
+				e.source.postMessage({ method: 'videorecorder.updateStreamName', name: name }, e.origin);
 				break;
 			default:
 				console.log(e);
