@@ -153,13 +153,8 @@
 
 			<section class="row-fluid report">
 				<div class="span12">
-					<p>
-						{* @todo Niels bijstijlen *}
-						<a href="http://signup.creativecomments.cc" class="btn signup">Request your account</a>
-					</p>
-					<p>
-						<a href="{$var|buildurl:'report':'comments'}/{$item.id}">{$lblReportThis}</a>
-					</p>
+					{option:!currentUser}<p><a href="http://signup.creativecomments.cc" class="btn signup">Request your account</a></p>{/option:!currentUser}
+					<p><a href="{$var|buildurl:'report':'comments'}/{$item.id}">{$lblReportThis}</a></p>
 				</div>
 			</section>
 
