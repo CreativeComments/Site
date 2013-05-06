@@ -71,7 +71,7 @@
 					<div id="creativeCommentsHolderSite">
 						<div class="video">
 							{option:item.videoId}
-								<!--{$item.video_flash_600x450}-->
+								{$item.video_flash_600x450}
 							{/option:item.videoId}
 						</div>
 					</div>
