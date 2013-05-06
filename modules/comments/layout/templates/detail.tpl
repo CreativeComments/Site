@@ -71,7 +71,7 @@
 					<div id="creativeCommentsHolderSite">
 						<div class="video">
 							{option:item.videoId}
-								{$item.video_flash_600x450}
+								<!--{$item.video_flash_600x450}-->
 							{/option:item.videoId}
 						</div>
 					</div>
@@ -153,7 +153,7 @@
 
 			<section class="row-fluid report">
 				<div class="span12">
-					{option:!currentUser}<p><a href="http://signup.creativecomments.cc" class="btn signup">Request your account</a></p>{/option:!currentUser}
+					{option:!currentUser}<p><a href="http://creativecomments.cc" class="btn signup">Request your account</a></p>{/option:!currentUser}
 					<p><a href="{$var|buildurl:'report':'comments'}/{$item.id}">{$lblReportThis}</a></p>
 				</div>
 			</section>
