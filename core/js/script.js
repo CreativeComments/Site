@@ -90,6 +90,8 @@ jsSite.api = {
 		if($('body').hasClass('videoPlayer')) {
 			jsSite.flowplayer.init();
 		}
+
+		window.addEventListener("message", jsSite.api.receive, false);
 	},
 
 	receive: function(e) {
