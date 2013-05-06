@@ -15,7 +15,7 @@
 									</a>
 								{/option:!currentUser}
 								{option:currentUser}
-									<a href="mailto:info@creativecomments.cc">
+									<a href="mailto:careers@creativecomments.cc">
 										Care to join?
 									</a>
 								{/option:currentUser}

@@ -30,10 +30,11 @@ RewriteEngine On
 RewriteBase /
 
 # only one base url
-RewriteCond %{HTTP_HOST} !^beta\.creativecomments\.cc [NC]
-RewriteCond %{HTTP_HOST} !.*\.local [NC]
-RewriteCond %{HTTP_HOST} !.*\.dev [NC]
-RewriteRule ^(.*)$ https://beta.creativecomments.cc/$1 [R=301,L]
+#RewriteCond %{HTTP_HOST} !^beta\.creativecomments\.cc [NC]
+#RewriteCond %{HTTP_HOST} !.*\.local [NC]
+#RewriteCond %{HTTP_HOST} !.*\.dev [NC]
+#RewriteCond %{HTTP_HOST} !.*\tmc\.com [NC]
+#RewriteRule ^(.*)$ https://beta.creativecomments.cc/$1 [R=301,L]
 
 # handle urls
 RewriteCond %{REQUEST_URI} !^$
