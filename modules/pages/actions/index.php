@@ -48,7 +48,7 @@ class PagesIndex extends SiteBaseAction
 
 		$userIds = array_unique($userIds);
 
-		$userData = Site::getDB()->getRecords(
+		$userData = (array) Site::getDB()->getRecords(
 			'SELECT i.*, UNIX_TIMESTAMP(i.created_on) AS created_on, UNIX_TIMESTAMP(i.edited_on) AS edited_on
 				 FROM users AS i
 				 WHERE i.id IN (' . implode(', ', $userIds) . ')'
@@ -66,6 +66,8 @@ class PagesIndex extends SiteBaseAction
 		$i = 1;
 		foreach($mostRecent as $comment)
 		{
+			if(!isset($users[$comment->userId])) continue;
+
 			$data = $comment->toArray();
 			$data['user'] = $users[$comment->userId]->toArray();
 			$data['newRow'] = false;
