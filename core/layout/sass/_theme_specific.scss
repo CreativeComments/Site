@@ -186,7 +186,8 @@ body.videoRecorder {
 			}
 
 			.facebookRegister, .facebookRegisterLayout {
-				width: 85%;
+				width: 100%;
+				@include box-sizing(border-box);
 				display: block;
 				margin: 20px auto 0;
 				background-color: #334f8a;
@@ -613,6 +614,22 @@ body.videoRecorder {
 				margin: 0 auto;
 				@include background(inline-image("svg/adblock.svg") no-repeat);
 			}
+		}
+	}
+}
+
+.beta {
+	.controls {
+		.form {
+			.inputPassword {
+				width: 100%;
+				height: 45px;
+				@include box-sizing(border-box);
+			}
+		}
+		
+		#betaAccess {
+			width: 100%;
 		}
 	}
 }
