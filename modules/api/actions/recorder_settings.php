@@ -18,7 +18,7 @@ class ApiRecorderSettings extends SiteBaseAction
 	 */
 	public function execute()
 	{
-		$config['connectionstring'] = 'rtmp://pmkfq7.cloud.influxis.com/hdfvr/_definst_';
+		$config['connectionstring'] = 'rtmp://infspylvf0nx4.rtmphost.com/hdfvr/_definst_';
 
 		if(isset($_GET['recorderId'])) { $recorderId = $_GET['recorderId']; }
 		$config['languagefile'] = '/core/hdfvr/translations/en.xml';
