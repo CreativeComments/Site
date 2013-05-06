@@ -87,16 +87,8 @@ jsSite.api = {
 	e: null,
 
 	init: function() {
-		if($('body').hasClass('videoRecorder')) {
-			function receiveMessage(event)
-			{
-				event.source.postMessage('kuthoer', event.origin);
-			}
-			window.addEventListener(
-				'message',
-				jsSite.api.receive,
-				false
-			);
+		if($('body').hasClass('videoPlayer')) {
+			jsSite.flowplayer.init();
 		}
 	},
 
@@ -574,6 +566,29 @@ jsSite.creativeComments =
 		});
 	}
 }
+
+jsSite.flowplayer = {
+	init: function() {
+		$f('flowplayer', '/core/flowplayer/flowplayer.swf', {
+//			debug: true, log: { level: 'debug' },
+			clip: {
+				base_url: 'rtmp://infspylvf0nx4.rtmphost.com/hdfvr/',
+				url: data.video,
+				provider: 'influxis'
+			},
+			plugins: {
+				'influxis': {
+					url: '/core/flowplayer/flowplayer.rtmp.swf',
+					netConnectionUrl: 'rtmp://infspylvf0nx4.rtmphost.com/hdfvr/'
+				}/*,
+				'mirror': {
+					url: '/core/flowplayer/flowplayer-mirror.swf'
+				}*/
+			}
+		});
+	}
+}
+
 
 jsSite.hdfvr = {
 	isAllowed: false,
