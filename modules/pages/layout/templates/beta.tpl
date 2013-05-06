@@ -15,7 +15,6 @@
 								<div class="form-inline">
 									<div class="control-group{option:txtPasswordError} error{/option:txtPasswordError}">
 										<label class="control-label hidden" for="inputPassword">Password</label>
-										</div>
 											<div class="controls row-fluid">
 												<div class="span6 form">
 												{$txtPassword}
@@ -25,6 +24,7 @@
 												</div>
 											</div>
 											{$txtPasswordError}
+									</div>
 									</div>
 								</div>
 							{/form:beta}
