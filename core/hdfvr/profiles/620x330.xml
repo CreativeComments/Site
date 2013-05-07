@@ -4,12 +4,12 @@
 		<nm>1280x720@30fps</nm>
 		<df>0</df>
 		<bytes>0</bytes>
-		<q>100</q>
+		<q>95</q>
 		<fps>30</fps>
 		<kfps>5</kfps>
 		<w>1280</w>
 		<h>720</h>
-		<snd>22</snd>
+		<snd>44</snd>
 		<sndSilencelevel>0</sndSilencelevel>
 		<vcodec>sorenson</vcodec>
 	</item>
