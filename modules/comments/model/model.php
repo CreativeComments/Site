@@ -253,6 +253,14 @@ class Comment
 	 */
 	public function setYoutube($youtube)
 	{
+		if(substr_count($youtube, 'iframe') > 0) {
+			$matches = array();
+			preg_match('|.*youtube.com/embed/(.*)"|iU', $youtube, $matches);
+
+			if(!isset($matches[1])) $youtube = null;
+			else $youtube = $matches[1];
+		}
+
 		$this->youtube = $youtube;
 	}
 
@@ -425,12 +433,6 @@ class Comment
 
 		if($onSite)
 		{
-			if($item['youtube'] != '')
-			{
-				$item['youtube'] = preg_replace('|width="[0-9]*"|iU', 'width="610"', $item['youtube']);
-				$item['youtube'] = preg_replace('|height="[0-9]*"|iU', 'height="450"', $item['youtube']);
-			}
-
 			if($item['slideshare'] != '')
 			{
 				$item['slideshare'] = preg_replace('|width="[0-9]*"|iU', 'width="610"', $item['slideshare']);
