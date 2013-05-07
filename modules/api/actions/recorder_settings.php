@@ -22,7 +22,6 @@ class ApiRecorderSettings extends SiteBaseAction
 
 		if(isset($_GET['recorderId'])) { $recorderId = $_GET['recorderId']; }
 		$config['languagefile'] = '/core/hdfvr/translations/en.xml';
-
 		$config['qualityurl'] = '/core/hdfvr/profiles/620x330.xml';
 
 		$config['maxRecordingTime'] = 20;
@@ -40,8 +39,8 @@ class ApiRecorderSettings extends SiteBaseAction
 		$config['snapshotSec'] = 5;
 		$config['snapshotEnable'] = 'false';
 
-		$config['backgroundColor'] = 0xffffff;
-		$config['menuColor'] = 0xffffff;
+		$config['backgroundColor'] = 0x000000;
+		$config['menuColor'] = 0x000000;
 		$config['radiusCorner'] = 0;
 		$config['padding'] = 0;
 
