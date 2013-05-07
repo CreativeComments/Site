@@ -63,6 +63,8 @@ class ApiRecorderSettings extends SiteBaseAction
 		$config['streamPrefix'] = '';
 		$config['streamName'] = '';
 
+		$config['flipImageHorizontally'] = 'true';
+
 		echo 'donot=removethis';
 		foreach ($config as $key => $value){
 			echo '&'.$key.'='.$value;
