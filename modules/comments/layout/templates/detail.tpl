@@ -35,7 +35,7 @@
 							{/option:item.text}
 							{option:item.youtube}
 								<li>
-									<a href="#" class="uiButton toggleElement" data-id="youtubeHolder">
+									<a href="#" class="uiButton toggleYoutube" data-id="youtubeHolder" data-yt-id="{$item.youtube}">
 										<span class="youtube"></span>
 										<span class="title">Watch movie</span>
 									</a>
@@ -130,7 +130,6 @@
 
 						{option:item.youtube}
 							<div id="youtubeHolder" class="element" style="display: none;">
-								{$item.youtube}
 							</div>
 						{/option:item.youtube}
 

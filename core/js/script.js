@@ -566,6 +566,28 @@ jsSite.creativeComments =
 				}, 1000);
 			}
 		});
+
+		$(document).on('click', 'a.toggleYoutube', function(e) {
+			e.preventDefault();
+			var $element = $('#' + $(this).data('id'));
+
+			console.log($element);
+
+			if($element.is(':visible')) {
+				$element.slideUp();
+				$('html, body').stop().animate({
+                   scrollTop: $('#comments').offset().top
+               }, 1000);
+				$element.html('');
+			} else {
+				var youtubeId = $(this).data('ytId');
+				$element.html('<iframe width="610" height="450" src="http://www.youtube.com/embed/' + youtubeId + '?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
+				$element.slideDown();
+				$('html, body').stop().animate({
+					scrollTop: $element.offset().top
+				}, 1000);
+			}
+		});
 	}
 }
 
