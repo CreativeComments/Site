@@ -47,6 +47,7 @@ class PagesBeta extends SiteBaseAction
 
 		$this->frm->parse($this->tpl);
 
+		$this->tpl->assign('pageTitle', 'Our little secret');
 		$this->display();
 	}
 }

@@ -29,6 +29,7 @@ class UsersDashboard extends SiteBaseAction
 
 		$this->parseReports();
 		$this->parse();
+		$this->tpl->assign('pageTitle', 'Dashboard');
 		$this->display();
 	}
 

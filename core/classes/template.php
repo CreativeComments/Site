@@ -354,9 +354,11 @@ class SiteTemplateModifiers
 	{
 		// remove special chars
 		$var = htmlspecialchars_decode($var, ENT_QUOTES);
+		$var = str_replace('<p>', ' <p>', $var);
 
 		// remove HTML
 		$var = strip_tags($var);
+		$var = trim($var);
 
 		// less characters
 		if(mb_strlen($var) <= $length) return SpoonFilter::htmlspecialchars($var);

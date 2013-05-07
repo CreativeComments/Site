@@ -18,6 +18,7 @@ class PagesBusiness extends SiteBaseAction
 	 */
 	public function execute()
 	{
+		$this->tpl->assign('pageTitle', 'For business');
 		$this->display();
 	}
 }

@@ -18,6 +18,7 @@ class PagesTeam extends SiteBaseAction
 	 */
 	public function execute()
 	{
+		$this->tpl->assign('pageTitle', 'Our team');
 		$this->display();
 	}
 }

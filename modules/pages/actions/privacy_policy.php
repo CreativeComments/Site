@@ -18,7 +18,7 @@ class PagesPrivacyPolicy extends SiteBaseAction
 	 */
 	public function execute()
 	{
-		// display the page
+		$this->tpl->assign('pageTitle', 'Privacy policy');
 		$this->display();
 	}
 }

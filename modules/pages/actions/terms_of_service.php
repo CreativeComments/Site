@@ -18,7 +18,7 @@ class PagesTermsOfService extends SiteBaseAction
 	 */
 	public function execute()
 	{
-		// display the page
+		$this->tpl->assign('pageTitle', 'Terms of service');
 		$this->display();
 	}
 }

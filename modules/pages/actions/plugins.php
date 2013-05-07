@@ -18,7 +18,7 @@ class PagesPlugins extends SiteBaseAction
 	 */
 	public function execute()
 	{
-		// display the page
+		$this->tpl->assign('pageTitle', 'Plugins');
 		$this->display();
 	}
 }

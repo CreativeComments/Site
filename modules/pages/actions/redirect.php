@@ -23,6 +23,7 @@ class PagesRedirect extends SiteBaseAction
 	 */
 	public function execute()
 	{
+		$this->tpl->assign('pageTitle', 'Redirect ...');
 		$this->display();
 	}
 }

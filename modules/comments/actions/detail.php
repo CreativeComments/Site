@@ -52,6 +52,11 @@ class CommentsDetail extends SiteBaseAction
 		if(mb_strlen($this->item->getText()) > 255) $content . '...';
 		if($content == '') $content = 'Click title to watch video message';
 
+		$user = User::get($this->item->getUserId());
+
+		$pageTitle = $title . ' by ' . $user->name;
+		$this->tpl->assign('pageTitle', $pageTitle);
+
 		// build meta
 		$meta = '<meta property="og:title" content="' . $title . '">' . "\n";
 		$meta .= '<meta property="og:type" content="website">' . "\n";
@@ -62,7 +67,6 @@ class CommentsDetail extends SiteBaseAction
 
 		$this->tpl->assign('meta', $meta);
 
-		$user = User::get($this->item->getUserId());
 
 		// @todo	parse meta/open graph data
 		$this->tpl->assign('item', $this->item->toArray(true));
