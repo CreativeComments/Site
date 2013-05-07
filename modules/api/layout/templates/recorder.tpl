@@ -66,15 +66,15 @@
 <body class="videoRecorder">
 	<object
 		id="recorder"
-		width="100%"
-		height="100%"
-		>
+		width="620"
+		height="380"
+	>
 		<param name="movie" value="/plugin_data/hdfvr/VideoRecorder.swf?recorderId=cc" />
 		<param name="quality" value="high" />
 		<param name="allowScriptAccess" value="always" />
 		<embed src="/plugin_data/hdfvr/VideoRecorder.swf?recorderId=cc"
 			quality="high"
-			width="100%" height="100%"
+			width="620" height="380"
 			name="VideoRecorder"
 			align="middle" play="true" loop="false" quality="high" allowScriptAccess="always">
 		</embed>
