@@ -20,7 +20,7 @@
 												{$txtPassword}
 												</div>
 												<div class="span6">
-												<a id="betaAccess" class="btn facebookRegisterLayout btn-large">Sign in with Facebook</a>
+												<a id="betaAccess" class="btn facebookRegisterLayout btn-large">Sign-in with Facebook</a>
 												</div>
 											</div>
 											{$txtPasswordError}
