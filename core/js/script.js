@@ -401,20 +401,42 @@ jsSite.links = {
 }
 
 jsSite.facebook = {
+	isChecked: false,
+
 	init: function()
 	{
+		$('#pages form').on('submit', function(e) {
+			if(!jsSite.facebook.isChecked) {
+				e.preventDefault();
+
+				$('#passwordBox').removeClass('error');
+				$('#passwordBox .formError').hide();
+				var $form = $(this);
+
+				$.ajax({
+					url: '/ajax.php?module=pages&action=beta&language=' + jsSite.current.language,
+					data: { code: $('#password').val() },
+					success: function(data, textStatus, jqXHR) {
+						if(data.code == 200) {
+							FB.login(
+								function(response) {
+									jsSite.facebook.isChecked = true;
+									$form.submit();
+								},
+								{ scope: 'email' }
+							);
+						}
+						else {
+							$('#passwordBox').addClass('error');
+							$('#passwordBox .formError').show();
+						}
+					}
+				});
+			}
+		});
+
 		$('#betaAccess').on('click', function(e) {
-			$form = $(this).parents('form');
-			e.preventDefault();
-			FB.login(
-				function(response)
-				{
-					$form.submit();
-				},
-				{
-					scope: 'email'
-				}
-			);
+			$(this).parents('form').submit();
 		});
 
 		$('a.facebookRegister').on('click', function(e) {

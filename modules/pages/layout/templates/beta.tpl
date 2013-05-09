@@ -13,18 +13,18 @@
 
 							{form:beta}
 								<div class="form-inline">
-									<div class="control-group{option:txtPasswordError} error{/option:txtPasswordError}">
+									<div id="passwordBox" class="control-group{option:txtPasswordError} error{/option:txtPasswordError}">
 										<label class="control-label hidden" for="inputPassword">Password</label>
-											<div class="controls row-fluid">
-												<div class="span6 form">
+										<div class="controls row-fluid">
+											<div class="span6 form">
 												{$txtPassword}
-												</div>
-												<div class="span6">
-												<a id="betaAccess" class="btn facebookRegisterLayout btn-large">Sign-in with Facebook</a>
-												</div>
 											</div>
-											{$txtPasswordError}
-									</div>
+											<div class="span6">
+											<a id="betaAccess" class="btn facebookRegisterLayout btn-large">Sign-in with Facebook</a>
+											</div>
+										</div>
+
+										<span class="hide formError">This field is required.</span>
 									</div>
 								</div>
 							{/form:beta}
