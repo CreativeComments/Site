@@ -11,6 +11,6 @@
 		<h>720</h>
 		<snd>44</snd>
 		<sndSilencelevel>0</sndSilencelevel>
-		<vcodec>sorenson</vcodec>
+		<vcodec>h264_f</vcodec>
 	</item>
 </bandwidth>
