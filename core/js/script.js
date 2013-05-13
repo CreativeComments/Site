@@ -471,19 +471,6 @@ jsSite.facebook = {
 jsSite.users = {
 	init: function()
 	{
-		$pluginNotInstalled = $('#pluginNotInstalled');
-		$noPluginAvailable = $('#noPluginAvailable');
-
-		if($pluginNotInstalled.length > 0)
-		{
-			$pluginNotInstalled.show();
-
-			// detect browser
-			if($.browser.chrome) $('#browserPluginChrome').show();
-			if($.browser.mozilla) $('#browserPluginFirefox').show();
-			if($.browser.safari) $('#browserPluginSafari').show();
-			if($.browser.chrome || $.browser.mozilla || $.browser.safari) $('#noPluginAvailable').hide();
-		}
 	}
 }
 
@@ -531,6 +518,20 @@ jsSite.creativeComments =
 {
 	init: function()
 	{
+		$pluginNotInstalled = $('#pluginNotInstalled');
+		$noPluginAvailable = $('#noPluginAvailable');
+
+		if($pluginNotInstalled.length > 0)
+		{
+			$pluginNotInstalled.show();
+
+			// detect browser
+			if($.browser.chrome) $('#browserPluginChrome').show();
+			if($.browser.mozilla) $('#browserPluginFirefox').show();
+			if($.browser.safari) $('#browserPluginSafari').show();
+			if($.browser.chrome || $.browser.mozilla || $.browser.safari) $('#noPluginAvailable').hide();
+		}
+
 		$(window).on('cco:loaded', function() {
 			if(typeof window.CC == 'undefined') return;
 
