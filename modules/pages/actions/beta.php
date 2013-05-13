@@ -33,6 +33,7 @@ class PagesBeta extends SiteBaseAction
 
 		if($this->frm->isSubmitted()) {
 			if($this->frm->getField('password')->isFilled(SiteLocale::err('FieldIsRequired'))) {
+				if($this->currentUser == null) $this->redirect('/en/error/?message=beta-error', 307);
 				if($this->frm->getField('password')->getValue() == CC_BETA_PASSWORD) {
 					// give the user access
 					$this->currentUser->hasAccess = true;
