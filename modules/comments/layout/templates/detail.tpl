@@ -71,7 +71,7 @@
 					<div id="creativeCommentsHolderSite">
 						<div class="video">
 							{option:item.videoId}
-								{$item.video_flash_600x450}
+								<iframe id="videoRecorderHolder" src="/en/api/player/{$item.id}" width="620" height="330" border="0"></iframe>
 							{/option:item.videoId}
 						</div>
 					</div>
