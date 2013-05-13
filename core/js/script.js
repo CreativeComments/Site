@@ -413,6 +413,12 @@ jsSite.facebook = {
 				$('#passwordBox .formError').hide();
 				var $form = $(this);
 
+				if($('#password').val() == '') {
+					$('#passwordBox').addClass('error');
+					$('#passwordBox #required').show();
+					return;
+				}
+
 				$.ajax({
 					url: '/ajax.php?module=pages&action=beta&language=' + jsSite.current.language,
 					data: { code: $('#password').val() },
@@ -428,7 +434,7 @@ jsSite.facebook = {
 						}
 						else {
 							$('#passwordBox').addClass('error');
-							$('#passwordBox .formError').show();
+							$('#passwordBox #wrong').show();
 						}
 					}
 				});

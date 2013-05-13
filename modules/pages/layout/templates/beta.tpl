@@ -20,11 +20,12 @@
 												{$txtPassword}
 											</div>
 											<div class="span6">
-											<a id="betaAccess" class="btn facebookRegisterLayout btn-large">Sign-in with Facebook</a>
+												<a id="betaAccess" class="btn facebookRegisterLayout btn-large">Sign-in with Facebook</a>
 											</div>
 										</div>
 
-										<span class="hide formError">This field is required.</span>
+										<span class="hide formError" id="required">This field is required.</span>
+										<span class="hide formError" id="wrong">Sorry, no can do. Wrong passcode.</span>
 									</div>
 								</div>
 							{/form:beta}
