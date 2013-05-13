@@ -732,6 +732,24 @@ only screen and (                min-resolution: 2dppx) {
 			}
 		}
 	}
+	
+	.download {
+		padding: 20px;
+		background: #f5f5f5;
+		border: 1px solid #d2d2d2;
+		@include box-shadow(0 1px 0 0 rgba(255,255,255,0.6));
+		margin-bottom: 30px;
+		
+		ol {
+			li {
+				margin-bottom: 19px;
+			}
+		}
+	}
+}
+
+.download {
+	
 }
 
 #users.dashboard .plugins {

@@ -34,6 +34,26 @@
 							<a href="{$var|buildurl:'download':'plugins'}?browser=safari&version=latest" class="btn disabled">Download</a>
 						</p>
 					</div>
+					
+					<!-- @todo tys add this for message -->
+					<!--
+<div class="span8 download">
+						<header>
+							<h3>
+								Two simple steps towards success!
+							</h3>
+							<ol>
+								<li>
+									We support the Google Chrome browser.  Please <a href="#">download and install</a> the browser first - it's free!
+								</li>
+								<li>
+									Install the <a href="#">Google Chrome plug-in</a> to start creating your Creative Comments  - easy enough!
+								</li>
+							</ol>
+						</header>
+					</div>
+-->
+					
 				</div>
 			</div>
 		</div>
