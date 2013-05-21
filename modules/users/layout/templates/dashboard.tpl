@@ -7,7 +7,6 @@
 			<div id="pluginNotInstalled" class="row-fluid plugins">
 				<div class="span12">
 					<h2>{$lblPluginNotInstalled|ucfirst}</h2>
-					<p>It seems like you don't have the plugin installed.</p>
 				</div>
 				<div class="row-fluid">
 					<div id="browserPluginChrome" class="span4 plugin hide">
