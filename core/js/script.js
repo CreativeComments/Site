@@ -542,11 +542,10 @@ jsSite.creativeComments =
 			if($.browser.chrome || $.browser.mozilla || $.browser.safari) $('#noPluginAvailable').hide();
 		}
 
-		$(window).on('cco:loaded', function() {
-			if(typeof window.CC == 'undefined') return;
+		$(window).on('cco:loaded', function(e) {
+			$pluginNotInstalled.hide();
 
-			$('#pluginNotInstalled').hide();
-
+			/* For some reason CC isn't registered anymore on the window, so we cant chck the version...
 			$.ajax({
 				url: '/ajax.php?module=plugins&action=versions&language=' + jsSite.current.language,
 				success: function(data, textStatus, jqXHR)
@@ -555,7 +554,7 @@ jsSite.creativeComments =
 					if($.browser.mozilla && data.data.mozilla.latest.version != window.CC.data.version) $('#upgradeBar').show();
 					if($.browser.safari && data.data.safari.latest.version != window.CC.data.version) $('#upgradeBar').show();
 				}
-			});
+			});*/
 		});
 
 		$('#emotionFilter').on('click', 'a', function(e) {
