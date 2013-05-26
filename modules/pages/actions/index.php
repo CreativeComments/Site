@@ -71,10 +71,6 @@ class PagesIndex extends SiteBaseAction
 			$data = $comment->toArray();
 			$data['user'] = $users[$comment->userId]->toArray();
 			$data['newRow'] = false;
-			if($i == 5) {
-				$data['showAdd'] = true;
-				$i++;
-			}
 			if($i % 3 == 0) $data['newRow'] = true;
 
 			$items[] = $data;

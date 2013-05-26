@@ -80,25 +80,7 @@
 									</div>
 								</div>
 							</div>
-
-							{option:items.showAdd}
-								<div class="span4 ads">
-									<div class="adBlock">
-										<script type="text/javascript"><!--
-											google_ad_client = "ca-pub-2874679990125867";
-											/* Creative comments inside */
-											google_ad_slot = "9629671972";
-											google_ad_width = 300;
-											google_ad_height = 250;
-											//-->
-										</script>
-										<script type="text/javascript"
-											src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-										</script>
-									</div>
-								</div>
-							{/option:items.showAdd}
-							{option:items.newRow}
+						{option:items.newRow}
 					</div>
 					<div class="row-fluid itemGrid">
 							{/option:items.newRow}
