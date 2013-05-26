@@ -450,7 +450,11 @@ jsSite.facebook = {
 			FB.login(
 				function(response)
 				{
-					window.location.reload();
+					if(response.status == 'not_authorized') {
+						window.location = '/en/error/?message=not-authorized';
+					}
+
+					else window.location.reload();
 				},
 				{
 					scope: 'email'

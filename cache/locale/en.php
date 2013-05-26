@@ -21,6 +21,7 @@ $err['Forbidden'] = 'You do not have sufficient rights';
 $err['GeneralError'] = 'Something went wrong';
 $err['GeneralFormError'] = 'Something went wrong, please check the marked fields.';
 $err['InvalidModule'] = 'Sorry, this module can not be found.';
+$err['NotAuthorized'] = 'Failed to sign in';
 $err['WrongPassword'] = 'Sorry, you can\'t come in';
 
 // init var
