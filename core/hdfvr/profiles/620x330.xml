@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <bandwidth>
 	<item>
-		<nm>1280x720@30fps</nm>
+		<nm>1280x720@20fps</nm>
 		<df>0</df>
 		<bytes>0</bytes>
 		<q>95</q>
-		<fps>30</fps>
+		<fps>20</fps>
 		<kfps>5</kfps>
 		<w>1280</w>
 		<h>720</h>
