@@ -625,7 +625,7 @@ jsSite.flowplayer = {
 		$f('flowplayer', '/core/flowplayer/flowplayer.swf', {
 			clip: {
 				base_url: 'rtmp://infspylvf0nx4.rtmphost.com/hdfvr/',
-				url: data.video,
+				url: 'mp4:'+ data.video +'.f4v',
 				provider: 'influxis'
 			},
 			plugins: {
