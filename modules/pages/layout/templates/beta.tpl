@@ -9,7 +9,7 @@
 							<header>
 								<h2>Beta account registration</h2>
 							</header>
-							<p>Surely this must be your lucky day!<br> Fill out the passcode you received and click the Sign-in with Facebook button.</p>
+							<p>Surely this must be your lucky day!<br> Fill out the passcode you received and click the "Sign in with Facebook" button.</p>
 
 							{form:beta}
 								<div class="form-inline">
@@ -20,7 +20,7 @@
 												{$txtPassword}
 											</div>
 											<div class="span6">
-												<a id="betaAccess" class="btn facebookRegisterLayout btn-large">Sign-in with Facebook</a>
+												<a id="betaAccess" class="btn facebookRegisterLayout btn-large">Sign in with Facebook</a>
 											</div>
 										</div>
 
