@@ -20,9 +20,9 @@
 
 	<link rel="stylesheet" href="/core/layout/css/style.css?m={$LAST_MODIFIED}">
 	{option:css}
-	{iteration:css}
-		<link rel="stylesheet" href="{$css.url}">
-	{/iteration:css}
+		{iteration:css}
+			<link rel="stylesheet" href="{$css.url}">
+		{/iteration:css}
 	{/option:css}
 
 	<!-- icon in the URL-bar -->
@@ -34,7 +34,6 @@
 	<!--  icon for facebook -->
 	<link rel="image_src" href="/image_src.png" />
 
-	<script>document.domain = document.domain;</script>
 	<script src="/core/js/lib.js?m={$LAST_MODIFIED}"></script>
 	<script src="/core/js/script.js?m={$LAST_MODIFIED}"></script>
 	{option:javascript}
