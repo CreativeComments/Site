@@ -87,11 +87,30 @@ jsSite.api = {
 	e: null,
 
 	init: function() {
-		if($('body').hasClass('videoPlayer')) {
-			jsSite.flowplayer.init();
+		if($('body').hasClass('videoRecorder')) {
+			jsSite.api.initRecorder();
 		}
-
 		window.addEventListener("message", jsSite.api.receive, false);
+	},
+
+	initRecorder: function() {
+		var flashvars = {
+			debug: false,
+			mirror: true,
+			recordtime: 20,
+			quality: 90
+		}
+		var params = {};
+		var attributes = {
+			id: 'videorecorder',
+			name: 'videorecorder'
+		};
+		swfobject.embedSWF(
+			'/core/flash/recorder.swf',
+			'flashContent',
+			620, 350, '11.0.0', null,
+			flashvars, params, attributes
+		);
 	},
 
 	receive: function(e) {
