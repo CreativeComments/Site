@@ -623,38 +623,4 @@ jsSite.creativeComments =
 	}
 }
 
-jsSite.flowplayer = {
-	init: function() {
-		$f('flowplayer', '/core/flowplayer/flowplayer.swf', {
-			clip: {
-				base_url: 'rtmp://infspylvf0nx4.rtmphost.com/hdfvr/',
-				url: 'mp4:'+ data.video +'.f4v',
-				provider: 'influxis'
-			},
-			plugins: {
-				'influxis': {
-					url: '/core/flowplayer/flowplayer.rtmp.swf',
-					netConnectionUrl: 'rtmp://infspylvf0nx4.rtmphost.com/hdfvr/'
-				}
-			}
-		});
-	}
-}
-
-
-jsSite.hdfvr = {
-	isAllowed: false,
-	onCamAccess: function(allowed, id) {
-		jsSite.hdfvr.isAllowed = allowed;
-	},
-	onSaveOk: function(streamName, streamDuration, userId, cameraName, micName, recorderId) {
-	},
-	onSaveFailed: function(streamName, streamDuration, userId, recorderId) {
-	}
-}
-
 $(jsSite.init);
-
-window.onCamAccess = jsSite.hdfvr.onCamAccess;
-window.onSaveOk = jsSite.hdfvr.onSaveOk;
-window.onSaveFailed = jsSite.hdfvr.onSaveFailed;
