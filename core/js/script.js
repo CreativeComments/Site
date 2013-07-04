@@ -85,6 +85,7 @@ var jsSite = {
 
 jsSite.api = {
 	e: null,
+	filename: null,
 
 	init: function() {
 		if($('body').hasClass('videoRecorder')) {
@@ -95,11 +96,13 @@ jsSite.api = {
 
 	initRecorder: function() {
 		var flashvars = {
-			debug: false,
-			mirror: true,
-			recordtime: 20,
-			quality: 90
+			debug: 'false',
+			mirror: 'true',
+			quality: '90',
+			recordtime: '20',
+			filename: data.videoId
 		}
+
 		var params = {};
 		var attributes = {
 			id: 'videorecorder',
@@ -115,33 +118,26 @@ jsSite.api = {
 
 	receive: function(e) {
 		var method = e.data.method;
+		var flash = document.getElementById('videorecorder');
 		if(typeof method == 'undefined') return;
 
 		switch(method) {
 			case 'videorecorder.startRecording':
-				if(!jsSite.hdfvr.isAllowed) {
-					e.source.postMessage({ method: 'videorecorder.notAllowed' }, e.origin);
-				} else {
-					VideoRecorder.record();
-					e.source.postMessage({ method: 'videorecorder.startedRecording' }, e.origin);
-				}
+				flash.startRecording();
+				e.source.postMessage({ method: 'videorecorder.startedRecording' }, e.origin);
 			break;
 			case 'videorecorder.stopRecording':
-				VideoRecorder.stop();
+				flash.stopRecording();
 				e.source.postMessage({ method: 'videorecorder.stoppedRecording' }, e.origin);
 			break;
 			case 'videorecorder.saveRecording':
-				VideoRecorder.save();
-				jsSite.api.e = e;
+				flash.stopRecording();
+				flash.getFilename();
 				e.source.postMessage({ method: 'videorecorder.savedRecording' }, e.origin);
 			break;
-			case 'videorecorder.getTime':
-				var time = VideoRecorder.getStreamTime();
-				e.source.postMessage({ method: 'videorecorder.updateTime', time: time }, e.origin);
-			break;
 			case 'videorecorder.getStreamName':
-				var name = VideoRecorder.getStreamName();
-				e.source.postMessage({ method: 'videorecorder.updateStreamName', name: name }, e.origin);
+				flash.getFilename();
+				jsSite.api.e = e;
 				break;
 			default:
 				console.log(e);
@@ -621,9 +617,6 @@ jsSite.creativeComments =
 		$(document).on('click', 'a.toggleYoutube', function(e) {
 			e.preventDefault();
 			var $element = $('#' + $(this).data('id'));
-
-			console.log($element);
-
 			if($element.is(':visible')) {
 				$element.slideUp();
 				$('html, body').stop().animate({
@@ -643,3 +636,8 @@ jsSite.creativeComments =
 }
 
 $(jsSite.init);
+
+function showRecorderFilename(filename){
+	jsSite.api.file = filename;
+	jsSite.api.e.source.postMessage({ method: 'videorecorder.updateStreamName', name: filename }, e.origin);
+}

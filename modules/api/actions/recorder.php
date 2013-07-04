@@ -18,6 +18,12 @@ class ApiRecorder extends SiteBaseAction
 	 */
 	public function execute()
 	{
+		$this->tpl->assign(
+			'data',
+			array(
+			     'videoId' => SpoonFilter::getGetValue('id', null, '')
+			)
+		);
 		$this->display();
 	}
 }

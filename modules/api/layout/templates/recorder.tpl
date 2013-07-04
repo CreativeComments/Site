@@ -49,6 +49,9 @@
 			currentUser.email = '{$currentUser.email|addslashes}';
 		{/option:currentUser}
 		var data = {};
+		{option:data.videoId}
+			data.videoId = '{$data.videoId|addslashes}';
+		{/option:data.videoId}
 	</script>
 
 	<!-- Google Analytics -->
