@@ -295,15 +295,6 @@ class SiteURL
 
 		$queryString = trim($queryString, '/');
 
-		/*
-		 * @remark
-		 * custom for HDFVR, because it sucks, see
-		 * see http://avchathq.com/forum/index.php?/topic/1429-how-to-overwrite-avc-settingsphp-location/
-		 */
-		if($queryString == 'en/api/avc_settings.php') $chunks[0] = 'en/api/recorder-settings';
-		if($queryString == 'en/api/jpg_encoder_download.php') $chunks[0] = 'en/api/recorder-jpg';
-		if($queryString == 'en/api/save_video_to_db.php') $chunks[0] = 'en/api/recorder-save';
-
 		// split into chunks, a url will always look like /<language>/<module>/<action>(?GET)
 		if(!isset($chunks[0]) || $chunks[0] == '') $chunks = array();
 		else $chunks = (array) explode('/', $chunks[0]);
