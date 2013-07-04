@@ -88,21 +88,19 @@ jsSite.api = {
 	filename: null,
 
 	init: function() {
-		if($('body').hasClass('videoRecorder')) {
-			jsSite.api.initRecorder();
-		}
+		if($('body').hasClass('videoRecorder')) { jsSite.api.initRecorder(); }
+		if($('body').hasClass('videoPlayer')) { jsSite.api.initPlayer(); }
 		window.addEventListener("message", jsSite.api.receive, false);
 	},
 
 	initRecorder: function() {
 		var flashvars = {
-			debug: 'false',
-			mirror: 'true',
-			quality: '90',
-			recordtime: '20',
+			debug: false,
+			mirror: true,
+			quality: 90,
+			recordtime: 20,
 			filename: data.videoId
 		}
-
 		var params = {};
 		var attributes = {
 			id: 'videorecorder',
@@ -257,6 +255,41 @@ jsSite.bugs = {
 			   else alert(data.message);
 		   }
 	   });
+	}
+}
+
+jsSite.comments = {
+	init: function() {
+		if($('#flashContent').length > 0) {
+			var flashvars = {
+				debug: false,
+				mirror: true,
+				quality: 90,
+				recordtime: 20,
+				filename: data.videoId,
+				player: true
+			}
+			var params = {};
+			var attributes = {
+				id: 'videorecorder',
+				name: 'videorecorder'
+			};
+			swfobject.embedSWF(
+				'/core/flash/recorder.swf',
+				'flashContent',
+				620, 350, '11.0.0', null,
+				flashvars, params, attributes
+			);
+
+			setTimeout(function() {
+				var flash = document.getElementById('videorecorder');
+				try {
+					flash.startPlaying();
+				} catch(e) {
+					console.log(e);
+				}
+			}, 700);
+		}
 	}
 }
 

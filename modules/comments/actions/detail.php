@@ -70,6 +70,7 @@ class CommentsDetail extends SiteBaseAction
 
 		// @todo	parse meta/open graph data
 		$this->tpl->assign('item', $this->item->toArray(true));
+		$this->tpl->assign('data', array('videoId' => $this->item->videoId));
 		$this->tpl->assign('user', $user->toArray());
 	}
 }
