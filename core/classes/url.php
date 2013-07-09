@@ -75,7 +75,8 @@ class SiteURL
 		$this->setQueryString($_SERVER['REQUEST_URI']);
 
 		// set host for later use
-		$this->setHost($_SERVER['HTTP_HOST']);
+		$host = (isset($_SERVER['HTTP_HOST'])) ? $_SERVER['HTTP_HOST'] : 'creativecomments.cc';
+		$this->setHost($host);
 
 		$isAjax = (substr($this->getQueryString(), 0, 8) == 'ajax.php');
 
