@@ -66,9 +66,6 @@ class CommentsDetail extends SiteBaseAction
 		$meta .= '<meta property="og:description" content="' . $content . '">' . "\n";
 
 		$this->tpl->assign('meta', $meta);
-
-
-		// @todo	parse meta/open graph data
 		$this->tpl->assign('item', $this->item->toArray(true));
 		$this->tpl->assign('data', array('videoId' => $this->item->videoId));
 		$this->tpl->assign('user', $user->toArray());

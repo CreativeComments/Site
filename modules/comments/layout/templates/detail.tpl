@@ -1,7 +1,7 @@
 {include:'{$CORE_PATH}/layout/templates/head.tpl'}
 {include:'{$CORE_PATH}/layout/templates/header.tpl'}
 
-	<div id="content">
+	<div id="content" class="$item.emotion}">
 		<div class="container">
 			{option:report}
 				<div class="row-fluid">
@@ -13,26 +13,31 @@
 
 			<section id="{$MODULE}" class="{$ACTION}">
 				<div class="row-fluid header">
-					<div class="span10 offset1 username">
+					<div class="span8 offset1 username">
 						<h3>
 							{$user.name}
 						</h3>
 						<time datetime="{$item.createdOn|date:"Y-m-d\TH:i:s"}">{$item.createdOn|timeago}</time>
 					</div>
+					<div class="span2">
+						<div class="fb-follow" data-href="https://www.facebook.com/{$user.facebookId}" data-layout="button_count" data-show-faces="false" data-width="90"></div>
+					</div>
 				</div>
 				<div class="visible-phone mobile alert">
 					This Creative Comments can not be viewed on a mobile device. Please visit the link on a desktop computer.
 				</div>
+				{option:item.text}
+					<div class="row-fluid">
+						<div class="span10 offset1">
+							<div id="textHolder" class="fakeElement">
+								{$item.text}
+							</div>
+						</div>
+					</div>
+				{/option:item.text}
 				<div id="creativeCommentsContent" class="hidden-phone">
 					<div id="buttonsLeft">
 						<ul>
-							{option:item.text}
-								<li>
-									<a href="#" class="uiButton toggleElement" data-id="textHolder">
-										<span class="text"></span><span class="title">View text</span>
-									</a>
-								</li>
-							{/option:item.text}
 							{option:item.youtube}
 								<li>
 									<a href="#" class="uiButton toggleYoutube" data-id="youtubeHolder" data-yt-id="{$item.youtube}">
@@ -123,12 +128,6 @@
 				</div>
 				<div id="creativeCommentsSub" class="row-fluid row-fluid hidden-phone">
 					<div class="span10 offset1">
-						{option:item.text}
-							<div id="textHolder" class="element" style="display: none;">
-								{$item.text}
-							</div>
-						{/option:item.text}
-
 						{option:item.youtube}
 							<div id="youtubeHolder" class="element" style="display: none;">
 							</div>
@@ -149,12 +148,18 @@
 						{/option:item.pictureUrl}
 					</div>
 				</div>
-			</section>
 
-			<section class="row-fluid report">
-				<div class="span12">
-					{option:!currentUser}<p><a href="http://creativecomments.cc" class="btn signup">Request your account</a></p>{/option:!currentUser}
-					<p><a href="{$var|buildurl:'report':'comments'}/{$item.id}">{$lblReportThis}</a></p>
+				<div class="row-fluid">
+					<div class="span7 offset1">
+						<small class="muted">
+							<a href="{$var|buildurl:'report':'comments'}/{$item.id}">{$lblReportThis}</a>
+						</small>
+					</div>
+					<div class="span3">
+						{option:!currentUser}
+							<a href="http://creativecomments.cc" class="btn btn-mini signup" style="float: right">Request your account</a></p>
+						{/option:!currentUser}
+					</div>
 				</div>
 			</section>
 		</div>
