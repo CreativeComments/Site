@@ -22,8 +22,8 @@ class ApiVideoStill extends SiteBaseAction
 		if($videoId == '') exit;
 
 		$id = (int) Site::getDB()->getVar(
-			'SELECT id
-			FROM comments
+			'SELECT i.id
+			FROM comments AS i
 			WHERE i.video_id = ?',
 			$videoId
 		);
