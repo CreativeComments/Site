@@ -816,6 +816,13 @@ only screen and (                min-resolution: 2dppx) {
 		.mobile {
 			padding: 20px;
 		}
+		
+		.report {
+			@include background(inline-image("svg/report.svg") no-repeat);
+			background-position: left center;
+			padding: 5px 0 5px 25px;
+			
+		}
 }
 
 .error {

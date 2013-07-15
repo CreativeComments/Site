@@ -365,6 +365,10 @@
 			}
 		}
 	}
+	
+	.report {
+		@include background(image-url("ie/report.png") no-repeat);
+	}
 }
 
 #team {
