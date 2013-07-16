@@ -647,6 +647,24 @@ body.videoRecorder, body.videoPlayer {
 	}
 }
 
+#content {
+	&.neutral {
+		.container {
+		@include background(inline-image("svg/normal_big.svg") no-repeat left center);
+		}
+	}
+	&.sad {
+		.container {
+		@include background(inline-image("svg/sad_big.svg") no-repeat left center);
+		}
+	}
+	&.happy {
+		.container {
+		@include background(inline-image("svg/happy_big.svg") no-repeat left center);
+		}
+	}
+}
+
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),

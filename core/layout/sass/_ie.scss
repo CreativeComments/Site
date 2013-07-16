@@ -387,4 +387,22 @@
 	}
 }
 
+#content {
+	&.neutral {
+		.container {
+		@include background(image-url("ie/normal_big.png") no-repeat left center);
+		}
+	}
+	&.sad {
+		.container {
+		@include background(image-url("ie/sad_big.png") no-repeat left center);
+		}
+	}
+	&.happy {
+		.container {
+		@include background(image-url("ie/happy_big.png") no-repeat left center);
+		}
+	}
+}
+
 }
