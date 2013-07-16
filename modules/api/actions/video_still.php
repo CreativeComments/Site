@@ -30,7 +30,7 @@ class ApiVideoStill extends SiteBaseAction
 
 		if($id != 0)
 		{
-			$filename = Site::getFilename() . '.jpg';
+			$filename = Site::getFilename() . '.png';
 			$path = Site::getFilesPath($filename);
 			SpoonFile::setContent($path, $GLOBALS['HTTP_RAW_POST_DATA']);
 
