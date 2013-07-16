@@ -18,8 +18,7 @@
 							{$user.name}
 						</h3>
 						<time datetime="{$item.createdOn|date:"Y-m-d\TH:i:s"}">{$item.createdOn|timeago}</time>
-						<!-- @todo Tijs title toevoegen -->
-						<h4>Title @todo</h4>
+						<h4>{$item.title}</h4>
 					</div>
 					<div class="span2">
 						<div class="fb-follow" data-href="https://www.facebook.com/{$user.facebookId}" data-layout="button_count" data-show-faces="false" data-width="90"></div>
