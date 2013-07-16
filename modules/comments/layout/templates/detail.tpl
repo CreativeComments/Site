@@ -1,7 +1,7 @@
 {include:'{$CORE_PATH}/layout/templates/head.tpl'}
 {include:'{$CORE_PATH}/layout/templates/header.tpl'}
 
-	<div id="content" class="$item.emotion}">
+	<div id="content" class="{$item.emotion}">
 		<div class="container">
 			{option:report}
 				<div class="row-fluid">
