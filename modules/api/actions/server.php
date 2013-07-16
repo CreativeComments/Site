@@ -110,6 +110,7 @@ class commentsApi
 		// @todo	prevent XSS
 		$comment = new Comment();
 		$comment->userId = $user->id;
+		if(isset($args['title']) && $args['title'] != '') $comment->setTitle($args['title']);
 		if(isset($args['text']) && $args['text'] != '') $comment->setText($args['text']);
 		if(isset($args['video_id']) && $args['video_id'] != '') $comment->setVideoId($args['video_id']);
 		if(isset($args['youtube']) && $args['youtube'] != '') $comment->setYoutube($args['youtube']);
