@@ -23,7 +23,7 @@ class Comment
 	 *
 	 * @var	string
 	 */
-	public $fullUrl, $text, $videoId, $youtube, $slideshare, $url, $dropbox, $file, $emotion = 'neutral', $picture;
+	public $fullUrl, $title, $text, $videoId, $youtube, $slideshare, $url, $dropbox, $file, $emotion = 'neutral', $picture;
 
 	/**
 	 * DateTime properties
@@ -207,6 +207,22 @@ class Comment
 	}
 
 	/**
+	 * @param string $title
+	 */
+	public function setTitle($title)
+	{
+		$this->title = $title;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getTitle()
+	{
+		return $this->title;
+	}
+
+	/**
 	 * @param int $userId
 	 */
 	public function setUserId($userId)
@@ -377,6 +393,7 @@ class Comment
 			$this->fullUrl = Spoon::get('url')->buildUrl('detail', 'comments') . '/' . $this->id;
 		}
 		if(isset($data['user_id'])) $this->userId = (int) $data['user_id'];
+		if(isset($data['title'])) $this->title = (string) $data['title'];
 		if(isset($data['text'])) $this->text = (string) $data['text'];
 		if(isset($data['video_id'])) $this->videoId = (string) $data['video_id'];
 		if(isset($data['youtube'])) $this->youtube = (string) $data['youtube'];
@@ -401,6 +418,7 @@ class Comment
 
 		// build record
 		$item['user_id'] = $this->userId;
+		$item['title'] = $this->title;
 		$item['text'] = $this->text;
 		$item['video_id'] = $this->videoId;
 		$item['youtube'] = $this->youtube;
@@ -437,6 +455,7 @@ class Comment
 		// build array
 		$item['id'] = $this->id;
 		$item['user_id'] = $this->getUserId();
+		$item['title'] = $this->getTitle();
 		$item['text'] = $this->getText();
 		$item['videoId'] = $this->getVideoId();
 		$item['youtube'] = $this->getYoutube();
