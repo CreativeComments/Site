@@ -23,7 +23,7 @@ class Comment
 	 *
 	 * @var	string
 	 */
-	public $fullUrl, $title, $text, $videoId, $youtube, $slideshare, $url, $dropbox, $file, $emotion = 'neutral', $picture;
+	public $fullUrl, $title, $text, $videoId, $youtube, $slideshare, $soundcloud, $url, $dropbox, $file, $emotion = 'neutral', $picture;
 
 	/**
 	 * DateTime properties
@@ -179,6 +179,22 @@ class Comment
 	public function getSlideshare()
 	{
 		return $this->slideshare;
+	}
+
+	/**
+	 * @param string $soundcloud
+	 */
+	public function setSoundcloud($soundcloud)
+	{
+		$this->soundcloud = $soundcloud;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getSoundcloud()
+	{
+		return $this->soundcloud;
 	}
 
 	/**
@@ -398,6 +414,7 @@ class Comment
 		if(isset($data['video_id'])) $this->videoId = (string) $data['video_id'];
 		if(isset($data['youtube'])) $this->youtube = (string) $data['youtube'];
 		if(isset($data['slideshare'])) $this->slideshare = (string) $data['slideshare'];
+		if(isset($data['soundcloud'])) $this->soundcloud = (string) $data['soundcloud'];
 		if(isset($data['url'])) $this->url = (string) $data['url'];
 		if(isset($data['dropbox'])) $this->dropbox = (string) $data['dropbox'];
 		if(isset($data['file'])) $this->file = (string) $data['file'];
@@ -423,6 +440,7 @@ class Comment
 		$item['video_id'] = $this->videoId;
 		$item['youtube'] = $this->youtube;
 		$item['slideshare'] = $this->slideshare;
+		$item['soundcloud'] = $this->soundcloud;
 		$item['url'] = $this->url;
 		$item['dropbox'] = $this->dropbox;
 		$item['file'] = $this->file;
@@ -460,6 +478,7 @@ class Comment
 		$item['videoId'] = $this->getVideoId();
 		$item['youtube'] = $this->getYoutube();
 		$item['slideshare'] = $this->getSlideshare();
+		$item['soundcloud'] = $this->getSoundcloud();
 		$item['url'] = $this->getUrl();
 		$item['dropbox'] = $this->getDropbox();
 		$item['file'] = $this->getFile();
