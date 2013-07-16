@@ -262,6 +262,10 @@
 						.link {
 							@include sprite(icon_link_hover);
 						}
+						
+						.soundcloud {
+							@include sprite(icon_soundcloud_hover);
+						}
 
 						}
 
@@ -299,6 +303,12 @@
 						.link {
 							display: block;
 							@include sprite(icon_link);
+							margin: 8px 0 0 8px;
+						}
+						
+						.soundcloud {
+							display: block;
+							@include sprite(icon_soundcloud);
 							margin: 8px 0 0 8px;
 						}
 					}
