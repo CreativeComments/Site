@@ -656,12 +656,12 @@ body.videoRecorder, body.videoPlayer {
 	}
 	&.sad {
 		.container {
-		@include background(inline-image("svg/sad_big.svg") no-repeat left center);
+		@include background(inline-image("svg/sad_big.svg") no-repeat left 10%);
 		}
 	}
 	&.happy {
 		.container {
-		@include background(inline-image("svg/happy_big.svg") no-repeat left center);
+		@include background(inline-image("svg/happy_big.svg") no-repeat left 10%);
 		}
 	}
 }
