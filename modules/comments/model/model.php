@@ -520,8 +520,6 @@ class CommentsHelper {
 	}
 
 	/**
-	 * @todo    add pagina, so we can implement infinite scroll
-	 *
 	 * @param $id
 	 * @return array
 	 */
