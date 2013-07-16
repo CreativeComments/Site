@@ -651,7 +651,7 @@ body.videoRecorder, body.videoPlayer {
 #content {
 	&.neutral {
 		.container {
-		@include background(inline-image("svg/normal_big.svg") no-repeat left center);
+		@include background(inline-image("svg/normal_big.svg") no-repeat left 10%);
 		}
 	}
 	&.sad {

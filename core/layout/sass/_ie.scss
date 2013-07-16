@@ -390,17 +390,17 @@
 #content {
 	&.neutral {
 		.container {
-		@include background(image-url("ie/normal_big.png") no-repeat left center);
+		@include background(image-url("ie/normal_big.png") no-repeat left 10%);
 		}
 	}
 	&.sad {
 		.container {
-		@include background(image-url("ie/sad_big.png") no-repeat left center);
+		@include background(image-url("ie/sad_big.png") no-repeat left 10%);
 		}
 	}
 	&.happy {
 		.container {
-		@include background(image-url("ie/happy_big.png") no-repeat left center);
+		@include background(image-url("ie/happy_big.png") no-repeat left 10%);
 		}
 	}
 }
