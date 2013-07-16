@@ -470,9 +470,6 @@ class Comment
 		$item['createdOn'] = ($this->createdOn !== null) ? $this->createdOn->getTimestamp() : null;
 		$item['editedOn'] = ($this->editedOn !== null) ? $this->editedOn->getTimestamp() : null;
 
-		$item['video_flash_278x135'] = CommentsHelper::buildFlashOutput($this->getVideoId(), 278, 135);
-		$item['video_flash_600x450'] = CommentsHelper::buildFlashOutput($this->getVideoId(), 600, 450);
-
 		if($onSite)
 		{
 			if($item['slideshare'] != '')
@@ -487,26 +484,6 @@ class Comment
 }
 
 class CommentsHelper {
-
-	/**
-	 * Build Flash output for the video
-	 *
-	 * @param $id
-	 * @param $width
-	 * @param $height
-	 * @return string
-	 */
-	public static function buildFlashOutput($id, $width, $height)
-	{
-		$output =   '<object id="video-%1$s" width="%2$s" height="%3$s">
-						<param name="movie" value="https://player.nimbb.com/nimbb.swf?guid=%1$s&key=' . NIMB_PUBLIC_KEY . '&nologo=1&autoplay=1" />
-						<param name="allowScriptAccess" value="always" />
-						<embed name="nimbb" src="https://player.nimbb.com/nimbb.swf?guid=%1$s&key=' . NIMB_PUBLIC_KEY . '&nologo=1&autoplay=1" width="%2$s" height="%3$s" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
-					</object>';
-		$output = sprintf($output, $id, $width, $height);
-		return $output;
-	}
-
 	/**
 	 * Get the most recent comments
 	 *
