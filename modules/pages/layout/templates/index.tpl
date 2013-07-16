@@ -61,17 +61,19 @@
 						{iteration:items}
 							<div class="span4 item">
 								<div class="videoHolder">
-									<h4>
-										<a href="{$var|buildurl:'detail':'comments'}/{$items.id}">
-											{$items.title}
-										</a>
-									</h4>{* @todo Niels style me plz. *}
 									<a class="video" href="{$var|buildurl:'detail':'comments'}/{$items.id}">
 										{option:items.videoId}
 											<img src="http://api.nimbb.com/Live/Thumbnail.aspx?key={$NIMB_PUBLIC_KEY}&guid={$items.videoId}" width="278" height="170" />
 										{/option:items.videoId}
 									</a>
 								</div>
+								<header>
+								<h4>
+									<a href="{$var|buildurl:'detail':'comments'}/{$items.id}">
+										{$items.title}
+									</a>
+								</h4>
+								</header>
 								<div class="user {$items.emotion}">
 									<div class="avatar">
 										<div class="top"></div>
