@@ -109,7 +109,7 @@ jsSite.api = {
 		swfobject.embedSWF(
 			'/core/flash/recorder.swf',
 			'flashContent',
-			620, 350, '11.0.0', null,
+			615, 350, '11.0.0', null,
 			flashvars, params, attributes
 		);
 	},
@@ -131,7 +131,7 @@ jsSite.api = {
 		swfobject.embedSWF(
 			'/core/flash/recorder.swf',
 			'flashContent',
-			620, 350, '11.0.0', null,
+			615, 350, '11.0.0', null,
 			flashvars, params, attributes
 		);
 
@@ -308,7 +308,7 @@ jsSite.comments = {
 			swfobject.embedSWF(
 				'/core/flash/recorder.swf',
 				'flashContent',
-				620, 350, '11.0.0', null,
+				615, 350, '11.0.0', null,
 				flashvars, params, attributes
 			);
 
