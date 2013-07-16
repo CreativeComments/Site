@@ -696,6 +696,34 @@ jsSite.creativeComments =
 				}, 1000);
 			}
 		});
+		$(document).on('click', 'a.toggleSoundcloud', function(e) {
+			e.preventDefault();
+			var $element = $('#' + $(this).data('id'));
+			if($element.is(':visible')) {
+				$element.slideUp();
+				$('html, body').stop().animate({
+                   scrollTop: $('#comments').offset().top
+               }, 1000);
+				$element.html('');
+			} else {
+				var soundcloudData = $(this).data('soundcloudId').split('|');
+				var html = '';
+
+				if(soundcloudData[0] == 'user') {
+					html = '<iframe id="soundcloudFrame" width="610" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http://api.soundcloud.com/users/' + soundcloudData[1] + '?auto_play=true"></iframe>';
+				}
+				if(soundcloudData[0] == 'track') {
+					html = '<iframe id="soundcloudFrame" width="610" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http://api.soundcloud.com/tracks/' + soundcloudData[1] + '?auto_play=true"></iframe>';
+				}
+
+				$element.html(html);
+
+				$element.slideDown();
+				$('html, body').stop().animate({
+					scrollTop: $element.offset().top
+				}, 1000);
+			}
+		});
 	}
 }
 

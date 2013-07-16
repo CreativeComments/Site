@@ -186,6 +186,40 @@ class Comment
 	 */
 	public function setSoundcloud($soundcloud)
 	{
+		if(substr_count($soundcloud, 'iframe') > 0) {
+			$matches = array();
+			preg_match('|.*api.soundcloud.com(.*)"|iU', $soundcloud, $matches);
+
+			if(!isset($matches[1])) $soundcloud = null;
+			else {
+				$soundcloud = trim(urldecode($matches[1]), '/');
+				$soundcloud = str_replace(
+					array('tracks/', 'users/'),
+					array('track|', 'user|'),
+					$soundcloud
+				);
+			}
+		} else {
+			$client = new Soundcloud\Service(
+				SOUNDCLOUD_CLIENT_ID,
+				SOUNDCLOUD_CLIENT_SECRET,
+				SOUNDCLOUD_CLIENT_REDIRECT_URL
+			);
+
+			try {
+				$json = json_decode(
+					$client->get(
+						'resolve',
+						array('url' => $soundcloud),
+						array(CURLOPT_FOLLOWLOCATION => true)
+					)
+				);
+				$soundcloud = $json->kind . '|' . $json->id;
+			} catch(Soundcloud\Exception\InvalidHttpResponseCodeException $e) {
+				$soundcloud = null;
+			}
+		}
+
 		$this->soundcloud = $soundcloud;
 	}
 
@@ -362,34 +396,34 @@ class Comment
 	 */
 	public function getOGImageUrl()
 	{
-		// should we generate the image?
-		if($this->videoId != '' && !SpoonFile::exists(PATH_WWW . '/files/comments/og/' . $this->id . '.png'))
-		{
-			$stillPath = PATH_WWW . '/files/comments/temp/' . $this->id . '.jpg';
-			$stillContent = SpoonHTTP::getContent(
-				'http://api.nimbb.com/Live/Thumbnail.aspx?key=' . NIMB_PUBLIC_KEY . '&guid=' . $this->videoId,
-				array(
-				     CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13',
-				)
-			);
-			SpoonFile::setContent(
-				$stillPath,
-				$stillContent
-			);
-
-			// create images
-			$still = new Imagick($stillPath);
-			$overlay = new Imagick(PATH_WWW . '/core/layout/images/emotion_overlays/' . $this->emotion . '.png');
-
-			$size = getimagesize($stillPath);
-
-			// add overlay
-			$still->compositeimage($overlay, Imagick::COMPOSITE_DEFAULT, (floor($size[0] / 2) - 100), (floor($size[1] / 2)) - 100);
-			$still->writeimage(PATH_WWW . '/files/comments/og/' . $this->id . '.png');
-
-			// cleanup
-			SpoonFile::delete($stillPath);
-		}
+//		// should we generate the image?
+//		if($this->videoId != '' && !SpoonFile::exists(PATH_WWW . '/files/comments/og/' . $this->id . '.png'))
+//		{
+//			$stillPath = PATH_WWW . '/files/comments/temp/' . $this->id . '.jpg';
+//			$stillContent = SpoonHTTP::getContent(
+//				'http://api.nimbb.com/Live/Thumbnail.aspx?key=' . NIMB_PUBLIC_KEY . '&guid=' . $this->videoId,
+//				array(
+//				     CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13',
+//				)
+//			);
+//			SpoonFile::setContent(
+//				$stillPath,
+//				$stillContent
+//			);
+//
+//			// create images
+//			$still = new Imagick($stillPath);
+//			$overlay = new Imagick(PATH_WWW . '/core/layout/images/emotion_overlays/' . $this->emotion . '.png');
+//
+//			$size = getimagesize($stillPath);
+//
+//			// add overlay
+//			$still->compositeimage($overlay, Imagick::COMPOSITE_DEFAULT, (floor($size[0] / 2) - 100), (floor($size[1] / 2)) - 100);
+//			$still->writeimage(PATH_WWW . '/files/comments/og/' . $this->id . '.png');
+//
+//			// cleanup
+//			SpoonFile::delete($stillPath);
+//		}
 
 		return '/files/comments/og/' . $this->id . '.png';
 	}

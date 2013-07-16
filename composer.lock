@@ -1,5 +1,9 @@
 {
-    "hash": "8b1ae4e602e628b10034dc1253c6ea2d",
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "821b9fc91ad5529deae7a3d7107d6496",
     "packages": [
         {
             "name": "facebook/php-sdk",
@@ -7,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/facebook/facebook-php-sdk.git",
-                "reference": "v3.2.2"
+                "reference": "16d696c138b82003177d0b4841a3e4652442e5b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facebook/facebook-php-sdk/zipball/v3.2.2",
-                "reference": "v3.2.2",
+                "url": "https://api.github.com/repos/facebook/facebook-php-sdk/zipball/16d696c138b82003177d0b4841a3e4652442e5b1",
+                "reference": "16d696c138b82003177d0b4841a3e4652442e5b1",
                 "shasum": ""
             },
             "require": {
@@ -42,20 +46,68 @@
                 "facebook",
                 "sdk"
             ],
-            "time": "2013-01-15 21:37:15"
+            "time": "2013-05-16 02:42:18"
         },
         {
-            "name": "spoon/library",
-            "version": "1.3.6",
+            "name": "ise/php-soundcloud",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/forkcms/library.git",
-                "reference": "1.3.6"
+                "url": "git://github.com/internalsystemerror/php-soundcloud.git",
+                "reference": "v3.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/forkcms/library/zipball/1.3.6",
-                "reference": "1.3.6",
+                "url": "https://api.github.com/repos/internalsystemerror/php-soundcloud/zipball/v3.0.0",
+                "reference": "v3.0.0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Soundcloud\\": "src/",
+                    "SoundcloudTest\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anton Lindqvist",
+                    "email": "anton@qvister.se",
+                    "homepage": "http://qvister.se/",
+                    "role": "developer"
+                },
+                {
+                    "name": "Gary Lockett",
+                    "email": "ise@garylockett.com",
+                    "homepage": "http://www.garylockett.com/"
+                }
+            ],
+            "description": "API Wrapper for SoundCloud written in PHP with support for authentication using OAuth 2.0 by Anton Lindqvist (mptre), composer support added by Gary Lockett (ise)",
+            "homepage": "https://github.com/internalsystemerror/php-soundcloud",
+            "keywords": [
+                "soundcloud"
+            ],
+            "time": "2013-02-05 00:26:05"
+        },
+        {
+            "name": "spoon/library",
+            "version": "1.3.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/forkcms/library.git",
+                "reference": "1.3.10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/forkcms/library/zipball/1.3.10",
+                "reference": "1.3.10",
                 "shasum": ""
             },
             "require": {
@@ -74,7 +126,7 @@
             ],
             "description": "A PHP5 library that is fast, easy to learn and fun!",
             "homepage": "http://www.spoon-library.com",
-            "time": "2013-03-19 19:48:28"
+            "time": "2013-06-07 07:27:08"
         }
     ],
     "packages-dev": [

@@ -59,7 +59,7 @@
 								<li>
 									<a href="#" class="uiButton toggleElement" data-id="slideshareHolder">
 										<span class="slideshare"></span>
-										<span class="title">View slide</span>
+										<span class="title">View SlideShare</span>
 									</a>
 								</li>
 							{/option:item.slideshare}
@@ -72,6 +72,14 @@
 									</a>
 								</li>
 							{/option:item.url}
+							{option:item.soundcloud}
+								<li>
+									<a href="#" class="uiButton toggleSoundcloud" data-id="soundcloudHolder" data-soundcloud-id="{$item.soundcloud}">
+										<span class="soundcloud"></span>
+										<span class="title">View SoundCloud</span>
+									</a>
+								</li>
+							{/option:item.soundcloud}
 						</ul>
 					</div>
 					<div id="creativeCommentsHolderSite">
@@ -139,6 +147,11 @@
 								{$item.slideshare}
 							</div>
 						{/option:item.slideshare}
+
+						{option:item.soundcloud}
+							<div id="soundcloudHolder" class="element" style="display: none;">
+							</div>
+						{/option:item.soundcloud}
 
 						{option:item.pictureUrl}
 							<div id="pictureHolder" class="element" style="display: none;">

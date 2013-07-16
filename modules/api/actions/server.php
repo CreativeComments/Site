@@ -115,6 +115,7 @@ class commentsApi
 		if(isset($args['video_id']) && $args['video_id'] != '') $comment->setVideoId($args['video_id']);
 		if(isset($args['youtube']) && $args['youtube'] != '') $comment->setYoutube($args['youtube']);
 		if(isset($args['slideshare']) && $args['slideshare'] != '') $comment->setSlideshare($args['slideshare']);
+		if(isset($args['soundcloud']) && $args['soundcloud'] != '') $comment->setSoundcloud($args['soundcloud']);
 		if(isset($args['url']) && $args['url'] != '') $comment->setUrl($args['url']);
 		if(isset($args['dropbox']) && $args['dropbox'] != '') $comment->setDropbox($args['dropbox']);
 		if(isset($args['file_id']) && $args['file_id'] != '') $comment->setFile(self::getTemporaryFile($args['file_id']));

@@ -4,6 +4,7 @@
 	"license": "MIT",
 	"require": {
 		"spoon/library": "1.3.*",
-		"facebook/php-sdk": "dev-master"
+		"facebook/php-sdk": "dev-master",
+		"ise/php-soundcloud": "3.*"
 	}
 }
