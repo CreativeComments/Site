@@ -21,7 +21,7 @@
 						<h4>{$item.title}</h4>
 					</div>
 					<div class="span2">
-						<div class="fb-follow" data-href="https://www.facebook.com/{$user.facebookId}" data-layout="button_count" data-show-faces="false" data-width="90"></div>
+						<div class="fb-like" data-href="{$SITE_URL}{$var|buildurl:'detail':'comments'}/{$item.id}" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div>
 					</div>
 				</div>
 				<div class="visible-phone mobile alert">
@@ -72,7 +72,7 @@
 									</a>
 								</li>
 							{/option:item.url}
-							
+
 							{option:item.soundcloud}
 								<li>
 									<a href="#" class="uiButton toggleSoundcloud" data-id="soundcloudHolder" data-soundcloud-id="{$item.soundcloud}">

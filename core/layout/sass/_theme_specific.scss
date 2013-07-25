@@ -817,7 +817,7 @@ only screen and (                min-resolution: 2dppx) {
 					border-left: 1px solid #bfbfbf;
 					border-right: 1px solid #bfbfbf;
 				}
-				
+
 				h4 {
 					float: left;
 					color: #424141;
@@ -826,7 +826,7 @@ only screen and (                min-resolution: 2dppx) {
 				}
 			}
 
-			.fb-follow {
+			.fb-like {
 				margin-top: 10px;
 				float: right;
 			}
@@ -835,12 +835,12 @@ only screen and (                min-resolution: 2dppx) {
 		.mobile {
 			padding: 20px;
 		}
-		
+
 		.report {
 			@include background(inline-image("svg/report.svg") no-repeat);
 			background-position: left center;
 			padding: 5px 0 5px 25px;
-			
+
 		}
 }
 
