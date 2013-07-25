@@ -23,7 +23,7 @@ class Comment
 	 *
 	 * @var	string
 	 */
-	public $fullUrl, $title, $text, $videoId, $youtube, $slideshare, $soundcloud, $url, $dropbox, $file, $emotion = 'neutral', $picture;
+	public $fullUrl, $title, $text, $videoId, $videoStill, $youtube, $slideshare, $soundcloud, $url, $dropbox, $file, $emotion = 'neutral', $picture;
 
 	/**
 	 * DateTime properties
@@ -321,6 +321,22 @@ class Comment
 	}
 
 	/**
+	 * @param string $videoStill
+	 */
+	public function setVideoStill($videoStill)
+	{
+		$this->videoStill = $videoStill;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getVideoStill()
+	{
+		return $this->videoStill;
+	}
+
+	/**
 	 * @param string $youtube
 	 */
 	public function setYoutube($youtube)
@@ -446,6 +462,7 @@ class Comment
 		if(isset($data['title'])) $this->title = (string) $data['title'];
 		if(isset($data['text'])) $this->text = (string) $data['text'];
 		if(isset($data['video_id'])) $this->videoId = (string) $data['video_id'];
+		if(isset($data['video_still'])) $this->videoStill = (string) $data['video_still'];
 		if(isset($data['youtube'])) $this->youtube = (string) $data['youtube'];
 		if(isset($data['slideshare'])) $this->slideshare = (string) $data['slideshare'];
 		if(isset($data['soundcloud'])) $this->soundcloud = (string) $data['soundcloud'];
