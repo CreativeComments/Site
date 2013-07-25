@@ -412,36 +412,30 @@ class Comment
 	 */
 	public function getOGImageUrl()
 	{
-//		// should we generate the image?
-//		if($this->videoId != '' && !SpoonFile::exists(PATH_WWW . '/files/comments/og/' . $this->id . '.png'))
-//		{
-//			$stillPath = PATH_WWW . '/files/comments/temp/' . $this->id . '.jpg';
-//			$stillContent = SpoonHTTP::getContent(
-//				'http://api.nimbb.com/Live/Thumbnail.aspx?key=' . NIMB_PUBLIC_KEY . '&guid=' . $this->videoId,
-//				array(
-//				     CURLOPT_USERAGENT => 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13',
-//				)
-//			);
-//			SpoonFile::setContent(
-//				$stillPath,
-//				$stillContent
-//			);
-//
-//			// create images
-//			$still = new Imagick($stillPath);
-//			$overlay = new Imagick(PATH_WWW . '/core/layout/images/emotion_overlays/' . $this->emotion . '.png');
-//
-//			$size = getimagesize($stillPath);
-//
-//			// add overlay
-//			$still->compositeimage($overlay, Imagick::COMPOSITE_DEFAULT, (floor($size[0] / 2) - 100), (floor($size[1] / 2)) - 100);
-//			$still->writeimage(PATH_WWW . '/files/comments/og/' . $this->id . '.png');
-//
-//			// cleanup
-//			SpoonFile::delete($stillPath);
-//		}
+		if(SpoonFile::exists(PATH_WWW . '/files/comments/og/' . $this->id . '.png')) {
+			return '/files/comments/og/' . $this->id . '.png';
+		}
 
-		return '/files/comments/og/' . $this->id . '.png';
+		// can we generate the image?
+		if(!SpoonFile::exists(PATH_WWW . '/files/comments/og/' . $this->id . '.png') && $this->getVideoStill() != '')
+		{
+			$stillPath = Site::getFilesPath($this->getVideoStill());
+
+			// create images
+			$still = new Imagick($stillPath);
+			$overlay = new Imagick(PATH_WWW . '/core/layout/images/emotion_overlays/' . $this->emotion . '.png');
+
+			$size = getimagesize($stillPath);
+
+			// add overlay
+			$still->compositeimage($overlay, Imagick::COMPOSITE_DEFAULT, floor($size[0]) - 110, 10);
+
+			$still->writeimage(PATH_WWW . '/files/comments/og/' . $this->id . '.png');
+
+			return '/files/comments/og/' . $this->id . '.png';
+		}
+
+		return '#';
 	}
 
 
