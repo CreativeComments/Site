@@ -21,26 +21,9 @@ class ApiVideoStill extends SiteBaseAction
 		$videoId = SpoonFilter::getGetValue('video', null, '');
 		if($videoId == '') exit;
 
-		$id = (int) Site::getDB()->getVar(
-			'SELECT i.id
-			FROM comments AS i
-			WHERE i.video_id = ?',
-			$videoId
+		SpoonFile::setContent(
+			PATH_WWW . '/files/comments/temp/' . $videoId . '.png',
+			$GLOBALS['HTTP_RAW_POST_DATA']
 		);
-
-		if($id != 0)
-		{
-			$filename = Site::getFilename() . '.png';
-			$path = Site::getFilesPath($filename);
-			SpoonFile::setContent($path, $GLOBALS['HTTP_RAW_POST_DATA']);
-
-			Site::getDB(true)->update(
-				'comments',
-				array('video_still' => $filename),
-				'id = ?',
-				array($id)
-			);
-		}
-		exit;
 	}
 }
