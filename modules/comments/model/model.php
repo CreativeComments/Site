@@ -484,11 +484,26 @@ class Comment
 	{
 		$this->editedOn = new DateTime();
 
+		if($this->videoId != '' && $this->videoStill == '')
+		{
+			if(SpoonFile::exists(PATH_WWW . '/files/comments/temp/' . $this->videoId  . '.png'))
+			{
+				$filename = Site::getFilename() . '.png';
+				SpoonFile::move(
+					PATH_WWW . '/files/comments/temp/' . $this->videoId  . '.png',
+					Site::getFilesPath($filename)
+				);
+
+				$this->videoStill = $filename;
+			}
+		}
+
 		// build record
 		$item['user_id'] = $this->userId;
 		$item['title'] = $this->title;
 		$item['text'] = $this->text;
 		$item['video_id'] = $this->videoId;
+		$item['video_still'] = $this->videoStill;
 		$item['youtube'] = $this->youtube;
 		$item['slideshare'] = $this->slideshare;
 		$item['soundcloud'] = $this->soundcloud;
