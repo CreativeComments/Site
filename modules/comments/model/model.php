@@ -536,6 +536,8 @@ class Comment
 		$item['title'] = $this->getTitle();
 		$item['text'] = $this->getText();
 		$item['videoId'] = $this->getVideoId();
+		$item['videoStill'] = $this->getVideoStill();
+		$item['videoStillUrl'] = ($this->getVideoStill() != null) ? Site::getFilesUrl($this->getVideoStill()) : null;
 		$item['youtube'] = $this->getYoutube();
 		$item['slideshare'] = $this->getSlideshare();
 		$item['soundcloud'] = $this->getSoundcloud();

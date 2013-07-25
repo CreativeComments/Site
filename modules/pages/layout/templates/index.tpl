@@ -62,9 +62,9 @@
 							<div class="span4 item">
 								<div class="videoHolder">
 									<a class="video" href="{$var|buildurl:'detail':'comments'}/{$items.id}">
-										{option:items.videoId}
-											<img src="http://api.nimbb.com/Live/Thumbnail.aspx?key={$NIMB_PUBLIC_KEY}&guid={$items.videoId}" width="278" height="170" />
-										{/option:items.videoId}
+										{option:items.videoStillUrl}
+											<img src="{$items.videoStillUrl}" width="278" />
+										{/option:items.videoStillUrl}
 									</a>
 								</div>
 								<header>
