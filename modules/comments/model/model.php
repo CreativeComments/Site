@@ -428,7 +428,7 @@ class Comment
 			$size = getimagesize($stillPath);
 
 			// add overlay
-			$still->compositeimage($overlay, Imagick::COMPOSITE_DEFAULT, floor($size[0]) - 110, 10);
+			$still->compositeimage($overlay, Imagick::COMPOSITE_DEFAULT, floor($size[0]) - 215, 10);
 
 			$still->writeimage(PATH_WWW . '/files/comments/og/' . $this->id . '.png');
 
