@@ -312,10 +312,11 @@ jsSite.comments = {
 				flashvars, params, attributes
 			);
 
-			setTimeout(function() {
+			var timer = setInterval(function() {
 				var flash = document.getElementById('videorecorder');
 				try {
 					flash.startPlaying();
+					clearInterval(timer);
 				} catch(e) {
 					console.log(e);
 				}
