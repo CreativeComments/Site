@@ -191,7 +191,7 @@
 				float: right;
 			}
 		}
-		
+
 		&.madeBy {
 					.sumo {
 			text-align: right;
@@ -226,6 +226,16 @@
 					list-style: none;
 					width: 58px;
 					border-bottom: 1px solid #bfbfbf;
+
+					&.borderTop {
+						border-top: 1px solid #bfbfbf;
+					}
+					&.emptyUiButton {
+						display: block;
+						height: 56px;
+						width: 58px;
+						border-bottom: none;
+					}
 
 					a {
 						display: block;
@@ -262,7 +272,7 @@
 						.link {
 							@include sprite(icon_link_hover);
 						}
-						
+
 						.soundcloud {
 							@include sprite(icon_soundcloud_hover);
 						}
@@ -273,7 +283,7 @@
 						position: absolute;
 						top: 18px;
 						left: 60px;
-						width: 200px;
+						width: 230px;
 						}
 
 						.text {
@@ -305,7 +315,7 @@
 							@include sprite(icon_link);
 							margin: 8px 0 0 8px;
 						}
-						
+
 						.soundcloud {
 							display: block;
 							@include sprite(icon_soundcloud);
@@ -329,6 +339,16 @@
 				list-style: none;
 				width: 56px;
 				border-bottom: 1px solid #bfbfbf;
+
+				&.borderTop {
+					border-top: 1px solid #bfbfbf;
+				}
+				&.emptyUiButton {
+					display: block;
+					height: 55px;
+					width: 58px;
+					border-bottom: none;
+				}
 
 				a {
 					display: block;
@@ -485,7 +505,7 @@
 					text-align: center;
 				}
 			}
-			
+
 			.facebookRegister, .facebookRegisterLayout {
 					text-align: center;
 				}

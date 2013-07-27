@@ -39,14 +39,14 @@
 				<div id="creativeCommentsContent" class="hidden-phone">
 					<div id="buttonsLeft">
 						<ul>
-							{option:item.youtube}
-								<li>
+							<li class="{option:!item.youtube}emptyUiButton{/option:!item.youtube} {option:item.youtube}borderTop{/option:item.youtube}">
+								{option:item.youtube}
 									<a href="#" class="uiButton toggleYoutube" data-id="youtubeHolder" data-yt-id="{$item.youtube}">
 										<span class="youtube"></span>
 										<span class="title">Watch movie</span>
 									</a>
-								</li>
-							{/option:item.youtube}
+								{/option:item.youtube}
+							</li>
 	{*
 							<li>
 								<a href="#" class="uiButton toggleElement" data-id="pinterestHolder">
@@ -55,32 +55,32 @@
 								</a>
 							</li>
 	*}
-							{option:item.slideshare}
-								<li>
+							<li class="{option:!item.slideshare}emptyUiButton{/option:!item.slideshare} {option:item.slideshare}{option:!item.youtube}borderTop{/option:!item.youtube}{/option:item.slideshare}">
+								{option:item.slideshare}
 									<a href="#" class="uiButton toggleElement" data-id="slideshareHolder">
 										<span class="slideshare"></span>
 										<span class="title">View SlideShare</span>
 									</a>
-								</li>
-							{/option:item.slideshare}
+								{/option:item.slideshare}
+							</li>
 
-							{option:item.url}
-								<li>
+							<li class="{option:!item.url}emptyUiButton{/option:!item.url} {option:item.url}{option:!item.slideshare}borderTop{/option:!item.slideshare}{/option:item.url}">
+								{option:item.url}
 									<a href="{$item.url}" target="_blank" class="uiButton">
 										<span class="link"></span>
 										<span class="title">View link</span>
 									</a>
-								</li>
-							{/option:item.url}
+								{/option:item.url}
+							</li>
 
-							{option:item.soundcloud}
-								<li>
+							<li class="{option:!item.soundcloud}emptyUiButton{/option:!item.soundcloud} {option:item.soundcloud}{option:!item.url}borderTop{/option:!item.url}{/option:item.soundcloud}">
+								{option:item.soundcloud}
 									<a href="#" class="uiButton toggleSoundcloud" data-id="soundcloudHolder" data-soundcloud-id="{$item.soundcloud}">
 										<span class="soundcloud"></span>
 										<span class="title">View SoundCloud</span>
 									</a>
-								</li>
-							{/option:item.soundcloud}
+								{/option:item.soundcloud}
+							</li>
 						</ul>
 					</div>
 					<div id="creativeCommentsHolderSite">
@@ -101,15 +101,15 @@
 								</a>
 							</li>
 *}
-							{option:item.dropbox}
-								<li>
+							<li class="{option:!item.dropbox}emptyUiButton{/option:!item.dropbox} {option:item.dropbox}borderTop{/option:item.dropbox}">
+								{option:item.dropbox}
 									<a href="{$item.dropbox}" target="_blank" class="uiButton">
 										<span class="dropbox"></span>
 										<span class="title">Dropbox</span>
 									</a>
-								</li>
-							{/option:item.dropbox}
-{*
+								{/option:item.dropbox}
+{*							</li>
+
 							<li>
 								<a href="#" class="uiButton toggleElement">
 									<span class="pinterest"></span>
@@ -117,22 +117,22 @@
 								</a>
 							</li>
 *}
-							{option:item.pictureUrl}
-								<li>
+							<li class="{option:!item.pictureUrl}emptyUiButton{/option:!item.pictureUrl} {option:item.pictureUrl}{option:!item.dropbox}borderTop{/option:!item.dropbox}{/option:item.pictureUrl}">
+								{option:item.pictureUrl}
 									<a href="#" class="uiButton toggleElement" data-id="pictureHolder">
 										<span class="picture"></span>
 										<span class="title">Picture</span>
 									</a>
-								</li>
-							{/option:item.pictureUrl}
-							{option:item.fileUrl}
-								<li>
+								{/option:item.pictureUrl}
+							</li>
+							<li class="{option:!item.fileUrl}emptyUiButton{/option:!item.fileUrl} {option:item.fileUrl}{option:!item.pictureUrl}borderTop{/option:!item.pictureUrl}{/option:item.fileUrl}">
+								{option:item.fileUrl}
 									<a href="{$item.fileUrl}" target="_blank" class="uiButton">
 										<span class="file"></span>
 										<span class="title">{$lblDownload|ucfirst}</span>
 									</a>
-								</li>
-							{/option:item.fileUrl}
+								{/option:item.fileUrl}
+							</li>
 						</ul>
 					</div>
 				</div>
