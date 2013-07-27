@@ -480,8 +480,14 @@ class Comment
 
 		if($this->videoId != '' && $this->videoStill == '')
 		{
-			if(SpoonFile::exists(PATH_WWW . '/files/comments/temp/' . $this->videoId  . '.png'))
+			$stillPath = PATH_WWW . '/files/comments/temp/' . $this->videoId  . '.png';
+
+			if(SpoonFile::exists($stillPath))
 			{
+				$still = new Imagick($stillPath);
+				$still->flopimage();
+				$still->writeimage($stillPath);
+
 				$filename = Site::getFilename() . '.png';
 				SpoonFile::move(
 					PATH_WWW . '/files/comments/temp/' . $this->videoId  . '.png',
