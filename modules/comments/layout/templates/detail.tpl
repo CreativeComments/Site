@@ -165,12 +165,12 @@
 				</div>
 
 				<div class="row-fluid">
-					<div class="span7 offset1">
+					<div class="span6 offset1">
 						<small class="muted">
 							<a href="{$var|buildurl:'report':'comments'}/{$item.id}" class="report">{$lblReportThis}</a>
 						</small>
 					</div>
-					<div class="span3">
+					<div class="span4">
 						{option:!currentUser}
 							<a href="http://creativecomments.cc" class="btn btn-mini signup" style="float: right">Request your account</a></p>
 						{/option:!currentUser}

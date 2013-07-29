@@ -17,6 +17,27 @@ body.videoRecorder, body.videoPlayer {
 			color: #781b17;
 		}
 	}
+	
+.btn {
+  		  width: 100%;
+				@include box-sizing(border-box);
+				display: block;
+				padding: 12px 19px;
+				background-color: #334f8a;
+				@include background(#334f8a);
+				color: #fff;
+				@include text-shadow(none);
+				border: none;
+				@include box-shadow(0 2px 0 0 rgba(9,33,82,1));
+				font-size: 16px;
+				background-position: 3px 0;
+				text-align: center;
+				
+				&:hover {
+				  color: #fff;
+  				@include background (#1a346a);
+				}
+}
 
 #content {
 	padding: 15px 0;
