@@ -567,17 +567,17 @@ body.videoRecorder, body.videoPlayer {
 				@include clearfix;
 
 				&.sad {
-						@include background(inline-image("svg/sad.svg") no-repeat);
+						@include background(inline-image("svg/sad_active.svg") no-repeat);
 					background-position: 95% center;
 					}
 
 				&.neutral {
-						@include background(inline-image("svg/normal.svg") no-repeat);
+							@include background(inline-image("svg/normal_active.svg") no-repeat);
 					background-position: 95% center;
 					}
 
 				&.happy {
-						@include background(inline-image("svg/happy.svg") no-repeat);
+						@include background(inline-image("svg/happy_active.svg") no-repeat);
 					background-position: 95% center;
 					}
 
