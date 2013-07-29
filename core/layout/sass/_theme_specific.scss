@@ -861,6 +861,9 @@ only screen and (                min-resolution: 2dppx) {
 			@include background(inline-image("svg/report.svg") no-repeat);
 			background-position: left center;
 			padding: 5px 0 5px 25px;
+			margin-top: 7px;
+			text-align: left;
+			display: block;
 
 		}
 }
