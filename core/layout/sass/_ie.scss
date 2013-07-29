@@ -151,17 +151,17 @@
 			.user {
 				
 				&.sad {
-					@include background(image-url("ie/sad.png") no-repeat);
+					@include background(image-url("ie/sad_active.png") no-repeat);
 					background-position: 95% center;
 				}
 				
 				&.neutral {
-					@include background(image-url("ie/normal.png") no-repeat);
+					@include background(image-url("ie/normal_active.png") no-repeat);
 					background-position: 95% center;
 				}
 				
 				&.happy {
-					@include background(image-url("ie/happy.png") no-repeat);
+					@include background(image-url("ie/happy_active.png") no-repeat);
 					background-position: 95% center;
 				}
 			
