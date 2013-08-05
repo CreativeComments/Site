@@ -90,6 +90,13 @@
 								</div>
 							{/option:item.videoId}
 						</div>
+						<div id="commentControls">
+							<ul>
+								<li class="play">
+									<a href="#" id="playButton">play</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 					<div id="buttonsRight">
 						<ul>

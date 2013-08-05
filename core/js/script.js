@@ -321,6 +321,11 @@ jsSite.comments = {
 					console.log(e);
 				}
 			}, 700);
+
+			$('#playButton').on('click', function(e) {
+				e.preventDefault();
+				document.getElementById('videorecorder').startPlaying();
+			});
 		}
 	}
 }
