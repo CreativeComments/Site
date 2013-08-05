@@ -687,6 +687,32 @@ body.videoRecorder, body.videoPlayer {
 	}
 }
 
+#commentControls {
+  margin-bottom: 20px;
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin: 10px 0;
+}
+
+  #playButton {
+    width: 36px;
+    height: 36px;
+    display: block;
+    @include squish-text;
+    
+    &.play {
+       @include sprite(play);
+    }
+    
+    &.pause {
+       @include sprite(pause);
+    }
+  }
+}
+
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),

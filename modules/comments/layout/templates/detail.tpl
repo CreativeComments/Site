@@ -93,7 +93,8 @@
 						<div id="commentControls">
 							<ul>
 								<li class="play">
-									<a href="#" id="playButton">play</a>
+								  <!-- @todo tijs add class pause when needed -->
+									<a href="#" id="playButton" class="play">play</a>
 								</li>
 							</ul>
 						</div>
