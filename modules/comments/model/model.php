@@ -293,6 +293,13 @@ class Comment
 	 */
 	public function setUrl($url)
 	{
+		if(
+			substr($url, 0, 7) != 'http://' &&
+			substr($url, 0, 8) != 'https://'
+		) {
+			$url = 'http://' . $url;
+		}
+
 		$this->url = $url;
 	}
 
