@@ -71,6 +71,7 @@ $msg['AreYouSure'] = 'Are you sure';
 $msg['BugReportStep1'] = 'Report a bug. Describe the problem and the expected result as concise as possible.';
 $msg['BugReportStep2'] = 'We now collect some information to help us analyze the problem.';
 $msg['BugReportStep3'] = 'Thank you, the information was sent.';
+$msg['CommentsReported'] = 'Thank you for reporting an inappropriate comment on Creative Comments.  Reported comments and users are reviewed by our staff to determine whether they violate our Terms of Service (TOS).  Accounts are penalized for such violations and serious or repeated violations can lead to account termination.';
 $msg['DatepickerFullSunday'] = 'Sunday';
 $msg['DatepickerFullMonday'] = 'Monday';
 $msg['DatepickerFullTuesday'] = 'Tuesday';
