@@ -84,12 +84,10 @@
 						</ul>
 					</div>
 					<div id="creativeCommentsHolderSite">
-						<div class="video">
-							{option:item.videoId}
-								<div id="flashContent">
-								</div>
-							{/option:item.videoId}
-						</div>
+						{option:item.videoId}
+							<div id="flashContent">
+							</div>
+						{/option:item.videoId}
 						<div id="commentControls">
 							<ul>
 								<li class="play">
