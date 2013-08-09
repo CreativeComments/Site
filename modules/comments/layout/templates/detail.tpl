@@ -122,7 +122,7 @@
 								</a>
 							</li>
 *}
-							<li class="{option:!item.pictureUrl}emptyUiButton{/option:!item.pictureUrl} {option:item.pictureUrl}{option:!item.dropbox}borderTop{/option:!item.dropbox}{/option:item.pictureUrl}">
+{*							<li class="{option:!item.pictureUrl}emptyUiButton{/option:!item.pictureUrl} {option:item.pictureUrl}{option:!item.dropbox}borderTop{/option:!item.dropbox}{/option:item.pictureUrl}">
 								{option:item.pictureUrl}
 									<a href="#" class="uiButton toggleElement" data-id="pictureHolder">
 										<span class="picture"></span>
@@ -130,7 +130,7 @@
 									</a>
 								{/option:item.pictureUrl}
 							</li>
-							<li class="{option:!item.fileUrl}emptyUiButton{/option:!item.fileUrl} {option:item.fileUrl}{option:!item.pictureUrl}borderTop{/option:!item.pictureUrl}{/option:item.fileUrl}">
+*}							<li class="{option:!item.fileUrl}emptyUiButton{/option:!item.fileUrl} {option:item.fileUrl}{option:!item.pictureUrl}borderTop{/option:!item.pictureUrl}{/option:item.fileUrl}">
 								{option:item.fileUrl}
 									<a href="{$item.fileUrl}" target="_blank" class="uiButton">
 										<span class="file"></span>
