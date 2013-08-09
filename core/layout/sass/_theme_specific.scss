@@ -17,7 +17,7 @@ body.videoRecorder, body.videoPlayer {
 			color: #781b17;
 		}
 	}
-	
+
 .btn {
   		  width: 100%;
 				@include box-sizing(border-box);
@@ -32,7 +32,7 @@ body.videoRecorder, body.videoPlayer {
 				font-size: 16px;
 				background-position: 3px 0;
 				text-align: center;
-				
+
 				&:hover {
 				  color: #fff;
   				@include background (#1a346a);
@@ -702,11 +702,11 @@ ul {
     height: 36px;
     display: block;
     @include squish-text;
-    
+
     &.play {
        @include sprite(play);
     }
-    
+
     &.pause {
        @include sprite(pause);
     }
@@ -848,7 +848,7 @@ only screen and (                min-resolution: 2dppx) {
 			.username {
 				@include clearfix;
 
-				h3 {
+				h4 {
 					float: left;
 					color: #424141;
 					margin: 0 10px 0 0;
@@ -862,14 +862,13 @@ only screen and (                min-resolution: 2dppx) {
 					margin-right: 10px;
 					padding: 0 10px;
 					border-left: 1px solid #bfbfbf;
-					border-right: 1px solid #bfbfbf;
 				}
 
-				h4 {
-					float: left;
+				h3 {
 					color: #424141;
 					margin: 10px 0 0 0;
 					line-height: 1.2em;
+					clear: left
 				}
 			}
 

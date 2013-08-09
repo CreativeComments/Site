@@ -14,11 +14,11 @@
 			<section id="{$MODULE}" class="{$ACTION}">
 				<div class="row-fluid header">
 					<div class="span8 offset1 username">
-						<h3>
+						<h4>
 							{$user.name}
-						</h3>
+						</h4>
 						<time datetime="{$item.createdOn|date:"Y-m-d\TH:i:s"}">{$item.createdOn|timeago}</time>
-						<h4>{$item.title}</h4>
+						<h3>{$item.title}</h3>
 					</div>
 					<div class="span2">
 						<div class="fb-like" data-href="{$SITE_URL}{$var|buildurl:'detail':'comments'}/{$item.id}" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div>
