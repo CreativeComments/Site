@@ -430,12 +430,19 @@ class Comment
 
 			// create images
 			$still = new Imagick($stillPath);
-			$overlay = new Imagick(PATH_WWW . '/core/layout/images/emotion_overlays/' . $this->emotion . '.png');
-
 			$size = getimagesize($stillPath);
 
-			// add overlay
+			// add emotion
+			$overlay = new Imagick(PATH_WWW . '/core/layout/images/emotion_overlays/' . $this->emotion . '.png');
 			$still->compositeimage($overlay, Imagick::COMPOSITE_DEFAULT, floor($size[0]) - 215, 10);
+
+			$overlay = new Imagick(PATH_WWW . '/core/layout/images/emotion_overlays/play_button.png');
+			$still->compositeimage(
+				$overlay,
+				Imagick::COMPOSITE_DEFAULT,
+				floor($size[0] / 2) - (216 / 2),
+				floor($size[1] / 2) - (216 / 2)
+			);
 
 			$still->writeimage(PATH_WWW . '/files/comments/og/' . $this->id . '.png');
 
