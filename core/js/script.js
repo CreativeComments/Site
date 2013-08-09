@@ -290,6 +290,8 @@ jsSite.bugs = {
 }
 
 jsSite.comments = {
+	isPlaying: false,
+
 	init: function() {
 		if($('#flashContent').length > 0) {
 			var flashvars = {
@@ -324,7 +326,9 @@ jsSite.comments = {
 
 			$('#playButton').on('click', function(e) {
 				e.preventDefault();
-				document.getElementById('videorecorder').startPlaying();
+
+				if(jsSite.comments.isPlaying) document.getElementById('videorecorder').stopPlaying();
+				else document.getElementById('videorecorder').startPlaying();
 			});
 		}
 	}
@@ -738,4 +742,18 @@ $(jsSite.init);
 function showRecorderFilename(filename){
 	jsSite.api.file = filename;
 	jsSite.api.e.source.postMessage({ method: 'videorecorder.updateStreamName', name: filename }, e.origin);
+}
+
+function recorderStatus(status){
+	var $playButton = $('#playButton');
+	if($playButton.length > 0) {
+		if(status == 'play.start') {
+			jsSite.comments.isPlaying = true;
+			$playButton.addClass('pause').removeClass('play');
+		}
+		if(status == 'play.stop') {
+			jsSite.comments.isPlaying = false;
+			$playButton.addClass('play').removeClass('pause');
+		}
+	}
 }
