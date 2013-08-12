@@ -12,6 +12,11 @@
 class CommentsForce extends SiteBaseAction
 {
 	/**
+	 * @var Comment
+	 */
+	private $item;
+	
+	/**
 	 * Execute the action
 	 *
 	 * @return void
@@ -19,6 +24,7 @@ class CommentsForce extends SiteBaseAction
 	public function execute()
 	{
 		$id = $this->url->getParameter('id', 'int');
+		$type = $this->url->getParameter('type');
 		$this->item = Comment::get($id);
 		if(!$this->item) $this->redirect($this->url->buildUrl('index', null, null, array('error' => 'invalid-record')));
 
