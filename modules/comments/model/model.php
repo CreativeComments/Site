@@ -564,9 +564,9 @@ class Comment
 		$item['url'] = $this->getUrl();
 		$item['dropbox'] = $this->getDropbox();
 		$item['file'] = $this->getFile();
-		$item['fileUrl'] = ($this->getFile() != null) ? Site::getFilesUrl($this->getFile()) : null;
+		$item['fileUrl'] = ($this->getFile() != null) ? CommentsHelper::getForceUrl($this->id, 'file') : null;
 		$item['picture'] = $this->getPicture();
-		$item['pictureUrl'] = ($this->getPicture() != null) ? Site::getFilesUrl($this->getPicture()) : null;
+		$item['pictureUrl'] = ($this->getPicture() != null) ? CommentsHelper::getForceUrl($this->id, 'picture') : null;
 		$item['emotion'] = $this->getEmotion();
 		$item['createdOn'] = ($this->createdOn !== null) ? $this->createdOn->getTimestamp() : null;
 		$item['editedOn'] = ($this->editedOn !== null) ? $this->editedOn->getTimestamp() : null;
@@ -585,6 +585,12 @@ class Comment
 }
 
 class CommentsHelper {
+	public static function getForceUrl($id, $type)
+	{
+		$url = Spoon::get('url');
+		return $url->buildUrl('force', 'comments', null, array('id' => $id, 'type' => $type));
+	}
+
 	/**
 	 * Get the most recent comments
 	 *
