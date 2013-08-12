@@ -31,7 +31,10 @@ class Authentication
 			catch(FacebookApiException $e)
 			{
 				// if no active token is found we should redirect to the homepage, and hope it is active in that time
-				if($e->getMessage() == 'An active access token must be used to query information about the current user.')
+				if(
+					$e->getMessage() == 'An active access token must be used to query information about the current user.' ||
+					substr_count($e->getMessage(), 'session has expired') > 0
+				)
 				{
 					SpoonHTTP::redirect('/');
 				}
