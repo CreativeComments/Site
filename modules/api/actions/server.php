@@ -185,11 +185,12 @@ class commentsApi
 	{
 		if(!isset($args['access_token']) || $args['access_token'] == '') throw new Exception('no access_token');
 		if(!isset($args['name']) || $args['name'] == '') throw new Exception('no name');
-		if(!isset($args['data']) || $args['data'] == '') throw new Exception('no data');
+		$data = file_get_contents('php://input');
+
 
 		$filename = Site::getFilename() . '.' . SpoonFile::getExtension($args['name']);
 		$path = Site::getFilesPath($filename);
-		SpoonFile::setContent($path, $args['data']);
+		SpoonFile::setContent($path, $data);
 
 		$id = Site::getDB(true)->insert(
 			'temporary_files',
