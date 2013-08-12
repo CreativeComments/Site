@@ -36,7 +36,8 @@ class Authentication
 					substr_count($e->getMessage(), 'session has expired') > 0
 				)
 				{
-					SpoonHTTP::redirect('/');
+//					SpoonHTTP::redirect('/');
+					return false;
 				}
 				else throw $e;
 			}
