@@ -15,7 +15,7 @@ class CommentsForce extends SiteBaseAction
 	 * @var Comment
 	 */
 	private $item;
-	
+
 	/**
 	 * Execute the action
 	 *
