@@ -131,7 +131,7 @@
 									</a>
 								{/option:item.pictureUrl}
 							</li>
-*}							<li class="{option:!item.fileUrl}emptyUiButton{/option:!item.fileUrl} {option:item.fileUrl}{option:!item.pictureUrl}borderTop{/option:!item.pictureUrl}{/option:item.fileUrl}">
+*}							<li class="{option:!item.fileUrl}emptyUiButton{/option:!item.fileUrl} {option:item.fileUrl}{option:!item.dropbox}borderTop{/option:!item.dropbox}{/option:item.fileUrl}">
 								{option:item.fileUrl}
 									<a href="{$item.fileUrl}" target="_blank" class="uiButton">
 										<span class="file"></span>
