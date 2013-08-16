@@ -371,6 +371,14 @@ class Comment
 			if(!isset($matches[1])) $youtube = null;
 			else $youtube = $matches[1];
 		}
+		elseif(substr_count($youtube, 'youtu.be/') > 0)
+		{
+			$matches = array();
+			preg_match('|youtu\.be/([^/]+)|i', $youtube, $matches);
+
+			if(!isset($matches[1])) $youtube = null;
+			else $youtube = $matches[1];
+		}
 		else $youtube = null;
 
 		$this->youtube = $youtube;
