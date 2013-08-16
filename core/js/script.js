@@ -615,6 +615,19 @@ jsSite.search = {
 
 jsSite.creativeComments =
 {
+	fixNoMargin: function()
+	{
+		$('.item.noMargin').removeClass('noMargin');
+		var i = 1;
+		$('.item:visible').each(function() {
+			if(i % 4 == 0 || i == 1) {
+				$(this).addClass('noMargin');
+				i = 1;
+			}
+			i++;
+		});
+	},
+
 	init: function()
 	{
 		$pluginNotInstalled = $('#pluginNotInstalled');
@@ -653,11 +666,11 @@ jsSite.creativeComments =
 			var $items = $('.item:has(.' + emotion + ')');
 
 			if($($items[0]).is(':visible')) {
-				$items.fadeOut();
+				$items.hide();
 			} else {
-				$items.fadeIn();
+				$items.show();
 			}
-
+			jsSite.creativeComments.fixNoMargin();
 			$(this).parent('li').toggleClass('active');
 		});
 

@@ -85,7 +85,7 @@
 		<div class="row-fluid itemGrid">
 			{option:items}
 				{iteration:items}
-					<div class="span4 item">
+					<div class="span4 item{option:items.newRow} noMargin{/option:items.newRow}">
 						<div class="videoHolder">
 							<a class="video" href="{$var|buildurl:'detail':'comments'}/{$items.id}">
 								{option:items.videoStillUrl}
@@ -113,10 +113,6 @@
 							</div>
 						</div>
 					</div>
-					{option:items.newRow}
-		</div>
-		<div class="row-fluid itemGrid">
-					{/option:items.newRow}
 				{/iteration:items}
 			{/option:items}
 			{option:!items}
