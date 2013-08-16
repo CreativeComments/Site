@@ -25,7 +25,8 @@
 					</div>
 				</div>
 				<div class="visible-phone mobile alert">
-					This Creative Comments can not be viewed on a mobile device. Please visit the link on a desktop computer.
+					<p>Please view this Creative Comment on a desktop computer.</p>
+					<p>We are not available on a mobile device, yet. You can drop an email at <a href="mailto:mobile@creativecomments.cc">mobile@creativecomments.cc</a> to join our beta-list. Stay tuned&hellip;</p>
 				</div>
 				{option:item.text}
 					<div class="row-fluid">
