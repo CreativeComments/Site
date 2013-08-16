@@ -37,7 +37,7 @@
 						</div>
 					</div>
 				{/option:item.text}
-				<div id="creativeCommentsContent" class="hidden-phone">
+				<div id="creativeCommentsContent" class="row-fluid hidden-phone">
 					<div id="buttonsLeft">
 						<ul>
 							<li class="{option:!item.youtube}emptyUiButton{/option:!item.youtube}">
@@ -89,13 +89,6 @@
 							<div id="flashContent">
 							</div>
 						{/option:item.videoId}
-						<div id="commentControls">
-							<ul>
-								<li class="play">
-									<a href="#" id="playButton" class="play">play</a>
-								</li>
-							</ul>
-						</div>
 					</div>
 					<div id="buttonsRight">
 						<ul>
@@ -141,6 +134,13 @@
 							</li>
 						</ul>
 					</div>
+				</div>
+				<div id="commentControls" class="row-fluid">
+					<ul>
+						<li class="play">
+							<a href="#" id="playButton" class="play">play</a>
+						</li>
+					</ul>
 				</div>
 				<div id="creativeCommentsSub" class="row-fluid row-fluid hidden-phone">
 					<div class="span10 offset1">
