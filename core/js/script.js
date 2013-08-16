@@ -140,7 +140,14 @@ jsSite.api = {
 			try {
 				flash.startPlaying();
 			} catch(e) {
-				console.log(e);
+				setTimeout(function() {
+					var flash = document.getElementById('videorecorder');
+					try {
+						flash.startPlaying();
+					} catch(e) {
+						console.log(e)
+					}
+				}, 700);
 			}
 		}, 700);
 	},
