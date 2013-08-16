@@ -1060,3 +1060,10 @@ only screen and (                min-resolution: 2dppx) {
 .formError {
 	@extend .help-inline;
 }
+
+#noFlash {
+	margin: 50px auto;
+	width: 400px;
+	color: #FFFFFF;
+	text-align: center;
+}

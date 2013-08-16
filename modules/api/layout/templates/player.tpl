@@ -67,7 +67,10 @@
 </head>
 <body class="videoPlayer">
 	<div id="flashContent">
-
+		<div id="noFlash">
+			<div id="erroricon"></div>
+			We are sorry, Creative Comments needs a webcam and a microphone to get magic done...
+		</div>
 	</div>
 </body>
 </html>
