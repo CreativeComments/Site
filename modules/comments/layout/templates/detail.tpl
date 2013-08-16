@@ -40,7 +40,7 @@
 				<div id="creativeCommentsContent" class="hidden-phone">
 					<div id="buttonsLeft">
 						<ul>
-							<li class="{option:!item.youtube}emptyUiButton{/option:!item.youtube} {option:item.youtube}borderTop{/option:item.youtube}">
+							<li class="{option:!item.youtube}emptyUiButton{/option:!item.youtube}">
 								{option:item.youtube}
 									<a href="#" class="uiButton toggleYoutube" data-id="youtubeHolder" data-yt-id="{$item.youtube}">
 										<span class="youtube"></span>
