@@ -70,7 +70,7 @@
 								<header>
 								<h4>
 									<a href="{$var|buildurl:'detail':'comments'}/{$items.id}">
-										{$items.title}
+										{$items.title|truncate:30}
 									</a>
 								</h4>
 								</header>
