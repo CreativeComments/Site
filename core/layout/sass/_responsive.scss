@@ -452,13 +452,29 @@
 
 		#creativeCommentsSub {
 			margin: 30px 0;
+			position: relative;
+			
+			#youtubeHolder, #slideshareHolder, #soundcloudHolder, #pictureHolder {
+  			margin-bottom: 25px;
+			}
+			
+			.span10 {
+  			position: relative;
+			}
 
 			a {
 				color: #d4342c;
-
-				&:hover {
-
-				}
+				
+				&.closeBtn {
+  			@include squish-text;
+  			width: 25px;
+  			height: 25px;
+  			display: block;
+  			position: absolute;
+  			top: -10px;
+  			right: -10px;
+  			@include background(inline-image("svg/close_btn.svg") no-repeat);
+        }
 			}
 		}
 

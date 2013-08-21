@@ -369,6 +369,13 @@
 	.report {
 		@include background(image-url("ie/report.png") no-repeat);
 	}
+	#creativeCommentsSub {
+  	a {
+    	&.closeBtn {
+      	@include background(image-url("ie/close_btn.png") no-repeat);
+    	}
+  	}
+	}
 }
 
 #team {

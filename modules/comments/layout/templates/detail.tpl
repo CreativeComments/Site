@@ -143,31 +143,49 @@
 					</ul>
 				</div>
 				<div id="creativeCommentsSub" class="row-fluid row-fluid hidden-phone">
-					<div class="span10 offset1">
 						{option:item.youtube}
-							<div id="youtubeHolder" class="element" style="display: none;">
-							</div>
+						<div class="row-fluid">
+              <div class="span10 offset1">
+  							<div id="youtubeHolder" class="element" style="display: none;">
+  							  <!-- @todo Tijs make close btn visible -->
+  							  <a class="closeBtn" href="#">Close</a>
+  							</div>
+              </div>
+						</div>
 						{/option:item.youtube}
 
 						{option:item.slideshare}
-							<div id="slideshareHolder" class="element" style="display: none;">
-								{$item.slideshare}
-							</div>
+						<div class="row-fluid">
+  						<div class="span10 offset1">
+  							<div id="slideshareHolder" class="element" style="display: none;">
+  							  <!-- @todo Tijs make close btn visible -->
+  							  <a class="closeBtn" href="#">Close</a>
+  								{$item.slideshare}
+  							</div>
+  						</div>
+						</div>
 						{/option:item.slideshare}
 
 						{option:item.soundcloud}
-							<div id="soundcloudHolder" class="element" style="display: none;">
-							</div>
+						<div class="row-fluid">
+  						<div class="span10 offset1">
+  							<div id="soundcloudHolder" class="element" style="display: none;">
+  							  <!-- @todo Tijs make close btn visible -->
+  							  <a class="closeBtn" href="#">Close</a>
+  							</div>
+  						</div>
+						</div>
 						{/option:item.soundcloud}
 
 						{option:item.pictureUrl}
+						<div class="row-fluid">
 							<div id="pictureHolder" class="element" style="display: none;">
 								<a href="{$item.pictureUrl}" target="_blank">
 									<img src="{$item.pictureUrl}" alt="" width="610" />
 								</a>
 							</div>
+						</div>
 						{/option:item.pictureUrl}
-					</div>
 				</div>
 
 				<div class="row-fluid">
