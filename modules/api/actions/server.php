@@ -289,6 +289,14 @@ class UsersApi
 		else $user = User::getByAccessToken($args['access_token']);
 
 		if(!$user) throw new Exception('invalid access_token');
+
+		Site::getDB(true)->update(
+			'users_sessions',
+			array('edited_on' => Site::getUTCDate()),
+			'user_id = ?',
+			array($user->id)
+		);
+
 		return $user;
 	}
 }

@@ -89,6 +89,7 @@ class User
 		// get data
 		$data = Site::getDB()->getRecord('SELECT i.*, UNIX_TIMESTAMP(i.created_on) AS created_on, UNIX_TIMESTAMP(i.edited_on) AS edited_on
 										  FROM users AS i
+										  INNER JOIN users_sessions AS s ON i.id = s.user_id
 										  WHERE i.access_token = ?',
 										 array($accessToken));
 
