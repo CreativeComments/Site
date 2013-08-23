@@ -48,14 +48,6 @@
 									</a>
 								{/option:item.youtube}
 							</li>
-	{*
-							<li>
-								<a href="#" class="uiButton toggleElement" data-id="pinterestHolder">
-									<span class="pinterest"></span>
-									<span class="title">Pintrest</span>
-								</a>
-							</li>
-	*}
 							<li class="{option:!item.slideshare}emptyUiButton{/option:!item.slideshare} {option:item.slideshare}{option:!item.youtube}borderTop{/option:!item.youtube}{/option:item.slideshare}">
 								{option:item.slideshare}
 									<a href="#" class="uiButton toggleElement" data-id="slideshareHolder">
@@ -92,14 +84,6 @@
 					</div>
 					<div id="buttonsRight">
 						<ul>
-{*
-							<li>
-								<a href="#" class="uiButton toggleElement" data-id="evernoteHolder">
-									<span class="evernote"></span>
-									<span class="title">Evernote</span>
-								</a>
-							</li>
-*}
 							<li class="{option:!item.dropbox}emptyUiButton{/option:!item.dropbox} {option:item.dropbox}borderTop{/option:item.dropbox}">
 								{option:item.dropbox}
 									<a href="{$item.dropbox}" target="_blank" class="uiButton">
@@ -107,24 +91,8 @@
 										<span class="title">Dropbox</span>
 									</a>
 								{/option:item.dropbox}
-{*							</li>
-
-							<li>
-								<a href="#" class="uiButton toggleElement">
-									<span class="pinterest"></span>
-									<span class="title">Pintrest</span>
-								</a>
 							</li>
-*}
-{*							<li class="{option:!item.pictureUrl}emptyUiButton{/option:!item.pictureUrl} {option:item.pictureUrl}{option:!item.dropbox}borderTop{/option:!item.dropbox}{/option:item.pictureUrl}">
-								{option:item.pictureUrl}
-									<a href="#" class="uiButton toggleElement" data-id="pictureHolder">
-										<span class="picture"></span>
-										<span class="title">Picture</span>
-									</a>
-								{/option:item.pictureUrl}
-							</li>
-*}							<li class="{option:!item.fileUrl}emptyUiButton{/option:!item.fileUrl} {option:item.fileUrl}{option:!item.dropbox}borderTop{/option:!item.dropbox}{/option:item.fileUrl}">
+							<li class="{option:!item.fileUrl}emptyUiButton{/option:!item.fileUrl} {option:item.fileUrl}{option:!item.dropbox}borderTop{/option:!item.dropbox}{/option:item.fileUrl}">
 								{option:item.fileUrl}
 									<a href="{$item.fileUrl}" target="_blank" class="uiButton">
 										<span class="file"></span>
@@ -142,50 +110,37 @@
 						</li>
 					</ul>
 				</div>
-				<div id="creativeCommentsSub" class="row-fluid row-fluid hidden-phone">
-						{option:item.youtube}
+				<div id="creativeCommentsSub" class="row-fluid row-fluid hidden-phone" style="display: none;">
+					{option:item.youtube}
 						<div class="row-fluid">
-              <div class="span10 offset1">
-  							<div id="youtubeHolder" class="element" style="display: none;">
-  							  <!-- @todo Tijs make close btn visible -->
-  							  <a class="closeBtn" href="#">Close</a>
-  							</div>
-              </div>
-						</div>
-						{/option:item.youtube}
-
-						{option:item.slideshare}
-						<div class="row-fluid">
-  						<div class="span10 offset1">
-  							<div id="slideshareHolder" class="element" style="display: none;">
-  							  <!-- @todo Tijs make close btn visible -->
-  							  <a class="closeBtn" href="#">Close</a>
-  								{$item.slideshare}
-  							</div>
-  						</div>
-						</div>
-						{/option:item.slideshare}
-
-						{option:item.soundcloud}
-						<div class="row-fluid">
-  						<div class="span10 offset1">
-  							<div id="soundcloudHolder" class="element" style="display: none;">
-  							  <!-- @todo Tijs make close btn visible -->
-  							  <a class="closeBtn" href="#">Close</a>
-  							</div>
-  						</div>
-						</div>
-						{/option:item.soundcloud}
-
-						{option:item.pictureUrl}
-						<div class="row-fluid">
-							<div id="pictureHolder" class="element" style="display: none;">
-								<a href="{$item.pictureUrl}" target="_blank">
-									<img src="{$item.pictureUrl}" alt="" width="610" />
-								</a>
+							<div class="span10 offset1">
+								<div id="youtubeHolder" class="element" style="display: none;">
+								  <a class="closeBtntoggleYoutube" data-id="youtubeHolder" href="#">{$lblClose|ucfirst}</a>
+								</div>
 							</div>
 						</div>
-						{/option:item.pictureUrl}
+					{/option:item.youtube}
+
+					{option:item.slideshare}
+						<div class="row-fluid">
+							<div class="span10 offset1">
+								<div id="slideshareHolder" class="element" style="display: none;">
+								  <a href="#" class="closeBtn toggleElement" data-id="slideshareHolder">{$lblClose|ucfirst}</a>
+									{$item.slideshare}
+								</div>
+							</div>
+						</div>
+					{/option:item.slideshare}
+
+					{option:item.soundcloud}
+						<div class="row-fluid">
+							<div class="span10 offset1">
+								<div id="soundcloudHolder" class="element" style="display: none;">
+								  <a class="closeBtn toggleSoundcloud" data-id="soundcloudHolder" href="#">{$lblClose|ucfirst}</a>
+								</div>
+							</div>
+						</div>
+					{/option:item.soundcloud}
 				</div>
 
 				<div class="row-fluid">

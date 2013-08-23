@@ -693,15 +693,15 @@ jsSite.creativeComments =
 		$(document).on('click', 'a.toggleElement', function(e) {
 			e.preventDefault();
 			var $element = $('#' + $(this).data('id'));
-
 			if($element.is(':visible')) {
-				$element.slideUp();
+				$('#creativeCommentsSub').slideUp();
+				$element.hide();
 				$('html, body').stop().animate({
                    scrollTop: $('#comments').offset().top
                }, 1000);
 			} else {
-				$element.slideDown();
-
+				$element.show();
+				$('#creativeCommentsSub').slideDown();
 				$('html, body').stop().animate({
 					scrollTop: $element.offset().top
 				}, 1000);
@@ -712,7 +712,8 @@ jsSite.creativeComments =
 			e.preventDefault();
 			var $element = $('#' + $(this).data('id'));
 			if($element.is(':visible')) {
-				$element.slideUp();
+				$element.hide();
+				$('#creativeCommentsSub').slideUp();
 				$('html, body').stop().animate({
                    scrollTop: $('#comments').offset().top
                }, 1000);
@@ -720,7 +721,8 @@ jsSite.creativeComments =
 			} else {
 				var youtubeId = $(this).data('ytId');
 				$element.html('<iframe width="610" height="450" src="http://www.youtube.com/embed/' + youtubeId + '?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
-				$element.slideDown();
+				$element.show();
+				$('#creativeCommentsSub').slideDown();
 				$('html, body').stop().animate({
 					scrollTop: $element.offset().top
 				}, 1000);
@@ -730,7 +732,8 @@ jsSite.creativeComments =
 			e.preventDefault();
 			var $element = $('#' + $(this).data('id'));
 			if($element.is(':visible')) {
-				$element.slideUp();
+				$element.hide();
+				$('#creativeCommentsSub').slideUp();
 				$('html, body').stop().animate({
                    scrollTop: $('#comments').offset().top
                }, 1000);
@@ -748,7 +751,8 @@ jsSite.creativeComments =
 
 				$element.html(html);
 
-				$element.slideDown();
+				$element.show();
+				$('#creativeCommentsSub').slideDown();
 				$('html, body').stop().animate({
 					scrollTop: $element.offset().top
 				}, 1000);
