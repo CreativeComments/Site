@@ -30,7 +30,7 @@
 				</div>
 				{option:item.text}
 					<div class="row-fluid">
-						<div class="span10 offset1">
+						<div id="infoHolder" class="span10 offset1">
 							<div id="textHolder" class="fakeElement">
 								{$item.text}
 							</div>
