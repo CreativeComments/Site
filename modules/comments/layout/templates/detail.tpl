@@ -115,7 +115,6 @@
 						<div class="row-fluid">
 							<div class="span10 offset1">
 								<div id="youtubeHolder" class="element" style="display: none;">
-								  <a class="closeBtntoggleYoutube" data-id="youtubeHolder" href="#">{$lblClose|ucfirst}</a>
 								</div>
 							</div>
 						</div>
@@ -125,7 +124,7 @@
 						<div class="row-fluid">
 							<div class="span10 offset1">
 								<div id="slideshareHolder" class="element" style="display: none;">
-								  <a href="#" class="closeBtn toggleElement" data-id="slideshareHolder">{$lblClose|ucfirst}</a>
+								  <a href="#" class="closeBtn closeElement" data-id="slideshareHolder">{$lblClose|ucfirst}</a>
 									{$item.slideshare}
 								</div>
 							</div>
@@ -136,7 +135,6 @@
 						<div class="row-fluid">
 							<div class="span10 offset1">
 								<div id="soundcloudHolder" class="element" style="display: none;">
-								  <a class="closeBtn toggleSoundcloud" data-id="soundcloudHolder" href="#">{$lblClose|ucfirst}</a>
 								</div>
 							</div>
 						</div>

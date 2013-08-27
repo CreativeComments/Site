@@ -744,11 +744,20 @@ jsSite.creativeComments =
 				}, 1000);
 			}
 		});
+		$(document).on('click', 'a.closeElement', function(e) {
+			e.preventDefault();
+			var $element = $('#' + $(this).data('id'));
+			$element.slideUp();
+			$('html, body').stop().animate({
+               scrollTop: $('#comments').offset().top
+            }, 1000);
+		});
 
 		$(document).on('click', 'a.toggleYoutube', function(e) {
 			e.preventDefault();
 			var $element = $('#' + $(this).data('id'));
 			if($element.is(':visible')) {
+				$element.html('');
 				$element.hide();
 				$('#creativeCommentsSub').slideUp();
 				$('html, body').stop().animate({
@@ -757,7 +766,8 @@ jsSite.creativeComments =
 				$element.html('');
 			} else {
 				var youtubeId = $(this).data('ytId');
-				$element.html('<iframe width="610" height="450" src="http://www.youtube.com/embed/' + youtubeId + '?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
+				$element.html('<a class="closeBtn closeYoutube" data-id="youtubeHolder" href="#">{$lblClose|ucfirst}</a>' +
+				              '<iframe width="610" height="450" src="http://www.youtube.com/embed/' + youtubeId + '?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
 				$element.show();
 				$('#creativeCommentsSub').slideDown();
 				$('html, body').stop().animate({
@@ -765,10 +775,22 @@ jsSite.creativeComments =
 				}, 1000);
 			}
 		});
+		$(document).on('click', 'a.closeYoutube', function(e) {
+			e.preventDefault();
+			var $element = $('#' + $(this).data('id'));
+			$($element.find('iframe')).remove();
+			$element.html('');
+			$element.slideUp();
+			$('html, body').stop().animate({
+               scrollTop: $('#comments').offset().top
+            }, 1000);
+			$element.html('');
+		});
 		$(document).on('click', 'a.toggleSoundcloud', function(e) {
 			e.preventDefault();
 			var $element = $('#' + $(this).data('id'));
 			if($element.is(':visible')) {
+				$element.html('');
 				$element.hide();
 				$('#creativeCommentsSub').slideUp();
 				$('html, body').stop().animate({
@@ -777,16 +799,16 @@ jsSite.creativeComments =
 				$element.html('');
 			} else {
 				var soundcloudData = $(this).data('soundcloudId').split('|');
-				var html = '';
+				var html = '<a class="closeBtn closeSoundcloud" data-id="soundcloudHolder" href="#">{$lblClose|ucfirst}</a>';
 
 				if(soundcloudData[0] == 'user') {
-					html = '<iframe id="soundcloudFrame" width="610" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http://api.soundcloud.com/users/' + soundcloudData[1] + '?auto_play=true"></iframe>';
+					html += '<iframe id="soundcloudFrame" width="610" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http://api.soundcloud.com/users/' + soundcloudData[1] + '?auto_play=true"></iframe>';
 				}
 				if(soundcloudData[0] == 'track') {
-					html = '<iframe id="soundcloudFrame" width="610" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http://api.soundcloud.com/tracks/' + soundcloudData[1] + '?auto_play=true"></iframe>';
+					html += '<iframe id="soundcloudFrame" width="610" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http://api.soundcloud.com/tracks/' + soundcloudData[1] + '?auto_play=true"></iframe>';
 				}
 
-				$element.html(html);
+				$element.append(html);
 
 				$element.show();
 				$('#creativeCommentsSub').slideDown();
@@ -794,6 +816,16 @@ jsSite.creativeComments =
 					scrollTop: $element.offset().top
 				}, 1000);
 			}
+		});
+		$(document).on('click', 'a.closeSoundcloud', function(e) {
+			e.preventDefault();
+			var $element = $('#' + $(this).data('id'));
+			$element.html('');
+			$element.slideUp();
+			$('html, body').stop().animate({
+               scrollTop: $('#comments').offset().top
+            }, 1000);
+			$element.html('');
 		});
 	}
 }
