@@ -32,11 +32,10 @@ class Authentication
 			{
 				// if no active token is found we should redirect to the homepage, and hope it is active in that time
 				if(
-					$e->getMessage() == 'An active access token must be used to query information about the current user.' ||
-					substr_count($e->getMessage(), 'session has expired') > 0
+					strtolower($e->getMessage()) == 'an active access token must be used to query information about the current user.' ||
+					substr_count(strtolower($e->getMessage()), 'session has expired') > 0
 				)
 				{
-//					SpoonHTTP::redirect('/');
 					return false;
 				}
 				else throw $e;
