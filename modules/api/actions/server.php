@@ -276,7 +276,7 @@ class UsersApi
 	 * Check if a user is logged in
 	 *
 	 * @param array $args
-	 * @return array
+	 * @return User
 	 */
 	public static function isLoggedIn($args)
 	{
@@ -298,5 +298,13 @@ class UsersApi
 		);
 
 		return $user;
+	}
+
+	/**
+	 * Log off the current user.
+	 */
+	public static function logOff()
+	{
+		Authentication::logout();
 	}
 }
