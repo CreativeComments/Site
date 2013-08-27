@@ -124,7 +124,7 @@
 						<div class="row-fluid">
 							<div class="span10 offset1">
 								<div id="slideshareHolder" class="element" style="display: none;">
-								  <a href="#" class="closeBtn closeElement" data-id="slideshareHolder">{$lblClose|ucfirst}</a>
+								  <a href="#" class="closeBtn toggleElement" data-id="slideshareHolder">{$lblClose|ucfirst}</a>
 									{$item.slideshare}
 								</div>
 							</div>
