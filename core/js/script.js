@@ -672,6 +672,26 @@ jsSite.creativeComments =
 		});
 	},
 
+	showElement: function($parent) {
+		$('#creativeCommentsSub:hidden').show();
+		$parent.slideDown();
+		$('html, body').stop().animate({
+			scrollTop: $element.offset().top
+		}, 1000);
+	},
+	closeElement: function($parent) {
+		$parent.slideUp(
+			function() {
+				if($('#creativeCommentsSub .row-fluid:visible').length == 0) {
+					$('#creativeCommentsSub').hide();
+				}
+			}
+		);
+		$('html, body').stop().animate({
+			scrollTop: $('#comments').offset().top
+		}, 1000);
+	},
+
 	init: function()
 	{
 		$pluginNotInstalled = $('#pluginNotInstalled');
@@ -717,12 +737,10 @@ jsSite.creativeComments =
 			jsSite.creativeComments.fixNoMargin();
 			$(this).parent('li').toggleClass('active');
 		});
-
 		$(document).on('click', '.itemGrid .item', function(e) {
 			e.preventDefault();
 			document.location = $(this).find('a:first').attr('href');
 		});
-
 		$(document).on('click', 'a.disabled', function(e) {
 			e.preventDefault();
 		});
@@ -730,48 +748,37 @@ jsSite.creativeComments =
 		$(document).on('click', 'a.toggleElement', function(e) {
 			e.preventDefault();
 			var $element = $('#' + $(this).data('id'));
-			if($element.is(':visible')) {
-				$element.slideUp();
-				$('html, body').stop().animate({
-                   scrollTop: $('#comments').offset().top
-               }, 1000);
+			var $parent = $($element.parents('.row-fluid:first'));
+
+			if($parent.is(':visible')) {
+				jsSite.creativeComments.closeElement($parent);
 			} else {
-				$element.show();
-				$('#creativeCommentsSub').slideDown();
-				$('html, body').stop().animate({
-					scrollTop: $element.offset().top
-				}, 1000);
+				jsSite.creativeComments.showElement($parent);
 			}
 		});
 
 		$(document).on('click', 'a.toggleYoutube', function(e) {
 			e.preventDefault();
 			var $element = $('#' + $(this).data('id'));
-			if($element.is(':visible')) {
-				$element.html('').slideUp();
-				$('html, body').stop().animate({
-                   scrollTop: $('#comments').offset().top
-               }, 1000);
+			var $parent = $($element.parents('.row-fluid:first'));
+
+			if($parent.is(':visible')) {
 				$element.html('');
+				jsSite.creativeComments.closeElement($parent);
 			} else {
 				var youtubeId = $(this).data('ytId');
 				$element.html('<a class="closeBtn toggleYoutube" data-id="youtubeHolder" href="#">{$lblClose|ucfirst}</a>' +
 				              '<iframe width="610" height="450" src="http://www.youtube.com/embed/' + youtubeId + '?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
-				$element.show();
-				$('#creativeCommentsSub').slideDown();
-				$('html, body').stop().animate({
-					scrollTop: $element.offset().top
-				}, 1000);
+				jsSite.creativeComments.showElement($parent);
 			}
 		});
 		$(document).on('click', 'a.toggleSoundcloud', function(e) {
 			e.preventDefault();
 			var $element = $('#' + $(this).data('id'));
-			if($element.is(':visible')) {
-				$element.html('').slideUp();
-				$('html, body').stop().animate({
-                   scrollTop: $('#comments').offset().top
-               }, 1000);
+			var $parent = $($element.parents('.row-fluid:first'));
+
+			if($parent.is(':visible')) {
+				jsSite.creativeComments.closeElement($parent);
 				$element.html('');
 			} else {
 				var soundcloudData = $(this).data('soundcloudId').split('|');
@@ -784,13 +791,8 @@ jsSite.creativeComments =
 					html += '<iframe id="soundcloudFrame" width="610" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http://api.soundcloud.com/tracks/' + soundcloudData[1] + '?auto_play=true"></iframe>';
 				}
 
-				$element.append(html);
-
-				$element.show();
-				$('#creativeCommentsSub').slideDown();
-				$('html, body').stop().animate({
-					scrollTop: $element.offset().top
-				}, 1000);
+				$element.html(html);
+				jsSite.creativeComments.showElement($parent);
 			}
 		});
 	}

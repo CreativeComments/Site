@@ -112,18 +112,18 @@
 				</div>
 				<div id="creativeCommentsSub" class="row-fluid row-fluid hidden-phone" style="display: none;">
 					{option:item.youtube}
-						<div class="row-fluid">
+						<div class="row-fluid" style="display: none;">
 							<div class="span10 offset1">
-								<div id="youtubeHolder" class="element" style="display: none;">
+								<div id="youtubeHolder" class="element">
 								</div>
 							</div>
 						</div>
 					{/option:item.youtube}
 
 					{option:item.slideshare}
-						<div class="row-fluid">
+						<div class="row-fluid" style="display: none;">
 							<div class="span10 offset1">
-								<div id="slideshareHolder" class="element" style="display: none;">
+								<div id="slideshareHolder" class="element">
 								  <a href="#" class="closeBtn toggleElement" data-id="slideshareHolder">{$lblClose|ucfirst}</a>
 									{$item.slideshare}
 								</div>
@@ -132,9 +132,9 @@
 					{/option:item.slideshare}
 
 					{option:item.soundcloud}
-						<div class="row-fluid">
+						<div class="row-fluid" style="display: none;">
 							<div class="span10 offset1">
-								<div id="soundcloudHolder" class="element" style="display: none;">
+								<div id="soundcloudHolder" class="element">
 								</div>
 							</div>
 						</div>
