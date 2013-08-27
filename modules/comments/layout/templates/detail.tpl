@@ -40,7 +40,7 @@
 				<div id="creativeCommentsContent" class="row-fluid hidden-phone">
 					<div id="buttonsLeft">
 						<ul>
-							<li class="{option:item.youtube}borderTop{/option:item.youtube} {option:!item.youtube}emptyUiButton{/option:!item.youtube}">
+							<li class="{option:item.youtube}{option:item.text}borderTop{/option:item.text}{/option:item.youtube} {option:!item.youtube}emptyUiButton{/option:!item.youtube}">
 								{option:item.youtube}
 									<a href="#" class="uiButton toggleYoutube" data-id="youtubeHolder" data-yt-id="{$item.youtube}">
 										<span class="youtube"></span>
@@ -84,7 +84,7 @@
 					</div>
 					<div id="buttonsRight">
 						<ul>
-							<li class="{option:!item.dropbox}emptyUiButton{/option:!item.dropbox} {option:item.dropbox}borderTop{/option:item.dropbox}">
+							<li class="{option:!item.dropbox}emptyUiButton{/option:!item.dropbox} {option:item.dropbox}{option:item.text}borderTop{/option:item.text}{/option:item.dropbox}">
 								{option:item.dropbox}
 									<a href="{$item.dropbox}" target="_blank" class="uiButton">
 										<span class="dropbox"></span>
