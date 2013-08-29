@@ -354,7 +354,6 @@ jsSite.comments = {
 					flash.startPlaying();
 					clearInterval(timer);
 				} catch(e) {
-					console.log(e);
 				}
 			}, 700);
 
@@ -666,7 +665,7 @@ jsSite.creativeComments =
 		$('#creativeCommentsSub:hidden').show();
 		$parent.slideDown();
 		$('html, body').stop().animate({
-			scrollTop: $element.offset().top
+			scrollTop: $parent.offset().top - 20
 		}, 1000);
 	},
 	closeElement: function($parent) {
