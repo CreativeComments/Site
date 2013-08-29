@@ -112,8 +112,9 @@ jsSite.api = {
 			615, 350, '11.0.0', null,
 			flashvars, params, attributes
 		);
-		setTimeout(function() {
+		setInterval(function() {
 			var flash = document.getElementById('videorecorder');
+
 			try {
 				if(!flash.hasWebcam()) {
 					$('#videorecorder').remove();
@@ -127,28 +128,17 @@ jsSite.api = {
 					);
 				}
 			} catch(e) {
-				setTimeout(function() {
-					var flash = document.getElementById('videorecorder');
-					try {
-						if(!flash.hasWebcam()) {
-							$('#videorecorder').remove();
-							$('body').html(
-								'<div id="flashContent" style="visibility: visible;">' +
-								'   <div id="noFlash">' +
-								'	    <div id="erroricon"></div>' +
-								'       We are sorry, Creative Comments needs a webcam and a microphone to get magic done...' +
-								'   </div>' +
-								'</div>'
-							);
-						}
-					} catch(e) {
-						console.log(e)
-					}
-				}, 700);
+				$('#videorecorder').remove();
+				$('body').html(
+					'<div id="flashContent" style="visibility: visible;">' +
+					'   <div id="noFlash">' +
+					'	    <div id="erroricon"></div>' +
+					'       We are sorry, Creative Comments needs a webcam and a microphone to get magic done...' +
+					'   </div>' +
+					'</div>'
+				);
 			}
 		}, 700);
-
-
 	},
 
 	initPlayer: function() {
