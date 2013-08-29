@@ -552,6 +552,23 @@ class Comment
 	}
 
 	/**
+	 * Remove an object
+	 */
+	public function delete()
+	{
+		// delete files
+		if($this->videoStill) SpoonFile::delete(Site::getFilesPath($this->videoStill));
+		if($this->file) SpoonFile::delete(Site::getFilesPath($this->file));
+		if($this->picture) SpoonFile::delete(Site::getFilesPath($this->picture));
+		$og = PATH_WWW . '/files/comments/og/' . $this->id . '.png';
+		if(SpoonFile::exists($og)) SpoonFile::delete($og);
+		$temp = PATH_WWW . '/files/comments/temp/' . $this->videoId . '.png';
+		if(SpoonFile::exists($temp)) SpoonFile::delete($temp);
+
+		Site::getDB(true)->delete('comments', 'id = ?', $this->id);
+	}
+
+	/**
 	 * Return the object as an array
 	 *
 	 * @return array
