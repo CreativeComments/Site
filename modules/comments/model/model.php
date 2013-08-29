@@ -170,6 +170,7 @@ class Comment
 	 */
 	public function setSlideshare($slideshare)
 	{
+		$slideshare = strip_tags($slideshare, '<iframe><div><strong><a>');
 		$this->slideshare = $slideshare;
 	}
 
