@@ -198,7 +198,7 @@ jsSite.api = {
 					);
 				} else {
 					flash.startRecording();
-					source.postMessage({ method: 'videorecorder.startedRecording' }, e.origin);
+					e.source.postMessage({ method: 'videorecorder.startedRecording' }, e.origin);
 				}
 			break;
 			case 'videorecorder.stopRecording':
