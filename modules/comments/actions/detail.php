@@ -63,6 +63,7 @@ class CommentsDetail extends SiteBaseAction
 		$meta .= '<meta property="og:image" content="' . $imageUrl . '">' . "\n";
 		$meta .= '<meta property="og:site_name" content="Creative Comments - Spice-up the conversation!">' . "\n";
 		$meta .= '<meta property="og:description" content="' . $content . '">' . "\n";
+		$meta .= '<meta property="og:app_id" content="' . FB_APP_ID . '">' . "\n";
 
 		$this->tpl->assign('meta', $meta);
 		$this->tpl->assign('item', $this->item->toArray(true));
