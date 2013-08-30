@@ -186,8 +186,18 @@ jsSite.api = {
 
 		switch(method) {
 			case 'videorecorder.startRecording':
-				flash.startRecording();
-				e.source.postMessage({ method: 'videorecorder.startedRecording' }, e.origin);
+				if(flash.isWebCamMuted()) {
+					$('#videorecorder').remove();
+					$('body').html(
+						'<div id="flashContent" style="visibility: visible;">' +
+						'   <div id="noFlash">' +
+						'	    <div id="erroricon"></div>' +
+						'       We are sorry, Creative Comments needs a webcam and a microphone to get magic done...' +
+						'   </div>' +
+						'</div>'
+					);
+				}
+				else e.source.postMessage({ method: 'videorecorder.startedRecording' }, e.origin);
 			break;
 			case 'videorecorder.stopRecording':
 				flash.stopRecording();
