@@ -769,7 +769,7 @@ jsSite.creativeComments =
 			} else {
 				var youtubeId = $(this).data('ytId');
 				$element.html('<a class="closeBtn toggleYoutube" data-id="youtubeHolder" href="#">{$lblClose|ucfirst}</a>' +
-				              '<iframe width="610" height="450" src="http://www.youtube.com/embed/' + youtubeId + '?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
+				              '<iframe width="610" height="450" src="https://www.youtube.com/embed/' + youtubeId + '?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
 				jsSite.creativeComments.showElement($parent);
 			}
 		});
@@ -786,10 +786,10 @@ jsSite.creativeComments =
 				var html = '<a class="closeBtn toggleSoundcloud" data-id="soundcloudHolder" href="#">{$lblClose|ucfirst}</a>';
 
 				if(soundcloudData[0] == 'user') {
-					html += '<iframe id="soundcloudFrame" width="610" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http://api.soundcloud.com/users/' + soundcloudData[1] + '?auto_play=true"></iframe>';
+					html += '<iframe id="soundcloudFrame" width="610" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https://api.soundcloud.com/users/' + soundcloudData[1] + '?auto_play=true"></iframe>';
 				}
 				if(soundcloudData[0] == 'track') {
-					html += '<iframe id="soundcloudFrame" width="610" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http://api.soundcloud.com/tracks/' + soundcloudData[1] + '?auto_play=true"></iframe>';
+					html += '<iframe id="soundcloudFrame" width="610" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https://api.soundcloud.com/tracks/' + soundcloudData[1] + '?auto_play=true"></iframe>';
 				}
 
 				$element.html(html);
