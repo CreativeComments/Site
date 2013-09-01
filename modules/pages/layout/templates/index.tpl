@@ -7,7 +7,7 @@
 					<div class="row-fluid">
 						<div class="span7 graphicHolder hidden-phone">
 							<div class="graphic">
-								<a href="/en/comments/detail/180">
+								<a href="/en/comments/detail/197">
 									Creative comment
 								</a>
 							</div>
