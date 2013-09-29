@@ -12,6 +12,7 @@
 				<ul>
 					<li><a href="{$var|buildurl:'plugins':'pages'}">{$msgPagesDownloadPlugin}</a></li>
 					<li><a href="{$var|buildurl:'business':'pages'}">For business</a></li>
+					<li><a href="http://creativecomments.uservoice.com/knowledgebase">Knowledge base</a></li>
 				</ul>
 			</div>
 
