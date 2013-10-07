@@ -63,12 +63,18 @@
 							</a>
 						{/option:currentUser}
 						{option:!currentUser}
-							<a href="#" class="facebookRegister">
-								{$lblSignIn|ucfirst}
-							</a>
-							<div class="avatar">
-								<div class="top"></div>
-							</div>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle about" data-toggle="dropdown" href="#">
+                                    <span class="link">{$lblSignIn|ucfirst}</span>
+                                    <div class="avatar">
+                                        <div class="top"></div>
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                    <li><a href="#" class="twitterRegister">{$lblWith} Twitter</a></li>
+                                    <li><a href="#" class="facebookRegister">{$lblWith} Facebook</a></li>
+                                </ul>
+                            </div>
 						{/option:!currentUser}
 					</div>
 				</div>
