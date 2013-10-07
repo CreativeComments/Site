@@ -103,7 +103,7 @@
 						<div class="user {$items.emotion}">
 							<div class="avatar">
 								<div class="top"></div>
-								<img src="https://graph.facebook.com/{$items.user.facebookId}/picture?type=square" width="40" height="40" alt="" />
+								<img src="{$items.user.settings.avatar}" width="40" height="40" alt="" />
 							</div>
 							<div class="content">
 								<a href="{$var|buildurl:'detail':'comments'}/{$items.id}">
