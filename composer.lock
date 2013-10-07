@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "821b9fc91ad5529deae7a3d7107d6496",
+    "hash": "416e835107cfe251264c007d14d044b8",
     "packages": [
         {
             "name": "facebook/php-sdk",
@@ -127,6 +127,46 @@
             "description": "A PHP5 library that is fast, easy to learn and fun!",
             "homepage": "http://www.spoon-library.com",
             "time": "2013-06-07 07:27:08"
+        },
+        {
+            "name": "tijsverkoyen/twitteroauth",
+            "version": "dev-master",
+            "target-dir": "TijsVerkoyen/Twitter",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tijsverkoyen/TwitterOAuth.git",
+                "reference": "b1e4c3d7362af2b6814f3045ca5151b54c869790"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tijsverkoyen/TwitterOAuth/zipball/b1e4c3d7362af2b6814f3045ca5151b54c869790",
+                "reference": "b1e4c3d7362af2b6814f3045ca5151b54c869790",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "TijsVerkoyen\\Twitter": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Tijs Verkoyen",
+                    "email": "php-twitter@verkoyen.eu",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP Twitter is a (wrapper)class to communicate with Twitter.",
+            "homepage": "https://github.com/tijsverkoyen/TwitterOAuth",
+            "time": "2013-07-11 06:03:57"
         }
     ],
     "packages-dev": [
@@ -137,7 +177,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "facebook/php-sdk": 20
+        "facebook/php-sdk": 20,
+        "tijsverkoyen/twitteroauth": 20
     },
     "platform": [
 

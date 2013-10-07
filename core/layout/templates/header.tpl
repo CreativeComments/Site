@@ -56,7 +56,7 @@
 							</a>
 							<div class="avatar">
 								<div class="top"></div>
-								<img src="https://graph.facebook.com/{$currentUser.facebookId}/picture?type=square" width="40" height="40" alt="" />
+								<img src="{$currentUser.settings.avatar}" width="40" height="40" alt="" />
 							</div>
 							<a href="#" class="facebookSignOff">
 								{$lblSignOff}
@@ -65,13 +65,12 @@
 						{option:!currentUser}
                             <div class="dropdown">
                                 <a class="dropdown-toggle about" data-toggle="dropdown" href="#">
+                                    <span class="about"></span>
                                     <span class="link">{$lblSignIn|ucfirst}</span>
-                                    <div class="avatar">
-                                        <div class="top"></div>
-                                    </div>
+                                    <span class="icon"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                                    <li><a href="#" class="twitterRegister">{$lblWith} Twitter</a></li>
+                                    <li><a href="{$var|buildurl:'login-with-twitter':'users'}" class="twitterRegister">{$lblWith} Twitter</a></li>
                                     <li><a href="#" class="facebookRegister">{$lblWith} Facebook</a></li>
                                 </ul>
                             </div>

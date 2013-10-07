@@ -148,8 +148,8 @@ body.videoRecorder, body.videoPlayer {
 					}
 
 					.span6 {
-						@include clearfix;
-							margin: 10px 0;
+					    margin: 10px 0;
+                        overflow: show;
 
 						a {
 							margin-top: 8px;
