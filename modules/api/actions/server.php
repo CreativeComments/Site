@@ -297,6 +297,9 @@ class UsersApi
 			array($user->id)
 		);
 
+        $data = $user->toArray();
+        $user->avatar = $data['settings']['avatar'];
+
 		return $user;
 	}
 
