@@ -63,11 +63,12 @@
 							</a>
 						{/option:currentUser}
 						{option:!currentUser}
-                            <div class="dropdown">
-                                <a class="dropdown-toggle about" data-toggle="dropdown" href="#">
-                                    <span class="about"></span>
+                            <div class="dropdown user">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                     <span class="link">{$lblSignIn|ucfirst}</span>
-                                    <span class="icon"></span>
+                                    <div class="avatar">
+                                        <div class="top"></div>
+                                    </div>
                                 </a>
                                 <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                                     <li><a href="{$var|buildurl:'login-with-twitter':'users'}" class="twitterRegister">{$lblWith} Twitter</a></li>
