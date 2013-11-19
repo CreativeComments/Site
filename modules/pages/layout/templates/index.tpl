@@ -18,7 +18,8 @@
 							</header>
 							<p>Welcome to Creative Comments™, an out-of-the-ordinary commenting platform for for Twitter&#174; Facebook&#174;. We drive a more creative conversation among 1 billion socialnauts.</p>
 							<p class="light">Be most imaginative by instantly posting your 20-second video message. Easily include Dropbox&#174; files, YouTube&#174; movies, Slideshare&#174; decks, etc. to bring your point across even better!</p>
-							<p><a href="http://signup.creativecomments.cc" class="btn btn-large facebookRegister">Sign in with Facebook</a></p>
+							<p><a href="http://signup.creativecomments.cc" class="btn btn-large twitterRegister btnRegister">Sign in with Twitter</a></p>
+                            <p><a href="http://signup.creativecomments.cc" class="btn btn-large facebookRegister btnRegister">Sign in with Facebook</a></p>
 						</div>
 					</div>
 				</div>

@@ -26,7 +26,8 @@
 					</div>
 					<div class="span5 offset1">
 						{option:!currentUser}
-							<a href="#" class="btn btn-large facebookRegister">Sign in with Facebook</a>
+                            <a href="#" class="btn btn-large twitterRegister btnRegister">Sign in with Facebook</a>
+							<a href="#" class="btn btn-large facebookRegister btnRegister">Sign in with Facebook</a>
 						{/option:!currentUser}
 						{option:currentUser}
 							<div class="alert alert-success">

@@ -66,6 +66,10 @@
 					@include background(image-url("ie/facebook.png") no-repeat #334f8a);
 				background-position: 6px 0;
 				}
+              .twitterRegister {
+                @include background(image-url("ie/facebook.png") no-repeat #334f8a);
+                background-position: 6px 0;
+              }
 			}
 		}
 	}

@@ -234,7 +234,7 @@ a {
                 }
             }
 
-            .facebookRegister, .facebookRegisterLayout {
+            .btnRegister {
                 width: 100%;
                 @include box-sizing(border-box);
                 display: block;
@@ -245,12 +245,22 @@ a {
                 border: none;
                 @include box-shadow(0 2px 0 0 rgba(9, 33, 82, 1));
                 font-size: 16px;
-                @include background(inline-image("svg/facebook.svg") no-repeat #334f8a);
-                background-position: 3px 0;
                 text-align: center;
 
                 strong {
                     font-family: $openSansBold;
+                }
+
+                &.facebookRegister {
+                  @include background(inline-image("svg/facebook.svg") no-repeat #334f8a);
+                  background-position: 3px 0;
+                }
+
+                &.twitterRegister {
+                  @include background(inline-image("svg/twitter.svg") no-repeat #0eb5e9);
+                  background-position: 3px 0;
+                  background-color: #0eb5e9;
+                  @include box-shadow(0 2px 0 0 rgba(11, 151, 195, 1));
                 }
             }
         }
