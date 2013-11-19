@@ -39,6 +39,47 @@ a {
     }
 }
 
+.loginBtns {
+   padding: 10px;
+   @include clearfix;
+
+  li {
+    margin-bottom: 10px;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .btn {
+    width: 100% !important;
+    float: none !important;
+    color: #fff !important;
+    padding: 5px 57px;
+
+    &.twitterRegister {
+      background-color: #0eb5e9;
+      @include box-shadow(0 2px 0 0 rgba(11, 151, 195, 1));
+      @include background(inline-image("svg/twitter_small.svg") no-repeat left center #0eb5e9);
+
+
+      &:hover {
+        @include background(inline-image("svg/twitter_small.svg") no-repeat left center #0eb5e9);
+        @include box-shadow(0 2px 0 0 rgba(21, 128, 161, 1));
+      }
+    }
+
+    &.facebookRegister {
+      @include background(inline-image("svg/facebook_small.svg") no-repeat left center #334F8A);
+
+      &:hover {
+        @include background(inline-image("svg/facebook_small.svg") no-repeat left center #334F8A);
+        @include box-shadow(0 2px 0 0 rgba(15, 33, 71, 1));
+      }
+    }
+  }
+}
+
 #content {
     padding: 15px 0;
     @include background(image-url("_bg_body.jpg"));

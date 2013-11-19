@@ -64,16 +64,46 @@
 			.intro {
 				.facebookRegister {
 					@include background(image-url("ie/facebook.png") no-repeat #334f8a);
-				background-position: 6px 0;
+				background-position: 8px 0;
 				}
               .twitterRegister {
-                @include background(image-url("ie/facebook.png") no-repeat #334f8a);
-                background-position: 6px 0;
+                @include background(image-url("ie/twitter.png") no-repeat #0eb5e9);
+
               }
 			}
+
+          .facebookRegister {
+            @include background(image-url("ie/facebook.png") no-repeat #334f8a);
+            background-position: 8px 0;
+          }
+          .twitterRegister {
+            @include background(image-url("ie/twitter.png") no-repeat #0eb5e9);
+
+          }
 		}
 	}
 }
+
+  .loginBtns {
+    .btn {
+      &.twitterRegister {
+        background-color: #0eb5e9;
+        @include background(image-url("ie/twitter_small.png") no-repeat #0eb5e9);
+
+        &:hover {
+          @include background(image-url("ie/twitter_small.png") no-repeat #0eb5e9 !important);
+        }
+      }
+
+      &.facebookRegister {
+        @include background(image-url("ie/facebook_small.png") no-repeat #334F8A);
+
+        &:hover {
+          @include background(image-url("ie/facebook_small.png") no-repeat #334F8A !important);
+        }
+      }
+    }
+  }
 
 #grid {
 	.subMenu {

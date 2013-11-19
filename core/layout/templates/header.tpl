@@ -70,9 +70,9 @@
                                         <div class="top"></div>
                                     </div>
                                 </a>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                                    <li><a href="{$var|buildurl:'login-with-twitter':'users'}" class="twitterRegister">{$lblWith} Twitter</a></li>
-                                    <li><a href="#" class="facebookRegister">{$lblWith} Facebook</a></li>
+                                <ul class="dropdown-menu loginBtns" role="menu" aria-labelledby="dLabel">
+                                    <li><a href="{$var|buildurl:'login-with-twitter':'users'}" class="twitterRegister btn">{$lblWith} Twitter</a></li>
+                                    <li><a href="#" class="facebookRegister btn">{$lblWith} Facebook</a></li>
                                 </ul>
                             </div>
 						{/option:!currentUser}
