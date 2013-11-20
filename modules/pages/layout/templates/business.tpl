@@ -26,7 +26,7 @@
 					</div>
 					<div class="span5 offset1">
 						{option:!currentUser}
-                            <a href="#" class="btn btn-large twitterRegister btnRegister">Sign in with Facebook</a>
+                            <a href="{$var|buildurl:'login-with-twitter':'users'}" class="btn btn-large twitterRegister btnRegister">Sign in with Twitter</a>
 							<a href="#" class="btn btn-large facebookRegister btnRegister">Sign in with Facebook</a>
 						{/option:!currentUser}
 						{option:currentUser}
