@@ -56,6 +56,10 @@ class UsersLoginWithTwitter extends SiteBaseAction
         }
         $response = $twitter->oAuthAccessToken($oAuthToken, $oAuthVerifier);
 
+        // check if we have a valid response
+        if(!isset($response['user_id'])) {
+            $this->redirect($this->url->buildUrl('login-with-twitter', 'users'));
+        }
         $user = User::getByTwitterId($response['user_id']);
         $data = $twitter->usersShow($response['user_id']);
 
