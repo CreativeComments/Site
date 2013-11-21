@@ -17,8 +17,8 @@
 								<h2>Spice-up the conversation!</h2>
 							</header>
                             <p>Welcome to Creative Comments™, the out-of-the-ordinary video messaging service for Twitter&#174; and Facebook&#174;. We drive a more creative exchange between one billion socialnauts.</p>							<p class="light">Be most imaginative by instantly posting your 20-second video message. Easily include Dropbox&#174; files, YouTube&#174; movies, Slideshare&#174; decks, etc. to bring your point across even better!</p>
-							<p><a href="http://signup.creativecomments.cc" class="btn btn-large twitterRegister btnRegister">Sign in with Twitter</a></p>
-                            <p><a href="http://signup.creativecomments.cc" class="btn btn-large facebookRegister btnRegister">Sign in with Facebook</a></p>
+							<p><a href="{$var|buildurl:'login-with-twitter':'users'}" class="btn btn-large twitterRegister btnRegister">Sign in with Twitter</a></p>
+                            <p><a href="#" class="btn btn-large facebookRegister btnRegister">Sign in with Facebook</a></p>
 						</div>
 					</div>
 				</div>
