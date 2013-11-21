@@ -44,6 +44,7 @@ define('SITE_DEFAULT_TITLE', '<name>'); // @todo	correct title
 // the url
 define('SITE_URL', 'http://' . SITE_DOMAIN);
 
+
 /**
  * Path configuration
  *
@@ -61,10 +62,17 @@ define('FB_APP_ID', '338832809543889');
 define('FB_APP_SECRET', '711eb25558ea44d63146bb9142b81e37');
 
 /**
- * Nimbb configuration
+ * Soundcloud configuration
  */
-define('NIMB_PUBLIC_KEY', '373f5c99d7');
-define('NIMB_PRIVATE_KEY', '283b815418');
+define('SOUNDCLOUD_CLIENT_ID', '157b11763565bd8d7e7a82c440f853ba');
+define('SOUNDCLOUD_CLIENT_SECRET', '0fb884c1c5bb03ace5214b63a7163482');
+define('SOUNDCLOUD_CLIENT_REDIRECT_URL', '');
+
+/**
+ * Twitter configuration
+ */
+define('TWITTER_CONSUMER_KEY', 'BFNlLeDEqxLsGv65WybzQ');
+define('TWITTER_CONSUMER_SECRET', '0xuq0FDnoSdC698zo3veHnmZEdlWtaf9lbbN8nbA');
 
 /**
  * Beta configuration
