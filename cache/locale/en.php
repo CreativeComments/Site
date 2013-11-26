@@ -14,7 +14,6 @@ $act = array();
 // init var
 $err = array();
 $err['AuthenticationError'] = 'Invalid credentials.';
-$err['BetaError'] = 'Failed to sign in';
 $err['EmailIsInvalid'] = 'This is an invalid emailaddress.';
 $err['FieldIsRequired'] = 'This field is required.';
 $err['Forbidden'] = 'You do not have sufficient rights';
