@@ -1,588 +1,573 @@
 /* tablets */
 @media (min-width: 767px) {
 
-#header {
-	.container {
-		.row-fluid {
-			.span5 {
-				border-bottom: none;
-				margin-top: 0;
-
-				h1 {
-					a {
-						margin: 0;
-					}
-				}
-			}
-
-		.span7 {
-			.row-fluid {
-				.span3 {
-					width: 26%;
-					border-bottom: none;
-					margin-bottom: 0;
-					margin-top: 20px;
-
-					&:last-child {
-						margin-left: 10px;
-					}
-
-					.language, .about {
-
-						.link {
-							float: left;
-						}
-
-						.icon {
-							float: left;
-							margin: 8px 5px 0;
-						}
-					}
-				}
-				.span6 {
-					width: 45%;
-
-					a {
-						width: 75%;
-						text-align: right;
-					}
-				}
-			}
-		}
-		}
-	}
-}
-
-#content {
-	padding: 20px 0 50px;
-}
-
-#pages, #business {
-	padding-bottom: 30px;
-
-	.container {
-		.row-fluid {
-			margin-top: 20px;
-
-			.graphicHolder {
-				position: relative;
-				margin-top: 35px;
-				height: 305px;
-
-				.graphic {
-					position: absolute;
-					width: 460px;
-					height: 295px;
-					left: -70px;
-
-					@include background(inline-image("svg/graphic_intro.svg") no-repeat);
-
-					a {
-						@include squish-text;
-						position: absolute;
-						display: block;
-						width: 164px;
-						height: 85px;
-						top: 82px;
-						left: 173px;
-					}
-
-					&.business {
-						@include background(inline-image("svg/graphic_business.svg") no-repeat);
-						left: -30px;
-					}
-				}
-			}
-
-			.btnRegister {
-				font-size: 18px;
-				margin: 20px 0 0 0;
-				text-align: right;
-			}
-
-		}
-	}
-}
-
-#business {
-	.container {
-		.lineBottom {
-			padding-bottom: 40px;
-			margin-bottom: 40px;
-		}
-	}
-}
-
-#team, #location {
-	h3 {
-		font-size: 26px;
-	}
-}
-
-#grid {
-	margin-top: 50px;
-
-	.subMenu {
-		.row-fluid {
-			.title {
-				margin-bottom: 0;
-				padding-bottom: 0;
-				border-bottom: none;
-				@include box-shadow(none);
-			}
-
-			.category {
-				margin-bottom: 0;
-				padding-bottom: 0;
-				border-bottom: none;
-				@include box-shadow(none);
-				margin-top: 10px;
-			}
-
-			.emotion {
-				margin-top: 10px;
-			}
-		}
-	}
-
-	.itemGrid {
-		.videoHolder {
-			.video {
-				width: 100% !important;
-			}
-		}
-	}
-}
-
-.error {
-	.title {
-		margin: 30px 0;
-
-		h3 {
-			font-size: 28px;
-		}
-	}
-}
-
-#erroricon {
-	margin: 50px auto;
-}
-
-#footer {
-
-	.row-fluid {
-
-		.logo {
-			@include squish-text;
-			width: 80px;
-			height: 80px;
-			@include background(inline-image("svg/logo_footer.svg") no-repeat);
-			margin-top: 30px;
-		}
-
-		.social {
-
-			ul {
-				float: right;
-			}
-
-			p {
-				margin-right: 5px;
-				float: right;
-			}
-		}
-
-		&.madeBy {
-					.sumo {
-			text-align: right;
-			}
-		}
-	}
-}
-
-#comments {
-	width: 700px;
-	margin: 40px auto 20px;
-
-		.header {
-			margin-top: 10px;
-			padding-bottom: 10px;
-		}
-
-		#creativeCommentsContent {
-		position: relative;
-
-			#buttonsLeft {
-			position: absolute;
-			left: 0;
-			top: 0;
-
-			ul {
-				list-style: none;
-				padding: 0;
-				margin: 0;
-
-				li {
-					list-style: none;
-					width: 60px;
-					border-bottom: 1px solid #bfbfbf;
-
-					&.borderTop {
-						border-top: 1px solid #bfbfbf;
-					}
-					&.emptyUiButton {
-						display: block;
-						height: 56px;
-						width: 58px;
-						border-bottom: none;
-					}
-
-					a {
-						display: block;
-						height: 55px;
-						width: 58px;
-						overflow-x: hidden;
-						position: relative;
-						@include transition(all 200ms);
-						background: #fff;
-						color: #cc3129;
-						font-family: $openSansSemiBold;
-						font-size: 15px;
-
-						&:hover {
-						color: #cc3129;
-						@include border-radius(4px 0 0 4px);
-
-						.text {
-							@include sprite(icon_text_hover);
-						}
-
-						.youtube {
-							@include sprite(icon_youtube_hover);
-						}
-
-						.pinterest {
-							@include sprite(icon_pinterest_hover);
-						}
-
-						.slideshare {
-							@include sprite(icon_slideshare_hover);
-						}
-
-						.link {
-							@include sprite(icon_link_hover);
-						}
-
-						.soundcloud {
-							@include sprite(icon_soundcloud_hover);
-						}
-
-						}
-
-						.title {
-						position: absolute;
-						top: 18px;
-						left: 60px;
-						width: 230px;
-						}
-
-						.text {
-							display: block;
-							@include sprite(icon_text);
-							margin: 8px 0 0 8px;
-						}
-
-						.youtube {
-							display: block;
-							@include sprite(icon_youtube);
-							margin: 8px 0 0 8px;
-						}
-
-						.pinterest {
-							display: block;
-							@include sprite(icon_pinterest);
-							margin: 8px 0 0 8px;
-						}
-
-						.slideshare {
-							display: block;
-							@include sprite(icon_slideshare);
-							margin: 8px 0 0 8px;
-						}
-
-						.link {
-							display: block;
-							@include sprite(icon_link);
-							margin: 8px 0 0 8px;
-						}
-
-						.soundcloud {
-							display: block;
-							@include sprite(icon_soundcloud);
-							margin: 8px 0 0 8px;
-						}
-					}
-				}
-			}
-		}
-
-			#buttonsRight {
-			position: absolute;
-			right: 1px;
-			top: 0;
-
-			ul {
-				margin: 0;
-				padding: 0;
-
-			li {
-				list-style: none;
-				width: 58px;
-				border-bottom: 1px solid #bfbfbf;
-
-				&.borderTop {
-					border-top: 1px solid #bfbfbf;
-				}
-				&.emptyUiButton {
-					display: block;
-					height: 55px;
-					width: 58px;
-					border-bottom: none;
-				}
-
-				a {
-					display: block;
-					height: 55px;
-					width: 56px;
-					overflow-x: hidden;
-					position: relative;
-					background: #fff;
-					color: #cc3129;
-					@include transition(all 200ms);
-					font-family: $openSansSemiBold;
-					font-size: 15px;
-
-					&:hover {
-						color: #cc3129;
-						@include border-radius( 0 4px 4px 0);
-
-						.evernote {
-							@include sprite(icon_evernote_hover);
-						}
-
-						.dropbox {
-							@include sprite(icon_dropbox_hover);
-						}
-
-						.pinterest {
-							@include sprite(icon_pinterest_hover);
-						}
-
-						.picture {
-							@include sprite(icon_picture_hover);
-						}
-
-						.file {
-							@include sprite(icon_file_hover);
-						}
-					}
-
-					.title {
-						position: absolute;
-						top: 18px;
-						right: 56px;
-						width: 200px;
-						text-align: right;
-					}
-
-					.evernote {
-						display: block;
-						@include sprite(icon_evernote);
-						margin: 8px 8px 0 0;
-						position: absolute;
-						right: 0;
-					}
-
-					.dropbox {
-						display: block;
-						@include sprite(icon_dropbox);
-						margin: 8px 8px 0 0;
-						position: absolute;
-						right: 0;
-					}
-
-					.pinterest {
-						display: block;
-						@include sprite(icon_pinterest);
-						margin: 8px 8px 0 0;
-						position: absolute;
-						right: 0;
-					}
-
-					.picture {
-						display: block;
-						@include sprite(icon_picture);
-						margin: 8px 8px 0 0;
-						position: absolute;
-						right: 0;
-					}
-
-					.file {
-						display: block;
-						@include sprite(icon_file);
-						margin: 8px 8px 0 0;
-						position: absolute;
-						right: 0;
-					}
-				}
-			}
-		}
-	}
-
-			#creativeCommentsHolderSite {
-				border: 1px solid #bfbfbf;
-				border-top: none;
-				width: 580px;
-				height: 310px;
-				margin: 0 auto;
-			}
-
-
-}
-
-		#creativeCommentsSub {
-			margin: 30px 0;
-			position: relative;
-			
-			#youtubeHolder, #slideshareHolder, #soundcloudHolder, #pictureHolder {
-  			margin-bottom: 25px;
-			}
-			
-			.span10 {
-  			position: relative;
-			}
-
-			a {
-				color: #d4342c;
-				
-				&.closeBtn {
-  			@include squish-text;
-  			width: 25px;
-  			height: 25px;
-  			display: block;
-  			position: absolute;
-  			top: -10px;
-  			right: -10px;
-  			@include background(inline-image("svg/close_btn.svg") no-repeat);
+    #header {
+        .container {
+            .row-fluid {
+                .span5 {
+                    border-bottom: none;
+                    margin-top: 0;
+
+                    h1 {
+                        a {
+                            margin: 0;
+                        }
+                    }
+                }
+
+                .span7 {
+                    .row-fluid {
+                        .span3 {
+                            width: 26%;
+                            border-bottom: none;
+                            margin-bottom: 0;
+                            margin-top: 20px;
+
+                            &:last-child {
+                                margin-left: 10px;
+                            }
+
+                            .language, .about {
+
+                                .link {
+                                    float: left;
+                                }
+
+                                .icon {
+                                    float: left;
+                                    margin: 8px 5px 0;
+                                }
+                            }
+                        }
+                        .span6 {
+                            width: 45%;
+
+                            a {
+                                width: 75%;
+                                text-align: right;
+                            }
+                        }
+                    }
+                }
+            }
         }
-			}
-		}
-		
-		#infoHolder {
-		  margin-top: 10px;
-  		border-bottom: 1px solid #BFBFBF;
-		}
+    }
 
-}
+    #content {
+        padding: 20px 0 50px;
+    }
 
-.beta {
-	.controls {
-		.form {
-			.inputPassword {
-				margin-top: 19px;
-			}
-		}
-	}
-}
+    #pages, #business {
+        padding-bottom: 30px;
 
-}
+        .container {
+            .row-fluid {
+                margin-top: 20px;
 
+                .graphicHolder {
+                    position: relative;
+                    margin-top: 35px;
+                    height: 305px;
 
-/* desktop */
-@media (min-width: 979px) {
+                    .graphic {
+                        position: absolute;
+                        width: 460px;
+                        height: 295px;
+                        left: -70px;
+                        @include background(inline-image("svg/graphic_intro.svg") no-repeat);
 
-#pages, #business {
-	.container {
-		.row-fluid {
+                        a {
+                            @include squish-text;
+                            position: absolute;
+                            display: block;
+                            width: 164px;
+                            height: 85px;
+                            top: 82px;
+                            left: 173px;
+                        }
 
-			.graphicHolder	{
-				.graphic {
-					left: 0;
+                        &.business {
+                            @include background(inline-image("svg/graphic_business.svg") no-repeat);
+                            left: -30px;
+                        }
+                    }
+                }
 
-					&.business {
-						left: 0;
-					}
-				}
-			}
-			.intro {
+                .btnRegister {
+                    font-size: 18px;
+                    margin: 20px 0 0 0;
+                    text-align: right;
+                }
 
-				header {
-				h2 {
-					font-size: 25px;
-					}
-				}
+            }
+        }
+    }
 
-				.btnRegister {
-					text-align: center;
-				}
-			}
+    #business {
+        .container {
+            .lineBottom {
+                padding-bottom: 40px;
+                margin-bottom: 40px;
+            }
+        }
+    }
 
-			.btnRegister {
-					text-align: center;
-				}
-		}
-	}
-}
+    #team, #location {
+        h3 {
+            font-size: 26px;
+        }
+    }
 
-.error {
-	.title {
-		margin: 30px 0;
+    #grid {
+        margin-top: 50px;
 
-		h3 {
-			font-size: 32px;
-		}
-	}
-}
+        .subMenu {
+            .row-fluid {
+                .title {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                    border-bottom: none;
+                    @include box-shadow(none);
+                }
 
-#comments {
-	width: 736px;
+                .category {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                    border-bottom: none;
+                    @include box-shadow(none);
+                    margin-top: 10px;
+                }
 
-	#creativeCommentsContent {
-		#buttonsLeft {
-			ul {
-				li {
-					a {
-						&:hover {
-							width: 195px;
-							margin-left: -140px;
-						}
-					}
-				}
-			}
-		}
-		#buttonsRight {
-			ul {
-				li {
-					a {
-						&:hover {
-							width: 195px;
-							margin-right: -140px;
-						}
-					}
-				}
-			}
-		}
+                .emotion {
+                    margin-top: 10px;
+                }
+            }
+        }
 
-		#creativeCommentsHolderSite {
-			width: 615px;
-			height: 350px;
-		}
-	}
-	
-			#infoHolder {
-		  margin-left: 60px;
-  		width: 617px;
-		}
-}
+        .itemGrid {
+            .videoHolder {
+                .video {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
 
-}
+    .error {
+        .title {
+            margin: 30px 0;
+
+            h3 {
+                font-size: 28px;
+            }
+        }
+    }
+
+    #erroricon {
+        margin: 50px auto;
+    }
+
+    #footer {
+
+        .row-fluid {
+
+            .logo {
+                @include squish-text;
+                width: 80px;
+                height: 80px;
+                @include background(inline-image("svg/logo_footer.svg") no-repeat);
+                margin-top: 30px;
+            }
+
+            .social {
+
+                ul {
+                    float: right;
+                }
+
+                p {
+                    margin-right: 5px;
+                    float: right;
+                }
+            }
+
+            &.madeBy {
+                .sumo {
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    #comments {
+        width: 700px;
+        margin: 40px auto 20px;
+
+        .header {
+            margin-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        #creativeCommentsContent {
+            position: relative;
+
+            #buttonsLeft {
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        list-style: none;
+                        width: 60px;
+                        border-bottom: 1px solid #bfbfbf;
+
+                        &.borderTop {
+                            border-top: 1px solid #bfbfbf;
+                        }
+                        &.emptyUiButton {
+                            display: block;
+                            height: 56px;
+                            width: 58px;
+                            border-bottom: none;
+                        }
+
+                        a {
+                            display: block;
+                            height: 55px;
+                            width: 58px;
+                            overflow-x: hidden;
+                            position: relative;
+                            @include transition(all 200ms);
+                            background: #fff;
+                            color: #cc3129;
+                            font-family: $openSansSemiBold;
+                            font-size: 15px;
+
+                            &:hover {
+                                color: #cc3129;
+                                @include border-radius(4px 0 0 4px);
+
+                                .text {
+                                    @include sprite(icon_text_hover);
+                                }
+
+                                .youtube {
+                                    @include sprite(icon_youtube_hover);
+                                }
+
+                                .pinterest {
+                                    @include sprite(icon_pinterest_hover);
+                                }
+
+                                .slideshare {
+                                    @include sprite(icon_slideshare_hover);
+                                }
+
+                                .link {
+                                    @include sprite(icon_link_hover);
+                                }
+
+                                .soundcloud {
+                                    @include sprite(icon_soundcloud_hover);
+                                }
+
+                            }
+
+                            .title {
+                                position: absolute;
+                                top: 18px;
+                                left: 60px;
+                                width: 230px;
+                            }
+
+                            .text {
+                                display: block;
+                                @include sprite(icon_text);
+                                margin: 8px 0 0 8px;
+                            }
+
+                            .youtube {
+                                display: block;
+                                @include sprite(icon_youtube);
+                                margin: 8px 0 0 8px;
+                            }
+
+                            .pinterest {
+                                display: block;
+                                @include sprite(icon_pinterest);
+                                margin: 8px 0 0 8px;
+                            }
+
+                            .slideshare {
+                                display: block;
+                                @include sprite(icon_slideshare);
+                                margin: 8px 0 0 8px;
+                            }
+
+                            .link {
+                                display: block;
+                                @include sprite(icon_link);
+                                margin: 8px 0 0 8px;
+                            }
+
+                            .soundcloud {
+                                display: block;
+                                @include sprite(icon_soundcloud);
+                                margin: 8px 0 0 8px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #buttonsRight {
+                position: absolute;
+                right: 1px;
+                top: 0;
+
+                ul {
+                    margin: 0;
+                    padding: 0;
+
+                    li {
+                        list-style: none;
+                        width: 58px;
+                        border-bottom: 1px solid #bfbfbf;
+
+                        &.borderTop {
+                            border-top: 1px solid #bfbfbf;
+                        }
+                        &.emptyUiButton {
+                            display: block;
+                            height: 55px;
+                            width: 58px;
+                            border-bottom: none;
+                        }
+
+                        a {
+                            display: block;
+                            height: 55px;
+                            width: 56px;
+                            overflow-x: hidden;
+                            position: relative;
+                            background: #fff;
+                            color: #cc3129;
+                            @include transition(all 200ms);
+                            font-family: $openSansSemiBold;
+                            font-size: 15px;
+
+                            &:hover {
+                                color: #cc3129;
+                                @include border-radius(0 4px 4px 0);
+
+                                .evernote {
+                                    @include sprite(icon_evernote_hover);
+                                }
+
+                                .dropbox {
+                                    @include sprite(icon_dropbox_hover);
+                                }
+
+                                .pinterest {
+                                    @include sprite(icon_pinterest_hover);
+                                }
+
+                                .picture {
+                                    @include sprite(icon_picture_hover);
+                                }
+
+                                .file {
+                                    @include sprite(icon_file_hover);
+                                }
+                            }
+
+                            .title {
+                                position: absolute;
+                                top: 18px;
+                                right: 56px;
+                                width: 200px;
+                                text-align: right;
+                            }
+
+                            .evernote {
+                                display: block;
+                                @include sprite(icon_evernote);
+                                margin: 8px 8px 0 0;
+                                position: absolute;
+                                right: 0;
+                            }
+
+                            .dropbox {
+                                display: block;
+                                @include sprite(icon_dropbox);
+                                margin: 8px 8px 0 0;
+                                position: absolute;
+                                right: 0;
+                            }
+
+                            .pinterest {
+                                display: block;
+                                @include sprite(icon_pinterest);
+                                margin: 8px 8px 0 0;
+                                position: absolute;
+                                right: 0;
+                            }
+
+                            .picture {
+                                display: block;
+                                @include sprite(icon_picture);
+                                margin: 8px 8px 0 0;
+                                position: absolute;
+                                right: 0;
+                            }
+
+                            .file {
+                                display: block;
+                                @include sprite(icon_file);
+                                margin: 8px 8px 0 0;
+                                position: absolute;
+                                right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #creativeCommentsHolderSite {
+                border: 1px solid #bfbfbf;
+                border-top: none;
+                width: 580px;
+                height: 310px;
+                margin: 0 auto;
+            }
+
+        }
+
+        #creativeCommentsSub {
+            margin: 30px 0;
+            position: relative;
+
+            #youtubeHolder, #slideshareHolder, #soundcloudHolder, #pictureHolder {
+                margin-bottom: 25px;
+            }
+
+            .span10 {
+                position: relative;
+            }
+
+            a {
+                color: #d4342c;
+
+                &.closeBtn {
+                    @include squish-text;
+                    width: 25px;
+                    height: 25px;
+                    display: block;
+                    position: absolute;
+                    top: -10px;
+                    right: -10px;
+                    @include background(inline-image("svg/close_btn.svg") no-repeat);
+                }
+            }
+        }
+
+        #infoHolder {
+            margin-top: 10px;
+            border-bottom: 1px solid #BFBFBF;
+        }
+
+    }
+
+    /* desktop */
+    @media (min-width: 979px) {
+
+        #pages, #business {
+            .container {
+                .row-fluid {
+
+                    .graphicHolder {
+                        .graphic {
+                            left: 0;
+
+                            &.business {
+                                left: 0;
+                            }
+                        }
+                    }
+                    .intro {
+
+                        header {
+                            h2 {
+                                font-size: 25px;
+                            }
+                        }
+
+                        .btnRegister {
+                            text-align: center;
+                        }
+                    }
+
+                    .btnRegister {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .error {
+            .title {
+                margin: 30px 0;
+
+                h3 {
+                    font-size: 32px;
+                }
+            }
+        }
+
+        #comments {
+            width: 736px;
+
+            #creativeCommentsContent {
+                #buttonsLeft {
+                    ul {
+                        li {
+                            a {
+                                &:hover {
+                                    width: 195px;
+                                    margin-left: -140px;
+                                }
+                            }
+                        }
+                    }
+                }
+                #buttonsRight {
+                    ul {
+                        li {
+                            a {
+                                &:hover {
+                                    width: 195px;
+                                    margin-right: -140px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                #creativeCommentsHolderSite {
+                    width: 615px;
+                    height: 350px;
+                }
+            }
+
+            #infoHolder {
+                margin-left: 60px;
+                width: 617px;
+            }
+        }
+
+    }
