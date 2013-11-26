@@ -218,13 +218,6 @@ class SiteBaseAction
 		// assign if there is a valid user
 		if($this->currentUser != false)
 		{
-            if($this->url->getModule() == 'users' && (in_array($this->url->getAction(), array('logout'))))
-            {
-            }
-            elseif($this->url->getModule() == 'api')
-            {
-            }
-
 			// assign
 			$this->tpl->assign('currentUser', $this->currentUser->toArray());
 		}
