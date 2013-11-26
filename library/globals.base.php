@@ -75,11 +75,6 @@ define('TWITTER_CONSUMER_KEY', 'BFNlLeDEqxLsGv65WybzQ');
 define('TWITTER_CONSUMER_SECRET', '0xuq0FDnoSdC698zo3veHnmZEdlWtaf9lbbN8nbA');
 
 /**
- * Beta configuration
- */
-define('CC_BETA_PASSWORD', 'thisisoursecretbetacode');
-
-/**
  * Errbit configuration
  */
 define('ERRBIT_API_KEY', '');

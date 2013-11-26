@@ -539,46 +539,6 @@ jsSite.facebook = {
 
 	init: function()
 	{
-		$('#pages form').on('submit', function(e) {
-			if(!jsSite.facebook.isChecked) {
-				e.preventDefault();
-
-				$('#passwordBox').removeClass('error');
-				$('#passwordBox .formError').hide();
-				var $form = $(this);
-
-				if($('#password').val() == '') {
-					$('#passwordBox').addClass('error');
-					$('#passwordBox #required').show();
-					return;
-				}
-
-				$.ajax({
-					url: '/ajax.php?module=pages&action=beta&language=' + jsSite.current.language,
-					data: { code: $('#password').val() },
-					success: function(data, textStatus, jqXHR) {
-						if(data.code == 200) {
-							FB.login(
-								function(response) {
-									jsSite.facebook.isChecked = true;
-									$form.submit();
-								},
-								{ scope: 'email' }
-							);
-						}
-						else {
-							$('#passwordBox').addClass('error');
-							$('#passwordBox #wrong').show();
-						}
-					}
-				});
-			}
-		});
-
-		$('#betaAccess').on('click', function(e) {
-			$(this).parents('form').submit();
-		});
-
 		$('a.facebookRegister').on('click', function(e) {
 			e.preventDefault();
 			FB.login(
