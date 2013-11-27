@@ -23,7 +23,7 @@ class Comment
 	 *
 	 * @var	string
 	 */
-	public $fullUrl, $title, $text, $videoId, $videoStill, $youtube, $slideshare, $soundcloud, $url, $dropbox, $file, $emotion = 'neutral', $picture;
+	public $fullUrl, $title, $text, $videoId, $videoStill, $youtube, $slideshare, $soundcloud, $flickr, $url, $dropbox, $file, $emotion = 'neutral', $picture;
 
 	/**
 	 * DateTime properties
@@ -231,6 +231,39 @@ class Comment
 	{
 		return $this->soundcloud;
 	}
+
+
+    /**
+     * Will parse the user and set|stream|photo part out of a flickr URL
+     * More info: http://www.flickr.com/services/api/misc.urls.html
+     *
+     * @param string $flickr
+     */
+    public function setFlickr($flickr)
+    {
+        # Get the flickr image url from the embed code
+        if(preg_match('`src="(http://farm\d+\.staticflickr.com/[^"]+)"`i', $flickr, $matches)) {
+            $path = $matches[1];
+            # Check if there's a size given in the url, and strip it
+            if(preg_match('`^(.+?)_[sqtmnzcbo](\.[^\.]+)$`i', $path, $matches)) {
+                $this->flickr = $matches[1] . $matches[2];
+            }
+            else {
+                $this->flickr = $path;
+            }
+        }
+        else {
+            $this->flickr = null;
+        }
+    }
+
+    /**
+     * @return string
+     */
+    public function getFlickr()
+    {
+        return $this->flickr;
+    }
 
 	/**
 	 * @param string $text
@@ -483,6 +516,9 @@ class Comment
 		if(isset($data['youtube'])) $this->youtube = (string) $data['youtube'];
 		if(isset($data['slideshare'])) $this->slideshare = (string) $data['slideshare'];
 		if(isset($data['soundcloud'])) $this->soundcloud = (string) $data['soundcloud'];
+		if(!empty($data['flickr'])) {
+            $this->flickr = $data['flickr'];
+        }
 		if(isset($data['url'])) $this->url = (string) $data['url'];
 		if(isset($data['dropbox'])) $this->dropbox = (string) $data['dropbox'];
 		if(isset($data['file'])) $this->file = (string) $data['file'];
@@ -530,8 +566,10 @@ class Comment
 		$item['youtube'] = $this->youtube;
 		$item['slideshare'] = $this->slideshare;
 		$item['soundcloud'] = $this->soundcloud;
+		$item['flickr'] = $this->getFlickr();
 		$item['url'] = $this->url;
 		$item['dropbox'] = $this->dropbox;
+
 		$item['file'] = $this->file;
 		$item['picture'] = $this->picture;
 		$item['emotion'] = $this->emotion;
@@ -587,6 +625,7 @@ class Comment
 		$item['youtube'] = $this->getYoutube();
 		$item['slideshare'] = $this->getSlideshare();
 		$item['soundcloud'] = $this->getSoundcloud();
+		$item['flickr'] = $this->getFlickr();
 		$item['url'] = $this->getUrl();
 		$item['dropbox'] = $this->getDropbox();
 		$item['file'] = $this->getFile();

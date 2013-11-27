@@ -796,6 +796,20 @@ jsSite.creativeComments =
 				jsSite.creativeComments.showElement($parent);
 			}
 		});
+    $(document).on('click', 'a.toggleFlickr', function(e) {
+      e.preventDefault();
+      var $element = $('#' + $(this).data('id'));
+      var $parent = $($element.parents('.row-fluid:first'));
+      if($parent.is(':visible')) {
+        $element.html('');
+        jsSite.creativeComments.closeElement($parent);
+      } else {
+        var flickrUrl = $(this).data('flickr-url');
+        $element.html('<a class="closeBtn toggleFlickr" data-id="flickrHolder" href="#">{$lblClose|ucfirst}</a>' +
+            '<a href="' + flickrUrl + '"><img src="http://farm9.staticflickr.com/8468/8112032652_4741b8f0b5.jpg" alt=""></a>');
+        jsSite.creativeComments.showElement($parent);
+      }
+    });
 	}
 }
 

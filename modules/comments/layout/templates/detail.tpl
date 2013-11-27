@@ -74,6 +74,15 @@
 									</a>
 								{/option:item.soundcloud}
 							</li>
+
+                            <li class="{option:item.flickr}{option:item.text}borderTop{/option:item.text}{/option:item.flickr} {option:!item.flickr}emptyUiButton{/option:!item.flickr}">
+                                {option:item.flickr}
+                                    <a href="#" class="uiButton toggleFlickr" data-id="flickrHolder" data-flickr-url="{$item.flickr}">
+                                        <span class="flickr"></span>
+                                        <span class="title">View image</span>
+                                    </a>
+                                {/option:item.flickr}
+                            </li>
 						</ul>
 					</div>
 					<div id="creativeCommentsHolderSite">
@@ -139,6 +148,15 @@
 							</div>
 						</div>
 					{/option:item.soundcloud}
+
+					{option:item.flickr}
+						<div class="row-fluid" style="display: none;">
+							<div class="span10 offset1">
+								<div id="flickrHolder" class="element">
+								</div>
+							</div>
+						</div>
+					{/option:item.flickr}
 				</div>
 
 				<div class="row-fluid">
