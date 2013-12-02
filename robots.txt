@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /
+Disallow: /cache/
+Disallow: /plugin_data/
+Disallow: /en/comments/detail/
