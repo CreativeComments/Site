@@ -52,7 +52,7 @@ class UsersLoginWithTwitter extends SiteBaseAction
         $oAuthToken    = SpoonFilter::getGetValue('oauth_token', null, '');
         $oAuthVerifier = SpoonFilter::getGetValue('oauth_verifier', null, '');
         if ($oAuthToken == '') {
-            $response = $twitter->oAuthAuthorize($response['oauth_token']);
+            $twitter->oAuthAuthenticate($response['oauth_token']);
         }
         $response = $twitter->oAuthAccessToken($oAuthToken, $oAuthVerifier);
 
