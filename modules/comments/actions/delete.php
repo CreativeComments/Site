@@ -6,7 +6,7 @@
  * @package        comments
  * @subpackage     detail
  *
- * @author         Tijs Verkoyen <tijs@sumocoders.be>
+ * @author         Tijs Vindevogel <tvin@sumocoders.be>
  * @since          1.0
  */
 class CommentsDelete extends SiteBaseAction
@@ -17,8 +17,6 @@ class CommentsDelete extends SiteBaseAction
 
     /**
      * Execute the action
-     *
-     * @return void
      */
     public function execute()
     {
