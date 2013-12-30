@@ -15,9 +15,10 @@
 					<div class="row-fluid">
 						<div class="span7 graphicHolder hidden-phone">
 							<div class="graphic">
-								<a href="/en/comments/detail/197">
+								<a id="demo" href="/en/comments/detail/197">
 									Creative comment
 								</a>
+                                <a href="https://beta.creativecomments.cc/en/pages/plugins" id="createNow">Create now</a>
 							</div>
 						</div>
 						<div class="span5 intro">
