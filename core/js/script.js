@@ -699,6 +699,9 @@ jsSite.creativeComments =
 			$(this).parent('li').toggleClass('active');
 		});
 		$(document).on('click', '.itemGrid .item', function(e) {
+			if($(e.target).is('a')) {
+				return true;
+			}
 			e.preventDefault();
 			document.location = $(this).find('a:first').attr('href');
 		});

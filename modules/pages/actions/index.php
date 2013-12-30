@@ -18,6 +18,7 @@ class PagesIndex extends SiteBaseAction
 	 */
 	public function execute()
 	{
+		$this->parseReports();
 		$this->parse();
 		$this->display();
 	}
@@ -76,10 +77,32 @@ class PagesIndex extends SiteBaseAction
 				$i = 1;
 			}
 
+            $data['canDelete'] = $this->canDelete($comment);
+
 			$items[] = $data;
 			$i++;
 		}
 
 		$this->tpl->assign('items', $items);
 	}
+
+	/**
+	 * @param Comment $comment
+	 * @return bool
+	 */
+	public function canDelete(Comment $comment)
+	{
+		$user = $this->currentUser;
+		if ($user) {
+			if ($user->isAdmin) {
+				return true;
+			}
+			if ($comment->userId == $user->id) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
 }
