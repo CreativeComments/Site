@@ -1,6 +1,14 @@
 {include:'{$CORE_PATH}/layout/templates/head.tpl'}
 {include:'{$CORE_PATH}/layout/templates/header.tpl'}
 	<div id="content">
+
+        {option:error}
+            <div class="alert alert-danger">{$error}</div>
+        {/option:error}
+        {option:report}
+            <div class="alert alert-success">{$report}</div>
+        {/option:report}
+
 		{option:!currentUser}
 			<section id="{$MODULE}" class="{$ACTION} lineBottom">
 				<div class="container">
@@ -61,7 +69,7 @@
 							<div class="span4 item{option:items.newRow} noMargin{/option:items.newRow}">
 								<div class="videoHolder">
 									<a class="video" href="{$var|buildurl:'detail':'comments'}/{$items.id}">
-										{option:items.videoStillUrl}
+								{option:items.videoStillUrl}
 											<img src="{$items.videoStillUrl}" width="278" />
 										{/option:items.videoStillUrl}
 									</a>
@@ -72,6 +80,9 @@
 										{$items.title|truncate:30}
 									</a>
 								</h4>
+                                    {option:items.canDelete}
+                                        <a class="iconDelete confirm" data-message="{$msgAreYouSure}" href="{$var|buildurl:'delete':'comments'}/{$items.id}">{$lblDelete}</a>
+                                    {/option:items.canDelete}
 								</header>
 								<div class="user {$items.emotion}">
 									<div class="avatar">

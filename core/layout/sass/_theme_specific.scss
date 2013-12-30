@@ -1,3 +1,5 @@
+@import "compass_sumo";
+
 body {
     background: #1f1f1f;
     padding: 0;
@@ -16,6 +18,17 @@ a {
     &:hover {
         color: #781b17;
     }
+
+		&.iconDelete {
+			@include svg-with-png-fallback(icon_delete, no-repeat, $hover: true);
+			@include squish-text;
+			display: block;
+		}
+}
+
+.modal-footer .btn + .btn {
+  margin-top: 5px;
+  margin-left: 0;
 }
 
 .btn {
@@ -612,11 +625,17 @@ a {
 
             header {
                 padding: 0 10px;
+								@include clearfix;
                 h4 {
                     margin: 0 0 10px 0;
                     font-family: $openSansBold;
                     line-height: 1.4em;
                     font-size: 16px;
+                    float: left;
+                }
+
+                a.iconDelete {
+                    float: right;
                 }
             }
 

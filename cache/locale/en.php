@@ -118,6 +118,7 @@ $msg['DatepickerShortOctober'] = 'Oct';
 $msg['DatepickerShortNovember'] = 'Nov';
 $msg['DatepickerShortDecember'] = 'Dec';
 $msg['FooterDisclaimer'] = '<p>This application is developed by SumoCoders BVBA, if you want a custom application: please contact us: <br /><a href="mailto:i-want-an-app@sumocoders.be">i-want-an-app@sumocoders.be</a> - <a href="http://www.sumocoders.be">www.sumocoders.be</a></p>';
+$msg['PagesDeleted'] = 'Item is deleted';
 $msg['PagesDownloadPlugin'] = 'Download the plugin';
 $msg['PluginNotInstalled'] = '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>';
 $msg['OldBrowserWarning'] = '<strong>Warning:</strong> You are using an older browser. If you want to see the site as it is intended, you may want to download a new version or a decent browser like <a href="http://www.getfirefox.com">Firefox</a>.';
