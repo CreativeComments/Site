@@ -28,7 +28,7 @@ class CommentsDelete extends SiteBaseAction
             $this->redirect($this->url->buildUrl('', '', null, array('error' => 'generalError')));
         }
         if ($this->canDelete()) {
-            //$this->item->delete();
+            $this->item->delete();
             $this->redirect($this->url->buildUrl('', '', null, array('report' => 'deleted')));
         } else {
             $this->redirect($this->url->buildUrl('', '', null, array('error' => 'forbidden')));
