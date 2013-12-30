@@ -71,19 +71,16 @@
 
           .graphic {
             position: absolute;
-            width: 460px;
-            height: 295px;
             left: -70px;
-            @include background(inline-image("svg/graphic_intro.svg") no-repeat);
-
+            @include svg-with-png-fallback(svg/graphic_intro_new, no-repeat);
             a {
               @include squish-text;
               position: absolute;
               display: block;
-              width: 164px;
-              height: 85px;
-              top: 82px;
-              left: 173px;
+              width: 175px;
+              height: 90px;
+              top: 88px;
+              left: 135px;
             }
 
             &.business {
