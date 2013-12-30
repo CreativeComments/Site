@@ -18,7 +18,7 @@
 								<a id="demo" href="/en/comments/detail/197">
 									Creative comment
 								</a>
-                                <a href="https://beta.creativecomments.cc/en/pages/plugins" id="createNow">Create now</a>
+								<a href="{$var|buildurl:'plugins':'pages'}" id="createNow">Create now</a>
 							</div>
 						</div>
 						<div class="span5 intro">
