@@ -3,8 +3,14 @@
 		<p id="confirmModalMessage">…</p>
 	</div>
 	<div class="modal-footer">
-		<a href="#" class="btn" data-dismiss="modal">{$lblCancel|ucfirst}</a>
-		<a href="#" id="confirmModalOk" class="btn btn-primary">{$lblOk|ucfirst}</a>
+        <div class="row-fluid">
+            <div class="span6">
+		    <a href="#" class="btn" data-dismiss="modal">{$lblCancel|ucfirst}</a>
+            </div>
+            <div class="span6">
+		    <a href="#" id="confirmModalOk" class="btn btn-primary">{$lblOk|ucfirst}</a>
+            </div>
+        </div>
 	</div>
 </div>
 
