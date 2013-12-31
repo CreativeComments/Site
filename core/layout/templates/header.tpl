@@ -43,7 +43,8 @@
 							<span class="icon"></span>
 							</a>
 							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-								<li><a href="{$var|buildurl:'team':'pages'}">Our team</a></li>
+                                <li><a href="http://creativecomments.uservoice.com/knowledgebase/topics/41499-how-to)">How to...</a></li>
+                                <li><a href="{$var|buildurl:'team':'pages'}">Our team</a></li>
 								<li><a href="{$var|buildurl:'terms-of-service':'pages'}">Terms of service</a></li>
 								<li><a href="{$var|buildurl:'privacy-policy':'pages'}">Privacy policy</a></li>
 							</ul>
