@@ -16,7 +16,7 @@
 						<div class="span7 graphicHolder hidden-phone">
 							<div class="graphic">
 								<a id="demo" href="/en/comments/detail/197">
-									Creative comment
+									View demo
 								</a>
 								<a href="{$var|buildurl:'plugins':'pages'}" id="createNow">Create now</a>
 							</div>
