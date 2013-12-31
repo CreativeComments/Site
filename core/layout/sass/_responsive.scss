@@ -75,7 +75,6 @@
             @include svg-with-png-fallback(svg/graphic_intro_new, no-repeat);
 
             a {
-
               &#demo {
               position: absolute;
               display: block;
@@ -90,11 +89,11 @@
             a {
               &#createNow {
               position: absolute;
-              bottom: 7px;
-              right: 0;
+              bottom: 19px;
+              right: 5px;
               display: block;
-              width: 123px;
-              height: 60px;
+              width: 165px;
+              height: 47px;
               @include squish-text;
               }
             }
