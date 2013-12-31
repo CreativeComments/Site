@@ -39,7 +39,6 @@
 
 	<script src="/core/js/lib.js?m={$LAST_MODIFIED}"></script>
 	<script src="/core/js/script.js?m={$LAST_MODIFIED}"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
     {option:javascript}
 		{iteration:javascript}
 			<script src="{$javascript.url}"></script>
