@@ -13,7 +13,7 @@ set :production_db, "creativecomments"		# eg: "sumocoders_site"
 set :production_errbit_api_key, "af877688600f52016935c4339acb2e9a"	# eg: "7cb0894de51936c39d86b4f2ab4713f2"
 
 # repo information
-set :repository, "git@git.sumocoders.be:creative_comments.git"		# eg: "git@github.com:sumocoders/forkcms.git"
+set :repository, "git@github.com:CreativeComments/Site.git"		# eg: "git@github.com:sumocoders/forkcms.git"
 
 # stages
 set :stages, %w{production staging}
