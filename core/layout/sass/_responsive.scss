@@ -73,17 +73,22 @@
             position: absolute;
             left: -70px;
             @include svg-with-png-fallback(svg/graphic_intro_new, no-repeat);
-            a#demo {
-              @include squish-text;
+
+            a {
+
+              &#demo {
               position: absolute;
               display: block;
               width: 175px;
               height: 90px;
               top: 88px;
               left: 135px;
+              @include squish-text;
+              }
             }
             
-            a#createNow {
+            a {
+              &#createNow {
               position: absolute;
               bottom: 7px;
               right: 0;
@@ -91,6 +96,7 @@
               width: 123px;
               height: 60px;
               @include squish-text;
+              }
             }
 
             &.business {
