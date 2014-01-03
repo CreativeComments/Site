@@ -72,5 +72,10 @@
 			We are sorry, Creative Comments needs a webcam and a microphone to get magic done...
 		</div>
 	</div>
+    {option:showDebug}
+        <a id="debugRecord" href="#">Record</a>
+        <a id="debugStop" href="#">Stop</a>
+        <a href="/en/api/player?id={$data.videoId}">Show</a>
+    {/option:showDebug}
 </body>
 </html>

@@ -112,6 +112,24 @@ jsSite.api = {
 			615, 350, '11.0.0', null,
 			flashvars, params, attributes
 		);
+
+    $(document).on('click', '#debugRecord', function(e) {
+      console.log('record');
+      window.postMessage(
+          { method: 'videorecorder.startRecording' },
+          document.location
+      );
+    });
+    $(document).on('click', '#debugStop', function(e) {
+      console.log('stop');
+      window.postMessage(
+          { method: 'videorecorder.stopRecording' },
+          document.location
+      );
+    });
+
+
+
 		setInterval(function() {
 			var flash = document.getElementById('videorecorder');
 
@@ -181,6 +199,7 @@ jsSite.api = {
 
 	receive: function(e) {
 		var method = e.data.method;
+    console.log(method);
 		var flash = document.getElementById('videorecorder');
 		if(typeof method == 'undefined') return;
 

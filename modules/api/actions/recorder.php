@@ -24,6 +24,12 @@ class ApiRecorder extends SiteBaseAction
 			     'videoId' => SpoonFilter::getGetValue('id', null, '')
 			)
 		);
+
+        if(SpoonFilter::getGetValue('debug', array('true', 'false'), 'false') == 'true')
+        {
+            $this->tpl->assign('showDebug', true);
+        }
+
 		$this->display();
 	}
 }
