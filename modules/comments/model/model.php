@@ -3,235 +3,234 @@
 /**
  * Comment
  *
- * @package		comments
- * @subpackage	model
+ * @package        comments
+ * @subpackage     model
  *
- * @author 		Tijs Verkoyen <tijs@sumocoders.be>
- * @since		1.0
+ * @author         Tijs Verkoyen <tijs@sumocoders.be>
+ * @since          1.0
  */
 class Comment
 {
-	/**
-	 * The id of the comment.
-	 *
-	 * @var	int
-	 */
-	public $id, $userId;
+    /**
+     * The id of the comment.
+     *
+     * @var    int
+     */
+    public $id, $userId;
 
-	/**
-	 * Textual properties
-	 *
-	 * @var	string
-	 */
-	public $fullUrl, $title, $text, $videoId, $videoStill, $youtube, $slideshare, $soundcloud, $flickr, $url, $dropbox, $file, $emotion = 'neutral', $picture;
+    /**
+     * Textual properties
+     *
+     * @var    string
+     */
+    public $fullUrl, $title, $text, $videoId, $videoStill, $youtube, $slideshare, $soundcloud, $flickr, $url, $dropbox, $file, $emotion = 'neutral', $picture;
 
-	/**
-	 * DateTime properties
-	 *
-	 * @var DateTime
-	 */
-	public $createdOn, $editedOn;
+    /**
+     * DateTime properties
+     *
+     * @var DateTime
+     */
+    public $createdOn, $editedOn;
 
-	/**
-	 * @param \DateTime $createdOn
-	 */
-	public function setCreatedOn($createdOn)
-	{
-		$this->createdOn = $createdOn;
-	}
+    /**
+     * @param \DateTime $createdOn
+     */
+    public function setCreatedOn($createdOn)
+    {
+        $this->createdOn = $createdOn;
+    }
 
-	/**
-	 * @return \DateTime
-	 */
-	public function getCreatedOn()
-	{
-		return $this->createdOn;
-	}
+    /**
+     * @return \DateTime
+     */
+    public function getCreatedOn()
+    {
+        return $this->createdOn;
+    }
 
-	/**
-	 * @param string $dropbox
-	 */
-	public function setDropbox($dropbox)
-	{
-		$this->dropbox = $dropbox;
-	}
+    /**
+     * @param string $dropbox
+     */
+    public function setDropbox($dropbox)
+    {
+        $this->dropbox = $dropbox;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getDropbox()
-	{
-		return $this->dropbox;
-	}
+    /**
+     * @return string
+     */
+    public function getDropbox()
+    {
+        return $this->dropbox;
+    }
 
-	/**
-	 * @param \DateTime $editedOn
-	 */
-	public function setEditedOn($editedOn)
-	{
-		$this->editedOn = $editedOn;
-	}
+    /**
+     * @param \DateTime $editedOn
+     */
+    public function setEditedOn($editedOn)
+    {
+        $this->editedOn = $editedOn;
+    }
 
-	/**
-	 * @return \DateTime
-	 */
-	public function getEditedOn()
-	{
-		return $this->editedOn;
-	}
+    /**
+     * @return \DateTime
+     */
+    public function getEditedOn()
+    {
+        return $this->editedOn;
+    }
 
-	/**
-	 * @param string $emotion
-	 */
-	public function setEmotion($emotion)
-	{
-		if(!in_array($emotion, array('sad', 'neutral', 'happy')))
-		{
-			$emotion = 'neutral';
-		}
+    /**
+     * @param string $emotion
+     */
+    public function setEmotion($emotion)
+    {
+        if (!in_array($emotion, array('sad', 'neutral', 'happy'))) {
+            $emotion = 'neutral';
+        }
 
-		$this->emotion = $emotion;
-	}
+        $this->emotion = $emotion;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getEmotion()
-	{
-		return $this->emotion;
-	}
+    /**
+     * @return string
+     */
+    public function getEmotion()
+    {
+        return $this->emotion;
+    }
 
-	/**
-	 * @param string $file
-	 */
-	public function setFile($file)
-	{
-		$this->file = $file;
-	}
+    /**
+     * @param string $file
+     */
+    public function setFile($file)
+    {
+        $this->file = $file;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getFile()
-	{
-		return $this->file;
-	}
+    /**
+     * @return string
+     */
+    public function getFile()
+    {
+        return $this->file;
+    }
 
-	/**
-	 * @param string $fullUrl
-	 */
-	public function setFullUrl($fullUrl)
-	{
-		$this->fullUrl = $fullUrl;
-	}
+    /**
+     * @param string $fullUrl
+     */
+    public function setFullUrl($fullUrl)
+    {
+        $this->fullUrl = $fullUrl;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getFullUrl()
-	{
-		return $this->fullUrl;
-	}
+    /**
+     * @return string
+     */
+    public function getFullUrl()
+    {
+        return $this->fullUrl;
+    }
 
-	/**
-	 * @param int $id
-	 */
-	public function setId($id)
-	{
-		$this->id = $id;
-	}
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
-	/**
-	 * @return int
-	 */
-	public function getId()
-	{
-		return $this->id;
-	}
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
-	/**
-	 * @param string $picture
-	 */
-	public function setPicture($picture)
-	{
-		$this->picture = $picture;
-	}
+    /**
+     * @param string $picture
+     */
+    public function setPicture($picture)
+    {
+        $this->picture = $picture;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getPicture()
-	{
-		return $this->picture;
-	}
+    /**
+     * @return string
+     */
+    public function getPicture()
+    {
+        return $this->picture;
+    }
 
-	/**
-	 * @param string $slideshare
-	 */
-	public function setSlideshare($slideshare)
-	{
-		$slideshare = strip_tags($slideshare, '<iframe><div><strong><a>');
-		$this->slideshare = $slideshare;
-	}
+    /**
+     * @param string $slideshare
+     */
+    public function setSlideshare($slideshare)
+    {
+        $slideshare = strip_tags($slideshare, '<iframe><div><strong><a>');
+        $this->slideshare = $slideshare;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getSlideshare()
-	{
-		return $this->slideshare;
-	}
+    /**
+     * @return string
+     */
+    public function getSlideshare()
+    {
+        return $this->slideshare;
+    }
 
-	/**
-	 * @param string $soundcloud
-	 */
-	public function setSoundcloud($soundcloud)
-	{
-		if(substr_count($soundcloud, 'iframe') > 0) {
-			$matches = array();
-			preg_match('|.*api.soundcloud.com(.*)"|iU', $soundcloud, $matches);
+    /**
+     * @param string $soundcloud
+     */
+    public function setSoundcloud($soundcloud)
+    {
+        if (substr_count($soundcloud, 'iframe') > 0) {
+            $matches = array();
+            preg_match('|.*api.soundcloud.com(.*)"|iU', $soundcloud, $matches);
 
-			if(!isset($matches[1])) $soundcloud = null;
-			else {
-				$soundcloud = trim(urldecode($matches[1]), '/');
-				$soundcloud = str_replace(
-					array('tracks/', 'users/'),
-					array('track|', 'user|'),
-					$soundcloud
-				);
-			}
-		} else {
-			$client = new Soundcloud\Service(
-				SOUNDCLOUD_CLIENT_ID,
-				SOUNDCLOUD_CLIENT_SECRET,
-				SOUNDCLOUD_CLIENT_REDIRECT_URL
-			);
+            if (!isset($matches[1])) {
+                $soundcloud = null;
+            } else {
+                $soundcloud = trim(urldecode($matches[1]), '/');
+                $soundcloud = str_replace(
+                    array('tracks/', 'users/'),
+                    array('track|', 'user|'),
+                    $soundcloud
+                );
+            }
+        } else {
+            $client = new Soundcloud\Service(
+                SOUNDCLOUD_CLIENT_ID,
+                SOUNDCLOUD_CLIENT_SECRET,
+                SOUNDCLOUD_CLIENT_REDIRECT_URL
+            );
 
-			try {
-				$json = json_decode(
-					$client->get(
-						'resolve',
-						array('url' => $soundcloud),
-						array(CURLOPT_FOLLOWLOCATION => true)
-					)
-				);
-				$soundcloud = $json->kind . '|' . $json->id;
-			} catch(Soundcloud\Exception\InvalidHttpResponseCodeException $e) {
-				$soundcloud = null;
-			}
-		}
+            try {
+                $json = json_decode(
+                    $client->get(
+                        'resolve',
+                        array('url' => $soundcloud),
+                        array(CURLOPT_FOLLOWLOCATION => true)
+                    )
+                );
+                $soundcloud = $json->kind . '|' . $json->id;
+            } catch (Soundcloud\Exception\InvalidHttpResponseCodeException $e) {
+                $soundcloud = null;
+            }
+        }
 
-		$this->soundcloud = $soundcloud;
-	}
+        $this->soundcloud = $soundcloud;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getSoundcloud()
-	{
-		return $this->soundcloud;
-	}
-
+    /**
+     * @return string
+     */
+    public function getSoundcloud()
+    {
+        return $this->soundcloud;
+    }
 
     /**
      * Will parse the user and set|stream|photo part out of a flickr URL
@@ -242,17 +241,15 @@ class Comment
     public function setFlickr($flickr)
     {
         # Get the flickr image url from the embed code
-        if(preg_match('`src="(http://farm\d+\.staticflickr.com/[^"]+)"`i', $flickr, $matches)) {
+        if (preg_match('`src="(http://farm\d+\.staticflickr.com/[^"]+)"`i', $flickr, $matches)) {
             $path = $matches[1];
             # Check if there's a size given in the url, and strip it
-            if(preg_match('`^(.+?)_[sqtmnzcbo](\.[^\.]+)$`i', $path, $matches)) {
+            if (preg_match('`^(.+?)_[sqtmnzcbo](\.[^\.]+)$`i', $path, $matches)) {
                 $this->flickr = $matches[1] . $matches[2];
-            }
-            else {
+            } else {
                 $this->flickr = $path;
             }
-        }
-        else {
+        } else {
             $this->flickr = null;
         }
     }
@@ -265,454 +262,520 @@ class Comment
         return $this->flickr;
     }
 
-	/**
-	 * @param string $text
-	 */
-	public function setText($text)
-	{
-		if(substr($text, 0, 1) != '<') $text = '<div>' . $text;
-		$text = str_replace(
-			array('<div>', '</div>'),
-			array('<p>', '</p>'),
-		    $text
-		);
-		$text = trim($text);
-		if($text == '') $text = null;
+    /**
+     * @param string $text
+     */
+    public function setText($text)
+    {
+        if (substr($text, 0, 1) != '<') {
+            $text = '<div>' . $text;
+        }
+        $text = str_replace(
+            array('<div>', '</div>'),
+            array('<p>', '</p>'),
+            $text
+        );
+        $text = trim($text);
+        if ($text == '') {
+            $text = null;
+        }
 
-		$this->text = $text;
-	}
+        $this->text = $text;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getText()
-	{
-		return $this->text;
-	}
+    /**
+     * @return string
+     */
+    public function getText()
+    {
+        return $this->text;
+    }
 
-	/**
-	 * @param string $title
-	 */
-	public function setTitle($title)
-	{
-		$this->title = $title;
-	}
+    /**
+     * @param string $title
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getTitle()
-	{
-		return $this->title;
-	}
+    /**
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
 
-	/**
-	 * @param int $userId
-	 */
-	public function setUserId($userId)
-	{
-		$this->userId = $userId;
-	}
+    /**
+     * @param int $userId
+     */
+    public function setUserId($userId)
+    {
+        $this->userId = $userId;
+    }
 
-	/**
-	 * @return int
-	 */
-	public function getUserId()
-	{
-		return $this->userId;
-	}
+    /**
+     * @return int
+     */
+    public function getUserId()
+    {
+        return $this->userId;
+    }
 
-	/**
-	 * @param string $url
-	 */
-	public function setUrl($url)
-	{
-		if(
-			substr($url, 0, 7) != 'http://' &&
-			substr($url, 0, 8) != 'https://'
-		) {
-			$url = 'http://' . $url;
-		}
+    /**
+     * @param string $url
+     */
+    public function setUrl($url)
+    {
+        if (
+            substr($url, 0, 7) != 'http://' &&
+            substr($url, 0, 8) != 'https://'
+        ) {
+            $url = 'http://' . $url;
+        }
 
-		$this->url = $url;
-	}
+        $this->url = $url;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getUrl()
-	{
-		return $this->url;
-	}
+    /**
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->url;
+    }
 
-	/**
-	 * @param string $videoId
-	 */
-	public function setVideoId($videoId)
-	{
-		$this->videoId = $videoId;
-	}
+    /**
+     * @param string $videoId
+     */
+    public function setVideoId($videoId)
+    {
+        $this->videoId = $videoId;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getVideoId()
-	{
-		return $this->videoId;
-	}
+    /**
+     * @return string
+     */
+    public function getVideoId()
+    {
+        return $this->videoId;
+    }
 
-	/**
-	 * @param string $videoStill
-	 */
-	public function setVideoStill($videoStill)
-	{
-		$this->videoStill = $videoStill;
-	}
+    /**
+     * @param string $videoStill
+     */
+    public function setVideoStill($videoStill)
+    {
+        $this->videoStill = $videoStill;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getVideoStill()
-	{
-		return $this->videoStill;
-	}
+    /**
+     * @return string
+     */
+    public function getVideoStill()
+    {
+        return $this->videoStill;
+    }
 
-	/**
-	 * @param string $youtube
-	 */
-	public function setYoutube($youtube)
-	{
-		if(substr_count($youtube, 'iframe') > 0) {
-			$matches = array();
-			preg_match('|.*youtube.com/embed/(.*)"|iU', $youtube, $matches);
+    /**
+     * @param string $youtube
+     */
+    public function setYoutube($youtube)
+    {
+        if (substr_count($youtube, 'iframe') > 0) {
+            $matches = array();
+            preg_match('|.*youtube.com/embed/(.*)"|iU', $youtube, $matches);
 
-			if(!isset($matches[1])) $youtube = null;
-			else $youtube = $matches[1];
-		}
-		elseif(substr_count($youtube, 'v=') > 0)
-		{
-			$matches = array();
-			preg_match('|v=([^&]+)|i', $youtube, $matches);
+            if (!isset($matches[1])) {
+                $youtube = null;
+            } else {
+                $youtube = $matches[1];
+            }
+        } elseif (substr_count($youtube, 'v=') > 0) {
+            $matches = array();
+            preg_match('|v=([^&]+)|i', $youtube, $matches);
 
-			if(!isset($matches[1])) $youtube = null;
-			else $youtube = $matches[1];
-		}
-		elseif(substr_count($youtube, 'v/') > 0)
-		{
-			$matches = array();
-			preg_match('|v/([^/]+)|i', $youtube, $matches);
+            if (!isset($matches[1])) {
+                $youtube = null;
+            } else {
+                $youtube = $matches[1];
+            }
+        } elseif (substr_count($youtube, 'v/') > 0) {
+            $matches = array();
+            preg_match('|v/([^/]+)|i', $youtube, $matches);
 
-			if(!isset($matches[1])) $youtube = null;
-			else $youtube = $matches[1];
-		}
-		elseif(substr_count($youtube, 'youtu.be/') > 0)
-		{
-			$matches = array();
-			preg_match('|youtu\.be/([^/]+)|i', $youtube, $matches);
+            if (!isset($matches[1])) {
+                $youtube = null;
+            } else {
+                $youtube = $matches[1];
+            }
+        } elseif (substr_count($youtube, 'youtu.be/') > 0) {
+            $matches = array();
+            preg_match('|youtu\.be/([^/]+)|i', $youtube, $matches);
 
-			if(!isset($matches[1])) $youtube = null;
-			else $youtube = $matches[1];
-		}
-		else $youtube = null;
+            if (!isset($matches[1])) {
+                $youtube = null;
+            } else {
+                $youtube = $matches[1];
+            }
+        } else {
+            $youtube = null;
+        }
 
-		$this->youtube = $youtube;
-	}
+        $this->youtube = $youtube;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getYoutube()
-	{
-		return $this->youtube;
-	}
+    /**
+     * @return string
+     */
+    public function getYoutube()
+    {
+        return $this->youtube;
+    }
 
-	/**
-	 * Get a comment
-	 *
-	 * @param int $id		The id of the comment.
-	 * @return Comment
-	 */
-	public static function get($id)
-	{
-		// redefine
-		$id = (int) $id;
+    /**
+     * Can the user delete this item
+     *
+     * @param User $user
+     * @return bool
+     */
+    public function canDelete(User $user)
+    {
+        if ($user) {
+            if ($user->isAdmin) {
+                return true;
+            }
+            if ($this->userId == $user->id) {
+                return true;
+            }
+        }
 
-		// get data
-		$data = Site::getDB()->getRecord('SELECT i.*, UNIX_TIMESTAMP(i.created_on) AS created_on, UNIX_TIMESTAMP(i.edited_on) AS edited_on
-											FROM comments AS i
-											WHERE i.id = ?',
-											array($id));
+        return false;
+    }
 
-		// validate
-		if($data === null) return false;
+    /**
+     * Get a comment
+     *
+     * @param int $id The id of the comment.
+     * @return Comment
+     */
+    public static function get($id)
+    {
+        // redefine
+        $id = (int) $id;
 
-		// create instance
-		$item = new Comment();
+        // get data
+        $data = Site::getDB()->getRecord(
+            'SELECT i.*, UNIX_TIMESTAMP(i.created_on) AS created_on, UNIX_TIMESTAMP(i.edited_on) AS edited_on
+                                                        FROM comments AS i
+                                                        WHERE i.id = ?',
+            array($id)
+        );
 
-		// initialize
-		$item->initialize($data);
+        // validate
+        if ($data === null) {
+            return false;
+        }
 
-		// return
-		return $item;
-	}
+        // create instance
+        $item = new Comment();
 
-	/**
-	 * @return string
-	 */
-	public function getOGImageUrl()
-	{
-		if(SpoonFile::exists(PATH_WWW . '/files/comments/og/' . $this->id . '.png')) {
-			return '/files/comments/og/' . $this->id . '.png';
-		}
+        // initialize
+        $item->initialize($data);
 
-		// can we generate the image?
-		if(!SpoonFile::exists(PATH_WWW . '/files/comments/og/' . $this->id . '.png') && $this->getVideoStill() != '')
-		{
-			$stillPath = Site::getFilesPath($this->getVideoStill());
+        // return
+        return $item;
+    }
 
-			// create images
-			$still = new Imagick($stillPath);
-			$size = getimagesize($stillPath);
+    /**
+     * @return string
+     */
+    public function getOGImageUrl()
+    {
+        if (SpoonFile::exists(PATH_WWW . '/files/comments/og/' . $this->id . '.png')) {
+            return '/files/comments/og/' . $this->id . '.png';
+        }
 
-			// add emotion
-			$overlay = new Imagick(PATH_WWW . '/core/layout/images/emotion_overlays/' . $this->emotion . '.png');
-			$still->compositeimage($overlay, Imagick::COMPOSITE_DEFAULT, floor($size[0]) - 215, 10);
+        // can we generate the image?
+        if (!SpoonFile::exists(PATH_WWW . '/files/comments/og/' . $this->id . '.png') && $this->getVideoStill() != '') {
+            $stillPath = Site::getFilesPath($this->getVideoStill());
 
-			$overlay = new Imagick(PATH_WWW . '/core/layout/images/emotion_overlays/play_button.png');
-			$still->compositeimage(
-				$overlay,
-				Imagick::COMPOSITE_DEFAULT,
-				floor($size[0] / 2) - (216 / 2),
-				floor($size[1] / 2) - (216 / 2)
-			);
+            // create images
+            $still = new Imagick($stillPath);
+            $size = getimagesize($stillPath);
 
-			$still->writeimage(PATH_WWW . '/files/comments/og/' . $this->id . '.png');
+            // add emotion
+            $overlay = new Imagick(PATH_WWW . '/core/layout/images/emotion_overlays/' . $this->emotion . '.png');
+            $still->compositeimage($overlay, Imagick::COMPOSITE_DEFAULT, floor($size[0]) - 215, 10);
 
-			return '/files/comments/og/' . $this->id . '.png';
-		}
+            $overlay = new Imagick(PATH_WWW . '/core/layout/images/emotion_overlays/play_button.png');
+            $still->compositeimage(
+                $overlay,
+                Imagick::COMPOSITE_DEFAULT,
+                floor($size[0] / 2) - (216 / 2),
+                floor($size[1] / 2) - (216 / 2)
+            );
 
-		return '#';
-	}
+            $still->writeimage(PATH_WWW . '/files/comments/og/' . $this->id . '.png');
 
+            return '/files/comments/og/' . $this->id . '.png';
+        }
 
-	/**
-	 * Initialize the object.
-	 *
-	 * @param array $data		The data in an array.
-	 * @return Comment
-	 */
-	public function initialize($data)
-	{
-		if(isset($data['id']))
-		{
-			$this->id = (int) $data['id'];
-			$this->fullUrl = Spoon::get('url')->buildUrl('detail', 'comments') . '/' . $this->id;
-		}
-		if(isset($data['user_id'])) $this->userId = (int) $data['user_id'];
-		if(isset($data['title'])) $this->title = (string) $data['title'];
-		if(isset($data['text'])) $this->text = (string) $data['text'];
-		if(isset($data['video_id'])) $this->videoId = (string) $data['video_id'];
-		if(isset($data['video_still'])) $this->videoStill = (string) $data['video_still'];
-		if(isset($data['youtube'])) $this->youtube = (string) $data['youtube'];
-		if(isset($data['slideshare'])) $this->slideshare = (string) $data['slideshare'];
-		if(isset($data['soundcloud'])) $this->soundcloud = (string) $data['soundcloud'];
-		if(!empty($data['flickr'])) {
+        return '#';
+    }
+
+    /**
+     * Initialize the object.
+     *
+     * @param array $data The data in an array.
+     * @return Comment
+     */
+    public function initialize($data)
+    {
+        if (isset($data['id'])) {
+            $this->id = (int) $data['id'];
+            $this->fullUrl = Spoon::get('url')->buildUrl('detail', 'comments') . '/' . $this->id;
+        }
+        if (isset($data['user_id'])) {
+            $this->userId = (int) $data['user_id'];
+        }
+        if (isset($data['title'])) {
+            $this->title = (string) $data['title'];
+        }
+        if (isset($data['text'])) {
+            $this->text = (string) $data['text'];
+        }
+        if (isset($data['video_id'])) {
+            $this->videoId = (string) $data['video_id'];
+        }
+        if (isset($data['video_still'])) {
+            $this->videoStill = (string) $data['video_still'];
+        }
+        if (isset($data['youtube'])) {
+            $this->youtube = (string) $data['youtube'];
+        }
+        if (isset($data['slideshare'])) {
+            $this->slideshare = (string) $data['slideshare'];
+        }
+        if (isset($data['soundcloud'])) {
+            $this->soundcloud = (string) $data['soundcloud'];
+        }
+        if (!empty($data['flickr'])) {
             $this->flickr = $data['flickr'];
         }
-		if(isset($data['url'])) $this->url = (string) $data['url'];
-		if(isset($data['dropbox'])) $this->dropbox = (string) $data['dropbox'];
-		if(isset($data['file'])) $this->file = (string) $data['file'];
-		if(isset($data['picture'])) $this->picture = (string) $data['picture'];
-		if(isset($data['emotion'])) $this->emotion = (string) $data['emotion'];
-		if(isset($data['created_on'])) $this->createdOn = new DateTime('@' . $data['created_on']);
-		if(isset($data['edited_on'])) $this->editedOn = new DateTime('@' . $data['edited_on']);
-	}
+        if (isset($data['url'])) {
+            $this->url = (string) $data['url'];
+        }
+        if (isset($data['dropbox'])) {
+            $this->dropbox = (string) $data['dropbox'];
+        }
+        if (isset($data['file'])) {
+            $this->file = (string) $data['file'];
+        }
+        if (isset($data['picture'])) {
+            $this->picture = (string) $data['picture'];
+        }
+        if (isset($data['emotion'])) {
+            $this->emotion = (string) $data['emotion'];
+        }
+        if (isset($data['created_on'])) {
+            $this->createdOn = new DateTime('@' . $data['created_on']);
+        }
+        if (isset($data['edited_on'])) {
+            $this->editedOn = new DateTime('@' . $data['edited_on']);
+        }
+    }
 
-	/**
-	 * Save the user
-	 *
-	 * @return bool
-	 */
-	public function save()
-	{
-		$this->editedOn = new DateTime();
+    /**
+     * Save the user
+     *
+     * @return bool
+     */
+    public function save()
+    {
+        $this->editedOn = new DateTime();
 
-		if($this->videoId != '' && $this->videoStill == '')
-		{
-			$stillPath = PATH_WWW . '/files/comments/temp/' . $this->videoId  . '.png';
+        if ($this->videoId != '' && $this->videoStill == '') {
+            $stillPath = PATH_WWW . '/files/comments/temp/' . $this->videoId . '.png';
 
-			if(SpoonFile::exists($stillPath))
-			{
-				$still = new Imagick($stillPath);
-				$still->flopimage();
-				$still->writeimage($stillPath);
+            if (SpoonFile::exists($stillPath)) {
+                $still = new Imagick($stillPath);
+                $still->flopimage();
+                $still->writeimage($stillPath);
 
-				$filename = Site::getFilename() . '.png';
-				SpoonFile::move(
-					PATH_WWW . '/files/comments/temp/' . $this->videoId  . '.png',
-					Site::getFilesPath($filename)
-				);
+                $filename = Site::getFilename() . '.png';
+                SpoonFile::move(
+                    PATH_WWW . '/files/comments/temp/' . $this->videoId . '.png',
+                    Site::getFilesPath($filename)
+                );
 
-				$this->videoStill = $filename;
-			}
-		}
+                $this->videoStill = $filename;
+            }
+        }
 
-		// build record
-		$item['user_id'] = $this->userId;
-		$item['title'] = $this->title;
-		$item['text'] = $this->text;
-		$item['video_id'] = $this->videoId;
-		$item['video_still'] = $this->videoStill;
-		$item['youtube'] = $this->youtube;
-		$item['slideshare'] = $this->slideshare;
-		$item['soundcloud'] = $this->soundcloud;
-		$item['flickr'] = $this->getFlickr();
-		$item['url'] = $this->url;
-		$item['dropbox'] = $this->dropbox;
+        // build record
+        $item['user_id'] = $this->userId;
+        $item['title'] = $this->title;
+        $item['text'] = $this->text;
+        $item['video_id'] = $this->videoId;
+        $item['video_still'] = $this->videoStill;
+        $item['youtube'] = $this->youtube;
+        $item['slideshare'] = $this->slideshare;
+        $item['soundcloud'] = $this->soundcloud;
+        $item['flickr'] = $this->getFlickr();
+        $item['url'] = $this->url;
+        $item['dropbox'] = $this->dropbox;
 
-		$item['file'] = $this->file;
-		$item['picture'] = $this->picture;
-		$item['emotion'] = $this->emotion;
-		$item['edited_on'] = Site::getUTCDate('Y-m-d H:i:s', $this->editedOn->getTimestamp());
+        $item['file'] = $this->file;
+        $item['picture'] = $this->picture;
+        $item['emotion'] = $this->emotion;
+        $item['edited_on'] = Site::getUTCDate('Y-m-d H:i:s', $this->editedOn->getTimestamp());
 
-		// non existing
-		if($this->id === null)
-		{
-			$this->createdOn = new DateTime();
-			$item['created_on'] = Site::getUTCDate('Y-m-d H:i:s', $this->createdOn->getTimestamp());
-			$this->id = Site::getDB(true)->insert('comments', $item);
-		}
-		else Site::getDB(true)->update('comments', $item, 'id = ?', $this->id);
+        // non existing
+        if ($this->id === null) {
+            $this->createdOn = new DateTime();
+            $item['created_on'] = Site::getUTCDate('Y-m-d H:i:s', $this->createdOn->getTimestamp());
+            $this->id = Site::getDB(true)->insert('comments', $item);
+        } else {
+            Site::getDB(true)->update('comments', $item, 'id = ?', $this->id);
+        }
 
-		$this->fullUrl = Spoon::get('url')->buildUrl('detail', 'comments') . '/' . $this->id;
+        $this->fullUrl = Spoon::get('url')->buildUrl('detail', 'comments') . '/' . $this->id;
 
-		// return
-		return true;
-	}
+        // return
+        return true;
+    }
 
-	/**
-	 * Remove an object
-	 */
-	public function delete()
-	{
-		// delete files
-		if($this->videoStill) SpoonFile::delete(Site::getFilesPath($this->videoStill));
-		if($this->file) SpoonFile::delete(Site::getFilesPath($this->file));
-		if($this->picture) SpoonFile::delete(Site::getFilesPath($this->picture));
-		$og = PATH_WWW . '/files/comments/og/' . $this->id . '.png';
-		if(SpoonFile::exists($og)) SpoonFile::delete($og);
-		$temp = PATH_WWW . '/files/comments/temp/' . $this->videoId . '.png';
-		if(SpoonFile::exists($temp)) SpoonFile::delete($temp);
+    /**
+     * Remove an object
+     */
+    public function delete()
+    {
+        // delete files
+        if ($this->videoStill) {
+            SpoonFile::delete(Site::getFilesPath($this->videoStill));
+        }
+        if ($this->file) {
+            SpoonFile::delete(Site::getFilesPath($this->file));
+        }
+        if ($this->picture) {
+            SpoonFile::delete(Site::getFilesPath($this->picture));
+        }
+        $og = PATH_WWW . '/files/comments/og/' . $this->id . '.png';
+        if (SpoonFile::exists($og)) {
+            SpoonFile::delete($og);
+        }
+        $temp = PATH_WWW . '/files/comments/temp/' . $this->videoId . '.png';
+        if (SpoonFile::exists($temp)) {
+            SpoonFile::delete($temp);
+        }
 
-		Site::getDB(true)->delete('comments', 'id = ?', $this->id);
-	}
+        Site::getDB(true)->delete('comments', 'id = ?', $this->id);
+    }
 
-	/**
-	 * Return the object as an array
-	 *
-	 * @return array
-	 */
-	public function toArray($onSite = false)
-	{
-		// build array
-		$item['id'] = $this->id;
-		$item['user_id'] = $this->getUserId();
-		$item['title'] = $this->getTitle();
-		$item['text'] = $this->getText();
-		$item['videoId'] = $this->getVideoId();
-		$item['videoStill'] = $this->getVideoStill();
-		$item['videoStillUrl'] = ($this->getVideoStill() != null) ? Site::getFilesUrl($this->getVideoStill()) : null;
-		$item['youtube'] = $this->getYoutube();
-		$item['slideshare'] = $this->getSlideshare();
-		$item['soundcloud'] = $this->getSoundcloud();
-		$item['flickr'] = $this->getFlickr();
-		$item['url'] = $this->getUrl();
-		$item['dropbox'] = $this->getDropbox();
-		$item['file'] = $this->getFile();
-		$item['fileUrl'] = ($this->getFile() != null) ? CommentsHelper::getForceUrl($this->id, 'file') : null;
-		$item['picture'] = $this->getPicture();
-		$item['pictureUrl'] = ($this->getPicture() != null) ? CommentsHelper::getForceUrl($this->id, 'picture') : null;
-		$item['emotion'] = $this->getEmotion();
-		$item['createdOn'] = ($this->createdOn !== null) ? $this->createdOn->getTimestamp() : null;
-		$item['editedOn'] = ($this->editedOn !== null) ? $this->editedOn->getTimestamp() : null;
+    /**
+     * Return the object as an array
+     *
+     * @return array
+     */
+    public function toArray($onSite = false)
+    {
+        // build array
+        $item['id'] = $this->id;
+        $item['user_id'] = $this->getUserId();
+        $item['title'] = $this->getTitle();
+        $item['text'] = $this->getText();
+        $item['videoId'] = $this->getVideoId();
+        $item['videoStill'] = $this->getVideoStill();
+        $item['videoStillUrl'] = ($this->getVideoStill() != null) ? Site::getFilesUrl($this->getVideoStill()) : null;
+        $item['youtube'] = $this->getYoutube();
+        $item['slideshare'] = $this->getSlideshare();
+        $item['soundcloud'] = $this->getSoundcloud();
+        $item['flickr'] = $this->getFlickr();
+        $item['url'] = $this->getUrl();
+        $item['dropbox'] = $this->getDropbox();
+        $item['file'] = $this->getFile();
+        $item['fileUrl'] = ($this->getFile() != null) ? CommentsHelper::getForceUrl($this->id, 'file') : null;
+        $item['picture'] = $this->getPicture();
+        $item['pictureUrl'] = ($this->getPicture() != null) ? CommentsHelper::getForceUrl($this->id, 'picture') : null;
+        $item['emotion'] = $this->getEmotion();
+        $item['createdOn'] = ($this->createdOn !== null) ? $this->createdOn->getTimestamp() : null;
+        $item['editedOn'] = ($this->editedOn !== null) ? $this->editedOn->getTimestamp() : null;
 
-		if($onSite)
-		{
-			if($item['slideshare'] != '')
-			{
-				$item['slideshare'] = preg_replace('|width="[0-9]*"|iU', 'width="610"', $item['slideshare']);
-				$item['slideshare'] = preg_replace('|height="[0-9]*"|iU', 'height="450"', $item['slideshare']);
-			}
-		}
+        if ($onSite) {
+            if ($item['slideshare'] != '') {
+                $item['slideshare'] = preg_replace('|width="[0-9]*"|iU', 'width="610"', $item['slideshare']);
+                $item['slideshare'] = preg_replace('|height="[0-9]*"|iU', 'height="450"', $item['slideshare']);
+            }
+        }
 
-		return $item;
-	}
+        return $item;
+    }
 }
 
-class CommentsHelper {
-	public static function getForceUrl($id, $type)
-	{
-		$url = Spoon::get('url');
-		return $url->buildUrl('force', 'comments', null, array('id' => $id, 'type' => $type));
-	}
+class CommentsHelper
+{
+    public static function getForceUrl($id, $type)
+    {
+        $url = Spoon::get('url');
 
-	/**
-	 * Get the most recent comments
-	 *
-	 * @param int[optional] $limit
-	 * @return array
-	 */
-	public static function getMostRecent($limit = 8)
-	{
-		$data = Site::getDB()->getRecords(
-			'SELECT i.*, UNIX_TIMESTAMP(i.created_on) AS created_on, UNIX_TIMESTAMP(i.edited_on) AS edited_on
-			FROM comments AS i
-			ORDER BY i.created_on DESC
-			LIMIT ?',
-			array($limit)
-		);
+        return $url->buildUrl('force', 'comments', null, array('id' => $id, 'type' => $type));
+    }
 
-		$return = array();
+    /**
+     * Get the most recent comments
+     *
+     * @param int [optional] $limit
+     * @return array
+     */
+    public static function getMostRecent($limit = 8)
+    {
+        $data = Site::getDB()->getRecords(
+            'SELECT i.*, UNIX_TIMESTAMP(i.created_on) AS created_on, UNIX_TIMESTAMP(i.edited_on) AS edited_on
+            FROM comments AS i
+            ORDER BY i.created_on DESC
+            LIMIT ?',
+            array($limit)
+        );
 
-		if(!empty($data))
-		{
-			foreach($data as $row)
-			{
-				$comment = new Comment();
-				$comment->initialize($row);
-				$return[$row['id']] = $comment;
-			}
-		}
+        $return = array();
 
-		return $return;
-	}
+        if (!empty($data)) {
+            foreach ($data as $row) {
+                $comment = new Comment();
+                $comment->initialize($row);
+                $return[$row['id']] = $comment;
+            }
+        }
 
-	/**
-	 * @param $id
-	 * @return array
-	 */
-	public static function getForUser($id)
-	{
-		$data = Site::getDB()->getRecords(
-			'SELECT i.*, UNIX_TIMESTAMP(i.created_on) AS created_on, UNIX_TIMESTAMP(i.edited_on) AS edited_on
-			FROM comments AS i
-			WHERE i.user_id = ?
-			ORDER BY i.created_on DESC',
-			array($id)
-		);
+        return $return;
+    }
 
-		$return = array();
+    /**
+     * @param $id
+     * @return array
+     */
+    public static function getForUser($id)
+    {
+        $data = Site::getDB()->getRecords(
+            'SELECT i.*, UNIX_TIMESTAMP(i.created_on) AS created_on, UNIX_TIMESTAMP(i.edited_on) AS edited_on
+            FROM comments AS i
+            WHERE i.user_id = ?
+            ORDER BY i.created_on DESC',
+            array($id)
+        );
 
-		if(!empty($data))
-		{
-			foreach($data as $row)
-			{
-				$comment = new Comment();
-				$comment->initialize($row);
-				$return[$row['id']] = $comment;
-			}
-		}
+        $return = array();
 
-		return $return;
-	}
+        if (!empty($data)) {
+            foreach ($data as $row) {
+                $comment = new Comment();
+                $comment->initialize($row);
+                $return[$row['id']] = $comment;
+            }
+        }
+
+        return $return;
+    }
 }

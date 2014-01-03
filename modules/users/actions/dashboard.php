@@ -3,60 +3,59 @@
 /**
  * UsersDashboard
  *
- * @package		users
- * @subpackage	dashboard
+ * @package        users
+ * @subpackage     dashboard
  *
- * @author 		Tijs Verkoyen <tijs@sumocoders.be>
- * @since		1.0
+ * @author         Tijs Verkoyen <tijs@sumocoders.be>
+ * @since          1.0
  */
 class UsersDashboard extends SiteBaseAction
 {
-	/**
-	 * Execute the action
-	 *
-	 * @return void
-	 */
-	public function execute()
-	{
-		// check if logged in
-		if(!$this->currentUser)
-		{
-			$this->redirect(
-				$this->url->buildUrl('index', 'error', null, array('code' => 403, 'message' => 'forbidden')),
-				403
-			);
-		}
+    /**
+     * Execute the action
+     *
+     * @return void
+     */
+    public function execute()
+    {
+        // check if logged in
+        if (!$this->currentUser) {
+            $this->redirect(
+                $this->url->buildUrl('index', 'error', null, array('code' => 403, 'message' => 'forbidden')),
+                403
+            );
+        }
 
-		$this->parseReports();
-		$this->parse();
-		$this->tpl->assign('pageTitle', 'Dashboard');
-		$this->display();
-	}
+        $this->parseReports();
+        $this->parse();
+        $this->tpl->assign('pageTitle', 'Dashboard');
+        $this->display();
+    }
 
-	/**
-	 * Parse
-	 *
-	 * @return void
-	 */
-	private function parse()
-	{
-		$comments = CommentsHelper::getForUser($this->currentUser->id);
-		$items = array();
-		$i = 1;
-		foreach($comments as $comment)
-		{
-			$data = $comment->toArray();
-			$data['user'] = $this->currentUser->toArray();
-			$data['newRow'] = false;
-			if($i % 4 == 0) {
-				$data['newRow'] = true;
-				$i = 1;
-			}
+    /**
+     * Parse
+     *
+     * @return void
+     */
+    private function parse()
+    {
+        $comments = CommentsHelper::getForUser($this->currentUser->id);
+        $items = array();
+        $i = 1;
+        foreach ($comments as $comment) {
+            $data = $comment->toArray();
+            $data['user'] = $this->currentUser->toArray();
+            $data['newRow'] = false;
+            if ($i % 4 == 0) {
+                $data['newRow'] = true;
+                $i = 1;
+            }
+            $data['canDelete'] = $comment->canDelete($this->currentUser);
 
-			$items[] = $data;
-			$i++;
-		}
+            $items[] = $data;
+            $i++;
+        }
 
-		$this->tpl->assign('items', $items);
-	}
+        $this->tpl->assign('items', $items);
+    }
 }
