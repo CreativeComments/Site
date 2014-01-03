@@ -435,6 +435,26 @@ class Comment
     }
 
     /**
+     * Can the user delete this item
+     *
+     * @param User $user
+     * @return bool
+     */
+    public function canDelete(User $user)
+    {
+        if ($user) {
+            if ($user->isAdmin) {
+                return true;
+            }
+            if ($this->userId == $user->id) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
      * Get a comment
      *
      * @param int $id The id of the comment.
