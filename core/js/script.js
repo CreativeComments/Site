@@ -134,6 +134,8 @@ jsSite.api = {
 			var flash = document.getElementById('videorecorder');
 
 			try {
+        console.log(flash.hasWebcam());
+
 				if(!flash.hasWebcam()) {
 					$('#videorecorder').remove();
 					$('body').html(
@@ -146,6 +148,7 @@ jsSite.api = {
 					);
 				}
 			} catch(e) {
+        console.log(e);
 				$('#videorecorder').remove();
 				$('body').html(
 					'<div id="flashContent" style="visibility: visible;">' +
