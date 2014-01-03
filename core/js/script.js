@@ -130,12 +130,10 @@ jsSite.api = {
 
 
 
-		setInterval(function() {
+		var interval = setInterval(function() {
 			var flash = document.getElementById('videorecorder');
 
 			try {
-        console.log(flash.hasWebcam());
-
 				if(!flash.hasWebcam()) {
 					$('#videorecorder').remove();
 					$('body').html(
@@ -147,6 +145,7 @@ jsSite.api = {
 						'</div>'
 					);
 				}
+        clearInterval(interval);
 			} catch(e) {
         console.log(e);
 				$('#videorecorder').remove();
