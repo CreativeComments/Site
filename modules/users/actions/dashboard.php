@@ -50,6 +50,7 @@ class UsersDashboard extends SiteBaseAction
                 $data['newRow'] = true;
                 $i = 1;
             }
+            $data['canDelete'] = $comment->canDelete($this->currentUser);
 
             $items[] = $data;
             $i++;

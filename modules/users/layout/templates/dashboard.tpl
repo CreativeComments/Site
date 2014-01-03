@@ -107,6 +107,9 @@
                                 {$items.title|truncate:30}
                             </a>
                         </h4>
+                        {option:items.canDelete}
+                            <a class="iconDelete confirm" data-message="{$msgDeleteCommentConfirmation}" href="{$var|buildurl:'delete':'comments'}/{$items.id}">{$lblDelete}</a>
+                        {/option:items.canDelete}
                     </header>
                     <div class="user {$items.emotion}">
                         <div class="avatar">
