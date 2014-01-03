@@ -437,10 +437,10 @@ class Comment
     /**
      * Can the user delete this item
      *
-     * @param User $user
+     * @param User|bool $user
      * @return bool
      */
-    public function canDelete(User $user)
+    public function canDelete($user)
     {
         if ($user) {
             if ($user->isAdmin) {
