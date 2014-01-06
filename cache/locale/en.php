@@ -64,6 +64,7 @@ $lbl['Type'] = 'type';
 $lbl['Users'] = 'users';
 $lbl['With'] = 'with';
 $lbl['YourComments'] = 'your comments';
+$lbl['CreateNow'] = 'Create now';
 
 // init var
 $msg = array();

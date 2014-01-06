@@ -4,7 +4,7 @@
   #header {
     .container {
       .row-fluid {
-        .span5 {
+        .logoHeader {
           border-bottom: none;
           margin-top: 0;
 
@@ -15,10 +15,14 @@
           }
         }
 
-        .span7 {
+        .headerMenu {
           .row-fluid {
-            .span3 {
-              width: 26%;
+            .ctaHeader {
+              .createNow {
+                margin-top: 14px;
+              }
+            }
+            .dropdownMenu {
               border-bottom: none;
               margin-bottom: 0;
               margin-top: 20px;
@@ -39,12 +43,32 @@
                 }
               }
             }
-            .span6 {
-              width: 45%;
+            .userBlock {
 
               a {
-                width: 75%;
                 text-align: right;
+                .link {
+                  width: 65%;
+                }
+              }
+
+              &.loggedIn {
+                margin: 10px 0 15px;
+
+                .userLoggedIn {
+                  float: left;
+                  width: 70%;
+
+                  a {
+                    display: block;
+                    margin: 0;
+                  }
+                }
+
+                .facebookSignOff {
+                  font-size: 0.8em;
+                  margin: 0;
+                }
               }
             }
           }
@@ -76,25 +100,25 @@
 
             a {
               &#demo {
-              position: absolute;
-              display: block;
-              width: 175px;
-              height: 90px;
-              top: 88px;
-              left: 135px;
-              @include squish-text;
+                position: absolute;
+                display: block;
+                width: 175px;
+                height: 90px;
+                top: 88px;
+                left: 135px;
+                @include squish-text;
               }
             }
-            
+
             a {
               &#createNow {
-              position: absolute;
-              bottom: 19px;
-              right: 5px;
-              display: block;
-              width: 165px;
-              height: 47px;
-              @include squish-text;
+                position: absolute;
+                bottom: 19px;
+                right: 5px;
+                display: block;
+                width: 165px;
+                height: 47px;
+                @include squish-text;
               }
             }
 
@@ -511,6 +535,33 @@
 
 /* desktop */
 @media (min-width: 979px) {
+
+  #header {
+    .container {
+      .row-fluid {
+        .logoHeader {
+          h1 {
+            a {
+              width: 240px;
+              text-align: left;
+              font-size: 20px;
+            }
+          }
+        }
+        .headerMenu {
+          .row-fluid {
+            .userBlock {
+              a {
+                .link {
+                  width: 75%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 
   #pages, #business {
     .container {

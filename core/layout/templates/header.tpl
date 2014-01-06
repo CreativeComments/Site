@@ -1,15 +1,18 @@
 <div id="header">
     <div class="container">
         <div class="row-fluid">
-            <div class="span5">
+            <div class="span4 logoHeader">
                 <h1>
                     <a href="{$var|buildurl:'index':'pages'}" rel="home">{$SITE_DEFAULT_TITLE}</a>
                 </h1>
             </div>
 
-            <div class="span7">
+            <div class="span8 headerMenu">
                 <div class="row-fluid">
-                    <div class="span3">
+                    <div class="span4 ctaHeader">
+                        {option:currentUser}
+                            <a href="{$var|buildurl:'plugins':'pages'}" id="createNow" class="btn createNow">{$lblCreateNow}</a>
+                        {/option:currentUser}
                         {*
                             Disabled this as there are no multiple languages yet
                                                 <div class="dropdown">
@@ -35,7 +38,7 @@
                                                 </div>
                         *}
                     </div>
-                    <div class="span3">
+                    <div class="span3 dropdownMenu offset1">
                         <div class="dropdown">
                             <a class="dropdown-toggle about" data-toggle="dropdown" href="#">
                                 <span class="about"></span>
@@ -52,18 +55,20 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="span6">
+                    <div class="span4 userBlock{option:currentUser} loggedIn{/option:currentUser}">
                         {option:currentUser}
+                            <div class="userLoggedIn">
                             <a href="{$var|buildurl:'dashboard':'users'}">
                                 {$currentUser.name}
                             </a>
+                            <a href="#" class="facebookSignOff">
+                                {$lblSignOff}
+                            </a>
+                            </div>
                             <div class="avatar">
                                 <div class="top"></div>
                                 <img src="{$currentUser.settings.avatar}" width="40" height="40" alt="" />
                             </div>
-                            <a href="#" class="facebookSignOff">
-                                {$lblSignOff}
-                            </a>
                         {/option:currentUser}
                         {option:!currentUser}
                             <div class="dropdown user">
