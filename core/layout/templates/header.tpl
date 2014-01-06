@@ -9,9 +9,9 @@
 
             <div class="span8 headerMenu">
                 <div class="row-fluid">
-                    <div class="span4">
+                    <div class="span4 ctaHeader">
                         {option:currentUser}
-                            <a href="{$var|buildurl:'plugins':'pages'}" class="btn">{lblCreateNow}</a>
+                            <a href="{$var|buildurl:'plugins':'pages'}" class="btn createNow">{$lblCreateNow}</a>
                         {/option:currentUser}
                         {*
                             Disabled this as there are no multiple languages yet

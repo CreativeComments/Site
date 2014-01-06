@@ -140,6 +140,14 @@ a {
 
             .headerMenu {
                 .row-fluid {
+                    .ctaHeader {
+                      .createNow {
+                        padding: 8px 15px;
+                        text-align: left;
+                        @include svg-with-png-fallback(svg/icon_cta_btn, no-repeat 96% 55% #dc3731, $dimensions:false);
+                        @include box-shadow(0 2px 0 0 rgba(160, 31, 31, 1));
+                      }
+                    }
                     .Userblock {
                         .user {
                             a {
@@ -162,7 +170,6 @@ a {
                             }
                         }
                     }
-
                     .dropdownMenu {
                         margin-top: 10px;
                         border-bottom: 1px solid #ededed;
