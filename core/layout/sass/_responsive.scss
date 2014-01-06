@@ -539,6 +539,15 @@
   #header {
     .container {
       .row-fluid {
+        .logoHeader {
+          h1 {
+            a {
+              width: 240px;
+              text-align: left;
+              font-size: 20px;
+            }
+          }
+        }
         .headerMenu {
           .row-fluid {
             .Userblock {
