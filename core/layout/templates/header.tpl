@@ -10,9 +10,9 @@
             <div class="span8 headerMenu">
                 <div class="row-fluid">
                     <div class="span4 ctaHeader">
-                        {*option:currentUser*}
+                        {option:currentUser}
                             <a href="{$var|buildurl:'plugins':'pages'}" id="createNow" class="btn createNow">{$lblCreateNow}</a>
-                        {*/option:currentUser*}
+                        {/option:currentUser}
                         {*
                             Disabled this as there are no multiple languages yet
                                                 <div class="dropdown">
