@@ -3,7 +3,7 @@
 #header {
 	.container {
 		.row-fluid{
-			.span5 {
+			.logoHeader {
 				h1 {
 					a {
 						@include background(image-url("ie/logo.png") no-repeat);
@@ -12,9 +12,9 @@
 				}
 			}
 			
-			.span7 {
+			.headerMenu {
 				.row-fluid {
-					.span3 {
+					.dropdownMenu {
 						.language {
 							.world {
 								@include background(image-url("ie/menu_world.png") no-repeat);
@@ -34,7 +34,7 @@
 							}
 						}
 					}
-					.span6 {
+					.Userblock {
 						.avatar {
 							@include background(image-url("ie/avatar.png") no-repeat);
 							background-position: center 40%;
