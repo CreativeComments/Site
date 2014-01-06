@@ -4,7 +4,7 @@
   #header {
     .container {
       .row-fluid {
-        .span5 {
+        .logoHeader {
           border-bottom: none;
           margin-top: 0;
 
@@ -15,10 +15,9 @@
           }
         }
 
-        .span7 {
+        .headerMenu {
           .row-fluid {
-            .span3 {
-              width: 26%;
+            .dropdownMenu {
               border-bottom: none;
               margin-bottom: 0;
               margin-top: 20px;
@@ -39,12 +38,32 @@
                 }
               }
             }
-            .span6 {
-              width: 45%;
+            .Userblock {
 
               a {
-                width: 75%;
                 text-align: right;
+                .link {
+                  width: 65%;
+                }
+              }
+
+              &.loggedIn {
+                margin: 10px 0 15px;
+
+                .userLoggedIn {
+                  float: left;
+                  width: 70%;
+
+                  a {
+                    display: block;
+                    margin: 0;
+                  }
+                }
+
+                .facebookSignOff {
+                  font-size: 0.8em;
+                  margin: 0;
+                }
               }
             }
           }
@@ -511,6 +530,24 @@
 
 /* desktop */
 @media (min-width: 979px) {
+
+  #header {
+    .container {
+      .row-fluid {
+        .headerMenu {
+          .row-fluid {
+            .Userblock {
+              a {
+                .link {
+                  width: 75%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 
   #pages, #business {
     .container {

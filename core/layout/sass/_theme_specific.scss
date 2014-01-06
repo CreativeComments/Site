@@ -111,7 +111,7 @@ a {
 
         .row-fluid {
 
-            .span5 {
+            .logoHeader {
                 margin-top: 20px;
                 border-bottom: 1px solid #ededed;
 
@@ -121,13 +121,14 @@ a {
                         padding-left: 55px;
                         display: block;
                         height: 45px;
-                        width: 200px;
-                        font-size: 20px;
+                        width: 170px;
+                        font-size: 17px;
                         font-family: $openSansBold;
                         color: #424141;
                         @include background(inline-image("svg/logo.svg") no-repeat);
                         background-position: left center;
                         margin: 0 auto;
+                      text-align: right;
 
                         &:hover {
                             color: #000;
@@ -137,17 +138,19 @@ a {
                 }
             }
 
-            .span7 {
+            .headerMenu {
                 .row-fluid {
-                    .span6 {
+                    .Userblock {
                         .user {
                             a {
-                                margin-top: 0;
+                                display: block;
+                              @include clearfix;
                             }
 
                             span {
                                 line-height: 40px;
                                 margin-right: 7px;
+                              float: left;
                             }
 
                             ul {
@@ -160,7 +163,7 @@ a {
                         }
                     }
 
-                    .span3 {
+                    .dropdownMenu {
                         margin-top: 10px;
                         border-bottom: 1px solid #ededed;
 
@@ -221,13 +224,12 @@ a {
                     }
                 }
 
-                .span6 {
-                    margin: 10px 0;
+                .Userblock {
+
                     overflow: show;
 
                     a {
-                        margin-top: 8px;
-                        float: left;
+                        margin: 10px 0;
                         color: #9d9d9d;
 
                         &:hover {
@@ -235,9 +237,22 @@ a {
                         }
                     }
 
-                    .facebookSignOff {
+                    &.loggedIn {
+                      margin: 15px 0 20px;
+
+                      .userLoggedIn {
+                        float: left;
+
+                        a {
+                          display: block;
+                          margin: 0;
+                        }
+                      }
+
+                      .facebookSignOff {
                         font-size: 0.8em;
                         margin: 0;
+                      }
                     }
 
                     .avatar {
