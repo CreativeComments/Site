@@ -55,7 +55,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="span4 Userblock {option:currentUser}loggedIn{/option:currentUser}">
+                    <div class="span4 userBlock{option:currentUser} loggedIn{/option:currentUser}">
                         {option:currentUser}
                             <div class="userLoggedIn">
                             <a href="{$var|buildurl:'dashboard':'users'}">
