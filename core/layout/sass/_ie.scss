@@ -1,87 +1,85 @@
 .ie8 {
 
-#header {
-	.container {
-		.row-fluid{
-			.logoHeader {
-				h1 {
-					a {
-						@include background(image-url("ie/logo.png") no-repeat);
-						background-position: left center;
-					}
-				}
-			}
-			
-			.headerMenu {
-				.row-fluid {
-					.dropdownMenu {
-						.language {
-							.world {
-								@include background(image-url("ie/menu_world.png") no-repeat);
-								margin-top: 2px;
-							}
-							.icon {
-								@include background(image-url("ie/select_icon.png") no-repeat);
-							}
-						}
-						
-						.about {
-							.about {
-								@include background(image-url("ie/menu_about.png") no-repeat);
-							}
-							.icon {
-								@include background(image-url("ie/select_icon.png") no-repeat);
-							}
-						}
-					}
-					.Userblock {
-						.avatar {
-							@include background(image-url("ie/avatar.png") no-repeat);
-							background-position: center 40%;
-							
-							.top {
-								@include background(image-url("ie/avatar_top.png") no-repeat);
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
+  #header {
+    .container {
+      .row-fluid {
+        .logoHeader {
+          h1 {
+            a {
+              @include background(image-url("ie/logo.png") no-repeat);
+              background-position: left center;
+            }
+          }
+        }
 
-#pages, #business {
-	.container {
-		.row-fluid {
-			.graphicHolder {
-				.graphic {
-				&.business {
-					@include background(image-url("ie/graphic_business.png") no-repeat);
-				}
-				}
-			}
-			.intro {
-				.facebookRegister {
-					@include background(image-url("ie/facebook.png") no-repeat #334f8a);
-				background-position: 8px 0;
-				}
-              .twitterRegister {
-                @include background(image-url("ie/twitter.png") no-repeat #0eb5e9);
-
+        .headerMenu {
+          .row-fluid {
+            .dropdownMenu {
+              .language {
+                .world {
+                  @include background(image-url("ie/menu_world.png") no-repeat);
+                  margin-top: 2px;
+                }
+                .icon {
+                  @include background(image-url("ie/select_icon.png") no-repeat);
+                }
               }
-			}
 
+              .about {
+                .about {
+                  @include background(image-url("ie/menu_about.png") no-repeat);
+                }
+                .icon {
+                  @include background(image-url("ie/select_icon.png") no-repeat);
+                }
+              }
+            }
+            .Userblock {
+              .avatar {
+                @include background(image-url("ie/avatar.png") no-repeat);
+                background-position: center 40%;
+
+                .top {
+                  @include background(image-url("ie/avatar_top.png") no-repeat);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #pages, #business {
+    .container {
+      .row-fluid {
+        .graphicHolder {
+          .graphic {
+            &.business {
+              @include background(image-url("ie/graphic_business.png") no-repeat);
+            }
+          }
+        }
+        .intro {
           .facebookRegister {
             @include background(image-url("ie/facebook.png") no-repeat #334f8a);
             background-position: 8px 0;
           }
           .twitterRegister {
             @include background(image-url("ie/twitter.png") no-repeat #0eb5e9);
-
           }
-		}
-	}
-}
+        }
+
+        .facebookRegister {
+          @include background(image-url("ie/facebook.png") no-repeat #334f8a);
+          background-position: 8px 0;
+        }
+        .twitterRegister {
+          @include background(image-url("ie/twitter.png") no-repeat #0eb5e9);
+        }
+      }
+    }
+  }
 
   .loginBtns {
     .btn {
@@ -104,345 +102,344 @@
     }
   }
 
-#grid {
-	.subMenu {
-		.row-fluid {
-			.title {
-				h3 {
-					@include background(image-url("ie/title_icon.png") no-repeat);
-					background-position: left center;
-				}
-			}
-			.category {
-				.dropdown {
-					.btn {
-						.icon {
-							@include background(image-url("ie/select_icon.png") no-repeat);
-						}
-					}
-				}
-			}
-			.emotion {
-				ul {
-					li {
-					
-						&.active {
-							a {
-								&.sad {
-								@include background(image-url("ie/sad_active.png") no-repeat);
-							}
-							&.normal {
-								@include background(image-url("ie/normal_active.png") no-repeat);
-							}
-							&.happy {
-								@include background(image-url("ie/happy_active.png") no-repeat);
-							}
-							}
-						}
-					
-					
-						a {
-							&.sad {
-								@include background(image-url("ie/sad.png") no-repeat);
-							}
-							&.normal {
-								@include background(image-url("ie/normal.png") no-repeat);
-							}
-							&.happy {
-								@include background(image-url("ie/happy.png") no-repeat);
-							}
-							
-							&:hover {
-								&.sad {
-								@include background(image-url("ie/sad_active.png") no-repeat);
-							}
-							&.normal {
-								@include background(image-url("ie/normal_active.png") no-repeat);
-							}
-							&.happy {
-								@include background(image-url("ie/happy_active.png") no-repeat);
-							}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	.itemGrid {
-		.item {
-		
-			.videoHolder {
-				.video {
-					@include background(image-url("ie/no_image.png") no-repeat center center #ededed);
-					
-					&.loading {
-						@include background(image-url("loader.gif") no-repeat center center #ededed);
-					}
-				}
-			}
-			.user {
-				
-				&.sad {
-					@include background(image-url("ie/sad_active.png") no-repeat);
-					background-position: 95% center;
-				}
-				
-				&.neutral {
-					@include background(image-url("ie/normal_active.png") no-repeat);
-					background-position: 95% center;
-				}
-				
-				&.happy {
-					@include background(image-url("ie/happy_active.png") no-repeat);
-					background-position: 95% center;
-				}
-			
-				.avatar {
-					.top {
-						@include background(image-url("ie/avatar_top.png") no-repeat);
-					}
-				}
-			}
-			&.ads {
-				adBlock {
-					@include background(image-url("adblock.png") no-repeat);
-				}
-			}
-		}
-	}
-}
+  #grid {
+    .subMenu {
+      .row-fluid {
+        .title {
+          h3 {
+            @include background(image-url("ie/title_icon.png") no-repeat);
+            background-position: left center;
+          }
+        }
+        .category {
+          .dropdown {
+            .btn {
+              .icon {
+                @include background(image-url("ie/select_icon.png") no-repeat);
+              }
+            }
+          }
+        }
+        .emotion {
+          ul {
+            li {
 
-#footer {
-	.row-fluid {
-		.logo {
-			@include background(image-url("ie/logo_footer.png") no-repeat);
-		}
-		.social {
-			ul {
-				li {
-				margin-right: 5px;
-					a {
-						&.google {
-							@include background(image-url("ie/footer_google.png") no-repeat);
-						}
-						&.facebook {
-							@include background(image-url("ie/footer_facebook.png") no-repeat);
-						}
-						&.twitter {
-							@include background(image-url("ie/footer_twitter.png") no-repeat);
-						}
-						
-						&:hover {
-							&.google {
-							background-position: 0 -55px;
-						}
-						&.facebook {
-							background-position: 0 -55px;
-						}
-						&.twitter {
-							background-position: 0 -55px;
-						}
-						}
-					}
-				}
-			}
-		}
-	}
-}
+              &.active {
+                a {
+                  &.sad {
+                    @include background(image-url("ie/sad_active.png") no-repeat);
+                  }
+                  &.normal {
+                    @include background(image-url("ie/normal_active.png") no-repeat);
+                  }
+                  &.happy {
+                    @include background(image-url("ie/happy_active.png") no-repeat);
+                  }
+                }
+              }
 
-#erroricon {
-	@include background(image-url("ie/error.png") no-repeat);
-}
+              a {
+                &.sad {
+                  @include background(image-url("ie/sad.png") no-repeat);
+                }
+                &.normal {
+                  @include background(image-url("ie/normal.png") no-repeat);
+                }
+                &.happy {
+                  @include background(image-url("ie/happy.png") no-repeat);
+                }
 
-#comments {
-	#creativeCommentsContent {
-		
-		#buttonsLeft {
-			ul {
-				li {
-					a {
-					
-						&:hover {
-						
-						.text {
-							@include sprite(icon_text_hover);
-						}
+                &:hover {
+                  &.sad {
+                    @include background(image-url("ie/sad_active.png") no-repeat);
+                  }
+                  &.normal {
+                    @include background(image-url("ie/normal_active.png") no-repeat);
+                  }
+                  &.happy {
+                    @include background(image-url("ie/happy_active.png") no-repeat);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .itemGrid {
+      .item {
 
-						.youtube {
-							@include sprite(icon_youtube_hover);
-						}
+        .videoHolder {
+          .video {
+            @include background(image-url("ie/no_image.png") no-repeat center center #ededed);
 
-						.pinterest {
-							@include sprite(icon_pinterest_hover);
-						}
+            &.loading {
+              @include background(image-url("loader.gif") no-repeat center center #ededed);
+            }
+          }
+        }
+        .user {
 
-						.slideshare {
-							@include sprite(icon_slideshare_hover);
-						}
+          &.sad {
+            @include background(image-url("ie/sad_active.png") no-repeat);
+            background-position: 95% center;
+          }
 
-						.link {
-							@include sprite(icon_link_hover);
-						}
-						}
-						
-						.text {
-							display: block;
-							@include sprite(icon_text);
-							margin: 8px 0 0 8px;
-						}
-						
-						.youtube {
-							display: block;
-							@include sprite(icon_youtube);
-							margin: 8px 0 0 8px;
-						}
+          &.neutral {
+            @include background(image-url("ie/normal_active.png") no-repeat);
+            background-position: 95% center;
+          }
 
-						.pinterest {
-							display: block;
-							@include sprite(icon_pinterest);
-							margin: 8px 0 0 8px;
-						}
+          &.happy {
+            @include background(image-url("ie/happy_active.png") no-repeat);
+            background-position: 95% center;
+          }
 
-						.slideshare {
-							display: block;
-							@include sprite(icon_slideshare);
-							margin: 8px 0 0 8px;
-						}
+          .avatar {
+            .top {
+              @include background(image-url("ie/avatar_top.png") no-repeat);
+            }
+          }
+        }
+        &.ads {
+          adBlock {
+            @include background(image-url("adblock.png") no-repeat);
+          }
+        }
+      }
+    }
+  }
 
-						.link {
-							display: block;
-							@include sprite(icon_link);
-							margin: 8px 0 0 8px;
-						}
-					}
-				}
-			}
-		}
-		
-		#buttonsRight {
-			ul {
-				li {
-					a {
-						&:hover {
-						.evernote {
-							@include sprite(icon_evernote_hover);
-						}
+  #footer {
+    .row-fluid {
+      .logo {
+        @include background(image-url("ie/logo_footer.png") no-repeat);
+      }
+      .social {
+        ul {
+          li {
+            margin-right: 5px;
+            a {
+              &.google {
+                @include background(image-url("ie/footer_google.png") no-repeat);
+              }
+              &.facebook {
+                @include background(image-url("ie/footer_facebook.png") no-repeat);
+              }
+              &.twitter {
+                @include background(image-url("ie/footer_twitter.png") no-repeat);
+              }
 
-						.dropbox {
-							@include sprite(icon_dropbox_hover);
-						}
+              &:hover {
+                &.google {
+                  background-position: 0 -55px;
+                }
+                &.facebook {
+                  background-position: 0 -55px;
+                }
+                &.twitter {
+                  background-position: 0 -55px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 
-						.pinterest {
-							@include sprite(icon_pinterest_hover);
-						}
+  #erroricon {
+    @include background(image-url("ie/error.png") no-repeat);
+  }
 
-						.picture {
-							@include sprite(icon_picture_hover);
-						}
+  #comments {
+    #creativeCommentsContent {
 
-						.file {
-							@include sprite(icon_file_hover);
-						}
-					}
+      #buttonsLeft {
+        ul {
+          li {
+            a {
 
-					.title {
-						position: absolute;
-						top: 18px;
-						right: 56px;
-						width: 200px;
-						text-align: right;
-					}
+              &:hover {
 
-					.evernote {
-						display: block;
-						@include sprite(icon_evernote);
-						margin: 8px 8px 0 0;
-						position: absolute;
-						right: 0;
-					}
+                .text {
+                  @include sprite(icon_text_hover);
+                }
 
-					.dropbox {
-						display: block;
-						@include sprite(icon_dropbox);
-						margin: 8px 8px 0 0;
-						position: absolute;
-						right: 0;
-					}
+                .youtube {
+                  @include sprite(icon_youtube_hover);
+                }
 
-					.pinterest {
-						display: block;
-						@include sprite(icon_pinterest);
-						margin: 8px 8px 0 0;
-						position: absolute;
-						right: 0;
-					}
+                .pinterest {
+                  @include sprite(icon_pinterest_hover);
+                }
 
-					.picture {
-						display: block;
-						@include sprite(icon_picture);
-						margin: 8px 8px 0 0;
-						position: absolute;
-						right: 0;
-					}
+                .slideshare {
+                  @include sprite(icon_slideshare_hover);
+                }
 
-					.file {
-						display: block;
-						@include sprite(icon_file);
-						margin: 8px 8px 0 0;
-						position: absolute;
-						right: 0;
-					}
-					}
-				}
-			}
-		}
-	}
-	
-	.report {
-		@include background(image-url("ie/report.png") no-repeat);
-	}
-	#creativeCommentsSub {
-  	a {
-    	&.closeBtn {
-      	@include background(image-url("ie/close_btn.png") no-repeat);
-    	}
-  	}
-	}
-}
+                .link {
+                  @include sprite(icon_link_hover);
+                }
+              }
 
-#team {
-	.item {
-		.avatarHolder {
-			@include background(image-url("ie/avatar_bg_big.png") no-repeat);
-			background-position: center center;
-			background-color: #f8f8f8;
-			
-			&.wanted {
-				@include background(image-url("ie/avatar_bg_big_wanted.png") no-repeat);
-				background-position: center center;
-				background-color: #f8f8f8;
-			}
-		}
-	}
-}
+              .text {
+                display: block;
+                @include sprite(icon_text);
+                margin: 8px 0 0 8px;
+              }
 
-#content {
-	&.neutral {
-		.container {
-		@include background(image-url("ie/normal_big.png") no-repeat left 10%);
-		}
-	}
-	&.sad {
-		.container {
-		@include background(image-url("ie/sad_big.png") no-repeat left 10%);
-		}
-	}
-	&.happy {
-		.container {
-		@include background(image-url("ie/happy_big.png") no-repeat left 10%);
-		}
-	}
-}
+              .youtube {
+                display: block;
+                @include sprite(icon_youtube);
+                margin: 8px 0 0 8px;
+              }
+
+              .pinterest {
+                display: block;
+                @include sprite(icon_pinterest);
+                margin: 8px 0 0 8px;
+              }
+
+              .slideshare {
+                display: block;
+                @include sprite(icon_slideshare);
+                margin: 8px 0 0 8px;
+              }
+
+              .link {
+                display: block;
+                @include sprite(icon_link);
+                margin: 8px 0 0 8px;
+              }
+            }
+          }
+        }
+      }
+
+      #buttonsRight {
+        ul {
+          li {
+            a {
+              &:hover {
+                .evernote {
+                  @include sprite(icon_evernote_hover);
+                }
+
+                .dropbox {
+                  @include sprite(icon_dropbox_hover);
+                }
+
+                .pinterest {
+                  @include sprite(icon_pinterest_hover);
+                }
+
+                .picture {
+                  @include sprite(icon_picture_hover);
+                }
+
+                .file {
+                  @include sprite(icon_file_hover);
+                }
+              }
+
+              .title {
+                position: absolute;
+                top: 18px;
+                right: 56px;
+                width: 200px;
+                text-align: right;
+              }
+
+              .evernote {
+                display: block;
+                @include sprite(icon_evernote);
+                margin: 8px 8px 0 0;
+                position: absolute;
+                right: 0;
+              }
+
+              .dropbox {
+                display: block;
+                @include sprite(icon_dropbox);
+                margin: 8px 8px 0 0;
+                position: absolute;
+                right: 0;
+              }
+
+              .pinterest {
+                display: block;
+                @include sprite(icon_pinterest);
+                margin: 8px 8px 0 0;
+                position: absolute;
+                right: 0;
+              }
+
+              .picture {
+                display: block;
+                @include sprite(icon_picture);
+                margin: 8px 8px 0 0;
+                position: absolute;
+                right: 0;
+              }
+
+              .file {
+                display: block;
+                @include sprite(icon_file);
+                margin: 8px 8px 0 0;
+                position: absolute;
+                right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .report {
+      @include background(image-url("ie/report.png") no-repeat);
+    }
+    #creativeCommentsSub {
+      a {
+        &.closeBtn {
+          @include background(image-url("ie/close_btn.png") no-repeat);
+        }
+      }
+    }
+  }
+
+  #team {
+    .item {
+      .avatarHolder {
+        @include background(image-url("ie/avatar_bg_big.png") no-repeat);
+        background-position: center center;
+        background-color: #f8f8f8;
+
+        &.wanted {
+          @include background(image-url("ie/avatar_bg_big_wanted.png") no-repeat);
+          background-position: center center;
+          background-color: #f8f8f8;
+        }
+      }
+    }
+  }
+
+  #content {
+    &.neutral {
+      .container {
+        @include background(image-url("ie/normal_big.png") no-repeat left 10%);
+      }
+    }
+    &.sad {
+      .container {
+        @include background(image-url("ie/sad_big.png") no-repeat left 10%);
+      }
+    }
+    &.happy {
+      .container {
+        @include background(image-url("ie/happy_big.png") no-repeat left 10%);
+      }
+    }
+  }
 
 }
