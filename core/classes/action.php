@@ -228,6 +228,7 @@ class SiteBaseAction
 
 		// assign option
 		$this->tpl->assign('is' . SpoonFilter::toCamelCase($this->url->getModule()), true);
+		$this->tpl->assign('year', date('Y'));
 
 		// require the model if it exists
 		$path = PATH_WWW . '/modules/' . $this->getModule() . '/model/model.php';

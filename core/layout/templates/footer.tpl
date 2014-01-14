@@ -38,7 +38,7 @@
 		</div>
 		<div class="row-fluid madeBy">
 			<div class="span8">
-				<p>© 2013 Creative Comments Media. All rights reserved.</p>
+				<p>© {$year} Creative Comments Media. All rights reserved.</p>
 			</div>
 			<div class="span4 sumo">
 				<p><a href="http://www.sumocoders.be/?utm_source=creative_comments&amp;utm_medium=credits&amp;utm_campaign=client_sites" rel="external">SumoCoders</a> によって供給</p>
