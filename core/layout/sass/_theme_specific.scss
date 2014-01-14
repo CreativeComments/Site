@@ -24,6 +24,11 @@ a {
     @include squish-text;
     display: block;
   }
+  &.iconEdit {
+    @include svg-with-png-fallback(icon_edit, no-repeat, $hover: true);
+    @include squish-text;
+    display: block;
+  }
 }
 
 .modal-footer .btn + .btn {
@@ -653,12 +658,15 @@ a {
           font-size: 16px;
           float: left;
           height: 1.4em;
-          width: 90%;
+          width: 78%;
           overflow: hidden;
         }
 
-        a.iconDelete {
+        a.iconDelete, a.iconEdit {
           float: right;
+        }
+        a.iconEdit {
+          margin-right: 7px;
         }
       }
 

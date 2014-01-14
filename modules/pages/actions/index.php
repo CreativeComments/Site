@@ -66,6 +66,7 @@ class PagesIndex extends SiteBaseAction
         $items = array();
         $i = 1;
         foreach ($mostRecent as $comment) {
+            /** @var Comment $comment */
             if (!isset($users[$comment->userId])) {
                 continue;
             }
@@ -78,7 +79,7 @@ class PagesIndex extends SiteBaseAction
                 $i = 1;
             }
 
-            $data['canDelete'] = $comment->canDelete($this->currentUser);
+            $data['canEdit'] = $comment->canEdit($this->currentUser);
 
             $items[] = $data;
             $i++;

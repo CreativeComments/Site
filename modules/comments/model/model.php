@@ -435,12 +435,12 @@ class Comment
     }
 
     /**
-     * Can the user delete this item
+     * Can the user edit this item
      *
      * @param User|bool $user
      * @return bool
      */
-    public function canDelete($user)
+    public function canEdit($user)
     {
         if ($user) {
             if ($user->isAdmin) {
