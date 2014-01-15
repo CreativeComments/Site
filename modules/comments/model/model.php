@@ -267,16 +267,8 @@ class Comment
      */
     public function setText($text)
     {
-        if (substr($text, 0, 1) != '<') {
-            $text = '<div>' . $text;
-        }
-        $text = str_replace(
-            array('<div>', '</div>'),
-            array('<p>', '</p>'),
-            $text
-        );
         $text = trim($text);
-        if ($text == '') {
+        if (!$text) {
             $text = null;
         }
 
