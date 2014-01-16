@@ -429,7 +429,7 @@ class Comment
     /**
      * Can the user edit this item
      *
-     * @param User|bool $user
+     * @param User $user
      * @return bool
      */
     public function canEdit($user)

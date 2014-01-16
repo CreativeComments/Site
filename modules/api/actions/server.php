@@ -148,6 +148,9 @@ class commentsApi
             throw new Exception('no comment id');
         }
         $comment = Comment::get($args['id']);
+        if(!$comment->canEdit($user)) {
+            throw new Exception('current user cannot edit comment');
+        }
 
         # Edit the comment
         if (!empty($args['title'])) {
