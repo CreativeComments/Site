@@ -81,9 +81,10 @@
 										{$items.title|truncate:30}
 									</a>
 								</h4>
-                                    {option:items.canDelete}
+                                    {option:items.canEdit}
                                         <a class="iconDelete confirm" data-message="{$msgDeleteCommentConfirmation}" href="{$var|buildurl:'delete':'comments'}/{$items.id}">{$lblDelete}</a>
-                                    {/option:items.canDelete}
+                                        <a class="iconEdit ccEdit" data-id="{$items.id}" href="{$var|buildurl:'plugins':'pages'}">{$lblEdit}</a>
+                                    {/option:items.canEdit}
 								</header>
 								<div class="user {$items.emotion}">
 									<div class="avatar">

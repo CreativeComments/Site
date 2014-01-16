@@ -267,16 +267,8 @@ class Comment
      */
     public function setText($text)
     {
-        if (substr($text, 0, 1) != '<') {
-            $text = '<div>' . $text;
-        }
-        $text = str_replace(
-            array('<div>', '</div>'),
-            array('<p>', '</p>'),
-            $text
-        );
         $text = trim($text);
-        if ($text == '') {
+        if (!$text) {
             $text = null;
         }
 
@@ -435,12 +427,12 @@ class Comment
     }
 
     /**
-     * Can the user delete this item
+     * Can the user edit this item
      *
-     * @param User|bool $user
+     * @param User $user
      * @return bool
      */
-    public function canDelete($user)
+    public function canEdit($user)
     {
         if ($user) {
             if ($user->isAdmin) {

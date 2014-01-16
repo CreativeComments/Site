@@ -129,7 +129,74 @@ class commentsApi
 		return $comment;
 	}
 
-	/**
+    /**
+     * @throws Exception
+     * @param array $args
+     * @return bool
+     */
+    public static function edit(array $args)
+    {
+        # Check access token, user and comment ID
+        if (empty($args['access_token'])) {
+            throw new Exception('no access_token');
+        }
+        $user = User::getByAccessToken($args['access_token']);
+        if (!$user) {
+            throw new Exception('invalid access_token');
+        }
+        if (empty($args['id'])) {
+            throw new Exception('no comment id');
+        }
+        $comment = Comment::get($args['id']);
+        if(!$comment->canEdit($user)) {
+            throw new Exception('current user cannot edit comment');
+        }
+
+        # Edit the comment
+        if (!empty($args['title'])) {
+            $comment->setTitle($args['title']);
+        }
+        if (!empty($args['text'])) {
+            $comment->setText($args['text']);
+        }
+        if (!empty($args['video_id'])) {
+            $comment->setVideoId($args['video_id']);
+        }
+        if (!empty($args['youtube'])) {
+            $comment->setYoutube($args['youtube']);
+        }
+        if (!empty($args['slideshare'])) {
+            $comment->setSlideshare($args['slideshare']);
+        }
+        if (!empty($args['soundcloud'])) {
+            $comment->setSoundcloud($args['soundcloud']);
+        }
+        if (!empty($args['flickr'])) {
+            $comment->setFlickr($args['flickr']);
+        }
+        if (!empty($args['url'])) {
+            $comment->setUrl($args['url']);
+        }
+        if (!empty($args['dropbox'])) {
+            $comment->setDropbox($args['dropbox']);
+        }
+        if (!empty($args['file_id'])) {
+            $comment->setFile(self::getTemporaryFile($args['file_id']));
+        }
+        if (!empty($args['picture_id'])) {
+            $comment->setPicture(self::getTemporaryFile($args['picture_id']));
+        }
+        if (!empty($args['emotion'])) {
+            $comment->setEmotion($args['emotion']);
+        }
+
+        # Save and return
+        $comment->save();
+
+        return $comment;
+    }
+
+    /**
 	 * Get a comment
 	 *
 	 * @param $args
